@@ -1,0 +1,84 @@
+*{	
+	margin: 0;
+	padding: 0;
+}
+body{
+	padding: 0;
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+	/*style:none;*/	
+}
+i{
+	style:none;
+	font-style: normal;
+}
+
+
+
+/*01*/
+.headph{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 0.88rem;
+	background-color: #f8f8f8;
+	line-height: 0.88rem;
+    text-align: center;
+    font-size: 0.4rem;
+    color: #d34647;
+}
+.headph i{
+	float: left;
+	padding-left: 0.3rem;
+}
+.headph b{
+	clear: both;
+}
+/*02*/
+#name{
+	margin-top: 1.3rem;
+}
+
+ul li{
+	list-style: none;
+	width: 90%;
+	margin: 0.5rem 5%;
+	/*border-bottom: solid #B5B5B5 0.01rem;*/
+	padding-bottom: 0.17rem;
+	
+}
+
+ul li i{
+	margin-left: 0.2rem;
+}
+
+.il{
+	float: right;
+	margin-right: 0.2rem;
+}
+
+input{
+	height: 0.5rem;
+	background-color: #F5F5F5;
+	border: none;
+}
+
+
+/*03*/
+.releve{
+	position: fixed;
+	bottom: 0.5rem;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	text-align: center;
+	border: solid #B5B5B5 0.01rem;
+	width: 79%;
+	margin: 0 10%;
+	
+}
+.releve i{
+	color: #000000;
+	font-size: 0.33rem;
+}

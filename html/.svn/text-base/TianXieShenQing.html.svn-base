@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>填写申请</title>
+	</head>
+	<link rel="stylesheet" href="../css/commen.css" />
+	<link rel="stylesheet" href="../css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../css/index.css" />
+	<link rel="stylesheet" href="../css/ziyemain.css" />
+	<body>
+		<header class="thebigheader"  style="height: initial;">
+		<ul style=" width: 7.5rem;">
+			<li style="margin-left: 0.3rem;">
+				<i class="fa fa-angle-left mui-action-back" aria-hidden="true" style="font-size: 0.66rem;"></i>
+			</li>
+			
+			<li style="text-align: center;width: 5.3rem;">
+				申请退款  
+			</li>
+			<!--<li style="line-height: 0.8rem;font-size: 0.24rem;margin-left: 0.3rem;">
+				<img style="margin-right: 0;" src="../img/shenqingtuikuan.png"  />
+			</li>-->
+				<li class="liebiaozuanfu" style="text-align: center;line-height: 0.6rem; font-size: 0.6rem; color: #ea0607;font-family: '微软雅黑';margin-right: 0.3rem;float: right;">...</li>
+		</ul>
+		
+		
+	</header>
+	<ul class="xialacaidan" style="display: none; z-index: 1000;" >
+				<div class="xiaojiao"></div>
+				<li><img src="../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+				<li><img src="../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+				
+				<li><img src="../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+				<li><img src="../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+			</ul>
+	
+	<!--banner-->
+	<div class="shenqingtuikuan" style="padding-top: 0.88rem;">
+		<p>退款类型</p>
+		<ul class="tuikauntuihuo">
+			<li>
+				<img src="../img/shouhoudizhixuanze.png" />
+				<img src="../img/shouhuodizhiyixuanze.png"  />
+				<span>我要退款</span>
+				
+			</li>
+			<li>
+				<img src="../img/shouhoudizhixuanze.png" />
+				<img src="../img/shouhuodizhiyixuanze.png"  />
+				<span>我要退货</span>
+				
+			</li>
+		</ul>
+		<p class="tip" style="margin-bottom: 0.3rem;">
+			<span>提示:</span>
+			待平台人员审核后，将进入退款流程中...
+		</p>
+		
+		
+		
+	</div>
+<!--退款状态-->
+	<div class="shenqingtuikuan" style="border-top: 1px solid #E5E5E5;margin-bottom: 0.3rem;">
+		<p>退款状态</p>
+		<ul class="tuikauntuihuo">
+			<li>
+				<img src="../img/shouhoudizhixuanze.png" />
+				<img src="../img/shouhuodizhiyixuanze.png"  />
+				<span>未收到货   </span>
+				
+			</li>
+			<li>
+				<img src="../img/shouhoudizhixuanze.png" />
+				<img src="../img/shouhuodizhiyixuanze.png"  />
+				<span>已收到货</span>
+				
+			</li>
+		</ul>
+		<p class="tip" style="height: inherit;line-height: 0.5rem;text-align: center;margin-left: 1rem;">
+			<span>提示:</span>
+			在“未收到货”的情况下，选择“已收到货”，结果将可能导致钱货两空。
+		</p>
+		
+		
+		
+	</div>
+
+<!--退款原因-->
+	<div class="shenqingtuikuan" style="border-top: 1px solid #e5e5e5;">
+		<p>退款原因</p>
+		<div class="tuiyaunyuanyin" style="padding-bottom: 2rem;" >
+			
+			
+		  <!--<img src="../img/xialasanjiao.png" />-->
+		  <div class="tuikuanyuanyinisThis">
+		  	<p>拍错了</p>
+		  	</div>
+		  <ul class="tuikuanyuanyinxialaliebiao" style="display: none;">
+		  	<li>信息填写错误</li>
+		  	<li>其他</li>
+		  	<!--<li></li>-->
+		  </ul>
+		  
+		  
+		</div>
+		
+		
+	</div>
+<!--退款金额-->
+	<div class="shenqingtuikuan">
+		<p>退款金额</p>
+		<div class="tuiyaunyuanyin">
+			<input type="number" placeholder="退款金额不能超过交易金额"  />
+			
+			
+		</div>
+		
+		
+	</div>
+<!--退款说明-->
+
+<div class="shenqingtuikuan">
+		<p>退款说明<span style="float: none;">(必填)</span></p>
+		<div class="tuikuanshuoming">
+			<textarea readonly="readonly">
+				
+				
+				
+				
+			</textarea>
+			
+			
+		</div>
+		
+		
+	</div>
+<!--上传凭证-->
+<div class="shenqingtuikuan">
+		<p>上传凭证</p>
+		<div class="tuikuanshuoming" style="border-bottom: none;">
+			<!--<div></div>-->
+			<img src="../img/photo.png"  />
+			<p>点击上传(最多上传3张图片)</p>
+			
+		</div>
+		
+		
+	</div>
+
+<!--提交申请-->
+     <div class="tijiaoshenqing">
+     	<div class="tijiao" style="border: 0.8px solid #e5e5e5;">
+     		提交申请
+     		
+     	</div>
+     	
+     </div>
+
+	
+	</body>
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<script type="text/javascript" src="../js/buju.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript" src="../js/tab.js" ></script>
+	<script type="text/javascript" src="../js/clickmodeo.js" ></script>
+	<script>
+		$(".tuikauntuihuo li img:nth-child(1)").on("click",function(){
+			
+			$(this).parent().siblings().children("img:nth-child(2)").css("display","none").siblings("img").css("display","block")
+			
+		})
+		
+		//下拉菜单
+	
+		$(".liebiaozuanfu").on("click",function(e){
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+		
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+	
+	//消息
+		$('.xialacaidan li:nth-child(3)').on('click',function(){
+			window.location.href="../html/xiaoxiliebiao.html";
+//mui.openWindow({
+//				url:'../html/xiaoxiliebiao.html',
+//				id:'../html/xiaoxiliebiao.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		//首页
+		$('.xialacaidan li:nth-child(2)').on('click',function(){
+			window.location.href ="../index.html";
+//mui.openWindow({
+//				url:'../html/xiaoxiliebiao.html',
+//				id:'../html/xiaoxiliebiao.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+	
+	</script>
+</html>

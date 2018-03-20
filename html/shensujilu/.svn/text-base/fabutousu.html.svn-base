@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html style="overflow-x: hidden;">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>发布投诉</title>
+		<style type="text/css">
+			header.thebigheader{
+				width: 7.5rem;
+				background: #f8f8f8;
+				position: fixed;
+				top: 0rem;
+				border-bottom: 0.8px solid #e5e5e5;
+			}
+			.tuikauntuihuo li span{
+				margin-left: 0.15rem;
+			}
+			div.tousushangpin ul li:nth-child(2) p{
+				width: auto;
+				height: auto;
+				line-height: normal;
+				padding: 0rem 0.08rem;
+				color: #999;
+				border: 0.8px solid #e5e5e5;
+				float: left;
+				margin-top: 0.15rem;
+				margin-left: 0.1rem;
+				text-indent: 0;
+			}
+			div.tousushangpin ul li:nth-child(2) p:nth-child(1){
+				padding: 0rem 0.08rem;
+				width: 4rem;
+				height: 0.4rem;
+				color: #333;
+				border: none;
+				text-align: left;
+				text-indent: inherit;
+			}
+			li p{
+				display: inline-block;
+			}
+			.tousu,.tuikauntuihuo{
+				display: inline-block;
+				vertical-align: middle;
+			}
+			p.buchongliuyan span,p.buchongliuyan textarea{
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			
+			.theThirdPage{
+				-webkit-overflow-scrolling: touch;
+				overflow: auto;
+				height: 7.3rem;
+			}
+
+		</style>
+	</head>
+	<link rel="stylesheet" href="../../css/commen.css" />
+	<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../../css/index.css" />
+	<link rel="stylesheet" href="../../css/ziyemain.css" />
+	<link rel="stylesheet" href="../../css/tousu.css" />
+	<body>
+		<header class="thebigheader"  >
+			<ul style=" width: 7.5rem;">
+				<li style="margin-left: 0.3rem;font-size:0.3rem;">
+					<i style="font-size: 0.66rem;" class="fa fa-angle-left mui-action-back" aria-hidden="true"></i>
+				</li>
+
+				<li style="text-align: center;width: 5.18rem;font-size:0.34rem;">
+					发布投诉
+				</li>
+				<li class="liebiaozuanfu" style="text-align: center;line-height: 0.6rem; font-size: 0.6rem; color: #ea0607;font-family: '微软雅黑';float: right;margin-right: 0.3rem;">...</li>
+			</ul>
+
+
+		</header>
+              <ul class="xialacaidan" style="display: none; z-index: 1001;" >
+				<div class="xiaojiao"></div>
+				<li><img src="../../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+				<li><img src="../../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+				
+				<li><img src="../../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+				<li><img src="../../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+			</ul>	
+	<!--banner-->
+	
+	<div class="theThirdPage" style="position: relative;">
+		<div class="tousushangpin" style="margin-top:0.9rem;border-bottom:0.8px solid #e5e5e5;">
+			<ul>
+				<li>
+					<img src="../../img/zhubangguindex.png"  />
+				</li>
+				<li style="width: 3.9rem;">
+	
+					<p style="font-size:0.28rem;">
+						猪棒骨
+						<span style="border: 0.8px solid #EA0607; color: #EA0607;font-size: 0.2rem;padding:0 0.08rem;border-radius:0.03rem;">期货</span>
+					</p>
+					<p style="border: 0.8px solid #e5e5e5;font-size: 0.2rem;padding:0 0.08rem;">
+						德国
+					</p>
+					<p style="border: 0.8px solid #e5e5e5;font-size: 0.2rem;padding:0 0.08rem;">
+						202
+					</p>
+					<p style="border: 0.8px solid #e5e5e5;font-size: 0.2rem;padding:0 0.08rem;">
+						10kg/件
+					</p>
+					<p style="border: 0.8px solid #e5e5e5;font-size: 0.2rem;padding:0 0.08rem;">
+						塘沽港
+					</p>
+				</li>
+				<li style="width: 1.38rem;font-size: 0.24rem;">
+					<p style="display:inline-block;width:100%;">
+						298000.00元
+					</p>
+					<p>
+						x 5柜
+					</p>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="tousuxinxi">
+			<p class="tousu" style="display:inline-block;width:auto;font-size:0.28rem;">
+				投诉类型
+			</p>
+	
+			<ul class="tuikauntuihuo" style="display:inline-block;width:auto;margin-left:0.3rem;">
+				<li class="shang" style="text-align: left;display:inline-block;width:auto;">
+					<img src="../../img/shouhuodizhiyixuanze.png" style="margin-left:0;"/>
+					
+					<span style="font-size:0.24rem;">商品</span>
+	
+				</li>
+				<li class="wu" style="text-align: left;display:inline-block;width:auto;">
+					<img src="../../img/shouhoudizhixuanze.png" />
+					
+					<span style="font-size:0.24rem;">物流</span>
+	
+				</li>
+			</ul>
+			<p class="tousushoujihao" style="font-size:0.28rem;">
+				手机号
+				<input type="tel" placeholder="请输入您的电话号" style="letter-spacing:0.04rem;font-size:0.24rem;background:#f5f5f5;border:0.8px solid #e5e5e5;border-radius:0.03rem;" />
+			</p>
+			<p class="buchongliuyan" style="display:inline-block;width:auto;">
+				<span style="font-size:0.28rem;">补充留言</span>
+				<textarea name="name" rows="8" cols="40"style="display:inline-block;width:5.45rem;margin-left:0.18rem;font-size:0.24rem;padding:0.2rem;box-sizing:border-box;background:#f5f5f5;border:0.8px solid #e5e5e5;border-radius:0.03rem;letter-spacing:0.04rem;" placeholder="请输入留言"></textarea>
+			</p>
+	
+			<p class="buchongliuyan" style="font-size:0.28rem;">
+				上传凭证
+	
+			</p>
+			<div class="theword">
+				<img src="../../img/pingzheng1.png"/>
+				<img src="../../img/pingzheng2.png"/>
+				<!-- <p style="font-size:0.2rem;">(每张图不超过5M,最多3张，支持JPG、PNG、GIF、DMP格式)</p> -->
+			</div>
+		</div>
+	</div>
+	<div class="fabu" style="border:0.8px solid #e5e5e5;margin-top: 0.81rem;">
+		<p style="border:0.8px solid #e5e5e5;">发布</p>
+	</div>
+	</div>
+	</body>
+	<script type="text/javascript" src="../../js/mui.js" ></script>
+	<script type="text/javascript" src="../../js/buju.js" ></script>
+	<script type="text/javascript" src="../../js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript" src="../../js/tab.js" ></script>
+	<script type="text/javascript" src="../../js/clickmodeo.js" ></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".tuikauntuihuo .shang img").click(function(){
+				if($(this).attr("src")=="../../img/shouhuodizhiyixuanze.png"){
+					$(this).show();
+					$(".tuikauntuihuo .wu img").attr("src","../../img/shouhoudizhixuanze.png");
+				}else{
+					$(this).show();
+					$(this).attr("src","../../img/shouhuodizhiyixuanze.png");
+					$(".tuikauntuihuo .wu img").attr("src","../../img/shouhoudizhixuanze.png")
+				}
+				
+			})
+			$(".tuikauntuihuo .wu img").click(function(){
+				if($(this).attr("src")=="../../img/shouhuodizhiyixuanze.png"){
+					$(this).show();
+					$(".tuikauntuihuo .shang img").attr("src","../../img/shouhoudizhixuanze.png");
+				}else{
+					$(this).show();
+					$(this).attr("src","../../img/shouhuodizhiyixuanze.png");
+					$(".tuikauntuihuo .shang img").attr("src","../../img/shouhoudizhixuanze.png")
+				}
+				
+			})
+		})
+			//下拉菜单
+	
+		$(".liebiaozuanfu").on("click",function(e){
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+		
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+	//消息
+		$('.xialacaidan li:nth-child(3)').on('click',function(){
+			window.location.href="../../html/xiaoxiliebiao.html";
+//			mui.openWindow({
+//				url:'../../html/xiaoxiliebiao.html',
+//				id:'../../html/xiaoxiliebiao.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		//首页
+		$('.xialacaidan li:nth-child(2)').on('click',function(){
+			window.location.href ="../../index.html";
+//			mui.openWindow({
+//				url:'../../index.html',
+//				id:'../../index.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+	</script>
+</html>

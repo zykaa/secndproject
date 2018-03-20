@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		
+    </script>
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/commen.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <style>
+    	.dahuo_shangpin ul li:nth-child(2) p span:nth-child(3){
+	border: 1px solid #4BBF80;
+	color: #4BBF80;
+	/*padding: 0 0.1rem;*/
+	font-size: 0.24rem;
+		/*border-radius: 0.05rem;*/
+		line-height: normal;
+		background: none;
+		margin-top: 0.1rem;
+	margin-left: 0.1rem;
+}
+    	.dahuoxingqingye{
+    		width: 0.85rem;
+    		height: 0.85rem;
+    	}
+    	.dahuoxingqingye span{
+    		margin-top: 0.35rem;
+    	}
+    	.dahuo{
+    		float: left;
+    	}
+    	.dahuo_shangpin ul li:nth-child(2) p span:nth-child(3){
+    		font-size: 0.2rem;
+    		padding: 0 0.08rem;
+    	}
+    	 .searches{
+    		    width: 0.6rem;
+    height: 0.6rem;
+    position: absolute;
+    top: 0.2rem;
+    right: 1.8rem;
+    background: #333333;
+     opacity: 0; 
+    	}
+    	.dahuo_shangpin ul li:nth-child(3) p{
+    		font-weight: 400;
+    	}
+    </style>
+	</head>
+	<body>
+		
+		<header class="thebigheader">
+			<ul style="width: 7.5rem;" >
+				<li class="theleft" style="margin: 0;">
+					<i class="fa fa-angle-left mui-action-back " aria-hidden="true" style="font-size: 0.66rem;text-align: ;margin-left: 0.2rem;"></i>
+
+				</li>
+				<li style="width: 5rem;">
+					<input style="border: 0.8px solid #333333;outline: none; text-indent: 0.3rem; position: relative; width: 5rem; height: 0.56rem;margin-top: -0.4rem; margin-left: -0.8rem; outline: none;text-indent: 0.3rem;background: url(../img/searchindex.png) no-repeat 4.6rem; background-size:0.5rem ;" type="text" placeholder="请输入厂号，港口等关键词" />
+					<div class="searches"></div>
+				</li>
+				<li style="width: 0.7rem; height: 0.88rem;line-height: 0.88rem; text-align: center; font-size: 0.28rem; color: #ea0607;">
+				
+					<img src="../img/gouwucar.png"  style="      width: 0.4rem;height: 0.4rem;margin-top: 0.2rem;margin-bottom: 0.3rem;margin-right: 0;"/>
+				<span class="mui-badge" style="  text-align: center;line-height: 0.3rem;  position: absolute; left: 83%; width: 0.35rem; display: block;height: 0.3rem;">3</span>
+			   </li>
+				<li class="liebiaozuanfu" style="text-align: center;line-height: 0.6rem; font-size: 0.6rem; color: #ea0607;font-family: '微软雅黑';">...</li>
+			</ul>
+			
+		</header>
+	<ul class="xialacaidan" style="display: none; z-index: 1000;" >
+				<div class="xiaojiao"></div>
+				<li><img src="../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+				<li><img src="../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+				
+				<li><img src="../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+				<li><img src="../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+			</ul>
+	
+	
+	
+	<div class="dahuo" style="margin-top: 0.88rem;">
+		
+		<ul style="float: left;margin-left: 0.3rem;">
+			<li>
+				<!--<img src="../img/dahuo.png" />-->
+				<span>猜你喜欢</span>
+			</li>
+			<li class="cainixianhuan" style="position: absolute;z-index: 999;width:0.85rem;height: 0.85rem; right: 0.42rem;">
+				<!--<img src="img/three.png"  />-->
+				<span style="margin-top: 0.35rem; width: 0.08rem;height: 0.08rem;background: #999;display: block;border-radius:50%;float: left;margin-right: 0.05rem;"></span>
+				<span style="margin-top: 0.35rem; width: 0.08rem;height: 0.08rem;background: #999;display: block;border-radius:50%;float: left;margin-right: 0.05rem;"></span>
+				<span style="margin-top: 0.35rem; width: 0.08rem;height: 0.08rem;background: #999;display: block;border-radius:50%;float: left;"></span>
+			</li>
+		</ul>
+		
+	</div>
+	
+	<div class="dahuo_shangpin">
+		<ul style="margin-top: 0;">
+			<li>
+				<img src="../img/zhubi.png"  />
+				<div class="lingjian">
+					<img src="../img/biaoqian.png"  />
+					<span>202</span>
+				</div>
+			</li>
+			<li>
+				<p>
+					<span>德国</span>
+					<span>经典猪里脊</span>
+					 
+					<span>现货</span>
+				</p>
+			</li>
+			<li>
+				<p>
+					253500.00
+					<span>元/柜</span>
+				</p>
+			</li>
+		</ul>
+		<ul style="margin-top: 0;">
+			<li>
+				<img src="../img/wuhuarousss.png"  />
+				<div class="lingjian">
+					<img src="../img/biaoqian.png"  />
+					<span>202</span>
+				</div>
+			</li>
+			<li>
+				<p>
+					<span>德国</span>
+					<span>去皮五花肉</span>
+					 
+					<span>现货</span>
+				</p>
+			</li>
+			<li>
+				<p>
+					255500.00
+					<span>元/柜</span>
+				</p>
+			</li>
+		</ul>
+		
+		<ul>
+			<li>
+				<img src="../img/wfwd.png"  />
+				<div class="lingjian">
+					<img src="../img/biaoqian.png"  />
+					<span>717</span>
+				</div>
+			</li>
+			<li>
+				<p>
+					<span>美国</span>
+					<span>里脊肉</span>
+					 
+					<span>现货</span>
+				</p>
+			</li>
+			<li>
+				<p>
+					305800.00
+					<span>元/柜</span>
+				</p>
+			</li>
+		</ul>
+		
+		<ul>
+			<li>
+				<img src="../img/ffvv.png"  />
+				<div class="lingjian">
+					<img src="../img/biaoqian.png"  />
+					<span>202</span>
+				</div>
+			</li>
+			<li>
+				<p>
+					<span>德国</span>
+					<span>猪背膘</span>
+					 
+					<span>现货</span>
+				</p>
+			</li>
+			<li>
+				<p>
+					304700.00
+					<span>元/柜</span>
+				</p>
+			</li>
+		</ul>
+		
+		
+	</div>
+	
+	<div class="dahuo">
+		
+		<ul>
+			<li>
+				<!--<img src="../img/dahuo.png" />-->
+				<span>最近热销</span>
+			</li>
+			<li class="zuijinrenxiao" style="position: absolute;z-index: 999;width:0.85rem;height: 0.85rem; right: 0.42rem;">
+				<!--<img src="img/three.png"  />-->
+				<span style="margin-top: 0.35rem; width: 0.08rem;height: 0.08rem;background: #999;display: block;border-radius:50%;float: left;margin-right: 0.05rem;"></span>
+				<span style="margin-top: 0.35rem; width: 0.08rem;height: 0.08rem;background: #999;display: block;border-radius:50%;float: left;margin-right: 0.05rem;"></span>
+				<span style="margin-top: 0.35rem; width: 0.08rem;height: 0.08rem;background: #999;display: block;border-radius:50%;float: left;"></span>
+			</li>
+		</ul>
+		
+	</div>
+	
+	<div class="dahuo_shangpin">
+		<ul style="margin-top: 0;">
+			<li>
+				<img src="../img/wuhuarousss.png"  />
+				<div class="lingjian">
+					<img src="../img/biaoqian.png"  />
+					<span>717</span>
+				</div>
+			</li>
+			<li>
+				<p>
+					<span>美国</span>
+					<span>小里脊</span>
+					 
+					<span>现货</span>
+				</p>
+			</li>
+			<li>
+				<p>
+					455800.00
+					<span>元/柜</span>
+				</p>
+			</li>
+		</ul>
+		<ul style="margin-top: 0;">
+			<li>
+				<img src="../img/hnhn.png"  />
+				<div class="lingjian">
+					<img src="../img/biaoqian.png"  />
+					<span>202</span>
+				</div>
+			</li>
+			<li>
+				<p>
+					<span>德国</span>
+					<span>带骨大排</span>
+					 
+					<span>现货</span>
+				</p>
+			</li>
+			<li>
+				<p>
+					305800.00
+					<span>元/柜</span>
+				</p>
+			</li>
+		</ul>
+		
+		<ul>
+			<li>
+				<img src="../img/ff.png"  />
+				<div class="lingjian">
+					<img src="../img/biaoqian.png"  />
+					<span>202</span>
+				</div>
+			</li>
+			<li>
+				<p>
+					<span>德国</span>
+					<span>猪整鼻</span>
+					 
+					<span>现货</span>
+				</p>
+			</li>
+			<li>
+				<p>
+					324800.00
+					<span>元/柜</span>
+				</p>
+			</li>
+		</ul>
+		
+		<ul>
+			<li>
+				<img src="../img/ujuj.png"  />
+				<div class="lingjian">
+					<img src="../img/biaoqian.png"  />
+					<span>717</span>
+				</div>
+			</li>
+			<li>
+				<p>
+					<span>德国</span>
+					<span>经典猪里脊</span>
+					 
+					<span>现货</span>
+				</p>
+			</li>
+			<li>
+				<p>
+					305823.00
+					<span>元/柜</span>
+				</p>
+			</li>
+		</ul>
+		
+		
+	</div>
+	
+	<div class="dahuo">
+		
+		<ul>
+			<li>
+				<!--<img src="../img/dahuo.png" />-->
+				<span>最近新增</span>
+			</li>
+			<li class="zuijinxinzneg" style="position: absolute;z-index: 999;width:0.85rem;height: 0.85rem; right: 0.42rem;">
+				<!--<img src="img/three.png"  />-->
+				<span style="margin-top: 0.35rem; width: 0.08rem;height: 0.08rem;background: #999;display: block;border-radius:50%;float: left;margin-right: 0.05rem;"></span>
+				<span style="margin-top: 0.35rem; width: 0.08rem;height: 0.08rem;background: #999;display: block;border-radius:50%;float: left;margin-right: 0.05rem;"></span>
+				<span style="margin-top: 0.35rem; width: 0.08rem;height: 0.08rem;background: #999;display: block;border-radius:50%;float: left;"></span>
+			</li>
+		</ul>
+		
+	</div>
+	
+	<div class="dahuo_shangpin">
+		<ul style="margin-top: 0;">
+			<li>
+				<img src="../img/zhubi.png"  />
+				<div class="lingjian">
+					<img src="../img/biaoqian.png"  />
+					<span>202</span>
+				</div>
+			</li>
+			<li>
+				<p>
+					<span>德国</span>
+					<span>经典猪里脊</span>
+					 
+					<span>现货</span>
+				</p>
+			</li>
+			<li>
+				<p>
+					312800.00
+					<span>元/柜</span>
+				</p>
+			</li>
+		</ul>
+		<ul style="margin-top: 0;">
+			<li>
+				<img src="../img/fvfv.png"  />
+				<div class="lingjian">
+					<img src="../img/biaoqian.png"  />
+					<span>202</span>
+				</div>
+			</li>
+			<li>
+				<p>
+					<span>德国</span>
+					<span>去皮五花肉</span>
+					 
+					<span>现货</span>
+				</p>
+			</li>
+			<li>
+				<p>
+					312800.00
+					<span>元/柜</span>
+				</p>
+			</li>
+		</ul>
+		
+		<ul>
+			<li>
+				<img src="../img/wfwd.png"  />
+				<div class="lingjian">
+					<img src="../img/biaoqian.png"  />
+					<span>717</span>
+				</div>
+			</li>
+			<li>
+				<p>
+					<span>美国</span>
+					<span>猪里脊</span>
+					 
+					<span>现货</span>
+				</p>
+			</li>
+			<li>
+				<p>
+					312800.00
+					<span>元/柜</span>
+				</p>
+			</li>
+		</ul>
+		
+		<ul>
+			<li>
+				<img src="../img/ffvv.png"  />
+				<div class="lingjian">
+					<img src="../img/biaoqian.png"  />
+					<span>202</span>
+				</div>
+			</li>
+			<li>
+				<p>
+					<span>德国</span>
+					<span>猪背膘</span>
+					 
+					<span>现货</span>
+				</p>
+			</li>
+			<li>
+				<p>
+					312670.00
+					<span>元/柜</span>
+				</p>
+			</li>
+		</ul>
+		
+		
+	</div>
+	
+	
+	
+	<div class="dahuo">
+		
+		<ul>
+			<li>
+				<!--<img src="../img/dahuo.png" />-->
+				<span>1F猪手</span>
+			</li>
+			<li class="dahuoxingqingye" style="position: absolute;z-index: 999;width:0.85rem;height: 0.85rem; right: 0.42rem;">
+				<!--<img src="img/three.png"  />-->
+				<span style="margin-top: 0.35rem; width: 0.08rem;height: 0.08rem;background: #999;display: block;border-radius:50%;float: left;margin-right: 0.05rem;"></span>
+				<span style="margin-top: 0.35rem; width: 0.08rem;height: 0.08rem;background: #999;display: block;border-radius:50%;float: left;margin-right: 0.05rem;"></span>
+				<span style="margin-top: 0.35rem; width: 0.08rem;height: 0.08rem;background: #999;display: block;border-radius:50%;float: left;"></span>
+			</li>
+		</ul>
+		
+	</div>
+	
+	<div class="dahuo_shangpin" style="margin-bottom: 1rem;">
+		<ul style="margin-top: 0;">
+			<li>
+				<img src="../img/zhushoueee.png"  />
+				<div class="lingjian">
+					<img src="../img/biaoqian.png"  />
+					<span>717</span>
+				</div>
+			</li>
+			<li>
+				<p>
+					<span>美国</span>
+					<span>猪手</span>
+					 
+					<span>现货</span>
+				</p>
+			</li>
+			<li>
+				<p>
+					324500.00
+					<span>元/柜</span>
+				</p>
+			</li>
+		</ul>
+		<ul style="margin-top: 0;">
+			<li>
+				<img src="../img/zhushoudfssdf.png"  />
+				<div class="lingjian">
+					<img src="../img/biaoqian.png"  />
+					<span>202</span>
+				</div>
+			</li>
+			<li>
+				<p>
+					<span>德国</span>
+					<span>猪手</span>
+					 
+					<span>现货</span>
+				</p>
+			</li>
+			<li>
+				<p>
+					245700.00
+					<span>元/柜</span>
+				</p>
+			</li>
+		</ul>
+		
+		<ul>
+			<li>
+				<img src="../img/zhushouewr.png"  />
+				<div class="lingjian">
+					<img src="../img/biaoqian.png"  />
+					<span>202</span>
+				</div>
+			</li>
+			<li>
+				<p>
+					<span>德国</span>
+					<span>1F猪手</span>
+					 
+					<span>现货</span>
+				</p>
+			</li>
+			<li>
+				<p>
+					290600.00
+					<span>元/柜</span>
+				</p>
+			</li>
+		</ul>
+		
+		<ul>
+			<li>
+				<img src="../img/zhushouwerwe.png"  />
+				<div class="lingjian">
+					<img src="../img/biaoqian.png"  />
+					<span>717</span>
+				</div>
+			</li>
+			<li>
+				<p>
+					<span>美国</span>
+					<span>1F猪手</span>
+					 
+					<span>现货</span>
+				</p>
+			</li>
+			<li>
+				<p>
+					312800.00
+					<span>元/柜</span>
+				</p>
+			</li>
+		</ul>
+		
+		
+	</div>
+	
+	</body>
+		<script type="text/javascript" src="../js/buju.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<!--<script type="text/javascript" src="js/feedback.js" ></script>-->
+	<!--<script type="text/javascript" src="../js/script.js" ></script>-->
+	<script type="text/javascript" src="../js/tab.js" ></script>
+	<script type="text/javascript" src="../js/clickmodeo.js" ></script>
+	<script>
+		$(".dahuo_shangpin ul li:nth-child(1) img").on("click",function(){
+			
+//			window.location.href="shangPinXiangQingLiJIGouMai/shangPinXiangQing.html"
+mui.openWindow({
+				url:'shangPinXiangQingLiJIGouMai/shangPinXiangQing.html',
+				id:'shangPinXiangQingLiJIGouMai/shangPinXiangQing.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+			
+			
+			
+		})
+			$("#shousuotab  li:nth-child(3)").on("click",function(){
+		
+//	window.location.href="gouWuChe/gouwucheBianji.html"
+mui.openWindow({
+				url:'gouWuChe/gouwucheBianji.html',
+				id:'gouWuChe/gouwucheBianji.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		
+	})
+	
+//		$(".cainixianhuan").on("click",function(){
+//			
+//			
+//			
+//			
+////			$('.thebigheader li:nth-child(2)').text("猜你喜欢")
+//			window.location.href="../dahuosanjiCaiNixihuan.html"
+//		})
+	
+	$(".cainixianhuan").on("click",function(){
+			
+			
+			
+			
+//			$('.thebigheader li:nth-child(2)').text("猜你喜欢")
+//			window.location.href="../dahuosanjiCaiNixihuan.html"
+mui.openWindow({
+				url:'../dahuosanjiCaiNixihuan.html',
+				id:'../dahuosanjiCaiNixihuan.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+	
+	$(".thebigheader li:nth-child(3)").on("click",function(){
+//		window.location.href="gouWuChe/gouwucheBianji.html"
+mui.openWindow({
+				url:'gouWuChe/gouwucheBianji.html',
+				id:'gouWuChe/gouwucheBianji.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+	})
+	$(".zuijinrenxiao").on("click",function(){
+		
+//		window.location.href="../dahuosanjiZuijinrexiao.html"
+mui.openWindow({
+				url:'../dahuosanjiZuijinrexiao.html',
+				id:'../dahuosanjiZuijinrexiao.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		
+	})
+	$(".zuijinxinzneg").on("click",function(){
+		
+//		window.location.href="../dahuosanji.html"
+mui.openWindow({
+				url:'../dahuosanji.html',
+				id:'../dahuosanji.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		
+	})
+// $(".theleft").on("click",function(){
+//		window.location.href="fenleixinxi.html"
+//		
+//		
+//	})
+$(".thebigheader li:nth-child(3)").on("click",function(){
+//		window.location.href="gouWuChe/gouwucheBianji.html"
+mui.openWindow({
+				url:'gouWuChe/gouwucheBianji.html',
+				id:'gouWuChe/gouwucheBianji.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		
+		
+	})
+
+		$(".searches").on("click",function(){
+			
+			var theword=$(".thebigheader ul li:nth-child(2) input").val()
+			
+//			console.log(theword)
+ 	
+ 		if (theword=="猪手") {
+   			window.location.href="../dahuoerjicainixihuan.html"
+//mui.openWindow({
+//				url:'../dahuosanjiCaiNixihuan.html',
+//				id:'../dahuosanjiCaiNixihuan.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+ 		} else{
+// 			alert("服务器开小差了，咱们去看看其他商品吧！")
+// 			window.location.href="lingshouErji.html"
+ 		}
+			
+			
+		})
+		//下拉菜单
+	
+		$(".liebiaozuanfu").on("click",function(e){
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+		
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+	
+	//消息
+		$('.xialacaidan li:nth-child(3)').on('click',function(){
+			window.location.href="../html/xiaoxiliebiao.html";
+//mui.openWindow({
+//				url:'../html/xiaoxiliebiao.html',
+//				id:'../html/xiaoxiliebiao.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		//首页
+		$('.xialacaidan li:nth-child(2)').on('click',function(){
+			window.location.href ="../index.html";
+//mui.openWindow({
+//				url:'../index.html',
+//				id:'../index.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+	</script>
+	
+</html>

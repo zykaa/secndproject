@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>个人资料</title>
+		<style type="text/css">
+			.yonghujibie #sexx  img{
+				width: 0.93rem;
+				height:0.65rem;
+				float: left;
+				margin: 0 auto;
+			}
+			.yonghujibie #sexx  .boy img:nth-child(2) {
+				display: none;
+			}
+			.yonghujibie #sexx  .girl img:nth-child(2){
+				display: none;
+			}
+			.yonghujibie #sexx  .girl{
+				margin-left: 1.22rem;
+				float: left;
+				margin-top: 0.2rem;
+			}
+			.yonghujibie #sexx  .boy{
+					float: left;
+					margin-top: 0.2rem;
+			}
+			header .gerenzilaio{
+				background-size: 100% 100%;
+			}
+			.yonghujibie{
+				font-size: 0.24rem;
+				margin-top: -0.9rem;
+			}
+			.yonghujibie ul li{
+				position: relative;
+				border-bottom: 1px solid #e5e5e5;
+			}
+			.yonghujibie ul li .jibie{
+				display: inline-block;
+				width: 2rem;
+			}
+			.yonghujibie ul li input{
+				color: #999;
+				height: 1.02rem;
+				margin-top: 0;
+				font-size: 0.24rem;
+			}
+			.yonghujibie ul #sexx .boy{
+				margin-top: 0;
+				box-sizing: border-box;
+				height: 1.02rem;
+				display: none;
+			}
+			.yonghujibie ul #sexx .girl{
+				margin-top: 0;
+				box-sizing: border-box;
+				height: 1.02rem;
+				margin-left: 0;
+			}
+			.yonghujibie ul #sexx img{
+				margin: 0.2rem 0;
+			}
+
+			.yonghujibie ul li textarea{
+				box-sizing: border-box;
+				padding: 0.1rem 0;
+				font-size: 0.24rem;
+				margin-top: 0;
+				height: 1.02rem;
+				line-height: 0.4rem;
+			}
+			.yonghujibie ol{
+				display: inline-block;
+				list-style: none;
+				width: 3.2rem;
+				position: absolute;
+				top: 1.03rem;
+				color: #333;
+				z-index: 100;
+				border: 1px solid #e5e5e5;
+				background-color: #f5f5f5;
+				right: 0rem;
+			}
+			.yonghujibie ol li{
+				width: 90%;
+				margin: auto;
+				font-size: 0.28rem;
+				padding-left: 0.1rem;
+			}
+			.yonghujibie ul li input{
+				width: auto;
+			}
+			.yonghujibie li .ti{
+				font-size: 0.28rem;
+				margin-left: 1.5rem;
+				display: inline-block;
+			}
+			.yonghujibie em~img{
+				display: inline-block;
+				width: 0.21rem;
+				margin-left: 0.2rem;
+			}
+			.yonghujibie em,.yonghujibie em~img{
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+	<link rel="stylesheet" href="../../css/commen.css" />
+	<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../../css/ziyemain.css" />
+	<body>
+		<header style="background: url(../../img/asdsaasd.png);">
+			<div class="gerenzilaio">
+				<ul style="width:7.2rem">
+					<li style="width:2.4rem">
+						<i class="fa fa-angle-left mui-action-back" aria-hidden="true" style="margin-top:0.1rem;font-size:0.66rem;color: #FFFFFF;"></i>
+					</li>
+					<li style="font-size:0.34rem;width:2.4rem">个人资料</li>
+					<li class="bianji" style="font-size:0.3rem;width:2.4rem">编辑</li>
+				</ul>
+
+			</div>
+
+		</header>
+
+      <div class="geRenziLiao_touxiang" style="background-size:cover ;">
+      	 <ul style="width: 6rem;">
+      	 	<li style="width: 2rem;margin-left: 0;font-weight: 100;font-size: 0.28rem;text-align: right;">
+      	 		高亮
+      	 	</li>
+      	 	<li style="width: 2rem;">
+      	 		<img style="display: block;margin: auto;" src="../../img/meinv.png"  />
+      	 	</li>
+      	 	<li style="width: 2rem;">
+      	 		<img src="../../img/gerenziliao.png"  />
+      	 		<img src="../../img/qiye.png" />
+
+      	 	</li>
+      	 </ul>
+
+
+      </div>
+
+	<div class="yonghujibie">
+		<ul>
+			<li>
+				<p>
+					<span>当前级别</span>
+					<span class="jibie">个人用户</span>
+					<div class="ti" style="display: none;"><em>提升权限</em><img src="../../img/xialasanjiao.png" alt="" /></div>
+					<ol class="xiala" style="display: none;">
+						<li>提升为个体工商户</li>
+						<li>提升为企业用户</li>
+					</ol>
+				</p>
+			</li>
+			<li>
+				<p>
+					<span>真实姓名</span>
+					<input class="zhenshi" readonly="readonly" type="text" value="高亮" />
+				</p>
+			</li>
+			<li>
+				<p>
+					<span>昵称</span>
+					<input  readonly="readonly" type="text" value="Gao Liang" />
+				</p>
+			</li>
+			<li id="sexx">
+					<span>性别</span>
+					<div class="boy">
+						<img src="../../img/boy.png"  />
+						<!-- <img src="../../img/boyl.png" /> -->
+					</div>
+					<div class="girl">
+						<img src="../../img/girl.png"  />
+						<!-- <img src="../../img/girllook.png"  /> -->
+					</div>
+			</li>
+			<li>
+				<p>
+					<span>年龄</span>
+					<input  readonly="readonly" type="text" value="28" />
+				</p>
+
+			</li>
+			<li>
+				<p>
+					<span>出生日期</span>
+					<input class="Datee" readonly="readonly" type="date" value="1988-02-15" />
+				<!-- </p> -->
+
+			</li>
+			<li>
+				<p>
+					<span>手机号</span>
+					<input class="zhenshi" readonly="readonly" type="tel" value="15079867798" />
+				</p>
+
+			</li>
+			<li>
+				<p>
+					<span>所在地</span>
+					<textarea   readonly="readonly" type="text" placeholder="北京市 朝阳区 八里庄街道  东区国际 5号楼4单元404室 "></textarea>
+				</p>
+
+			</li>
+			<li>
+				<p>
+					<span>身份证号</span>
+					<input class="zhenshi" readonly="readonly" type="text" value="610454567890345678#" />
+				</p>
+
+			</li>
+		</ul>
+
+
+	</div>
+
+
+	</body>
+	<script type="text/javascript" src="../../js/mui.js" ></script>
+	<script type="text/javascript" src="../../js/buju.js" ></script>
+	<script type="text/javascript" src="../../js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript" src="../../js/tab.js" ></script>
+	<script type="text/javascript" src="../../js/clickmodeo.js" ></script>
+	<script type="text/javascript">
+		$(".xiala li:nth-child(1)").on("click",function(){
+//			window.location.href="../geTiGongShangHuDengJi.html"
+			mui.openWindow({
+				url:'../geTiGongShangHuDengJi.html',
+				id:'../geTiGongShangHuDengJi.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+		$(".xiala li:nth-child(2)").on("click",function(){
+//			window.location.href="../qiyeyonghudengji.html"
+			mui.openWindow({
+				url:'../qiyeyonghudengji.html',
+				id:'../qiyeyonghudengji.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+	
+	
+	
+		$(function(){
+			$(".gerenzilaio .bianji").click(function(){
+				var zhuangtai=$(this).text();
+				if (zhuangtai=="编辑"){
+					$(this).html("编辑");
+//					$(".yonghujibie li .girl").hide();
+					$(".yonghujibie .ti").hide();
+					console.log($("#sexx .boy img").attr("src"));
+					if($("#sexx .boy img").attr("src")=="../../img/boy.png"){
+						console.log($("#sexx .boy img").attr("src"));
+//						$("#sexx .boy img").attr("src","../../img/boy.png")
+						$("#sexx .boy").hide();
+						$("#sexx .girl").css("margin-left","0");
+					}
+					else if($("#sexx .boy img").attr("src")=="../../img/boyl.png"){
+						console.log($("#sexx .boy img").attr("src"));
+						$("#sexx .boy").show();
+						$("#sexx .girl").hide();
+					}
+				}else if(zhuangtai =="保存"){
+//					$(this).html("编辑");
+					$(".yonghujibie li .boy").show();
+					$(".yonghujibie li .girl").show();
+					$("#sexx .girl").css("margin-left","1.22rem");
+					$(".yonghujibie .ti").show();
+				}
+
+			})
+			$(".yonghujibie .ti").click(function(){
+				$(".yonghujibie li ol").slideToggle(500);
+			})
+			$(".yonghujibie li ol li").eq(0).click(function(){
+//				$(".jibie").html("个体工商户");
+				$(".yonghujibie li ol").hide();
+			})
+			$(".yonghujibie li ol li").eq(1).click(function(){
+//				$(".jibie").html("企业用户");
+				$(".yonghujibie li ol").hide();
+			})
+			// 男女
+			$("#sexx .boy img").click(function(){
+				$(this).attr("src","../../img/boyl.png");
+				$("#sexx .girl img").attr("src","../../img/girlkong.png");
+			})
+			$("#sexx .girl img").eq(0).click(function(){
+				$(this).attr("src","../../img/girl.png");
+				$("#sexx .boy img").attr("src","../../img/boy.png");
+			})
+		})
+	</script>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		
+		<title>付款详情</title>
+		<link rel="stylesheet" type="text/css" href="../css/commen.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/fukuan.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"/>
+		<style type="text/css">
+		*{
+			font-family: "微软雅黑";
+		}
+			.hua{
+				
+			position:fixed;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			z-index:1700;
+			padding:0;
+			}
+			.hua img{
+				display: inline-block;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<!--01--> 
+		
+		
+		<!--<img src="../img/cheshi.jpg" style="display: block;width: 100%;position: fixed;top:0;height:100%;z-index: 100000000;"/>-->
+		
+		<header class="thebigheader"  >
+			<ul style=" width: 7.5rem;">
+				<li >
+					<i class="fa fa-angle-left mui-action-back " aria-hidden="true" style="font-size: 0.66rem;text-align: center;"></i>
+				</li>
+				
+				<li style="text-align: center;width: 5.5rem;">
+					付款详情
+				</li>	
+			<li class="liebiaozuanfu" style="text-align: center;line-height: 0.6rem; font-size: 0.6rem; color: #ea0607;font-family: '微软雅黑';float: right;margin-right: 0.2rem;">...</li>
+			</ul>
+			
+		</header>
+	<ul class="xialacaidan" style="display: none; z-index: 1000;" >
+				<div class="xiaojiao"></div>
+				<li><img src="../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+				<li><img src="../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+				
+				<li><img src="../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+				<li><img src="../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+			</ul>
+	
+		<!--02-->
+		<div id="zhifumoney">
+			<a>支付金额:<i>21000.00元</i></a>
+			<div id="xiangxi">
+				<ul>
+					<li>
+						<img style="width: 0.3rem;margin-right: 0.1rem;" src="../img/money/Page 1.png"/>&nbsp;
+						<i>商品金额</i>
+						<i class="lt">10000.00元</i>
+					</li>
+					<li>
+						<img style="width: 0.4rem"  src="../img/money/qingguanfei.png"/>&nbsp;
+						<i>清关费</i>
+						<i class="lt">5000.00元</i>
+					</li>
+					<li>
+						<img style="width: 0.4rem" src="../img/money/wuliufei.png"/>&nbsp;
+						<i>物流费</i>
+						<i class="lt">6000.00元</i>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<hr />	
+		<a class="yue" style="">
+			<em class="change">信用付</em>可用余额:
+			<em class="change1" style="color: #FF0103;">43000.00元</em>
+		</a>
+		<hr class="hhh" />
+		<b><i class="xuanzhe">选择支付方式</i></b>
+		<hr id="hr1"/>
+		<hr id="hr2" />
+		<div class="moneyfangshi">
+			<i class="image">
+				<img style="width: 0.6rem;" src="../img/money/xinyongfu.png"/>
+				<i class="ziti">信用支付</i>				
+				<img style="width: 0.6rem;" class="lt box" src="../img/money/okokok.png"/>
+			</i>		
+			<hr />
+			<i class="image">
+				<img style="width: 0.6rem;" src="../img/money/zhanghuyue.png"/>
+				<i class="ziti">账户余额</i>	
+				<img style="width: 0.6rem;" class="lt box" src="../img/money/nonono.png"/>
+			</i>
+			<hr />
+			<i class="image">
+				<img style="width: 0.6rem;" src="../img/money/zhifubao.png"/>
+				<i class="ziti">支付宝</i>
+				<img style="width: 0.6rem;" class="lt box" src="../img/money/nonono.png"/>
+			</i>
+			<hr />
+			<i class="image">
+				<img style="width: 0.6rem;" src="../img/money/xianxiazhifu.png"/>
+				<i class="ziti">线下支付</i>
+				<img style="width: 0.6rem;" class="lt box" src="../img/money/nonono.png"/>
+			</i>
+		</div>
+		<hr />
+		<div id="shifujine" style="text-align: center;font-size: 0.30rem;margin-top: 0.5rem;margin-bottom: 1.5rem;">		
+			<i style="font-size: 0.30rem;">实付金额:</i>
+			<i style="color: #FF0103;font-size: 0.30rem;">21000.00元</i>
+		</div>
+		
+		<div id="bottom" class="bottom">
+			<i>确认支付</i>
+		</div>
+
+	
+		<div id="donghua" class="donghuayi hua" style="display: none;">
+			<img class="kaishiyi" src="../img/dongzhifupad.gif" style="height: 100%;"/>
+		</div>
+		<div class="donghuaer hua" style="display: none;">
+			<img class="kaishier" src="../img/erererpad.gif" />
+		</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<script type="text/javascript" src="../js/buju.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript" src="../js/tab.js" ></script>
+	<script type="text/javascript" src="../js/clickmodeo.js" ></script>
+</html>
+<script type="text/javascript">
+
+
+	$(".image").each(function(index,val){
+			$(val).click(function(){
+				if(index==0){
+					$(".yue").show(500);
+					$(".hhh").show(500);
+					$(".change").text("信用付");
+					$(".change1").text("￥43000.00");	
+					$(".bottom").on("click",function(){
+						$(".donghuayi").css({"display":"block"})
+						setTimeout("$('.kaishiyi').attr('src','../img/dongjiezipad.jpg')",12000)
+						
+					})
+				}
+				else if(index==1){
+					$(".yue").show(500);
+					$(".hhh").show(500);
+					$(".change").text("账户");
+					$(".change1").text("￥33000.00");
+					$(".bottom").on("click",function(){
+						$(".donghuaer").css({"display":"block"})
+						setTimeout("$('.kaishier').attr('src','../img/dongjiezipad.jpg')",9000)
+					})
+				}
+				else if(index==2){
+					$(".yue").hide(1000);
+					$(".hhh").hide(500);
+					$(".bottom").on("click",function(){
+						setTimeout("window.location.href='../html/wodedingdan/wodedingdanDaiShouhuo.html'",0);
+					})
+				}
+				else if(index==3){
+					$(".yue").hide(1000);
+					$(".hhh").hide(500);
+					$(".bottom").on("click",function(){
+						setTimeout("window.location.href='../html/wodedingdan/wodedingdanDaiShouhuo.html'",0);
+					})
+				}
+				$(this).children().filter(".box").attr("src","../img/money/okokok.png");
+				$(this).siblings().children().filter(".box").attr("src","../img/money/nonono.png");		
+			})
+		})
+	
+		$(".bottom").on("click",function(){
+						$(".donghuayi").css({"display":"block"})
+						setTimeout("$('.kaishiyi').attr('src','../img/dongjiezipad.jpg')",12000)
+					})
+	
+
+		$(".donghuayi").on("click",function(){
+//			window.location.href='../html/wodedingdan/wodedingdanDaiShouhuo.html'
+mui.openWindow({
+				url:'../html/wodedingdan/wodedingdanDaiShouhuo.html',
+				id:'../html/wodedingdan/wodedingdanDaiShouhuo.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+		$(".donghuaer").on("click",function(){
+//			window.location.href='../html/wodedingdan/wodedingdanDaiShouhuo.html'
+mui.openWindow({
+				url:'../html/wodedingdan/wodedingdanDaiShouhuo.html',
+				id:'../html/wodedingdan/wodedingdanDaiShouhuo.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+		
+	//下拉菜单
+	
+		$(".liebiaozuanfu").on("click",function(e){
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+		
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+	
+	//消息
+		$('.xialacaidan li:nth-child(3)').on('click',function(){
+			window.location.href="../html/xiaoxiliebiao.html";
+//mui.openWindow({
+//				url:'../html/xiaoxiliebiao.html',
+//				id:'../html/xiaoxiliebiao.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		//首页
+		$('.xialacaidan li:nth-child(2)').on('click',function(){
+			window.location.href ="../index.html";
+//mui.openWindow({
+//				url:'../index.html',
+//				id:'../index.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+
+
+
+		
+</script>

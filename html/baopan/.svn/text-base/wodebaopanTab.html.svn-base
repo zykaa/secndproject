@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>我的报盘</title>
+	</head>
+	
+	<link rel="stylesheet" href="../../css/commen.css" />
+	<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../../css/index.css" />
+	<link rel="stylesheet" href="../../css/ziyemain.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/baopanex.css"/>
+	<style>
+		.wodedingdanquanbuTab .wodedingdanlist li{
+			width: 1.09rem;
+			margin-right: 0.8rem;
+		}
+		.wodebaopanbg .guige{
+			    width: 4rem;
+			    height: 0.65rem;
+			    background: #E5E5E5;
+			    font-size: 0.24rem;
+			    color: #999999;
+			    float: left;
+			    text-indent: 0.3rem;
+			    outline: none;
+			    border: none;
+			    /*background: url(../../img/xialasanjiao.png) no-repeat right;*/
+			    background-size:0.2rem;
+		}
+		.theThirdPage{
+				-webkit-overflow-scrolling: touch;
+				overflow: auto;
+				height: 10.5rem;  
+			}
+	</style>
+	<body>
+		<header class="dingdanquanbu" style="position: fixed;z-index: 9999;background: #f8f8f8;">
+		<ul class="wodedingdanheader yincang" style=" width: 7.5rem;">
+			<li style="margin-left: 0.3rem;">
+				<i class="fa fa-angle-left mui-action-back" aria-hidden="true" style="font-size: 0.66rem;"></i>
+			</li>
+			<li style="text-align: center;width: 5.4rem;">
+				我的报盘  
+			</li>
+			<!--<li style="line-height: 0.8rem;font-size: 0.24rem;margin-left: 0.3rem;">
+				<img src="../../img/search.png"  />
+			</li>-->
+			<li class="liebiaozuanfu" style="text-align: center;line-height: 0.6rem; font-size: 0.6rem; color: #ea0607;font-family: '微软雅黑';float: right;margin-right: 0.3rem;">...</li>
+			</ul>
+
+
+	
+		<!--<div class="wodedingdanSearch">
+			<input type="text"  placeholder="请输入您要搜索的商品"/>
+			<span>取消</span>
+		</div>
+		<div class="wodedingdanSousuo"></div>-->
+
+		</header>
+              <ul class="xialacaidan" style="display: none;" >
+				<div class="xiaojiao"></div>
+				<li><img src="../../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+				<li><img src="../../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+				
+				<li><img src="../../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+				<li><img src="../../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+			</ul>
+<!--banner-->
+<div class="theThirdPage">
+	
+
+	<div class="wodedingdanquanbuTab" style="border-bottom: 0.8px solid #E5E5E5;margin-top: 0.88rem;float: left;">
+		<ul class="wodedingdanlist" style="border-bottom: none;font-size: 0.28rem;">
+			<!--<li style="width:1.5rem;line-height: 0.76rem;margin-right: 0.11rem;">DDP<span style="font-size: 0.2rem;">(出厂价)</span></li>
+			<li style="width: 1.5rem;line-height: 0.76rem;margin-right: 0.11rem;">CIF <span style="font-size: 0.2rem;">(现货价)</span></li>
+			<li style="width: 1.5rem;line-height: 0.76rem;margin-right: 0.11rem;">FOB <span style="font-size: 0.2rem;">(到岸价)</span></li>
+			<li style="width: 2rem;line-height: 0.76rem;margin-right: 0;">EX words <span style="font-size: 0.2rem;">(离岸价)</span></li>-->
+			<li style="height: 0.76rem;margin-left:1rem;margin-right:0.9rem;">
+			<dl style="text-align: center;">
+				<dt style="color: #333;font-size: 0.28rem;line-height:0.6rem;height: 0rem;">DDP</dt>
+				<dd style="color: #333;font-size: 0.2rem;line-height:1.1rem;">(现货价)</dd>
+			</dl>
+			</li>
+			<li style="height: 0.76rem;margin-right: 1rem;">
+			<dl style="text-align: center;">
+				<dt style="color: #333;font-size: 0.28rem;line-height:0.6rem;height: 0rem;">CIF</dt>
+				<dd style="color: #333;font-size: 0.2rem;line-height:1.1rem;">(到岸价)</dd>
+			</dl>
+			</li>
+			<li style="height: 0.76rem;margin-right: 0rem;">
+			<dl style="text-align: center;">
+				<dt style="color: #333;font-size: 0.28rem;line-height:0.6rem;height: 0rem;">FOB</dt>
+				<dd style="color: #333;font-size: 0.2rem;line-height:1.1rem;">(离岸价)</dd>
+			</dl>
+			</li>
+			<!--<li style="height: 0.76rem;width: 1.5rem;margin-right:0;float: right;">
+			<dl style="text-align: center;">
+				<dt style="color: #333;font-size: 0.28rem;line-height:0.6rem;height: 0rem;">EX works</dt>
+				<dd style="color: #333;font-size: 0.2rem;line-height:1.1rem;">(离岸价)</dd>
+			</dl>
+			</li>-->
+		</ul>
+	</div>
+	<!--DDP-->
+	<div  class="wodebaopanDDP" style="margin-top: 0;">
+			<ul class="wodebaopanList">
+				<li style="position: relative;">
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>原产地</p>
+					<div class="wodebaopanbg searchCity"  style="width: 5.55rem;border:0.8px solid #e5e5e5;background: #F5F5F5;border-radius:0.03rem;">
+						<input type="text" id="inputCity" placeholder="美国" style="text-indent: 0.2rem;background: #F5F5F5;outline: none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p class="searchCity" style="float: right;margin-right: 0.2rem;line-height: 0.7rem;height: 0.7rem;">
+							<img src="../../img/dingwei.png" style="width: 0.16rem;height:0.2rem;margin-top: -0.08rem;"/>
+							<span  style="font-size: 0.24rem;">查找</span>
+						</p>
+					</div>
+					<li class="birCity" style="position: absolute;display: none;z-index: 999;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.05rem 0.05rem;">美国</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">加拿大</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">巴西</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">智利</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">法国</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">丹麦</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">爱尔兰</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">意大利</dt>
+					</dl>
+				</li>
+				</li>
+					
+				<li style="position: relative;">
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>厂号</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;border-radius:0.03rem;">
+						<input type="text" id="searchChanghao" placeholder="717M" style="text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p class="searchChanghao" style="float: right;margin-right: 0.2rem;line-height: 0.7rem;height: 0.7rem;">
+							<span style="font-size: 0.24rem;">查找</span>
+						</p>
+					</div>
+					<li class="changhao" style="position: absolute;display: none;z-index: 997;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.05rem 0.05rem;">717M</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">147C</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">SIF1001</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">06-17</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">29-027-001</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">865</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">EC332</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">169L</dt>
+						
+					</dl>
+				</li>
+				</li>
+				<li style="position: relative;">
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>品名</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;border-radius:0.03rem;">
+						<input type="text" id="searchPinming" placeholder="猪手" style="text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p class="searchPinming" style="float: right;margin-right: 0.2rem;line-height: 0.7rem;height: 0.7rem;">
+							<span style="font-size: 0.24rem;">查找</span>
+						</p>
+					</div>
+					<li class="pinming" style="position: absolute;display: none;z-index: 996;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪手</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪头</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪心</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪皮</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪肋骨</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪腰</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪大肠</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪尾巴</dt>
+							
+						</dl>
+					</li>
+				</li> 
+				<li style="padding-bottom: 0.3rem;position: relative;">
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;"></span>品牌</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;border-radius:0.03rem;">
+						<input type="text" id="searchPinpai"  placeholder="鲜达" style="text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;">
+						<p class="searchPinpai" style="height: 0.7rem;float: right;margin-right: 0.2rem;height:0;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;">
+							<span style="font-size: 0.24rem;line-height: 0;">查找</span>
+						</p>
+					</div>
+					<li class="pinpai" style="position: absolute;display: none;z-index: 99;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.53rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.05rem 0.05rem;">江泉</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">得利斯</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">龙大</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">鹏程</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">鲜达</dt>
+						</dl>
+					</li>
+				</li>
+				<hr style="width: 7.2rem;border:none;border-bottom: 0.8px solid #e5e5e5;"/>
+				<li style="position: relative;">
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>国家</p>
+					<div class="wodebaopanbg" style="width: 2rem;border: 0.8px solid #e5e5e5;background: #f5f5f5;position: relative;border-radius:0.03rem;text-indent: 0.2rem;">
+						<input type="text" id="cityCoutray"  placeholder="中国" style="width:1.5rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;">
+						<span style="top:0.28rem;right:0.23rem;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display:block;position: absolute;"></span>
+					</div>
+					<p style="line-height: 0.71rem;width: 0.96rem;float: left;text-align: center;color: #333;font-size: 0.28rem;">城市</p>
+					<div class="wodebaopanbg" style="width: 2.55rem;border: 0.8px solid #e5e5e5;background: #f5f5f5;border-radius:0.03rem;">
+						<input type="text" id="detialsCity" placeholder="上海" style="width: 1.4rem;background: #f5f5f5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="float: right;margin-right: 0.19rem;line-height: 0.7rem;">
+							<img src="../../img/dingwei.png" style="width: 0.16rem;height:0.2rem;margin-top: -0.08rem;"/>
+							<span style="font-size: 0.24rem;">查找</span>
+						</p>
+					</div>
+					<li class="guojia" style="position: absolute;display:none;z-index: 999;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.6rem;position: absolute;background: #f5f5f5;color:#757575;left: 1.3rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.05rem 0.05rem;">中国</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">意大利</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">法国</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">英国</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">俄罗斯</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">美国</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">德国</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">巴西</dt>
+						</dl>
+					</li>
+					<li class="chengshi" style="position: absolute;display:none;z-index: 999;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.995rem;position: absolute;background: #f5f5f5;color:#757575;right: 0rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.05rem 0.05rem;">上海</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">北京</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">杭州</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">武汉</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">郑州</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">长沙</dt>
+						</dl>
+					</li>
+				</li>
+				<li style="margin-bottom: 1.7rem;">
+					<p style="margin-top: 0.04rem;">接货地址</p>
+					<textarea name="" rows="" cols="" style="width: 5.55rem;height:2rem;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;"></textarea>
+				</li>
+				<li style="position: relative;">
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>库存</p>
+					<div class="wodebaopanbg "  style="line-height: 0.68rem;width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="number" id="kucunInput" value="200" style="width:4.8rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;" >
+							<span class="kucunspan" style="font-size: 0.24rem;color: #333333;display: inline-block;">柜</span><span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>		
+						</p>
+					</div>
+					<li class="kucun" style="position: absolute;display:none;z-index: 996;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">柜</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">吨</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;">件</dt>
+					</dl>
+				</li>
+				</li>
+				<li style="position: relative;">
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>起售数量</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="number" id="qishouInput" value="10" style="width:4.8rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;">
+							<span class="qishouspan" style="font-size: 0.24rem;color: #333333;display: inline-block;">柜</span><span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>		
+						</p>
+					</div>
+					<li class="qishou" style="position: absolute;display:none;z-index: 996;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">柜</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">吨</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;">件</dt>
+					</dl>
+				</li>
+				</li>
+				<li>
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>单价</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="number" placeholder="264000.00" class="inputSpr" style="width:4.2rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;">
+							<span class="danjiainput" style="font-size: 0.24rem;color: #333333;display: inline-block;">元/每<span class="danjiaspan">柜</span></span><span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>		
+						</p>
+					</div>
+					<li class="danjia" style="position: absolute;display:none;z-index: 996;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">柜</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">吨</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;">件</dt>
+					</dl>
+				</li>
+				</li>
+				<li class="SPR" style="width: 5.26rem;float:right;border-radius:0.03rem;line-height: 0.3rem;padding: 0.1rem 0.1rem 0.3rem 0.2rem;color: #757575;border:1px solid #ea0406;display: none;font-size: 0.2rem;">SPR推荐价:该价格为根据系统中海量的历史成交记录,通过大数据和领先的机器人
+					预测算法为您推荐的有利成交价格,该价格仅供参考。
+				</li>
+				<li style="float: left;">
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>总货量</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="number" placeholder="20" class="zongshuliang" style="width:5.1rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;">
+							<span style="font-size: 0.24rem;color: #333333;display: inline-block;">吨</span>	
+						</p>
+					</div>
+				</li>
+				<li style="padding-bottom: 0.3rem;float: left;position: relative;">
+					<p><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>规格</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="number" id="guigeInput" placeholder="259"style="width:4.2rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;">
+							<span style="font-size: 0.24rem;color: #333333;display: inline-block;">kg/每件</span><span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>		
+						</p>
+					</div>
+					<li class="guige" style="position: absolute;display:none;z-index: 996;margin-top: 2rem;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">270</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;">300</dt>
+					</dl>
+				</li>
+				<hr style="width: 7.2rem;border:none;border-bottom: 0.8px solid #e5e5e5;"/>
+				<li>
+					<p style="margin-top: 0.04rem;">到港期</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;border-radius:0.03rem;">
+						<input type="text" placeholder="2016-09-11" style="background: #F5F5F5;text-indent: 0.2rem;width: 4.23rem;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;float: right;margin-right: 0.2rem;">
+							<!--<span style="font-size: 0.24rem;">文字标签</span>-->
+						</p>
+					</div>
+				</li>
+				
+				<li>
+					<p style="margin-top: 0.04rem">预付款</p>
+					
+					<div class="wodebaopanbg" style="width: 1.06rem;border: 0.8px solid #e5e5e5;background: #f5f5f5;position: relative;border-radius:0.03rem;text-indent: 0.2rem;">
+						<input type="text" id="yufuInput"  value="全款" style="width:0.9rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;" readonly>
+						<span style="top:0.28rem;right:0.18rem;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display:block;position: absolute;"></span>
+					</div>
+					
+					<div class="wodebaopanbg" style="position:relative;width: 4.22rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;margin-left: 0.24rem;border-radius:0.03rem;">
+						 
+						<input type="number" class="yufujiage" value="" style="-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;width:2.4rem;text-indent: 0.2rem;background: #F5F5F5;" readonly="readonly"/>
+						<p style="line-height: 0.7rem;">
+							<span style="font-size: 0.24rem;color: #333333;display: inline-block;margin-left: 0.45rem;">元 (人民币)</span><!--<span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>-->		
+						</p>
+						<!--<span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>-->
+					</div>
+					<li class="yufu" style="position: absolute;display:none;z-index: 996;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.25rem;position: absolute;background: #f5f5f5;color:#757575;left: 1.3rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">全款</dt>
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">20%</dt>
+							<dt style="display: block;padding:0.2rem 0.05rem;">50%</dt>
+						</dl>
+					</li>
+				
+				</li>
+				<li class="weikuan_zhifu" style="display:none;padding-bottom: 0;float: left;position: relative;">
+					<p style="width:2.65rem">支付尾款期限<span style="color: #999;font-size: 0.2rem;">(天)</span></p>
+					<div class="wodebaopanbg"  style="width: 4.21rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="text" name="" id="weikuanInput" value="" placeholder="10" style="-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;background: #F5F5F5;width: 4rem;text-indent: 0.2rem;font-size: 0.24rem;"/>
+						<span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>
+					</div>
+					<li class="weikuan" style="position: absolute;display:none;z-index: 996;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.3rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:0.75rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">5</dt>
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">10</dt>
+							<dt style="display: block;padding: 0.2rem 0.05rem;">15</dt>
+						</dl>                                                                                                                                                                                                                                                             
+					</li>
+				</li>
+				<li style="padding-bottom: 0.4rem;float: left;border-bottom: 0.01rem solid #E5E5E5;position: relative;">
+					<p style="width:2.65rem">商品展示持续时间<span style="color: #999;font-size: 0.2rem;">(天)</span></p>
+					<div class="wodebaopanbg"  style="width: 4.21rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="text" name="" id="timeInput" value="" placeholder="10" style="-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;background: #F5F5F5;width: 4rem;text-indent: 0.2rem;font-size: 0.24rem;"/>
+						<span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>
+					</div>
+					<li class="showTime" style="position: absolute;display:none;z-index: 996;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.3rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:0.77rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">10</dt>
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">20</dt>
+							<dt style="display: block;padding: 0.2rem 0.05rem;">30</dt>
+						</dl>
+					</li>
+				</li>
+			</ul>
+			<hr style="width: 7.2rem;border:none;border-bottom: 0.8px solid #e5e5e5;margin-right: 0;"/>
+			<div class="shangchuan_zhaopian">
+				<ul>
+					<li style="border-bottom: 1px solid #E5E5E5;">
+						<p>
+							添加商品照片
+						</p>
+						<p>
+							
+							<img src="../../img/photo.png"  />
+							<span style="display: block;margin-left: -0.03rem;">点击上传</span>
+							
+						</p>
+						
+					</li>
+					<li style="border-bottom: 1px solid #E5E5E5;">
+						<p style="width:6.9rem;height:0.8rem">
+							<span>检验检疫许可证</span>
+							<!--<span>
+								(如果商品上架需要上传该许可证)
+							</span>-->
+						</p>
+						<p style="height: 0;padding-bottom: 1.5rem;">
+							<img src="../../img/photo.png"/>
+							<span style="display: block;margin-left: -0.03rem;">点击上传</span>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div class="baopanxieyi">
+				<div class="baopan_xieyi">
+					<img src="../../img/shouhoudizhixuanze.png" />
+					<img src="../../img/shouhuodizhiyixuanze.png"  style="display: none;"/>
+					<p style="margin-left: 0.1rem;" class="xieyip">我已阅读并同意<span>《报盘协议》</span></p>
+				</div>
+				<p class="tijiaobiaodian" style="border:none; color: #fff; background: #e5e5e5;">提交</p>
+			</div>
+			<div class="xieyitupianbg" style="position: fixed; left: 0; top: 0.86rem; bottom: 0; right: 0; background: #000; opacity: 0.3; display: none; z-index: 100;"></div>
+			<div class="xieyitupian" style="display: none; z-index: 2000;">
+				<img src="../../img/bpxieyi.png" style=" position: fixed; width: 4.9rem; height: 7.2rem; left: 0rem; top: 0rem; bottom: 0; right: 0; margin: auto; z-index: 10000;"/>
+				<!--<img src="../../img/chaxieyi.png" style="position: absolute; left: 5rem; top: 0.3rem; width: 0.3rem; height: 0.3rem; z-index: 202;"/>-->
+			</div>
+		</div>
+	
+	<!--CIF-->
+	<div style="display:none;margin-top: 0;" class="wodebaopanCIF">
+			<ul class="wodebaopanList">
+				<li style="position: relative;">
+					<!--<p style="margin-top: 0.04rem;">原产地</p>-->
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>原产地</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border:0.8px solid #e5e5e5;background: #F5F5F5;border-radius:0.03rem;">
+						<input type="text" id="inputCitycif" placeholder="美国" style="text-indent: 0.2rem;background: #F5F5F5;outline: none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p class="searchCity" style="float: right;margin-right: 0.2rem;line-height: 0.7rem;height: 0.7rem;">
+							<img src="../../img/dingwei.png" style="width: 0.16rem;height:0.2rem;margin-top: -0.08rem;"/>
+							<span  style="font-size: 0.24rem;">查找</span>
+						</p>
+					</div>
+					<li class="birCitycif" style="position: absolute;display: none;z-index: 999;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.05rem 0.05rem;">美国</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">加拿大</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">巴西</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">智利</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">法国</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">丹麦</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">爱尔兰</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">意大利</dt>
+					</dl>
+				</li>
+				</li>
+					
+				<li style="position: relative;">
+					<!--<p style="margin-top: 0.04rem;">厂号</p>-->
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>厂号</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;border-radius:0.03rem;">
+						<input type="text" id="searchChanghaocif" placeholder="717M" style="text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p class="searchChanghao" style="float: right;margin-right: 0.2rem;line-height: 0.7rem;height: 0.7rem;">
+							<span style="font-size: 0.24rem;">查找</span>
+						</p>
+					</div>
+					<li class="changhaocif" style="position: absolute;display: none;z-index: 997;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.05rem 0.05rem;">717M</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">147C</dt>
+						<dt style="display: block;padding: 0.05rem0 0.05rem;">SIF1001</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">06-17</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">29-027-001</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">865</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">EC332</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">169L</dt>
+						
+					</dl>
+				</li>
+				</li>
+				<li style="position: relative;">
+					<!--<p style="margin-top: 0.04rem;">品名</p>-->
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>品名</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;border-radius:0.03rem;">
+						<input type="text" id="searchPinmingcif" placeholder="猪手" style="text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p class="searchPinming" style="float: right;margin-right: 0.2rem;line-height: 0.7rem;height: 0.7rem;">
+							<span style="font-size: 0.24rem;">查找</span>
+						</p>
+					</div>
+					<li class="pinmingcif" style="position: absolute;display: none;z-index: 996;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪手</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪头</dt>
+							<dt style="display: block;padding: 0.05rem0 0.05rem;">猪心</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪皮</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪肋骨</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪腰</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪大肠</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪尾巴</dt>
+							
+						</dl>
+					</li>
+				</li>
+				<li style="padding-bottom: 0.3rem;position: relative;">
+					<p style="margin-top: 0.04rem;">品牌</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;border-radius:0.03rem;">
+						<input type="text" id="searchPinpaicif"  placeholder="鲜达" style="text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;">
+						<p class="searchPinpai" style="height: 0.7rem;float: right;margin-right: 0.2rem;height:0;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;">
+							<span style="font-size: 0.24rem;line-height: 0;">查找</span>
+						</p>
+					</div>
+					<li class="pinpaicif" style="position: absolute;display: none;z-index: 99;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.53rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.05rem 0.05rem;">江泉</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">得利斯</dt>
+							<dt style="display: block;padding: 0.05rem0 0.05rem;">龙大</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">鹏程</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">鲜达</dt>
+						</dl>
+					</li>
+				</li>
+				<hr style="width: 7.2rem;border:none;border-bottom: 0.8px solid #e5e5e5;"/>
+				<li style="position: relative;">
+					<!--<p style="margin-top: 0.04rem;">国家</p>-->
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>国家</p>
+					<div class="wodebaopanbg" style="width: 2rem;border: 0.8px solid #e5e5e5;background: #f5f5f5;position: relative;border-radius:0.03rem;text-indent: 0.2rem;">
+						<input type="text" id="cityCoutraycif"  placeholder="中国" style="width:1.5rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;">
+						<span style="top:0.28rem;right:0.23rem;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display:block;position: absolute;"></span>
+					</div>
+					<p style="line-height: 0.71rem;width: 0.96rem;float: left;text-align: center;color: #333;font-size: 0.28rem;">城市</p>
+					<div class="wodebaopanbg" style="width: 2.55rem;border: 0.8px solid #e5e5e5;background: #f5f5f5;border-radius:0.03rem;">
+						<input type="text" id="detialsCitycif" placeholder="上海" style="width: 1.4rem;background: #f5f5f5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="float: right;margin-right: 0.19rem;line-height: 0.7rem;">
+							<img src="../../img/dingwei.png" style="width: 0.16rem;height:0.2rem;margin-top: -0.08rem;"/>
+							<span style="font-size: 0.24rem;">查找</span>
+						</p>
+					</div>
+					<li class="guojiacif" style="position: absolute;display:none;z-index: 999;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.6rem;position: absolute;background: #f5f5f5;color:#757575;left: 1.3rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.05rem 0.05rem;">中国</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">意大利</dt>
+							<dt style="display: block;padding: 0.05rem0 0.05rem;">法国</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">英国</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">俄罗斯</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">美国</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">德国</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">巴西</dt>
+						</dl>
+					</li>
+					<li class="chengshicif" style="position: absolute;display:none;z-index: 999;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.995rem;position: absolute;background: #f5f5f5;color:#757575;right: 0rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.05rem 0.05rem;">上海</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">北京</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">杭州</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">武汉</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">郑州</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">长沙</dt>
+						</dl>
+					</li>
+				</li>
+				<li style="margin-bottom: 1.7rem;">
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;"></span>接货地址</p>
+					<textarea name="" rows="" cols="" style="width: 5.55rem;height:2rem;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;"></textarea>
+				</li>
+				<li style="position: relative;">
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>库存</p>
+					<div class="wodebaopanbg "  style="line-height: 0.68rem;width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="number" id="kucunInputcif" value="200" style="width:4.8rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;" >
+							<span class="kucunspancif" style="font-size: 0.24rem;color: #333333;display: inline-block;">柜</span><span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>		
+						</p>
+					</div>
+					<li class="kucuncif" style="position: absolute;display:none;z-index: 996;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">柜</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">吨</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;">件</dt>
+					</dl>
+				</li>
+				</li>
+				<li style="position: relative;">
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>起售数量</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="number" id="qishouInputcif" value="10" style="width:4.8rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;">
+							<span class="qishouspancif" style="font-size: 0.24rem;color: #333333;display: inline-block;">柜</span><span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>		
+						</p>
+					</div>
+					<li class="qishoucif" style="position: absolute;display:none;z-index: 996;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">柜</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">吨</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;">件</dt>
+					</dl>
+				</li>
+				</li>
+				<li>
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>单价</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="number" placeholder="264000.00" id="danjiaInputcif"   class="inputSprcif" style="width:4.2rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;">
+							<span class="danjiainputcif" style="font-size: 0.24rem;color: #333333;display: inline-block;">元/每<span class="danjiaspancif">柜</span></span><span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>		
+						</p>
+					</div>
+					<li class="danjiacif" style="position: absolute;display:none;z-index: 996;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">柜</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">吨</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;">件</dt>
+					</dl>
+				</li>
+				</li>
+				<li class="SPRcif" style="width: 5.26rem;float:right;border-radius:0.03rem;line-height: 0.3rem;padding: 0.1rem 0.1rem 0.3rem 0.2rem;color: #757575;border:1px solid #ea0406;display: none;font-size: 0.2rem;">SPR推荐价:该价格为根据系统中海量的历史成交记录,通过大数据和领先的机器人
+					预测算法为您推荐的有利成交价格,该价格仅供参考。
+				</li>
+				<li style="float: left;">
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>总货量</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="number" placeholder="500" style="width:5.1rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;">
+							<span style="font-size: 0.24rem;color: #333333;display: inline-block;">吨</span>	
+						</p>
+					</div>
+				</li>
+				<li style="padding-bottom: 0.3rem;float: left;position: relative;">
+					<p><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>规格</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="number" id="guigeInputcif" placeholder="259"style="width:4.2rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;">
+							<span style="font-size: 0.24rem;color: #333333;display: inline-block;">kg/每件</span><span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>		
+						</p>
+					</div>
+					<li class="guigecif" style="position: absolute;display:none;z-index: 996;margin-top: 2rem;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">270</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;">300</dt>
+					</dl>
+				</li>
+				<hr style="width: 7.2rem;border:none;border-bottom: 0.8px solid #e5e5e5;"/>
+				<li>
+					<p style="margin-top: 0.04rem;">到港期</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;border-radius:0.03rem;">
+						<input type="text" placeholder="2016-09-11" style="background: #F5F5F5;text-indent: 0.2rem;width: 4.23rem;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;float: right;margin-right: 0.2rem;">
+							<!--<span style="font-size: 0.24rem;">文字标签</span>-->
+						</p>
+					</div>
+				</li>
+				
+				<li>
+					<p style="margin-top: 0.04rem">预付款</p>
+					
+					<div class="wodebaopanbg" style="width: 1.06rem;border: 0.8px solid #e5e5e5;background: #f5f5f5;position: relative;border-radius:0.03rem;text-indent: 0.2rem;">
+						<input type="text" id="yufuInputcif"  value="全款" style="width:0.9rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;" readonly>
+						<span style="top:0.28rem;right:0.18rem;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display:block;position: absolute;"></span>
+					</div>
+					
+					<div class="wodebaopanbg" style="position:relative;width: 4.22rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;margin-left: 0.24rem;border-radius:0.03rem;">
+						 
+						<input type="number" class="yufujiagecif" value="528000.00" style="-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;width:2.4rem;text-indent: 0.2rem;background: #F5F5F5;" readonly="readonly"/>
+						<p style="line-height: 0.7rem;">
+							<span style="font-size: 0.24rem;color: #333333;display: inline-block;margin-left: 0.45rem;">元 (人民币)</span><!--<span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>-->		
+						</p>
+						<!--<span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>-->
+					</div>
+					<li class="yufucif" style="position: absolute;display:none;z-index: 996;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.25rem;position: absolute;background: #f5f5f5;color:#757575;left: 1.3rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">全款</dt>
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">20%</dt>
+							<dt style="display: block;padding:0.2rem 0.05rem;">50%</dt>
+						</dl>
+					</li>
+				
+				</li>
+				<li class="weikuan_zhifucif" style="display:none;padding-bottom: 0;float: left;position: relative;">
+					<p style="width:2.65rem">支付尾款期限<span style="color: #999;font-size: 0.2rem;">(天)</span></p>
+					<div class="wodebaopanbg"  style="width: 4.21rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="text" name="" id="weikuanInputcif" value="" placeholder="10" style="-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;background: #F5F5F5;width: 4rem;text-indent: 0.2rem;font-size: 0.24rem;"/>
+						<span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>
+					</div>
+					<li class="weikuancif" style="position: absolute;display:none;z-index: 996;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.3rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:0.75rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">5</dt>
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">10</dt>
+							<dt style="display: block;padding: 0.2rem 0.05rem;">15</dt>
+						</dl>                                                                                                                                                                                                                                                             
+					</li>
+				</li>
+				<li style="padding-bottom: 0.4rem;float: left;border-bottom: 0.01rem solid #E5E5E5;position: relative;">
+					<p style="width:2.65rem">商品展示持续时间<span style="color: #999;font-size: 0.2rem;">(天)</span></p>
+					<div class="wodebaopanbg"  style="width: 4.21rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="text" name="" id="timeInputcif" value="" placeholder="10" style="-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;background: #F5F5F5;width: 4rem;text-indent: 0.2rem;font-size: 0.24rem;"/>
+						<span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>
+					</div>
+					<li class="showTimecif" style="position: absolute;display:none;z-index: 996;margin-top: 1.2rem;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.3rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:0.77rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">10</dt>
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">20</dt>
+							<dt style="display: block;padding: 0.2rem 0.05rem;">30</dt>
+						</dl>
+					</li>
+				</li>
+			</ul>
+			<div class="shangchuan_zhaopian">
+				<ul>
+					<li style="border-bottom: 0.8px solid #E5E5E5;">
+						<p>
+							<span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;"></span>
+							添加商品照片
+							
+						</p>
+						<p>
+							
+							<img src="../../img/photo.png"  />
+							<span style="display: block;margin-left: -0.03rem;">点击上传</span>
+							
+						</p>
+						
+					</li>
+					<li style="border-bottom: 0.8px solid #E5E5E5;">
+						<p style="width:6.9rem;height:0.8rem">
+						
+							<span><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;"></span>检验检疫许可证</span>
+							<!--<span>
+								(如果商品上架需要上传该许可证)
+							</span>-->
+						</p>
+						<p style="height: 0;padding-bottom: 1.5rem;">
+							<img src="../../img/photo.png"/>
+							<span style="display: block;margin-left: -0.03rem;">点击上传</span>
+						</p>
+					</li>
+					<li style="border-bottom: 0.8px solid #E5E5E5;">
+						<p>
+							<span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;"></span>
+							上传采购合同
+							
+						</p>
+						<p>
+							 
+							<img src="../../img/photo.png"  />
+							<span style="display: block;margin-left: -0.03rem;">点击上传</span>
+							
+						</p>
+						
+					</li>
+					<li style="border-bottom: 0.8px solid #E5E5E5;">
+						<p>
+							<span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;"></span>
+							上传其他资质证明
+							
+						</p>
+						<p>
+							
+							<img src="../../img/photo.png"  />
+							<span style="display: block;margin-left: -0.03rem;">点击上传</span>
+							
+						</p>
+						
+					</li>
+				</ul>
+				
+				
+			</div>
+			<div class="baopanxieyi">
+				<div class="baopan_xieyi">
+					<img src="../../img/shouhoudizhixuanze.png" />
+					<img src="../../img/shouhuodizhiyixuanze.png"  />
+					<p class="xieyip" style="margin-left: 0.1rem;">我已阅读并同意<span >《报盘协议》</span></p>
+				</div>
+				<p class="tijiaobiaodian" style="border:none; color: #fff; background: #e5e5e5;">提交</p>
+			</div>
+			<div class="xieyitupianbg" style="position: fixed; left: 0; top: 0.86rem; bottom: 0; right: 0; background: #000; opacity: 0.3; display: none; z-index: 100;"></div>
+			<div class="xieyitupian" style="display: none; z-index: 2000;">
+				<img src="../../img/bpxieyi.png" style=" position: fixed;width: 4.9rem; height: 7.2rem; left: 0rem; top: 0rem; bottom: 0; right: 0; margin: auto; z-index: 10000;"/>
+				<!--<img src="../../img/chaxieyi.png" style="position: absolute; left: 5rem; top: 0.3rem; width: 0.3rem; height: 0.3rem; z-index: 202;"/>-->
+			</div>
+	</div>
+	<!--FOB-->
+	<div style="display: none;margin-top: 0;" class="wodebaopanFOB">
+			<ul class="wodebaopanList">
+				<li style="position: relative;">
+					<!--<p style="margin-top: 0.04rem;">原产地</p>-->
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>原产地</p>
+					<div class="wodebaopanbg searchCity"  style="width: 5.55rem;border:0.8px solid #e5e5e5;background: #F5F5F5;border-radius:0.03rem;">
+						<input type="text" id="inputCityfob" placeholder="美国" style="text-indent: 0.2rem;background: #F5F5F5;outline: none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p class="searchCityfob" style="float: right;margin-right: 0.2rem;line-height: 0.7rem;height: 0.7rem;">
+							<img src="../../img/dingwei.png" style="width: 0.16rem;height:0.2rem;margin-top: -0.08rem;"/>
+							<span  style="font-size: 0.24rem;">查找</span>
+						</p>
+					</div>
+					<li class="birCityfob" style="position: absolute;display: none;z-index: 999;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.05rem 0.05rem;">美国</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">加拿大</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">巴西</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">智利</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">法国</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">丹麦</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">爱尔兰</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">意大利</dt>
+					</dl>
+				</li>
+				</li>
+					
+				<li style="position: relative;">
+					<!--<p style="margin-top: 0.04rem;">厂号</p>-->
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>厂号</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;border-radius:0.03rem;">
+						<input type="text" id="searchChanghaofob" placeholder="717M" style="text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p class="searchChanghaofob" style="float: right;margin-right: 0.2rem;line-height: 0.7rem;height: 0.7rem;">
+							<span style="font-size: 0.24rem;">查找</span>
+						</p>
+					</div>
+					<li class="changhaofob" style="position: absolute;display: none;z-index: 997;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.05rem 0.05rem;">717M</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">147C</dt>
+						<dt style="display: block;padding: 0.05rem0 0.05rem;">SIF1001</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">06-17</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">29-027-001</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">865</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">EC332</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">169L</dt>
+						
+					</dl>
+				</li>
+				</li>
+				<li style="position: relative;">
+					<!--<p style="margin-top: 0.04rem;">品名</p>-->
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>品名</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;border-radius:0.03rem;">
+						<input type="text" id="searchPinmingfob" placeholder="猪手" style="text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p class="searchPinmingfob" style="float: right;margin-right: 0.2rem;line-height: 0.7rem;height: 0.7rem;">
+							<span style="font-size: 0.24rem;">查找</span>
+						</p>
+					</div>
+					<li class="pinmingfob" style="position: absolute;display: none;z-index: 996;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪手</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪头</dt>
+							<dt style="display: block;padding: 0.05rem0 0.05rem;">猪心</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪皮</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪肋骨</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪腰</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪大肠</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪尾巴</dt>
+							
+						</dl>
+					</li>
+				</li>
+				<li style="padding-bottom: 0.3rem;position: relative;">
+					<p style="margin-top: 0.04rem;">品牌</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;border-radius:0.03rem;">
+						<input type="text" id="searchPinpaifob"  placeholder="鲜达" style="text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;">
+						<p class="searchPinpaifob" style="height: 0.7rem;float: right;margin-right: 0.2rem;height:0;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;">
+							<span style="font-size: 0.24rem;line-height: 0;">查找</span>
+						</p>
+					</div>
+					<li class="pinpaifob" style="position: absolute;display: none;z-index: 99;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.53rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.05rem 0.05rem;">江泉</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">得利斯</dt>
+							<dt style="display: block;padding: 0.05rem0 0.05rem;">龙大</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">鹏程</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">鲜达</dt>
+						</dl>
+					</li>
+				</li>
+				<hr style="width: 7.2rem;border:none;border-bottom: 0.8px solid #e5e5e5;"/>
+				<li style="position: relative;">
+					<!--<p style="margin-top: 0.04rem;">国家</p>-->
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>国家</p>
+					<div class="wodebaopanbg" style="width: 2rem;border: 0.8px solid #e5e5e5;background: #f5f5f5;position: relative;border-radius:0.03rem;text-indent: 0.2rem;">
+						<input type="text" id="cityCoutrayfob"  placeholder="中国" style="width:1.5rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;">
+						<span style="top:0.28rem;right:0.23rem;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display:block;position: absolute;"></span>
+					</div>
+					<p style="line-height: 0.71rem;width: 0.96rem;float: left;text-align: center;color: #333;font-size: 0.28rem;">城市</p>
+					<div class="wodebaopanbg" style="width: 2.55rem;border: 0.8px solid #e5e5e5;background: #f5f5f5;border-radius:0.03rem;">
+						<input type="text" id="detialsCityfob" placeholder="上海" style="width: 1.4rem;background: #f5f5f5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="float: right;margin-right: 0.19rem;line-height: 0.7rem;">
+							<img src="../../img/dingwei.png" style="width: 0.16rem;height:0.2rem;margin-top: -0.08rem;"/>
+							<span style="font-size: 0.24rem;">查找</span>
+						</p>
+					</div>
+					<li class="guojiafob" style="position: absolute;display:none;z-index: 999;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.6rem;position: absolute;background: #f5f5f5;color:#757575;left: 1.3rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.05rem 0.05rem;">中国</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">意大利</dt>
+							<dt style="display: block;padding: 0.05rem0 0.05rem;">法国</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">英国</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">俄罗斯</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">美国</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">德国</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">巴西</dt>
+						</dl>
+					</li>
+					<li class="chengshifob" style="position: absolute;display:none;z-index: 999;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.995rem;position: absolute;background: #f5f5f5;color:#757575;right: 0rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.05rem 0.05rem;">上海</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">北京</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">杭州</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">武汉</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">郑州</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">长沙</dt>
+						</dl>
+					</li>
+				</li>
+				<li style="margin-bottom: 1.7rem;">
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;"></span>接货地址</p>
+					<textarea name="" rows="" cols="" style="width: 5.55rem;height:2rem;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;"></textarea>
+				</li>
+				<li style="position: relative;">
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>库存</p>
+					<div class="wodebaopanbg "  style="line-height: 0.68rem;width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="number" id="kucunInputfob" value="200" style="width:4.8rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;" >
+							<span class="kucunspanfob" style="font-size: 0.24rem;color: #333333;display: inline-block;">柜</span><span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>		
+						</p>
+					</div>
+					<li class="kucunfob" style="position: absolute;display:none;z-index: 996;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">柜</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">吨</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;">件</dt>
+					</dl>
+				</li>
+				</li>
+				<li style="position: relative;">
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>起售数量</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="number" id="qishouInputfob" value="10" style="width:4.8rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;">
+							<span class="qishouspanfob" style="font-size: 0.24rem;color: #333333;display: inline-block;">柜</span><span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>		
+						</p>
+					</div>
+					<li class="qishoufob" style="position: absolute;display:none;z-index: 996;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">柜</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">吨</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;">件</dt>
+					</dl>
+				</li>
+				</li>
+				<li>
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>单价</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="number" placeholder="264000.00"  class="inputSprfob" style="width:4.2rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;">
+							<span class="danjiainput" style="font-size: 0.24rem;color: #333333;display: inline-block;">元/每<span class="danjiaspanfob">柜</span></span><span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>		
+						</p>
+					</div>
+					<li class="danjiafob" style="position: absolute;display:none;z-index: 996;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">柜</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">吨</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;">件</dt>
+					</dl>
+				</li>
+				</li>
+				<li class="SPRfob" style="width: 5.26rem;float:right;border-radius:0.03rem;line-height: 0.3rem;padding: 0.1rem 0.1rem 0.3rem 0.2rem;color: #757575;border:1px solid #ea0406;display: none;font-size: 0.2rem;">SPR推荐价:该价格为根据系统中海量的历史成交记录,通过大数据和领先的机器人
+					预测算法为您推荐的有利成交价格,该价格仅供参考。
+				</li>
+				<li style="float: left;">
+					<p style="margin-top: 0.04rem;"><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>总货量</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="number" placeholder="500" style="width:5.1rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;">
+							<span style="font-size: 0.24rem;color: #333333;display: inline-block;">吨</span>	
+						</p>
+					</div>
+				</li>
+				<li style="padding-bottom: 0.3rem;float: left;position: relative;">
+					<p><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;">*</span>规格</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="number" id="guigeInputfob" placeholder="259"style="width:4.2rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;">
+							<span style="font-size: 0.24rem;color: #333333;display: inline-block;">kg/每件</span><span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>		
+						</p>
+					</div>
+					<li class="guigefob" style="position: absolute;display:none;z-index: 996;margin-top: 2rem;">
+					<dl style="border: 0.8px solid #E5E5E5;padding:0 0.5rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">270</dt>
+						<dt style="display: block;padding: 0.2rem 0.05rem;">300</dt>
+					</dl>
+				</li>
+				<hr style="width: 7.2rem;border:none;border-bottom: 0.8px solid #e5e5e5;"/>
+				<li>
+					<p style="margin-top: 0.04rem;">到港期</p>
+					<div class="wodebaopanbg"  style="width: 5.55rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;border-radius:0.03rem;">
+						<input type="text" placeholder="2016-7-8" style="background: #F5F5F5;text-indent: 0.2rem;width: 4.23rem;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;"/>
+						<p style="line-height: 0.7rem;float: right;margin-right: 0.2rem;">
+							<!--<span style="font-size: 0.24rem;">文字标签</span>-->
+						</p>
+					</div>
+				</li>
+				
+				<li>
+					<p style="margin-top: 0.04rem">预付款</p>
+					
+					<div class="wodebaopanbg" style="width: 1.06rem;border: 0.8px solid #e5e5e5;background: #f5f5f5;position: relative;border-radius:0.03rem;text-indent: 0.2rem;">
+						<input type="text" id="yufuInputfob"  value="全款" style="width:0.9rem;text-indent: 0.2rem;background: #F5F5F5;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;" readonly>
+						<span style="top:0.28rem;right:0.18rem;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display:block;position: absolute;"></span>
+					</div>
+					
+					<div class="wodebaopanbg" style="position:relative;width: 4.22rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;margin-left: 0.24rem;border-radius:0.03rem;">
+						 
+						<input type="number" class="yufujiagefob" value="528000.00" style="-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;width:2.4rem;text-indent: 0.2rem;background: #F5F5F5;" readonly="readonly"/>
+						<p style="line-height: 0.7rem;">
+							 
+							<span style="font-size: 0.24rem;color: #333333;display: inline-block;margin-left: 0.45rem;">元 (人民币)</span><!--<span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>-->		
+						</p>
+						<!--<span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>-->
+					</div>
+					<li class="yufufob" style="position: absolute;display:none;z-index: 996;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.25rem;position: absolute;background: #f5f5f5;color:#757575;left: 1.3rem;top:-0.245rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">全款</dt>
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">20%</dt>
+							<dt style="display: block;padding:0.2rem 0.05rem;">50%</dt>
+						</dl>
+					</li>
+				
+				</li>
+				<li class="weikuan_zhifufob" style="display:none;padding-bottom: 0;float: left;position: relative;">
+					<p style="width:2.65rem">支付尾款期限<span style="color: #999;font-size: 0.2rem;">(天)</span></p>
+					<div class="wodebaopanbg"  style="width: 4.21rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="text" name="" id="weikuanInputfob" value="" placeholder="10" style="-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;background: #F5F5F5;width: 4rem;text-indent: 0.2rem;font-size: 0.24rem;"/>
+						<span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>
+					</div>
+					<li class="weikuanfob" style="position: absolute;display:none;z-index: 996;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.3rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:0.75rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">5</dt>
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">10</dt>
+							<dt style="display: block;padding: 0.2rem 0.05rem;">15</dt>
+						</dl>                                                                                                                                                                                                                                                             
+					</li>
+				</li>
+				<li style="padding-bottom: 0.4rem;float: left;border-bottom: 0.01rem solid #E5E5E5;position: relative;">
+					<p style="width:2.65rem">商品展示持续时间<span style="color: #999;font-size: 0.2rem;">(天)</span></p>
+					<div class="wodebaopanbg"  style="width: 4.21rem;border: 0.8px solid #e5e5e5;background: #F5F5F5;position: relative;border-radius:0.03rem;">
+						<input type="text" name="" id="timeInputfob" value="" placeholder="10" style="-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only;background: #F5F5F5;width: 4rem;text-indent: 0.2rem;font-size: 0.24rem;"/>
+						<span style="top:0.28rem;right:0.23rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>
+					</div>
+					<li class="showTimefob" style="position: absolute;display:none;z-index: 996;margin-top: 1.2rem;">
+						<dl style="border: 0.8px solid #E5E5E5;padding:0 0.3rem;position: absolute;background: #f5f5f5;color:#757575;right: 0.033rem;top:0.77rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">10</dt>
+							<dt style="display: block;padding: 0.2rem 0.05rem;border-bottom: 0.8px solid #E5E5E5;">20</dt>
+							<dt style="display: block;padding: 0.2rem 0.05rem;">30</dt>
+						</dl>
+					</li>
+				</li>
+			</ul>
+			
+			<div class="shangchuan_zhaopian">
+				<ul>
+					<li style="border-bottom: 0.8px solid #E5E5E5;">
+						<p>
+							<span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;"></span>
+							添加商品照片
+							
+						<
+						<p>
+							
+							<img src="../../img/photo.png"  />
+							<span style="display: block;margin-left: -0.03rem;">点击上传</span>
+							
+						</p>
+						
+					</li>
+					<li style="border-bottom: 0.8px solid #E5E5E5;">
+						<p style="width:6.9rem;height:0.8rem">
+						
+							<span><span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;"></span>检验检疫许可证</span>
+							<!--<span>
+								(如果商品上架需要上传该许可证)
+							</span>-->
+						</p>
+						<p style="height: 0;padding-bottom: 1.5rem;">
+							<img src="../../img/photo.png"/>
+							<span style="display: block;margin-left: -0.03rem;">点击上传</span>
+						</p>
+					</li>
+					<li style="border-bottom: 0.8px solid #E5E5E5;">
+						<p>
+							<span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;"></span>
+							上传采购合同
+							
+						</p>
+						<p>
+							
+							<img src="../../img/photo.png"  />
+							<span style="display: block;margin-left: -0.03rem;">点击上传</span>
+							
+						</p>
+						
+					</li>
+					<li style="border-bottom: 0.8px solid #E5E5E5;">
+						<p>
+							<span style="margin-left: -0.2rem;margin-right: 0.08rem;display: inline-block;margin-top: 0.08rem;float: left;"></span>
+							上传其他资质证明
+							
+						</p>
+						<p>
+							
+							<img src="../../img/photo.png"  />
+							<span style="display: block;margin-left: -0.03rem;">点击上传</span>
+							
+						</p>
+						
+					</li>
+				</ul>
+				
+				
+			</div>
+			<div class="baopanxieyi">
+				<div class="baopan_xieyi">
+					<img src="../../img/shouhoudizhixuanze.png" />
+					<img src="../../img/shouhuodizhiyixuanze.png"  />
+					<p style="margin-left: 0.1rem;"  class="xieyip">我已阅读并同意<span>《报盘协议》</span></p>
+				</div>
+				<p class="tijiaobiaodian" style="background: #E5E5E5; color: #fff; border: none;">提交</p>
+			</div>
+			<div class="xieyitupianbg" style="position: fixed; left: 0; top: 0.86rem; bottom: 0; right: 0; background: #000; opacity: 0.3; display: none; z-index: 100;"></div>
+			<div class="xieyitupian" style="display: none; z-index: 2000;">
+				<img src="../../img/bpxieyi.png" style=" position: fixed; width: 4.9rem; height: 7.2rem; left: 0rem; top: 0rem; bottom: 0; right: 0; margin: auto; z-index: 10000;"/>
+				<!--<img src="../../img/chaxieyi.png" style="position: absolute; left: 5rem; top: 0.3rem; width: 0.3rem; height: 0.3rem; z-index: 202;"/>-->
+			</div>
+		</div>
+
+	
+	
+</div>	
+</body>
+	<script type="text/javascript" src="../../js/mui.js" ></script>
+	<script type="text/javascript" src="../../js/buju.js" ></script>
+	<script type="text/javascript" src="../../js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript" src="../../js/tab.js" ></script>
+	<script src="../../js/baopan.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/clickmodeo.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/xunpan.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.baopan_xieyi img:nth-child(1)').on('click',function(){
+			$(this).css("display","none").siblings("img").css("display","block").parent().siblings('.tijiaobiaodian').css('background','#EA0404');
+			$('.xieyip').on('click',function(){
+				$('.xieyitupian').css('display','block');
+			})
+			$(this).parent().siblings('.tijiaobiaodian').on('click',function(){
+//				window.location.href = 'wodebaopan.html';
+				mui.openWindow({
+				url:'wodebaopan.html',
+				id:'wodebaopan.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+			})
+		})
+		
+		
+		$(".baopan_xieyi img:nth-child(2)").on("click",function(){
+			$(this).css("display","none").siblings("img").css("display","block").parent().siblings('.tijiaobiaodian').css('background','#E5E5E5');
+			$(this).parent().siblings('.tijiaobiaodian').children().on('click',function(){
+				$(this).unbind('click');
+			})
+		});
+		$(".liebiaozuanfu").on("click",function(e){
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+	
+	//消息
+		$('.xialacaidan li:nth-child(3)').on('click',function(){
+			$(".xialacaidan").hide()
+			window.location.href="../../html/xiaoxiliebiao.html";
+//mui.openWindow({
+//				url:'../../html/xiaoxiliebiao.html',
+//				id:'../../html/xiaoxiliebiao.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		//首页
+		$('.xialacaidan li:nth-child(2)').on('click',function(){
+			$(".xialacaidan").hide()
+			window.location.href ="../../index.html";
+//mui.openWindow({
+//				url:'../../index.html',
+//				id:'../../index.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+	</script>
+</html>

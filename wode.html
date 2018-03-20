@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+       <meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-touch-fullscreen" content="yes" />
+    <title></title>
+   
+    </script>
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/commen.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <style>
+    	.usernames{
+    		width: 7.5rem;
+    		margin: 0 auto;
+    		font-size: 0.3rem;
+    		color: #fff;
+    		text-align: center;
+    		height: 1.2rem;
+    		padding-top: 2rem;
+    	}
+    	.theFivePage .wode .shezhixiaoxi{
+    		width: 7.5rem;
+    		height: 1.17rem;
+    	}
+    	.theFivePage .wode .shezhixiaoxi li{
+    		float: left;
+    		width:3rem ;
+    		height: 1.15rem;
+    	}
+    	.theFivePage .wode .shezhixiaoxi li img{
+    		width: 0.85rem;
+    		height: 0.85rem;
+    		margin: 0;
+    		line-height: normal;
+    		float: right;
+    	}
+    	.touxiangg  img{
+    		    border-radius: 100%;
+    /* margin-left: 0.03rem; */
+    width: 1.78rem;
+    position: absolute;
+    /* margin-bottom: 0.03rem; */
+    height: 1.78rem;
+    	}
+    </style>
+    <script type="text/javascript" src="js/buju.js" ></script>
+	</head>
+	<body>
+		<!--
+		我的
+	-->
+	
+	
+	<div class="theFivePage" style="display: block;-webkit-overflow-scrolling: touch;overflow: auto;height: 13rem;position: relative;">
+		<div class="wode">
+			<!--<ul style="margin-left: 1.5rem;">
+				<li><a href="html/setting.html">
+					<img src="img/shezhi.png"  />
+				</a></li>
+				<li>
+					
+					<div class="touxiangg "  id="fileList" >  </div>
+					<input id="shangchuan" type="file"  accept="image/*" onchange="handleFiles(this)" />
+					<p class="lijidengluindex" style="color: #fff;">Ye Zhang</p>
+					<span><img class="xxxx"  src="img/gerenw.png" style=" width: 0.5rem;height: 0.6rem;float: left; margin-left: 1.8rem;" /></span>
+				</li>
+				<li>
+					<a href="###">
+						<img src="img/xiaoxi.png"  />
+					</a>
+				</li>
+			</ul>-->
+			
+			<ul class="shezhixiaoxi">
+				<li class="shezhiImg" style="margin-top: 1.4rem;"><img src="img/shezhi.png" style="margin-right: 1.14rem;" /></li>
+				<li class="xiaoxiImg" style="margin: 0;margin-top: 1.4rem;float: right;"><img src="img/xiaoxi.png" style="margin-left: 1.14rem; float: left;" /></li>
+			</ul>
+			
+			<div class="touxiangg "  id="fileList" style="background:url(img/meinv.png) no-repeat center;background-size:cover ; width: 1.78rem;height: 1.78rem;position: absolute;left: 2.85rem;top: 1rem;" >
+				<img src="img/meinv.png"  />
+				
+			</div>
+					<input style="margin-top: -2rem;" id="shangchuan" type="file"  accept="image/*" onchange="handleFiles(this)" />
+		
+				<p class="usernames" style="font-size: 0.28rem;">高亮</p>
+				<p class="xxxx" style="  position: absolute;top: 3.1rem;right: 0.5rem;"><img src="img/zuanshihuiyuan.png" style="width: 1rem;height: 0.5rem;" /> </p>
+		</div>
+		<div class="QuanBuDingDan" style="border-top: 0.8px solid #E5E5E5;">
+			<div class="quanbudingdanHeader">
+				<p><img src="img/qunrendingdan.png" />
+					<span style="padding: 0 0.09rem;">全部订单</span>
+					<i class="fa fa-angle-right" aria-hidden="true"></i>
+				</p>
+
+			</div>
+
+		</div>
+		<div class="wodezhuangtai">
+			<ul>
+				<li><a href="###">
+					<img src="img/daifukuan.png"  style="width:0.59rem;height: 0.77rem;margin-top: 0.2rem;margin-left: 0.5rem;"/>
+				</a></li>
+				<!--<li><a href="###">
+					<img src="img/daifahuo.png"  />
+				</a></li>-->
+				<li><a href="###">
+					<img src="img/daishouhuo.png" style="width:0.59rem;height: 0.74rem;margin-top: 0.24rem;margin-left: 0.5rem;"  />
+				</a></li>
+				<li><a href="###">
+					<img src="img/daipingjia.png" style="width:0.59rem;height: 0.8rem;margin-top: 0.2rem;margin-left: 0.5rem;" />
+					
+				</a></li>
+				<li><a href="###">
+					<img src="img/tuikuangshouhou.png" style=" height: 0.79rem; width: 0.72rem;margin-top: 0.22rem;margin-left: 0.5rem;" />
+				</a></li>
+			</ul>
+		</div>
+		
+		<div class="wodeList">
+			<ul>
+				
+				
+				<li  class="wodegouwuche_wode"><a href="###">
+					<img src="img/gouwuche_wode.png"  />
+					<p>购物车</p>
+					<span>3</span>
+					<i class="fa fa-angle-right" aria-hidden="true" ></i>
+					
+					
+				</a></li>
+				<li  class="wodebaopan_wode"><a href="###">
+					<i class="fa fa-line-chart" aria-hidden="true" style="color: #EA0607;"></i>
+					<p>我的报盘</p>
+					<span>4</span>
+					<i class="fa fa-angle-right" aria-hidden="true"></i>
+					
+					
+				</a></li>
+				<li class="wodexunpan_wode"><a href="###">
+					<img src="img/wodexunpan_wode.png"  />
+					<p>我的询盘</p>
+					<span>1</span>
+					<i class="fa fa-angle-right" aria-hidden="true"></i>
+					
+					
+				</a></li>
+				<li class="wodeshoucang_wode"><a href="###">
+					<img src="img/wodeshoucang_wode.png"  />
+					<p>我的收藏</p>
+					<span>12</span>
+					<i class="fa fa-angle-right" aria-hidden="true"></i>
+					
+					
+				</a></li>
+				
+				<li class="wodetousu_wode"><a href="###">
+					<img src="img/wodetousu_wode.png"  />
+					<p>我的投诉</p>
+					<span>4</span>
+					<i class="fa fa-angle-right" aria-hidden="true"></i>
+					
+					
+				</a></li>
+				<li class="wodeshouhou_wode"><a href="###">
+					<img src="img/wodeshouhou_wode.png"  /> 
+					<p>我的售后</p>
+					<span>2</span>
+					<i class="fa fa-angle-right" aria-hidden="true"></i>
+					
+					
+				</a></li>
+				<li class="gerenziliao_wode"><a href="###">
+					<img src="img/gerenziliao_wode.png"  />
+					<p>个人资料</p>
+					<span></span>
+					<i class="fa fa-angle-right" aria-hidden="true"></i>
+					
+					
+				</a></li>
+				<li class="zhifuguanli_wode"><a href="###">
+					<img src="img/zhifuguanli_wode.png"  />
+					<p>支付管理</p>
+					<span></span>
+					<i class="fa fa-angle-right" aria-hidden="true"></i>
+					
+					
+				</a></li>
+				<li class="zhuangshukefu_wode"><a href="###">
+					<img src="img/zhuanshukefu_wdoe.png"  />
+					<p>专属客服</p>
+					<span></span>
+					<i class="fa fa-angle-right" aria-hidden="true"></i>
+					
+					
+				</a></li>
+				<li  style="height: 0.97rem;border-bottom: none;"></li>
+				
+			</ul>
+			
+		</div>
+	</div>
+		
+		<!--footer-->
+	<footer >
+		<div class="footer" >
+			<ul>
+				<li>
+				<img src="img/bighou.png"/>
+				<img src="img/big.png" />
+				
+				</li>
+				
+				
+				<li>
+					<img src="img/xunpan.png"  />
+					<img src="img/xunpanimg.png" />
+					
+				</li>
+				
+				<li>
+					<img  src="img/home.png"  />
+					<img src="img/homehou.png"  />
+					
+					
+				</li>
+				<li>
+					<img src="img/lingshouhou.png"  />
+					<img src="img/lingshou.png"  />
+					
+					
+				</li>
+				<li>
+					
+					<img src="img/mine.png"  />
+					<img src="img/mined.png"  />
+				</li>
+			</ul>
+			
+		</div>
+		
+		
+		
+	</footer>
+	
+	</body>
+	
+<!--<script type="text/javascript" src="js/buju.js" ></script>-->
+<script type="text/javascript" src="js/jquery-2.1.3.min.js" ></script>
+<script type="text/javascript" src="js/mui.js" ></script>
+<!--<script type="text/javascript" src="js/feedback.js" ></script>-->
+<!--<script type="text/javascript" src="js/script.js" ></script>-->
+<script type="text/javascript" src="js/tab.js" ></script>
+<script type="text/javascript" src="js/clickmodeo.js" ></script>
+
+
+<script>
+		window.URL=window.URL||window.webkitURL;
+		var fileElem=document.getElementById("fileElem")
+		
+		fileList=document.getElementById("fileList")
+		function handleFiles(obj){
+			var files=obj.files
+			img=new Image()
+			if (window.URL) {
+//				alert(files[0].name+","+files[0].size+"bytes");
+				
+				img.src=window.URL.createObjectURL(files[0]);//创建url
+				img.width=100;
+				img.height=100;
+				img.onload=function(e){
+					
+					window.URL.revokeObjectURL(this,src)
+				}
+				
+				fileList.appendChild(img)
+			} else if(window.FileReader){
+				var reader=new FileReader();
+				reader.readAsDataURL(files[0])
+				reader.onload=function(e){
+					
+					alert(files[0].name+","+e.total+"bytes")
+					img.src=this.result
+					img.width=100;
+						img.height=100;
+					fileList.appendChild(img)
+				}
+				
+			}else{
+				
+				obj.select()
+				obj.blur()
+				var nfile=document.seletection.creatRange().text;
+				document.selection.empty();
+				img.src=nfile
+				img.width=100;
+					img.height=100;
+				img.onload=function(){
+//					alert(nfile+","+img.fileSize+"bytes");
+					
+				}
+				
+				fileList.appendChild(img);
+				
+				fileList.style.fileter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src='"+nfile+"')";
+				
+			}
+					
+				}
+
+
+//		$(".")
+
+
+
+		$(".xxxx").on("click",function(){
+			
+//			window.location.href="html/huiyuan/huiyuan.html"
+mui.openWindow({
+				url:'html/huiyuan/huiyuan.html',
+				id:'html/huiyuan/huiyuan.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+			
+			
+		})
+
+//		$(".usernames")
+		
+		$(".shezhiImg").on("click",function(){
+//			window.location.href="html/setting.html"
+mui.openWindow({
+				url:'html/setting.html',
+				id:'html/setting.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+
+			$(".xiaoxiImg").on("click",function(){
+				window.location.href="html/xiaoxiliebiao.html"
+//mui.openWindow({
+//				url:'html/xiaoxiliebiao.html',
+//				id:'html/xiaoxiliebiao.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+			})
+//		$("body").fadeIn(500)
+
+</script>
+</html>

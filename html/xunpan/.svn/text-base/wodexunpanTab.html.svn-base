@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>询盘</title>
+	</head>
+	<link rel="stylesheet" href="../../css/commen.css" />
+	<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../../css/index.css" />
+	<link rel="stylesheet" href="../../css/ziyemain.css" />
+	<link rel="stylesheet" href="../../css/xunpanandMine.css" />
+	<style>
+		.wodedingdanquanbuTab .wodedingdanlist li{
+			width: 1.09rem;
+			margin-right: 0.8rem;
+		}
+		.wodebaopanbg .guige{
+			
+			    width: 4rem;
+			    height: 0.65rem;
+			    background: #E5E5E5;
+			    font-size: 0.24rem;
+			    color: #e5e5e5e5e5e5;
+			    float: left;
+			    text-indent: 0.3rem;
+			    outline: none;
+			    border: none;
+			    background: url(../../img/xialasanjiao.png) no-repeat right;
+			    background-size:0.2rem ;
+		}
+		
+	</style>
+	<body>
+		<header class="dingdanquanbu" style="position: fixed;z-index: 999;">
+		<ul class="wodedingdanheader yincang" style=" width: 7.5rem;">
+			<li style="margin-left: 0.3rem;">
+				<i class="fa fa-angle-left mui-action-back" aria-hidden="true" style="font-size: 0.66rem;"></i>
+			</li>
+			
+			<li style="text-align: center;width: 5.4rem;margin-left: -0.2rem;">
+				询盘  
+			</li>
+			<li class="liebiaozuanfu" style="text-align: center;line-height: 0.6rem; font-size: 0.6rem; color: #ea0607;float:right;margin-right:0.3rem;font-family: '微软雅黑';">...</li>
+				
+			<!--<li style="line-height: 0.8rem;font-size: 0.24rem;margin-left: 0.3rem;">
+				<img src="../../img/search.png"  />
+			</li>-->
+			
+		</ul>
+		<div class="wodedingdanSearch">
+			<input type="text"  placeholder="请输入您要搜索的商品"/>
+			<span>取消</span>
+		</div>
+		<div class="wodedingdanSousuo"></div>
+	</header>
+	<ul class="xialacaidan" style="display: none; z-index: 1000;" >
+				<div class="xiaojiao"></div>
+				<li><img src="../../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+				<li><img src="../../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+				
+				<li><img src="../../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+				<li><img src="../../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+			</ul>
+
+<!--banner-->
+	<div class="wodedingdanquanbuTab" style="border-bottom: 0.8px solid #E5E5E5;margin-top: 1rem;float: left;">
+		<ul class="wodedingdanlist" style="border-bottom: none;">
+			
+			<li style="margin-left: 0.8rem;width: 1.5rem; margin-right: 0.3rem;height: 0.75rem;font-size: 0.28rem;">模糊询盘</li>
+			<li  style="width: 1.5rem; margin-right: 0.3rem;height: 0.75rem;font-size: 0.28rem;">精确询盘</li>
+			<li  style="width: 1.5rem; margin-right: 0.3rem;height: 0.75rem;font-size: 0.28rem;">人工询盘</li>
+			
+			
+		</ul>
+	</div>
+	<!--模糊询盘-->
+	<div style="display:block;float: left;" class="wodebaopanDDP">
+		<div  class="wodexunpanXunPan">
+			<div class="yixuanxinxi" style="border-bottom: 0.8px solid #e5e5e5;border-top: 0.8px solid #e5e5e5;margin-top: 0;">
+					 <ul>
+					 	<li>已选:</li>
+					 	<li class="subguojia">西班牙、</li>、
+					 	<li class="subchanghao">厂号、</li>
+					 	<li class="subpinlei">猪骨、</li>
+					 	<li class="subnumber">×1、</li>
+					 	<li class="subdanwei">吨</li>
+					 </ul>
+			</div>
+		<div class="wuzhongfenlei" style="border-bottom: 0.8px solid #e5e5e5">
+			<p>
+				猪
+			</p>
+		</div>	
+			
+		<div class="xiaoxiliebian_xunpan" style="float: left;">
+			<div class="dahuo_shangxuan" style="border: none;">
+		<!--<p>
+			已选： <span>B级猪脚</span>
+		</p>-->
+		<div class="theAllshuJu" style="float: left;height: auto; background: #fff;width: 7.5rem;">
+			<ul class="theTabMessage" style="margin-left: 0.3rem; background: #FFF;border-bottom: 0.9px solid #e5e5e5;">
+				<li>
+					头部
+				</li>
+				<li style="background: #FFFFFF;">
+					<span style="line-height: 0.8rem;" class="fa fa-caret-down" aria-hidden="true"></span>					
+				</li>				
+			</ul>
+			<div class="quanbu_message xunpan_message " style="margin: 0; display: none; height: auto;float: left;">
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/zhushefghh.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p class="yixuanPinlei">
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+				
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/ff.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p class="yixuanPinlei">
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+				
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/hnhn.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p class="yixuanPinlei">
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		
+		
+		<div class="theAllshuJu" style="float: left;height: auto; background: #fff;width: 7.5rem;">
+			<ul class="theTabMessage" style="margin-left: 0.3rem; background: #fff; border-bottom: 0.9px solid #e5e5e5;">
+				<li>
+					背部
+				</li>
+				<li style="background: #fff;">
+					<span style="line-height: 0.8rem;" class="fa fa-caret-down" aria-hidden="true"></span>
+					
+				</li>
+				
+			</ul>
+			<div class="quanbu_message xunpan_message " style="margin: 0; display: none; height: auto;float: left;">
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/hnhn.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p class="yixuanPinlei">
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+				
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/scvv.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p class="yixuanPinlei">
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+				
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/ffvv.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p class="yixuanPinlei">
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+		</div>
+		
+		<div class="theAllshuJu" style="float: left;height: auto; background: #fff;width: 7.5rem;">
+			<ul class="theTabMessage" style="margin-left: 0.3rem; background: #fff; border-bottom: 0.9px solid #e5e5e5;">
+				<li>
+					腹部
+				</li>
+				<li style="background: #fff;">
+					<span style="line-height: 0.8rem;" class="fa fa-caret-down" aria-hidden="true"></span>
+					
+				</li>
+				
+			</ul>
+			<div class="quanbu_message xunpan_message " style="margin: 0; display: none; height: auto;float: left;">
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/fvfv.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p class="yixuanPinlei">
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+				
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/zhubi.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p class="yixuanPinlei">
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+				
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/wfwd.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p class="yixuanPinlei">
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+			</div>
+			
+			
+		</div>
+		
+		<div class="theAllshuJu" style="float: left;height: auto; background: #fff;width: 7.5rem;">
+			<ul class="theTabMessage" style="margin-left: 0.3rem; background: #fff; border-bottom: 0.9px solid #e5e5e5;">
+				<li>
+					前腿
+				</li>
+				<li style="background: #fff;">
+					<span style="line-height: 0.8rem;" class="fa fa-caret-down" aria-hidden="true"></span>
+					
+				</li>
+				
+			</ul>
+			<div class="quanbu_message xunpan_message " style="margin: 0; display: none; height: auto;float: left;">
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/zhushoudfssdf.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p>
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+				
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/zhushouewr.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p>
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+				
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/zhushouwerwe.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p>
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+			</div>
+			
+			
+		</div>
+		
+		<div class="theAllshuJu" style="float: left;height: auto; background: #fff;width: 7.5rem;">
+			<ul class="theTabMessage" style="margin-left: 0.3rem; background: #fff; border-bottom: 0.9px solid #e5e5e5;">
+				<li>
+					后腿
+				</li>
+				<li style="background: #fff;">
+					<span style="line-height: 0.8rem;" class="fa fa-caret-down" aria-hidden="true"></span>
+					
+				</li>
+				
+			</ul>
+			<div class="quanbu_message xunpan_message " style="margin: 0; display: none; height: auto;float: left;">
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/zhushoueee.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p>
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+				
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/zhushouwerwe.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p>
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+				
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/zhushoudfssdf.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p>
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+			</div>
+			
+			
+		</div>
+		
+		<div class="theAllshuJu" style="float: left;height: auto; background: #fff;width: 7.5rem;">
+			<ul class="theTabMessage" style="margin-left: 0.3rem; background: #fff; border-bottom: 0.8px solid #e5e5e5;">
+				<li style>
+					内脏及其他猪副
+				</li>
+				<li style="background: #fff;">
+					<span style="line-height: 0.8rem;" class="fa fa-caret-down" aria-hidden="true"></span>
+					
+				</li>
+				
+			</ul>
+			<div class="quanbu_message xunpan_message " style="margin: 0; display: none; height: auto;float: left;">
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/zhubi.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p class="yixuanPinlei">
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+				
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/fvfv.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p class="yixuanPinlei">
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+				
+				<ul id="xunpanTab">
+					<li>
+						<img src="../../img/ffvv.png"  />
+					</li>
+					<li>
+						<p>
+							<span>柜</span>
+							<span>吨</span>
+							<span>件</span>
+						</p>
+						<p class="yixuanPinlei">
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+							<span>
+								<img src="../../img/shouhoudizhixuanze.png"  />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+							</span>
+							
+						</p>
+						
+					</li>
+					<li>
+						
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</div>
+		</div>
+		<div class="guojiaxuznze" style="position: relative;">
+			<p style="float: left;">
+				<span>国家</span>
+				<span>(选填,可选国家)</span>
+			</p>
+			<div class="input" style="width: 4rem;height: 0.65rem;background: #e5e5e5;border-radius:0.03rem;float: left;margin-left: 0.2rem;margin-top: 0.66rem;">
+				<input type="text" name="" class="mohuGuojia" value="美国" style="width: 3rem;height: 0.64rem;text-indent: 0.2rem;font-size: 0.24rem;border: none;background: #E5E5E5;color: #999;"/>
+				<span style="font-size: 0.24rem;color: #333;margin-left: 0.28rem;">查找</span>
+			</div>
+			<dl class="mohuXunpan" style="display:none;border: 0.8px solid #999;padding:0 0.5rem;position: absolute;z-index:999;background: #e5e5e5;color:#999;right: 0.51rem;bottom:0.88rem;font-size: 0.24rem;text-align: center;">
+				<dt style="display: block;padding: 0.05rem 0.05rem;">美国</dt>
+				<dt style="display: block;padding: 0.05rem 0.05rem;">加拿大</dt>
+				<dt style="display: block;padding: 0.05rem 0.05rem;">巴西</dt>
+				<dt style="display: block;padding: 0.05rem 0.05rem;">智利</dt>
+				<dt style="display: block;padding: 0.05rem 0.05rem;">法国</dt>
+				<dt style="display: block;padding: 0.05rem 0.05rem;">丹麦</dt>
+				<dt style="display: block;padding: 0.05rem 0.05rem;">爱尔兰</dt>
+				<dt style="display: block;padding: 0.05rem 0.05rem;">意大利</dt>
+			</dl>
+		</div>
+		
+		<div class="guojiaxuznze" style="position: relative;">
+			<p style="margin-top: 0;">
+				<span>厂号</span>
+				<span>(选填,可选厂号)</span>
+			</p>
+			<div class="input" style="width: 4rem;height: 0.65rem;background: #e5e5e5;border-radius:0.03rem;float: left;margin-left: 0.2rem;margin-top: 0.22rem;">
+				<input type="text" name="" class="inputChanghao" value="717M" style="width: 3rem;height: 0.64rem;text-indent: 0.2rem;font-size: 0.24rem;border: none;background: #E5E5E5;color: #999;"/>
+				<span style="font-size: 0.24rem;color: #333;margin-left: 0.28rem;">查找</span>
+			</div>
+			<dl class="mohuChanghao" style="display:none;border: 0.8px solid #999;padding:0 0.5rem;position: absolute;z-index:999;background: #e5e5e5;color:#999;right: 0.51rem;bottom:0.88rem;font-size: 0.24rem;text-align: center;">
+				<dt style="display: block;padding: 0.05rem 0.05rem;">717M</dt>
+				<dt style="display: block;padding: 0.05rem 0.05rem;">147C</dt>
+				<dt style="display: block;padding: 0.05rem 0.05rem;">SIF1001</dt>
+				<dt style="display: block;padding: 0.05rem 0.05rem;">06-17</dt>
+				<dt style="display: block;padding: 0.05rem 0.05rem;">29-027-001</dt>
+				<dt style="display: block;padding: 0.05rem 0.05rem;">865</dt>
+				<dt style="display: block;padding: 0.05rem 0.05rem;">EC332</dt>
+				<dt style="display: block;padding: 0.05rem 0.05rem;">169L</dt>
+			</dl>
+			
+		</div>
+	<div style="background: #fff;float: left;width: 7.5rem;">
+		
+		<div class="xieyixvke" style="margin-left: -0.33rem;">
+				<img src="../../img/shouhoudizhixuanze.png" style="float: left;"/>
+				<img src="../../img/shouhuodizhiyixuanze.png"  style="float: left;"/>
+				<p  class="xieyip" style="float: left;margin-left: 0.2rem;">
+					我已阅读并同意<span>《询盘协议》</span>
+				</p>
+		</div>
+			<div class="xunpantijiao">
+				<p  style="border: 0.8px solid #999;">提交</p>
+			</div>
+		</div>
+		<div class="xieyitupianbg" style="position: fixed; left: 0; top: 0.86rem; bottom: 0; right: 0; background: #fff; opacity: 0.5; display: none; z-index: 100;"></div>
+				<div class="xieyitupian" style="display: none; z-index: 2000;">
+					<img src="../../img/xpxieyi.png" style=" position: fixed; width: 5.63rem; height: 8.63rem; left: 0rem; top: 0rem; bottom: 0; right: 0; margin: auto; z-index: 10000;"/>
+					<!--<img src="../../img/chaxieyi.png" style="position: absolute; left: 5rem; top: 0.3rem; width: 0.3rem; height: 0.3rem; z-index: 202;"/>-->
+				</div>
+	</div>
+	<!--精确询盘-->
+	<div style="display:none;" class="wodebaopanCIF">
+			<ul class="wodebaopanList" style="height: 8rem;">
+				<li>
+					<p>国家</p>
+					<div class="wodebaopanbg" style="position: relative;border-radius:0.03rem;">
+						<input class="guojiaxinxi" type="text" placeholder="美国" />
+						<p class="searchGuojia" style="float: right;margin-right: 0.2rem;line-height: 0.7rem;height: 0.7rem;">
+							<span style="font-size: 0.24rem;">查找</span>
+						</p>
+						<dl class="guojiaXunpan" style="display:none;border: 0.8px solid #999;padding:0 0.5rem;position: absolute;z-index:999;background: #e5e5e5;color:#999;right: 0.01rem;top:0.7rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.05rem 0.05rem;">美国</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">加拿大</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">巴西</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">智利</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">法国</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">丹麦</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">爱尔兰</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">意大利</dt>
+						</dl>
+				</li>
+				
+				<li>
+					<p>厂号</p>
+					<div class="wodebaopanbg" style="position: relative;border-radius:0.03rem;">
+						<input class="changhaoxinxi" type="text" placeholder="717M" />
+						<p class="searchChanghao" style="float: right;margin-right: 0.2rem;line-height: 0.7rem;height: 0.7rem;">
+							<span style="font-size: 0.24rem;">查找</span>
+						</p>
+						<dl class="changhaoXunpan" style="display:none;border: 0.8px solid #999;padding:0 0.5rem;position: absolute;z-index:999;background: #e5e5e5;color:#999;right: 0.01rem;top:0.7rem;font-size: 0.24rem;text-align: center;">
+							<dt style="display: block;padding: 0.05rem 0.05rem;">717M</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">147C</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">SIF1001</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">06-17</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">29-027-001</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">865</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">EC332</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">169L</dt>
+						</dl>
+						
+						<!--<select class="jianada" style="display: none;" >
+						<option>字母和数字</option>	
+						<option>001</option>
+						<option>4</option>
+						<option>7</option>
+						<option>9</option>
+						<option>12</option>
+						<option>14</option>
+						<option>68</option>
+						<option>80</option>
+						<option>86</option>
+						<option>94</option>
+						<option>126</option>
+						<option>129</option>
+						<option>147</option>
+						<option>147C</option>
+						</select>-->
+					</div>
+				</li>
+				
+				<li >
+					<p>品名</p>
+					<div class="wodebaopanbg" style="position: relative;border-radius:0.03rem;">
+						<input class="pinmingxinxi" type="text" placeholder="猪手" />
+						<p class="searchPinming" style="float: right;margin-right: 0.2rem;line-height: 0.7rem;height: 0.7rem;">
+							<span style="font-size: 0.24rem;">查找</span>
+						</p>
+						<dl class="pinmingXunpan" style="display:none;border: 0.8px solid #999;padding:0 0.5rem;position: absolute;background: #e5e5e5;color:#999;right: 0.01rem;top:0.7rem;font-size: 0.24rem;text-align: center;z-index: 999;">
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪手</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪头</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪心</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪皮</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪肋骨</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪腰</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪大肠</dt>
+							<dt style="display: block;padding: 0.05rem 0.05rem;">猪尾巴</dt>
+						</dl>
+						<div class="pinmingfenlei">
+							<div class="pinmingyijifenlei">
+								<div class="leiming">
+									猪
+									
+								</div>
+								<ul class="pinmingerjifenlei">
+										<li>猪头</li>
+										<li>背部</li>
+										<li>腹部</li>
+										<li>前腿</li>
+										<li>后退</li>
+										<li>猪头</li>
+										<li>背部</li>
+										<li>腹部</li>
+										<li>前腿</li>
+										<li>后退</li>
+								</ul>
+							</div>
+							<div class="pinmingyijifenlei">
+								<!--<div class="leiming">
+								牛
+									
+								</div>
+								<ul class="pinmingerjifenlei">
+										<li>牛头</li>
+										<li>背部</li>
+										<li>腹部</li>
+										<li>前腿</li>
+										<li>后退</li>
+								</ul>
+							-->
+								
+								
+							</div>
+							<div class="pinmingyijifenlei">
+								<!--<div class="leiming">
+									羊
+									
+								</div>
+								<ul class="pinmingerjifenlei">
+										<li>羊头</li>
+										<li>背部</li>
+										<li>腹部</li>
+										<li>前腿</li>
+										<li>后退</li>
+								</ul>-->
+								
+								
+								
+							</div>
+							<div class="pinmingyijifenlei">
+								<!--<div class="leiming">
+									生鲜
+									
+								</div>
+								<ul class="pinmingerjifenlei">
+										<li>龙虾</li>
+										<li>海蚌</li>
+										<li>鱼</li>
+										
+								</ul>-->
+								
+								
+								
+							</div>
+							
+							<!--<ul class="pinmingyijifenlei">
+								
+								<li>
+									猪
+									
+									
+								</li>
+									<ul class="pinmingerjifenlei">
+										<li>猪头</li>
+										<li>背部</li>
+										<li>腹部</li>
+										<li>前腿</li>
+										<li>后退</li>
+									</ul>
+								
+								<li>
+									牛
+								</li>
+								<li>
+									羊
+								</li>
+								<li>
+									生鲜
+								</li>
+								
+								
+							</ul>
+							-->
+							
+						</div>
+						
+					</div>
+				</li>
+				
+				
+				<li>
+					<p>数量</p>
+					<div class="wodebaopanbg" style="width: 2.2rem;background: none;">
+						<input type="number" placeholder="10" style="width:1.7rem;border-radius:0.03rem;"/>
+						<p style="width: 0.3rem;">
+							<span>柜</span>
+							
+						</p>
+					</div>
+				</li>
+				
+				<li>
+					<p>报价</p>
+					<div class="wodebaopanbg" style="background: none;">
+					<input type="number" placeholder="200000" style="width:1.7rem;float: left;border-radius:0.03rem;"/>
+					<span style="float: left;width: 0.5rem;text-align: center;line-height: 0.7rem;">~</span>
+					<input type="number" placeholder="500000" style="width:1.7rem;float: left;border-radius:0.03rem;"/>
+					<p style="width: 0.3rem;float: left;">
+						<span>元</span>
+					</p>
+					</div>
+				</li>
+				<li style="position: relative;">
+					<p>询盘时效</p>
+					<div class="wodebaopanbg" style="width: 5rem;background: none;position: relative;">
+						<input type="number" class="baopanshixiao" placeholder="5" style="width:3.9rem;border-radius:0.03rem;"/>
+						<span style="top:0.28rem;right:1.3rem;width: 0;height: 0;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: inline-block;position: absolute;"></span>
+						<p style="width: 0.3rem;">
+							<span>天</span>
+						</p>
+					</div>
+					<dl class="shixiaolist" style="display:none;border: 0.8px solid #999;padding:0 0.3rem;position: absolute;background: #e5e5e5;color:#999;right: 1.7rem;top:0.7rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.05rem 0.05rem;">5</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">10</dt>
+						<dt style="display: block;padding: 0.05rem0 0.05rem;">20</dt>
+						<dt style="display: block;padding: 0.05rem0 0.05rem;">30</dt>
+					</dl>
+				</li>
+				<li>
+					<p>备注</p>
+					<div class="wodebaopanbg" style="background: none;">
+						<textarea class="beizhuxinxi" placeholder="请详细的描述您的需求!一般需求描述的越详细，越容易达成交易哦！" style="border-radius:0.03rem;font-size: 0.24rem;color: #999;"></textarea>
+						
+					</div>
+				</li>
+				
+			</ul>
+			
+			<div style="background: #fff;float: left;width: 7.5rem;">
+		
+		<div class="xieyixvke" style="margin-left: -0.33rem;">
+				<img src="../../img/shouhoudizhixuanze.png" style="float: left;"/>
+				<img src="../../img/shouhuodizhiyixuanze.png"  style="float: left;"/>
+				<p class="xieyip" style="float: left;margin-left: 0.2rem;">
+					我已阅读并同意<span>《询盘协议》</span>
+				</p>
+		</div>
+			<div class="xunpantijiao">
+				<p  style="border: 0.8px solid #999;">提交</p>
+			</div>
+		</div>
+		<div class="xieyitupianbg" style="position: fixed; left: 0; top: 0.86rem; bottom: 0; right: 0; background: #fff; opacity: 0.5; display: none; z-index: 100;"></div>
+				<div class="xieyitupian" style="display: none; z-index: 2000;">
+					<img src="../../img/xpxieyi.png" style=" position: fixed; width: 5.63rem; height: 8.63rem; left: 0rem; top: 0rem; bottom: 0; right: 0; margin: auto; z-index: 10000;"/>
+					<!--<img src="../../img/chaxieyi.png" style="position: absolute; left: 5rem; top: 0.3rem; width: 0.3rem; height: 0.3rem; z-index: 202;"/>-->
+				</div>
+			
+		</div>
+	
+	<!--人工询盘-->
+	<div style="display: none;" class="wodebaopanFOB">
+			<ul class="wodebaopanList">
+				<li>
+					<p>询盘需求</p>
+					<div class="wodebaopanbg" style="height: none;border-radius:0.03rem;">
+						<textarea class="xunpanxvqiuwenti" placeholder="一句话描述您想要的，我们将有专人与您联系，保持手机通畅哦！如：德国 101厂 猪手1 规格20kg/件 2016年08月08日天津港口收货"></textarea>
+					</div>
+				</li>
+				
+				
+				
+				<li style="float: left;position: relative;">
+					<p>数量</p>
+					<div class="wodebaopanbg" style="width: 2.5rem;height: 0.6rem;border-radius:0.03rem;">
+						<input type="number" id="inputRengong" placeholder="200" style="color:#333;border-radius:0.03rem;"/>
+						<p style="position: absolute;right: 1.8rem;">
+						<span class="numberChange" style="font-size: 0.24rem;color: #333333;display: inline-block;float: left;">柜</span><span style="width: 0;height: 0;float:left;margin-top:0.28rem;margin-left:0.1rem;border-top: 0.13rem solid #333333;border-left: 0.07rem solid transparent;border-right: 0.07rem solid transparent;display: block;"></span>		
+						</p>
+						<p style="width: 1rem;border-radius:0.03rem;">
+						<dl class="numberRengong" style="display:none;padding:0 0.5rem;position: absolute;background: #e5e5e5;color:#757575;right: 1.6rem;top:0.7rem;font-size: 0.24rem;text-align: center;">
+						<dt style="display: block;padding: 0.05rem 0.05rem;">柜</dt>
+						<dt style="display: block;padding: 0.05rem 0.05rem;">吨</dt>
+						<dt style="display: block;padding: 0.05rem0 0.05rem;">件</dt>
+						
+					</dl>
+						</p>
+					</div>
+				</li>
+				
+				
+			</ul>
+				<div style="background: #fff;float: left; position: fixed;bottom: 0;width: 7.5rem;height: 2rem;">
+			<div style="background: #fff;float: left;width: 7.5rem;">
+		
+		<div class="xieyixvke" style="margin-left: -0.33rem;">
+				<img src="../../img/shouhoudizhixuanze.png" style="float: left;"/>
+				<img src="../../img/shouhuodizhiyixuanze.png"  style="float: left;"/>
+				<p  class="xieyip" style="float: left;margin-left: 0.2rem;">
+					我已阅读并同意<span>《询盘协议》</span>
+				</p>
+		</div>
+			<div class="xunpantijiao">
+				<p  style="border: 0.8px solid #999;">提交</p>
+			</div>
+		</div>
+		<div class="xieyitupianbg" style="position: fixed; left: 0; top: 0.86rem; bottom: 0; right: 0; background: #fff; opacity: 0.5; display: none; z-index: 100;"></div>
+				<div class="xieyitupian" style="display: none; z-index: 2000;">
+					<img src="../../img/xpxieyi.png" style=" position: fixed; width: 5.63rem; height: 8.63rem; left: 0rem; top: 0rem; bottom: 0; right: 0; margin: auto; z-index: 10000;"/>
+					<!--<img src="../../img/chaxieyi.png" style="position: absolute; left: 5rem; top: 0.3rem; width: 0.3rem; height: 0.3rem; z-index: 202;"/>-->
+				</div>
+			
+			
+		</div>
+	
+	
+	</body>
+
+	<script type="text/javascript" src="../../js/mui.js" ></script>
+	<script type="text/javascript" src="../../js/buju.js" ></script>
+	<script type="text/javascript" src="../../js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript" src="../../js/tab.js" ></script>
+	<script type="text/javascript" src="../../js/changjiaTab.js" ></script>
+	<script src="../../js/xunpan.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/clickmodeo.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$(".xunpantijiao p").on("click",function(){
+			
+			window.location.href="wodexunpan.html"
+			
+		})
+		
+			//下拉菜单
+	
+		$(".liebiaozuanfu").on("click",function(e){
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+		
+		
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+	
+	//消息
+		$('.xialacaidan li:nth-child(3)').on('click',function(){
+			window.location.href="../xiaoxiliebiao.html";
+		})
+		//首页
+		$('.xialacaidan li:nth-child(2)').on('click',function(){
+			window.location.href ="../../index.html";
+		})
+	</script>
+	
+</html>

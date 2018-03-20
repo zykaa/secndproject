@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>商品自提</title>
+		<style type="text/css">
+			div.shangpin_ziti ul li input{
+				background: #f5f5f5;
+				border: 1px solid #e5e5e5;
+				border-radius: 0.03rem;
+			}
+			.theThirdPage{
+				-webkit-overflow-scrolling: touch;
+				overflow: auto;
+				height: 13rem;
+			}
+		</style>
+	</head>
+	<link rel="stylesheet" href="../../css/commen.css" />
+	<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../../css/index.css" />
+	<link rel="stylesheet" href="../../css/ziyemain.css" />
+	<body style="overflow-x: hidden;width: 7.5rem;">
+		<header class="dingdanquanbu" style="z-index: 1000;background: #f8f8f8;position: fixed;" >
+		<ul class="wodedingdanheader yincang" style=" width: 7.5rem;">
+			<li style="margin-left: 0.3rem;font-size: 0.3rem;">
+				<i class="fa fa-angle-left mui-action-back" aria-hidden="true" style="font-size: 0.66rem;"></i>
+			</li>
+
+			<li style="text-align: center;width: 5.18rem;font-size: 0.34rem;">
+				商品自提
+			</li>
+			<li class="liebiaozuanfu" style="text-align: center;line-height: 0.6rem; font-size: 0.6rem; color: #ea0607;float: right;margin-right: 0.3rem;font-family: '微软雅黑';">...</li>
+			</ul>
+
+
+		</header>
+              <ul class="xialacaidan" style="display: none; z-index: 1001;" >
+				<div class="xiaojiao"></div>
+				<li><img src="../../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+				<li><img src="../../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+				
+				<li><img src="../../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+				<li><img src="../../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+			</ul>
+		
+<div class="theThirdPage">
+	<div class="shangpin_ziti" style="margin-top: 1rem;">
+		<p>
+			物流司机基本信息
+		</p>
+
+		<ul>
+			<li>
+				<span style="font-size:0.24rem">姓名</span>
+				<input type="text" placeholder="张扬" />
+			</li>
+			<li>
+				<span style="font-size:0.24rem">手机号</span>
+				<input type="text" placeholder="15832229900" />
+			</li>
+			<li>
+				<span style="font-size:0.24rem">车牌号</span>
+				<input type="text" placeholder="京N22334445" />
+			</li>
+		</ul>
+
+
+	</div>
+
+	<div class="shangchuan">
+			<p>身份证照</p>
+			<ul>
+				<li>
+					<img src="../../img/shnrefenhzng.png"  />
+				</li>
+				<li>
+					<img src="../../img/kongmeban.png"  />
+
+				</li>
+			</ul>
+
+	</div>
+	<div class="xingshizheng">
+
+		<p>行驶证照片</p>
+
+		<p>
+
+			<img src="../../img/photo.png" />
+			<span>点击上传</span>
+		</p>
+
+	</div>
+
+
+	<div class="shangpinziti_tijiao">
+		<p style="border: 1px solid #e5e5e5;">提交</p>
+
+
+	</div>
+	<p class="ziliaoyitijiao" style="width: 7.5rem;font-size: 0.28rem;display:none;color: #EA0607;text-align: center;float: left;line-height: 0.5rem;">资料已提交</p>
+	
+</div>
+	</body>
+     <script type="text/javascript" src="../../js/mui.js" ></script>
+     <script type="text/javascript" src="../../js/buju.js" ></script>
+	<script type="text/javascript" src="../../js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript" src="../../js/tab.js" ></script>
+	<script type="text/javascript" src="../../js/clickmodeo.js" ></script>
+	<script>
+		$(".shangpinziti_tijiao").on("click",function(){
+
+			$(".ziliaoyitijiao").fadeIn(500,function(){
+
+//				window.location.href="querendingdan.html";
+				mui.openWindow({
+				url:'querendingdan.html',
+				id:'querendingdan.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+				
+				
+				$(".tuijiawuliuzixuan>li>img").attr("src","../../img/shouhoudizhixuanze.png");
+				$(".shangpinzitihsangpinxiangqing>img").attr("src","../../img/shouhuodizhiyixuanze.png");
+
+
+			})
+
+		})
+
+//下拉菜单
+	
+		$(".liebiaozuanfu").on("click",function(e){
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+		
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+	
+	//消息
+		$('.xialacaidan li:nth-child(3)').on('click',function(){
+			window.location.href="../../html/xiaoxiliebiao.html";
+//			mui.openWindow({
+//				url:'../../html/xiaoxiliebiao.html',
+//				id:'../../html/xiaoxiliebiao.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		//首页
+		$('.xialacaidan li:nth-child(2)').on('click',function(){
+			window.location.href ="../../index.html";
+//			mui.openWindow({
+//				url:'../../index.html',
+//				id:'../../index.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+
+	</script>
+
+	<!--<script type="text/javascript" src="../../js/feedback.js" ></script>-->
+</html>

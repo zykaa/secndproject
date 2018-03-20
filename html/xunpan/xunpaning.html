@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>我的询盘</title>
+	</head>
+	<link rel="stylesheet" href="../../css/commen.css" />
+	<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../../css/index.css" />
+	<link rel="stylesheet" href="../../css/ziyemain.css" />
+	<style>
+		.wodedingdan_shangpin {
+			float: left;
+		}
+		 
+		.wodedingdan_xinxi li:nth-child(3) {
+			text-align: right;
+		}
+		
+		#wodebaopan_xinxi span {
+			background: #fff;
+			border: 0.03rem solid #E5E5E5;
+			padding: 0.03rem 0.05rem;
+			border-radius: 0.05rem;
+			color: #999999;
+		}
+		.wodebaopan_xuanzeyonghuleixing{
+			display: none;
+			width: 7.5rem;
+			height: 14rem;
+			position: fixed;
+			background: #000000;
+			opacity: 0.3;
+			filter: alpha(opacity:30;);
+			top: 0;
+		}
+		.yonghuxianze{
+			display: none;
+			width:5.4rem;
+			margin: 0 auto;
+			position: fixed;
+			top: 4rem;
+			height:3.13rem;
+			background: #fff;
+			border-radius:0.5rem ;
+			color: #999;
+			margin-left: 1rem;
+		}
+		.yonghuxianze ul li{
+			width: 5.4rem;
+			height:0.95rem ;
+			text-align: center;
+			line-height: 0.95rem;
+		}
+		.yonghuxianze ul li:nth-child(1){
+			position: relative;
+			color: #333333;
+		}
+		.yonghuxianze ul li:nth-child(1) span{
+			width: 0.54rem;
+			height: 0.54rem;
+			position: absolute;
+			color: #Fff;
+			right: 0;
+			top: -0.8rem;
+			font-size: 0.5rem;
+		}
+			.yonghuxianze ul li:nth-child(2){
+				border-bottom: 0.03rem solid #E5E5E5;
+				border-top: 0.03rem solid #E5E5E5;
+			}
+			.guocheng ul{
+				margin-left: 0.62rem;
+				margin-right: 0.3rem;
+				
+			}
+			.guocheng ul li:first-child{
+				margin-top: 0.34rem;
+			}
+			.guocheng ul li:nth-child(5){
+				width: 0.3rem;
+				height: 0.3rem;
+				line-height: 0.3rem;
+				background: #333;
+				border: none;
+				color: #fff;
+			}
+			.guocheng .fourthList.hover{
+				width: 0.3rem;
+				height: 0.3rem;
+				line-height: 0.3rem;
+				background: #333;
+				border: none;
+				color: #fff;
+			}
+			.guocheng ul li{
+				width: 0.28rem;
+				height: 0.28rem;
+				border: 1px solid #999;
+				font-size: 0.24rem;
+				text-align: center;
+				line-height: 0.28rem;
+				border-radius:50%;
+				color: #999;
+			}
+			.xiangqing_liucheng{
+				float: left;
+			}
+			.xiangqing_liucheng dl{
+				margin-top: 0.3rem;
+			}
+			.xiangqing_liucheng dl dt{
+				color: #333;
+				font-size: 0.24rem;
+			}
+			.xiangqing_liucheng dl dd{
+				color: #999;
+				font-size: 0.2rem;
+			}
+			.xiangqing_liucheng dl:nth-child(3) dt{
+				color: #ffb035;
+			}
+			.xiangqing_liucheng dl:nth-child(3) dd{
+				color: #ffb035;
+			}
+	</style>
+
+	<body>
+		<header class="dingdanquanbu" style="border-bottom: 0.5px solid #e5e5e5;position: fixed;z-index: 999;">
+			<ul class="wodedingdanheader yincang" style=" width: 7.5rem;border-bottom: none;background: #F5F5F5;">
+				<li style="margin-left: 0.3rem;">
+					<a href="wodexunpan.html" style="color: #EA0607;"><i class="fa fa-angle-left mui-action-back" aria-hidden="true" style="font-size: 0.66rem;"></i></a>
+				</li>
+
+				<li style="text-align: center;margin-left: -0.52rem;">
+					<span style="display: inline-block;">询盘详情</span>
+					
+				</li>
+				<li class="liebiaozuanfu" style="text-align: center;line-height: 0.6rem; font-size: 0.6rem; color: #ea0607;float:right;margin-right:0.3rem;font-family: '微软雅黑';">...</li>
+				
+				<!--<li style="line-height: 0.8rem;font-size: 0.24rem;margin-left: 0.3rem;">
+				<img src="../../img/search.png"  />
+			</li>-->
+
+			</ul>
+
+		</header>
+		<ul class="xialacaidan" style="display: none; z-index: 1000;" >
+				<div class="xiaojiao"></div>
+				<li><img src="../../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+				<li><img src="../../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+				
+				<li><img src="../../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+				<li><img src="../../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+			</ul>
+		
+		<div class="dingdnachenggong" style="margin-top: 0.85rem;">
+			<img src="../../img/xiangqingbg.png" style="width:100%;height:1.8rem;position: relative;"/>
+			<div class="dingdanchenggongtop" style="position: absolute;top: 0.8rem;">
+				<dl style="font-size: 0.24rem;color: #fff;text-align: center;">
+					<dt class="subing" style="margin-top: 0.4rem; color: #fff; font-size: 0.3rem;">询盘需求受理中</dt>
+					<dd class="subjuliing" style="padding-top:0.2rem;color: #fff; font-size: 0.24rem;">询盘需求结束时间还剩 : 3天2小时</dd>
+				</dl>
+			</div>
+			
+		</div>
+		
+		<div style="float: left;">
+		<div class="wodedingdan_shangpin" style="border-top: none;float: left;">
+			<div class="wodedingdan_zhanshishangpin" style="height: initial;">
+
+				<ul class="wodedingdan_xinxi" style="height: 1.8rem;">
+
+					<li style="line-height: 0;">
+						<img src="../../img/ff.png" style="margin-top: 0;"/>
+						
+					</li>
+					<li style="width: 2rem;">
+						<p>
+							<a href="javascript::" style="color: #333333;display: inline-block;float: left;font-size: 0.28rem;">猪排</a>
+							<span style="font-size: 0.24rem;border-radius: 0.03rem;padding: 0 0.08rem;border: 0.8px solid #64c790;color: #64c790;border-radius:0.03rem;">模糊询盘</span>
+						</p>
+
+						<p id="wodebaopan_xinxi">
+							<span style="border-radius:0;padding: 0 0.08rem;font-size: 0.24rem;border: 0.8px solid #E5E5E5;">德国</span>
+							<span style="border-radius:0;padding: 0 0.08rem;font-size: 0.24rem;border: 0.8px solid #E5E5E5;">202</span>
+							<span style="border-radius:0;padding: 0 0.08rem;font-size: 0.24rem;border: 0.8px solid #E5E5E5;">吨</span>
+						</p>
+
+					</li>
+
+					<li style="width: 3.43rem;color: #ffbb00;text-align: right;margin-top: 0.04rem;">
+						<p class="quxiaozhongbut" style="color: #EA0607;margin-top: 0;font-size: 0.24rem;">询盘中</p>
+						<p style="margin-top: 0.1rem;">约363000.00元/柜<br /><span style="color: #999;">×10吨</span><br /><span style="color: #999;display:inline-block;margin-top: 0.2rem;font-size: 0.2rem;">2016-09-11</span></p>
+					</li>
+					
+				</ul>
+				<!--<div style="float: left;">
+					<p style="color: #EA0607;">距离付款时间还剩: <span>1天1小时</span></p>
+				</div>-->
+				
+				<div class="baopanzhuangtai" style="border-top: 0.8px solid #E5E5E5;">
+					<p style="margin-top: 0.23rem;">
+						<a class="wodedelete" style="width:1.24rem;height:0.5rem;text-align:center;line-height:0.5rem;color:#333;display:inline-block;border: 0.8px solid #999;text-decoration:none;margin-left: 1.72rem;">
+		   				取消询盘
+		   				</a>
+		   				<a class="subwodedelete"  style="width:1.24rem;height:0.5rem;text-align:center;line-height:0.5rem;color:#333;display:inline-block;border: 0.8px solid #999;text-decoration:none;margin-left: 1.72rem;">
+		   				删除询盘
+		   				</a>
+					</p>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="guocheng" style="width: 100%;border-top:0.5px solid #E5E5E5;height: 5rem;float: left;">
+			<!--<ul style="color: #999;font-size: 0.24rem;margin-left: 0.3rem;">
+				<li class="xuqiu">询盘需求提交时间 :<span>2016-09-06 10:11:11</span></li>
+				<li class="xuqiu">您的询盘需求系统开始自动确认 :<span>2016-09-06 12:12:34</span></li>
+				<li class="xuqiu">询盘需求已完成自动分发 :<span>2016-09-06 12:12:35</span></li>
+			</ul>-->
+			
+			<ul style="float: left;">
+				<li>1</li>
+				<span style="display: block;width: 0.02rem;height: 0.4rem;border-left:1px dotted #999;margin-top: 0.1rem;margin-bottom:0.1rem;margin-left: 0.15rem;"></span>
+				<li>2</li>
+				<span style="display: block;width: 0.02rem;height: 0.4rem;border-left:1px dotted #999;margin-top: 0.1rem;margin-bottom:0.1rem;margin-left: 0.15rem;"></span>
+				<li  class="serthList">3</li>
+				<span class="otherList" style="display: block;width: 0.02rem;height: 0.4rem;border-left:1px dotted #999;margin-top: 0.1rem;margin-bottom:0.1rem;margin-left: 0.15rem;"></span>
+				<li class="otherList">4</li>
+				<span class="otherList" style="display: block;width: 0.02rem;height: 0.4rem;border-left:1px dotted #999;margin-top: 0.1rem;margin-bottom:0.1rem;margin-left: 0.15rem;"></span>
+				<li class="otherList">5</li>
+				<span class="otherList" style="display: block;width: 0.02rem;height: 0.4rem;border-left:1px dotted #999;margin-top: 0.1rem;margin-bottom:0.1rem;margin-left: 0.15rem;"></span>
+				<li class="otherList">6</li>
+			</ul>
+			<div class="xiangqing_liucheng">
+				<dl>
+					<dt>询盘需求提交时间 :</dt>
+					<dd>2016-09-06 12:12:33</dd>
+				</dl>
+				<dl>
+					<dt>您的询盘需求系统开始自动确认 :</dt>
+					<dd>2016-09-06 12:12:34</dd>
+				</dl>
+				<dl>
+					<dt class="xunpanQuxiao">询盘需求已完成自动分发 :</dt>
+					<dd class="quxiaoshijian">2016-09-06 12:12:35</dd>
+				</dl>
+				<dl class="lastList">
+					<dt>询盘需求已被自动受理 :</dt>
+					<dd></dd>
+				</dl>
+				<dl class="lastList" style="margin-top: 0.58rem;">
+					<dt>询盘需求已生成待付款订单 :</dt>
+					<dd></dd>
+				</dl>
+				<dl class="lastList"  style="margin-top: 0.55rem;">
+					<dt>确认订单并付款 :</dt>
+					<dd></dd>
+				</dl>
+			</div>
+		</div>
+		
+		</div>
+		
+		<div class="xieyitupianbg" style="position: fixed; left: 0; top: 0.86rem; bottom: 0; right: 0; background: rgba(0,0,0,.5);  display: none;z-index: 996;">
+				
+				<div class="subquxiao" style="display: none; z-index: 999;">
+					<div style="position: fixed; width: 6rem; height: 4rem;background: #fff;border-radius:0.03rem ; left: 0rem; top: 0rem; bottom: 0; right: 0; margin: auto;">
+						<h2 style="font-size: 0.4rem;text-align: center;margin-top: 0.2rem;color: #333;font-weight: normal;">取消询盘</h2>
+						<p style="font-size: 0.3rem;margin-left: 1.3rem;margin-top: 0.6rem;color: #333;">你确定取消该询盘记录吗?</p>
+						<ul style="width: 100%;height: 1rem;font-size: 0.35rem;border-top: 1px solid #E5E5E5;margin-top: 1.16rem;">
+							<li class="quxiao" style="float: left;width:50%;text-align: center;line-height: 1rem;border-right: 1px solid #e5e5e5;"><a href="" style="color: #999;text-decoration: none;">取消</a></li>
+							<li class="queding" style="float:left;width: 47%;text-align: center;line-height: 1rem;"><a class="queding" style="color: #333;text-decoration: none;">确定</a></li>
+						</ul>
+					</div>
+				</div>
+				<!--删除弹出框-->
+				<div class="xunpanshanchuzhong" style="display: none; z-index: 999;">
+					<!--<img src="../../img/xpxieyi.png" style=" position: fixed; width: 5rem; height: 8rem; left: 0rem; top: 0rem; bottom: 0; right: 0; margin: auto; z-index: 10000;"/>-->
+					<!--<img src="../../img/chaxieyi.png" style="position: absolute; left: 5rem; top: 0.3rem; width: 0.3rem; height: 0.3rem; z-index: 202;"/>-->
+					<div style="position: fixed; width: 6rem; height: 4rem;background: #fff;border-radius:0.03rem ; left: 0rem; top: 0rem; bottom: 0; right: 0; margin: auto;">
+						<h2 style="font-size: 0.4rem;text-align: center;margin-top: 0.2rem;color: #333;font-weight: normal;">删除询盘</h2>
+						<p style="font-size: 0.3rem;margin-left: 1.3rem;margin-top: 0.6rem;color: #333;">你确定删除该询盘记录吗?</p>
+						<ul style="width: 100%;height: 1rem;font-size: 0.35rem;border-top: 1px solid #E5E5E5;margin-top: 1.16rem;">
+							<li class="quxiao" style="float: left;width:50%;text-align: center;line-height: 1rem;border-right: 1px solid #e5e5e5;"><a href="" style="color: #999;text-decoration: none;">取消</a></li>
+							<li class="queding" style="float:left;width: 47%;text-align: center;line-height: 1rem;"><a class="queding"  style="color: #333;text-decoration: none;">确定</a></li>
+						</ul>
+					</div>
+				</div>
+				
+		</div>
+		<!--<div class="wodebaopan_xuanzeyonghuleixing"></div>
+		
+		<div class="yonghuxianze">
+			<ul>
+				<li>
+					选择用户类型
+					 <span>×</span>
+				</li>
+				<li>
+					个体工商户
+				</li>
+				<li>
+					企业用户
+					
+				</li>
+			</ul>
+			 
+			 
+			
+		</div>-->
+		<!--footer-->
+<!--<a href="../geTiGongShangHuDengJi.html"></a>-->
+	</body>
+	<script type="text/javascript" src="../../js/mui.js" ></script>
+	<script type="text/javascript" src="../../js/buju.js"></script>
+	<script type="text/javascript" src="../../js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="../../js/tab.js"></script>
+	<script type="text/javascript" src="../../js/clickmodeo.js" ></script>
+    <script>
+//		$(".yonghuxianze ul li:nth-child(2)").on("click",function(){
+//			
+//			$("body").load("../geTiGongShangHuDengJi.html",function(){
+//				$(this).fadeIn(200)
+//				
+//			})
+//			
+//		})
+//		$(".yonghuxianze ul li:nth-child(3)").on("click",function(){
+//			
+//			$("body").load("../qiyeyonghudengji.html",function(){
+//				$(this).fadeIn(200)
+//				
+//			})
+//			
+//		})
+		
+	
+		
+		
+//		$(".baopanzhuangtai p span:nth-child(1)").on("click",function(){
+//			
+//			$(this).closest(".wodedingdan_shangpin").slideUp(500)
+//		})
+//		
+//		$(".zengjiabaopan p").on("click",function(){
+//			window.location.href="wodexunpanTab.html"
+//			
+//			
+//		})
+//		
+//			$(".baopanzhuangtai p span:nth-child(2)").on("click",function(){
+//			
+//			window.location.href="wodexunpanTab.html"
+//			
+//		})
+
+		$('.subwodedelete').hide()
+		$('.wodedelete').click(function(){
+			$('.xieyitupianbg').css('display','block');
+			$('.subquxiao').css('display','block');
+		}) 
+		$('.subquxiao .quxiao').click(function(){
+			$('.subquxiao').css('display','none');
+			$('.xieyitupianbg').css('display','none'); 
+			
+		})
+		$('.subquxiao .queding').click(function(){ 
+			 
+			$('.xieyitupianbg').css('display','none');
+			$('.subquxiao').css('display','none');
+			$('.wodedelete').hide();
+			$('.subwodedelete').show()
+			$('.subing ').html('询盘已取消');
+			$('.subing ').css('margin-top','0.7rem')
+			$('.subjuliing').html('');
+			$('.zengjiabaopan').hide()
+			$('.xunpanQuxiao').html('此次询盘已被您取消')
+			$('.lastList').hide()
+			$('.otherList').hide()
+			
+			
+		}) 
+		
+		//删除弹出框
+		$('.subwodedelete').click(function(){
+			$('.xieyitupianbg').css('display','block');
+			$('.xunpanshanchuzhong').css('display','block');
+		})
+		$('.xunpanshanchuzhong .quxiao').click(function(){
+			$('.xunpanshanchuzhong').css('display','none');
+			$('.xieyitupianbg').css('display','none');
+			
+		})
+		$('.xunpanshanchuzhong .queding').click(function(){ 
+			 
+			$('.xieyitupianbg').css('display','none');
+			$('.xunpanshanchuzhong').css('display','none');
+			window.location.href="wodequxiaoing.html"
+		})
+		
+		//下拉菜单
+	
+//		$(".liebiaozuanfu").click(function(e){
+//	　　		$(".xialacaidan").show(300);
+//	　　		e.stopPropagation();
+//		});
+//		var bool=0
+//		$(".liebiaozuanfu").on("click",function(){
+//			if(bool==0){
+//				$(".xialacaidan").show(300);
+//				bool=1
+//			}
+//			else{
+//				$(".xialacaidan").hide(300);
+//				bool=0
+//			}
+//			
+//		})
+		$(".liebiaozuanfu").on("click",function(e){
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+		
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+	
+	//消息
+		$('.xialacaidan li:nth-child(3)').on('click',function(){
+			window.location.href="../xiaoxiliebiao.html";
+		})
+		//首页
+		$('.xialacaidan li:nth-child(2)').on('click',function(){
+			window.location.href ="../../index.html";
+		})
+	</script>
+</html>

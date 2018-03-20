@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>银行账户管理</title>
+    <link rel="stylesheet" type="text/css" href="../../css/commen.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/bank.css"/>
+    <link rel="stylesheet" href="../../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../css/index.css" />
+    <script type="text/javascript" src="../../js/mui.js" ></script>
+    <script src="../../js/buju.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/jquery-2.1.3.min.js" ></script>
+    <script type="text/javascript" src="../../js/clickmodeo.js" ></script>
+    <script type="text/javascript" src="../../js/tab.js"></script>
+    <script type="text/javascript">
+
+   	$(function(){
+   		 		//下拉菜单
+	
+		$(".liebiaozuanfu").on("click",function(e){
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+		
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+	//消息
+		$('.xialacaidan li:nth-child(3)').on('click',function(){
+//			window.location.href="../xiaoxiliebiao.html";
+mui.openWindow({
+				url:'../xiaoxiliebiao.html',
+				id:'../xiaoxiliebiao.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+		//首页
+		$('.xialacaidan li:nth-child(2)').on('click',function(){
+//			window.location.href ="../../index.html";
+mui.openWindow({
+				url:'../../index.html',
+				id:'../../index.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+   	})
+  
+	
+    </script>
+    <style type="text/css">
+    	.thebigheader{
+    		background: #f8f8f8;
+    		width: 7.5rem;
+        border-bottom: 0.8px solid #e5e5e5;
+        
+    	}
+    	div.nameL{
+    		width: 2rem;
+    		height: auto;
+    		padding-left: 0.15rem;
+    	}
+    	div.nameL i{
+    		height: 0.7rem;
+    		line-height: 0.7rem;
+    		margin-top: 0.35rem;
+    	}
+    	div.nameR{
+    		width: 5.3rem;
+    	}
+    	.nameR input{
+    		font-size: 0.24rem;
+    		text-indent: 0.2rem;
+    		box-sizing: border-box;
+    		border: 0.8px solid #e5e5e5;
+    		border-radius: 0.03rem;
+    	}
+    	.nameR .input2{
+    		width: 3.1rem;
+    		margin-left: 0;
+    	}
+    	.nameR .textarea{
+    		padding: 0.2rem;
+    		box-sizing: border-box;
+    		font-size: 0.24rem;
+    		border: 0.8px solid #e5e5e5;
+    	}
+    	.nameR .textarea,.nameR .input1{
+    		margin-top: 0.35rem;
+    		width: 5.11rem;
+    		margin-left: 0;
+    	}
+    	.nameR ol{
+				display: inline-block;
+				list-style: none;
+				width: 1.88rem;
+				position: absolute;
+				top: 4.4rem;
+				color: #333;
+				z-index: 100;
+				border: 0.8px solid #e5e5e5;
+				background-color: #f5f5f5;
+				box-sizing: border-box;
+				right: 0.21rem;
+			}
+			.nameR ol li{
+				width: 90%;
+				margin: auto;
+				font-size: 0.24rem;
+				padding-left: 0.1rem;
+				margin-top: 0.1rem;
+			}
+			.nameR ol li:last-child{
+				margin-bottom: 0.2rem;
+			}
+			.nameR .ti{
+				font-size: 0.24rem;
+				/*margin-left: 1.5rem;*/
+				margin-top: 0.35rem;
+				display: inline-block;
+				width: 1.9rem;
+				height: 0.7rem;
+				line-height: 0.7rem;
+				background: #f5f5f5;
+				box-sizing: border-box;
+				border: 0.8px solid #e5e5e5;
+			}
+			.nameR em~img{
+				display: inline-block;
+				width: 0.21rem;
+				margin-left: 0.2rem;
+			}
+			.nameR em,.nameR em~img{
+				vertical-align: middle;
+			}
+			div.releve{
+				bottom:0.5rem;
+				top: auto;
+				border: 0.8px solid #e5e5e5;
+			}
+    </style>
+</head>
+<body style="display: block;">
+	<!--01-->
+	<header class="thebigheader"  >
+		<ul style=" width: 7.5rem;">
+			
+			<li style="margin-left: 0.3rem;">
+				<i class="fa fa-angle-left mui-action-back" aria-hidden="true" style="font-size: 0.66rem;"></i>
+			</li>
+			<li style="width:5.2rem;">
+				<!--<em style="margin-left:1.1rem;">-->
+					银行账户管理
+				<!--</em>-->
+			</li>
+			<!--<li style="width:1.5rem; line-height: 0.8rem;font-size: 0.24rem;">
+				手机快速注册
+			</li>-->
+			<li class="liebiaozuanfu" style="text-align: center;line-height: 0.6rem; font-size: 0.6rem; color: #ea0607;float:right;margin-right: 0.3rem;font-family: '微软雅黑';">...</li>
+			</ul>
+			
+	
+
+		</header>
+		
+		<ul class="xialacaidan" style="display: none; z-index: 1000;" >
+				<div class="xiaojiao"></div>
+				<li><img src="../../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+				<li><img src="../../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+				
+				<li><img src="../../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+				<li><img src="../../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+			</ul>
+	
+
+	<!--02-->
+	<div id="">
+
+		<div id="" class="nameL" style="font-size: 0.28rem;color: #333333;">
+
+			    <i>银行账号:</i>
+			    <i>银行开户名:</i>
+			    <i>银行开户行:</i>
+			    <i>银行开户支行:</i>
+
+		</div>
+		<div id="" class="nameR">
+
+			    <input type="text" class="input1" name="" id="" value="请填写你的银行卡账号" onfocus="if(this.value=='请填写你的银行卡账号'){value=''}" onblur="if (value ==''){value='请填写你的银行卡账号'}"/>
+
+		    	<input type="text" class="input1" name="" id="" value="请填写你的银行开户名" onfocus="if(this.value=='请填写你的银行开户名'){value=''}" onblur="if (value ==''){value='请填写你的银行开户名'}"/>
+
+		        <input class="input2" type="text" name="" id="" value="请填写你的银行开户行" onfocus="if(this.value=='请填写你的银行开户行'){value=''}" onblur="if (value ==''){value='请填写你的银行开户行'}"/>
+		        <div class="ti" style="border-radius: 0.03rem;"><em>选择开户行</em><img src="../../img/xialasanjiao.png" alt="" /></div>
+				<ol class="xiala" style="display: none;">
+					<li>招商银行</li>
+				</ol>
+
+		        <textarea  style="border-radius: 0.03rem;" class="textarea" onfocus="if(value=='请输入开户行支行'){value=''}" onblur="if (value ==''){value='请输入开户行支行'}">请输入开户行支行</textarea>
+
+		</div>
+
+	</div>
+	<!--03-->
+
+	<div id="" class="releve">
+		<i>提交</i>
+	</div>
+</body>
+<script type="text/javascript">
+	$(function(){
+		$(".nameR .ti").click(function(){
+				$(".nameR ol").slideToggle(500);
+			})
+			$(".nameR ol li").eq(0).click(function(){
+				$(".input2").val("招商银行");
+				$(".nameR ol").hide();
+			})
+	})
+</script>
+</html>

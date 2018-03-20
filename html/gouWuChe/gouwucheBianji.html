@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>购物车</title>
+	</head>
+	<link rel="stylesheet" href="../../css/commen.css" />
+	<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../../css/ziyemain.css" />
+	<style type="text/css">
+		.GouWuChe_Shangpin li:nth-child(2) .jiajian p {
+			border: 1px solid #e5e5e5;
+			width: 0.59rem;
+			height: 0.57rem;
+			line-height: 0.57rem;
+		}
+		
+		.GouWuChe_Shangpin li:nth-child(2) p:nth-child(3) {
+			height: 0.44rem;
+		}
+		
+		ul.gouwuche_dianpu li:nth-child(1) img {
+			margin-top: 0.2rem;
+		}
+		
+		div.gouwubottom li:nth-child(2) {
+			margin-left: 0.3rem;
+			/*padding-left: 0.7rem;*/
+		}
+		
+		ul.GouWuChe_Shangpin li:nth-child(1) img {
+			margin-top: 0.7rem;
+		}
+		
+		ul.GouWuChe_Shangpin li:nth-child(2) p:nth-child(3) {
+			font-size: 0.2rem;
+		}
+		
+		ul.GouWuChe_Shangpin li:nth-child(2) .jiajian {
+			font-size: 0.28rem;
+			padding-right: 0.2rem;
+			box-sizing: border-box;
+		}
+		
+		div.gouwubottom ul li:nth-child(3) {
+			line-height: 0.78rem;
+			/*zh*/
+			float: right;
+		}
+		
+		div.gouwubottom ul li:nth-child(3) span {
+			font-weight: normal;
+		}
+		
+		div.gouwubottom ul li:nth-child(1) img,
+		span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		
+		div.gouwubottom ul li:nth-child(1) img {
+			float: none;
+			margin-top: 0;
+		}
+		
+		div.gouwubottom ul li {
+			box-sizing: border-box;
+		}
+		
+		.i {
+			width: 100%;
+			height: 100%;
+			border: 1px solid #e5e5e5;
+			box-sizing: border-box;
+		}
+		
+		.i img {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+		}
+		
+		.wanchengye {
+			width: 7.5rem;
+			height: 0.94rem;
+			float: left;
+			background: #fff;
+			position: fixed;
+			bottom: 0;
+		}
+		
+		.wanchengye ul {
+			width: 7.5rem;
+			height: 0.94rem;
+			float: left;
+		}
+		
+		.wanchengye ul li {
+			float: left;
+			line-height: 0.94rem;
+			font-size: 0.26rem;
+			border: 0.8px solid #E5E5E5;
+		}
+		
+		.wanchengye ul li:nth-child(1) {
+			width: 2.35rem;
+			height: 0.9rem;
+		}
+		
+		.wanchengye ul li:nth-child(1) img {
+			width: 0.35rem;
+			height: 0.35rem;
+			margin-top: 0.3rem;
+			float: left;
+			margin-left: 0.25rem;
+		}
+		
+		.wanchengye ul li:nth-child(1) img:nth-child(2) {
+			display: none;
+		}
+		
+		.wanchengye ul li:nth-child(2) {
+			width: 1.07rem;
+			height: 0.9rem;
+			border-left: none;
+			border-right: none;
+		}
+		
+		.wanchengye ul li:nth-child(2) img {
+			margin: 0 auto;
+			margin-left: 0.3rem;
+		}
+		
+		.wanchengye ul li:nth-child(3) {
+			width: 2rem;
+			height: 0.9rem;
+			text-align: center;
+			border-right: none;
+			line-height: 0.9rem;
+		}
+		
+		.wanchengye ul li:nth-child(4) {
+			width: 2rem;
+			border-left: none;
+			border-right: none;
+			background: #EA0607;
+			height: 0.9rem;
+			line-height: 0.9rem;
+			color: #fff;
+			font-size: 0.28rem;
+			text-align: center;
+		}
+		
+		.shareNeiRong {
+			width: 6rem;
+			position: absolute;
+			top: 3.8rem;
+			/*height: 6.12rem;*/
+			display: none;
+			margin: 0 auto;
+			background: #FFFFFF;
+			margin-left: 0.72rem;
+		}
+		
+		.shareNeiRong ul {
+			width: 5.5rem;
+			height: 2.07rem;
+			float: left;
+		}
+		
+		.shareNeiRong ul li {
+			float: left;
+			/*width: 1.2rem;*/
+			height: 2.07rem;
+		}
+		
+		.shareNeiRong ul:nth-child(2) {
+			border-bottom: 0.8px solid #F5F5F5;
+			margin-left: 0.2rem;
+		}
+		
+		.shareNeiRong ul:nth-child(2) li:nth-child(1) img {
+			width: 0.94rem;
+			height: 1.23rem;
+			margin: 0 auto;
+			margin-left: 0.37rem;
+			margin-top: 0.4rem;
+		}
+		
+		.shareNeiRong ul:nth-child(2) li:nth-child(2) img {
+			width: 0.82rem;
+			height: 1.26rem;
+			margin: 0 auto;
+			margin-left: 0.37rem;
+			margin-top: 0.4rem;
+		}
+		
+		.shareNeiRong ul:nth-child(3) li:nth-child(1) img {
+			width: 0.95rem;
+			height: 1.27rem;
+			margin: 0 auto;
+			margin-left: 0.37rem;
+			margin-top: 0.4rem;
+		}
+		
+		.shareNeiRong ul:nth-child(3) li:nth-child(2) img {
+			width: 1.18rem;
+			height: 1.27rem;
+			margin: 0 auto;
+			margin-left: 0.37rem;
+			margin-top: 0.4rem;
+		}
+		
+		.shareNeiRong ul:nth-child(3) li:nth-child(3) img {
+			width: 0.85rem;
+			height: 1.27rem;
+			margin: 0 auto;
+			margin-left: 0.37rem;
+			margin-top: 0.4rem;
+		}
+		
+		.shareNeiRong ul:nth-child(3) li:nth-child(4) img {
+			width: 0.82rem;
+			height: 1.27rem;
+			margin: 0 auto;
+			margin-left: 0.37rem;
+			margin-top: 0.4rem;
+		}
+		
+		.shareBg {
+			display: none;
+			width: 7.5rem;
+			height: 100%;
+			background: #000000;
+			opacity: 0.5;
+			filter: alpha(opacity: 50);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		
+		.shareNeiRong p {
+			width: 6rem;
+			height: 0.5rem;
+			text-align: center;
+			font-size: 0.26rem;
+			line-height: 1rem;
+			color: #333333;
+		}
+		
+		.shareNeiRong .quxioa {
+			height: 1rem;
+			float: left;
+			text-align: center;
+			line-height: 1rem;
+			width: 6rem;
+			border-top: 0.8px solid #F5F5F5;
+		}
+	</style>
+
+	<body style="height: 114%;">
+		<header style="position: fixed;top: 0;">
+			<div class="gerenzilaio" style="background: #f8f8f8;height: 0.88rem; border-bottom: 1px solid #e5e5e5;">
+				<ul>
+					<li style="width: 1.9rem;">
+						<i style="color: #EA0607;font-size: 0.6rem;margin-top: 0.15rem;" class="mui-action-back fa fa-angle-left" aria-hidden="true" style="font-size: 0.66rem; color: #FFFFFF;"></i>
+
+					</li>
+					<li style="color: #EA0607;font-size: 0.34rem;width: 3.1rem;">购物车</li>
+					<li style="width: initial;"></li>
+					<li style="color: #EA0607;font-size: 0.3rem;width: 1.5rem;text-align: right;">编辑</li>
+				</ul>
+
+			</div>
+
+		</header>
+
+		<div class="gouwuche_bianji" style="margin-top: 0.88rem;">
+			<ul class="gouwuche_dianpu">
+				<li class="baozhu">
+					<img src="../../img/shouhoudizhixuanze.png" />
+					<img src="../../img/shouhuodizhiyixuanze.png" />
+				</li>
+				<li>
+					<p>
+						<img src="../../img/shanghu.png" />
+						<span>宝珠冻品商行</span>
+						<!--<span>编辑</span>-->
+					</p>
+
+					<p>
+						<span>
+							激活信用付，千万豪礼等你拿
+						</span>
+						<span class="tianjia">
+							去激活
+							<i style="color: #EA0607; font-size: 0.28rem;" class="fa fa-angle-right" aria-hidden="true" style="font-size: 0.66rem; color: #FFFFFF;"></i>
+						
+						</span>
+
+					</p>
+				</li>
+			</ul>
+
+			<ul class="GouWuChe_Shangpin">
+				<li class="baozhuli">
+					<img class="meixuan" src="../../img/shouhoudizhixuanze.png" />
+					<img class="yixuan" src="../../img/shouhuodizhiyixuanze.png" />
+				</li>
+				<li>
+					<p>
+						<img src="../../img/ff.png" />
+					</p>
+					<p>
+						<span style="font-size: 0.28rem;">猪耳</span>
+
+						<span style="font-size:0.2rem;border-radius:0.03rem;padding: 0 0.08rem;border: 1px solid #64c790;background: none;color: #64c790;">现货</span>
+						<i class="fa fa-map-marker" aria-hidden="true">天津</i>
+
+					</p>
+					<p>厂号：202</p>
+					<div class="jiajian">
+						<p class="down">－</p>
+						<p class="num">1</p>
+						<p class="up" style="height: 0.57rem;">＋</p>
+
+						<p class="jiage_gouwuche">
+							<span>17000.00元</span><span style="color: #EA0607;float: right;">总价:</span> <br /><span style="float: right;">×1件</span>
+						</p>
+					</div>
+
+				</li>
+
+			</ul>
+
+			<ul class="GouWuChe_Shangpin">
+				<li class="baozhuli">
+					<img class="meixuan" src="../../img/shouhoudizhixuanze.png" />
+					<img class="yixuan" src="../../img/shouhuodizhiyixuanze.png" />
+				</li>
+				<li>
+					<p>
+						<img src="../../img/zhuliji.png" />
+					</p>
+					<p>
+						<span>猪棒骨</span>
+
+						<span style="font-size:0.2rem;border-radius:0.03rem;padding: 0 0.08rem;border: 1px solid #64c790;background: none;color: #64c790;">现货</span>
+						<i class="fa fa-map-marker" aria-hidden="true">天津</i>
+
+					</p>
+					<p>厂号：202</p>
+					<div class="jiajian">
+						<p class="down">－</p>
+						<p class="num">1</p>
+						<p class="up" style="height: 0.57rem;">＋</p>
+
+						<p class="jiage_gouwuche">
+							<span>9785.00元</span>
+							<span style="float: right;color: #EA0607;">总价:</span>
+							<br />
+							<span style="float: right;">×1件</span>
+						</p>
+					</div>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+		<div class="gouwuche_bianji">
+			<ul class="gouwuche_dianpu">
+				<li class="tianjin">
+					<img src="../../img/shouhoudizhixuanze.png" />
+					<img src="../../img/shouhuodizhiyixuanze.png" />
+				</li>
+				<li>
+					<p>
+						<img src="../../img/shanghua.png" />
+
+						<span>天津正标食品有限公司</span>
+						<!--<span>编辑</span>-->
+					</p>
+
+					<p>
+						<span>
+							激活信用付，千万豪礼等你拿
+						</span>
+						<span class="tianjia">
+							去激活
+							<i style="color: #EA0607; font-size: 0.28rem;" class="fa fa-angle-right" aria-hidden="true" style="font-size: 0.66rem; color: #FFFFFF;"></i>
+						
+						</span>
+
+					</p>
+				</li>
+			</ul>
+
+			<ul class="GouWuChe_Shangpin">
+				<li class="tianjinli">
+					<img class="meixuan" src="../../img/shouhoudizhixuanze.png" />
+					<img class="yixuan" src="../../img/shouhuodizhiyixuanze.png" />
+				</li>
+				<li>
+					<p>
+						<img src="../../img/zhushoudfssdf.png" />
+					</p>
+					<p>
+						<span>猪手</span>
+
+						<span style="font-size:0.2rem;border-radius:0.03rem;padding: 0 0.05rem;border: 1px solid #64c790;background: none;color: #64c790;">现货</span>
+						<i class="fa fa-map-marker" aria-hidden="true">天津</i>
+
+					</p>
+					<p>厂号：717</p>
+					<div class="jiajian">
+						<p class="down">－</p>
+						<p class="num">1</p>
+						<p class="up" style="height: 0.57rem;">＋</p>
+
+						<p class="jiage_gouwuche">
+							<span>21000.00元</span><span style="float: right;color: #EA0607;">总价:</span><br /><span style="float: right;">×1件</span>
+						</p>
+					</div>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+		<div class="gouwubottom" style="background: #fff;">
+			<ul style="width: 7.5rem;">
+				<li style="margin-left: 0.3rem;">
+					<img src="../../img/shouhoudizhixuanze.png" style="margin-top: 0.25rem;float: left;width: 0.35rem;height: 0.35rem;" />
+					<img src="../../img/shouhuodizhiyixuanze.png" style="margin: 0;margin-top: 0.25rem;float: left; height:0.35rem;width: 0.35rem;" />
+					<span style="margin-left: 0.1rem;">全选</span>
+				</li>
+				<li>
+					合计：<span>0.00元</span>
+
+				</li>
+				<li class="qujiesuan" style="height: 0.9rem;margin: 0;line-height: 0.9rem;"> <span>结算</span>
+					<span style="margin-top: -0.05rem;">(3)</span>
+				</li>
+			</ul>
+
+			<!--zh-->
+
+		</div>
+		<div class="wanchengye" style="display: none;">
+			<ul>
+				<li style="border-bottom: none;">
+					<img src="../../img/shouhoudizhixuanze.png" />
+					<img src="../../img/shouhuodizhiyixuanze.png" />
+					<span style="margin-left: 0.1rem;">全选</span>
+				</li>
+				<li style="border-bottom: none;">
+					<img style="width: 0.45rem;height: 0.44rem;" src="../../img/feixianghei.png" />
+
+				</li>
+				<li style="border-bottom: none;">
+					转移到收藏夹
+				</li>
+				<li style="width: 2.05rem;height:1rem;border-bottom: none;">
+					删 除
+				</li>
+			</ul>
+
+		</div>
+
+		<!--分享-->
+		<div class="shareBg">
+
+		</div>
+		<div class="shareNeiRong">
+
+			<p>分享</p>
+			<ul>
+				<li>
+					<img src="../../img/fuhzilianjie.png" />
+
+				</li>
+				<li>
+					<img src="../../img/erweimafuzhi.png" />
+				</li>
+			</ul>
+
+			<ul style="margin-left: 0.2rem;">
+				<li><img src="../../img/weixinhaoyou.png" /></li>
+				<li>
+					<img src="../../img/pengyouquan.png" />
+				</li>
+				<li>
+					<img src="../../img/qqhaoyou.png" />
+				</li>
+				<li>
+					<img src="../../img/zifubaoaaa.png" />
+				</li>
+			</ul>
+			<p class="quxioa">取消</p>
+		</div>
+
+		<!--<video width="100%" height="100%" style="display: none;">-->
+		<!--<source src="myvideo.mp4" type="video/mp4"></source>
+			<source src="myvideo.ogv" type="video/ogg"></source>
+			<source src="myvideo.webm" type="video/webm"></source>
+			<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+				<param name="movie" value="myvideo.swf" />
+				<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+			</object>-->
+		<!--</video>-->
+		<div class="i" style="display: none;">
+			<img src="../../img/xinyongfupad.gif" />
+		</div>
+	</body>
+	<script type="text/javascript" src="../../js/mui.js"></script>
+	<script type="text/javascript" src="../../js/buju.js"></script>
+	<script type="text/javascript" src="../../js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="../../js/tab.js"></script>
+	<script type="text/javascript" src="../../js/clickmodeo.js"></script>
+	<script>
+		$(".qujiesuan").on("click", function() {
+
+//			window.location.href = "../shangPinXiangQingLiJIGouMai/querendingdan.html"
+			mui.openWindow({
+				url:'../shangPinXiangQingLiJIGouMai/querendingdan.html',
+				id:'../shangPinXiangQingLiJIGouMai/querendingdan.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+		$(".tianjia").on("click", function() {
+			$("header").hide();
+			$(".gouwubottom").hide();
+			$(".gouwuche_bianji").hide();
+			$(".gouwuche_dianpu").hide();
+			$(".i").show();
+			$(".wanchengye").hide();
+		})
+		$(".i").on("click", function() {
+			$("header").show();
+			$(".gouwubottom").show();
+			$(".gouwuche_bianji").show();
+			$(".gouwuche_dianpu").show();
+			$(".i").hide();
+			//			$(".wanchengye")
+		})
+
+		$(".gerenzilaio ul li:nth-child(4)").on("click", function() {
+
+			var zhuangtai = $(this).text()
+
+			if(zhuangtai == "保存") {
+				$(this).text("编辑")
+				$('.gouwubottom').slideDown(500)
+				$(".wanchengye").slideUp(500)
+					//				
+			} else if(zhuangtai == "编辑") {
+				$(this).text("保存")
+
+				$('.gouwubottom').slideUp(500)
+				$(".wanchengye").slideDown(500)
+			}
+
+		})
+
+		$(".shareNeiRong ul li").on("click", function() {
+
+			$(".shareBg").fadeOut(500)
+			$(".shareNeiRong").fadeOut(500)
+		})
+
+		$(".quxioa").on("click", function() {
+
+			$(".shareBg").css("display", "none")
+			$(".shareNeiRong").css("display", "none")
+		})
+		$(".wanchengye ul li:nth-child(2)").on("click", function() {
+
+			$(".shareBg").css("display", "block")
+			$(".shareNeiRong").css("display", "block")
+		})
+
+		$(".wanchengye li:nth-child(1) img").on("click", function() {
+			$(this).css("display", "none").siblings("img").css("display", "block")
+		})
+		$(".wanchengye li:nth-child(1) img:nth-child(1)").on("click", function() {
+
+			//		$(this).css("display","none").siblings("img").css("display","block")
+			$(".GouWuChe_Shangpin li:nth-child(1) img:nth-child(2)").css("display", "block").siblings("img").css("display", "none")
+			$(".gouwuche_dianpu li:nth-child(1) img:nth-child(2)").css("display", "block").siblings("img").css("display", "none")
+
+		})
+		$(".wanchengye li:nth-child(1) img:nth-child(2)").on("click", function() {
+
+			//		$(this).css("display","none").siblings("img").css("display","block")
+			$(".GouWuChe_Shangpin li:nth-child(1) img:nth-child(1)").css("display", "block").siblings("img").css("display", "none")
+			$(".gouwuche_dianpu li:nth-child(1) img:nth-child(1)").css("display", "block").siblings("img").css("display", "none")
+
+		})
+
+		$(".wanchengye li:nth-child(4) ").on("click", function() {
+
+			//		if(window.confirm("您确定删除该商品吗？")){
+			////			$(".GouWuChe_Shangpin").remove()
+			////			$()
+			////$(".gouwuche_bianji ").remove()
+			//			return true
+			//		}else{
+			//			return false
+			//		}
+			if($(".wanchengye li:nth-child(1) img:nth-child(2)").is(":visible") == true) {
+				alert("该商品已删除")
+				$(".gouwuche_bianji").remove()
+					//   	$(".tianjin").parent().parent().remove()
+					//   	$(".baozhu").parent().parent().remove()
+			} else if($(".baozhu img:nth-child(2)").is(":visible") == true) {
+				alert("该商品已删除")
+				$(".baozhu").parent().parent().remove()
+				$(".tianjin").parent().parent().css("marginTop", "0.88rem")
+				return
+			} else if($(".tianjin img:nth-child(2)").is(":visible") == true) {
+				alert("该商品已删除")
+				$(".tianjin").parent().parent().remove()
+				return
+
+			}
+
+		})
+
+		$(".baozhu img:nth-child(1)").on("click", function() {
+			//		$(this).parent().parent().siblings(".GouWuChe_Shangpin").children("img:nth-child(2)").css("display","block").siblings("img").css("display","none")
+			$(this).css("display", "none").siblings("img").css("display", "block")
+			$(".baozhuli").children("img:nth-child(2)").css("display", "block").siblings("img").css("display", "none")
+		})
+
+		$(".baozhu img:nth-child(2)").on("click", function() {
+			$(this).css("display", "none").siblings("img").css("display", "block")
+			$(".baozhuli").children("img:nth-child(1)").css("display", "block").siblings("img").css("display", "none")
+		})
+
+		$(".baozhu img:nth-child(1)").on("click", function() {
+			$(".gouwubottom li:nth-child(2) span").text("26785.00元")
+		})
+
+		$(".baozhu img:nth-child(2)").on("click", function() {
+			$(".gouwubottom li:nth-child(2) span").text("0.00元")
+		})
+
+		$(".tianjin img:nth-child(1)").on("click", function() {
+			//		$(this).parent().parent().siblings(".GouWuChe_Shangpin").children("img:nth-child(2)").css("display","block").siblings("img").css("display","none")
+			$(this).css("display", "none").siblings("img").css("display", "block")
+			$(".tianjinli").children("img:nth-child(2)").css("display", "block").siblings("img").css("display", "none")
+		})
+
+		$(".tianjin img:nth-child(2)").on("click", function() {
+			$(this).css("display", "none").siblings("img").css("display", "block")
+			$(".tianjinli").children("img:nth-child(1)").css("display", "block").siblings("img").css("display", "none")
+		})
+
+		$(".tianjin img:nth-child(1)").on("click", function() {
+			$(".gouwubottom li:nth-child(2) span").text("215000.00元")
+
+		})
+		$(".tianjin img:nth-child(2)").on("click", function() {
+			$(".gouwubottom li:nth-child(2) span").text("0.00元")
+
+		})
+
+		//	$(function(){
+		//		var shuzi=$(".jiajian .num").text()
+		//		console.log(shuzi)
+
+		//	})
+
+		$(".jiajian").on("click", function() {
+
+			var shuzi = $(this).children().siblings(".num").text()
+			console.log(shuzi)
+			var zongjiage = $(this).children().children("span:nth-child(1)").text()
+			var shuzijisuan = shuzi * 12333
+			console.log(shuzijisuan)
+			$(this).children("p:nth-child(4) ").children("span:nth-child(4)").text("×" + shuzi + "件")
+
+			$(this).children("p:nth-child(4)").children("span:nth-child(1)").text(shuzijisuan + ".00元")
+				//	console.log(s)
+		})
+
+		//$(".jiage_gouwuche span:nth-child(4)").text("213")
+
+		$(".tianjinli img:nth-child(1)").on("click", function() {
+			$(".tianjin img:nth-child(2)").css("display", "block").siblings("img").css("display", "none")
+			$(".gouwubottom li:nth-child(2) span").text("21000.00元")
+		})
+		$(".tianjinli img:nth-child(2)").on("click", function() {
+			$(".tianjin img:nth-child(1)").css("display", "block").siblings("img").css("display", "none")
+			$(".gouwubottom li:nth-child(2) span").text("0.00元")
+		})
+		var cc = 0;
+		$(".baozhuli img:nth-child(1)").on("click", function() {
+
+			$(this).closest(".GouWuChe_Shangpin").siblings(".gouwuche_dianpu").children(".baozhu").children("img:nth-child(2)").css("display", "block").siblings("img").css("display", "none")
+			$(".gouwubottom li:nth-child(2) span").text("21000.00元")
+
+			if($(this).prop("src") != "../../img/shouhuodizhiyixuanze.png") {
+				cc++;
+				if(cc >= 2 && $(".baozhuli img:nth-child(2)").prop("src") == "../../img/shouhuodizhiyixuanze.png") {
+					cc = 3;
+				} else if(cc >= 2 && $(".baozhuli img:nth-child(2)").prop("src") != "../../img/shouhuodizhiyixuanze.png") {
+					cc = 2;
+				}
+				console.log(cc)
+				$(".gouwubottom li:nth-child(3) span:nth-child(2)").text("(" + cc + ")");
+			}
+
+			console.log(cc)
+		})
+		$(".baozhuli img:nth-child(2)").on("click", function() {
+				$(this).closest(".GouWuChe_Shangpin").siblings(".gouwuche_dianpu").children(".baozhu").children("img:nth-child(1)").css("display", "block").siblings("img").css("display", "none")
+				$(".gouwubottom li:nth-child(2) span").text("21000.00元")
+
+			})
+			//$(".baozhuli li")
+	</script>
+
+</html>

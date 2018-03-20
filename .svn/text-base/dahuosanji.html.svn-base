@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		
+    </script>
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/commen.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <style>
+    	.theTabMessage li{
+    		width: 1.4rem;
+    	}
+    	 .searches{
+    		    width: 0.6rem;
+    height: 0.6rem;
+    position: absolute;
+    top: 0.2rem;
+    right: 1.8rem;
+    background: #333333;
+     opacity: 0; 
+    	}
+    		
+    </style>
+</head>
+<body>
+<!--<div class="thefirstpage">-->
+			<div class="shezhi" style="background: #fff;z-index: 1000000;position: relative;">
+	<!--<header class="thebigheader" >
+		<ul style="width: 7.5rem;">
+			<li>
+				<i class="fa fa-angle-left mui-action-back" aria-hidden="true" style="text-align: center;"></i>
+			</li>
+			<li style="width: 6rem;">
+				最近新增
+			</li>
+			
+			
+			
+		</ul>
+		
+		
+	</header>-->
+	<header class="thebigheader">
+			<ul style="width: 7.5rem;" >
+				<li class="theleft" style="margin: 0;">
+					<i class="fa fa-angle-left mui-action-back " aria-hidden="true" style="font-size: 0.66rem;text-align: ;margin-left: 0.2rem;"></i>
+
+				</li>
+				<li style="width: 5rem;">
+					<input style="border: 0.8px solid #333333;outline: none; text-indent: 0.3rem; position: relative; width: 5rem; height: 0.56rem;margin-top: -0.4rem; margin-left: -0.8rem; outline: none;text-indent: 0.3rem;background: url(img/searchindex.png) no-repeat 4.6rem; background-size:0.5rem ;" type="text" placeholder="请输入厂号，港口等关键词" />
+					<div class="searches"></div>
+				</li>
+				<li style="width: 0.7rem; height: 0.88rem;line-height: 0.88rem; text-align: center; font-size: 0.28rem; color: #ea0607;">
+				
+					<img src="img/gouwucar.png"  style="      width: 0.4rem;height: 0.4rem;margin-top: 0.2rem;margin-bottom: 0.3rem;margin-right: 0;"/>
+				<span class="mui-badge" style="  text-align: center;line-height: 0.3rem;  position: absolute; left: 83%; width: 0.35rem; display: block;height: 0.3rem;">12</span>
+			   </li>
+				<li class="liebiaozuanfu" style="text-align: center;line-height: 0.6rem; font-size: 0.6rem; color: #ea0607;font-family: '微软雅黑';">...</li>
+			</ul>
+			
+		</header>
+	<ul class="xialacaidan" style="display: none;" >
+				<div class="xiaojiao"></div>
+				<li><img src="img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+				<li><img src="img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+				
+				<li><img src="img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+				<li><img src="img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+			</ul>
+	<!--<div class="searchshangpin">
+				<input type="text" placeholder="搜索全部大货商品" />
+				<p>取消</p>
+			</div>-->
+	<!--<div class="dahuoTabBanner" style="margin-top: 0.88rem;">
+		<ul >
+			<li>全部</li>
+			<li>不限时</li>
+			<li>筛选</li>
+			
+		</ul>
+		
+		
+	</div>-->
+	 </div>
+	<!--蒙版添加-->
+    <div class="theAllMengbanaa">
+		<div class="quanbuQieHuan">
+			
+				<div class="tabBaoPan">
+						<ul>
+							<li>
+								全部报盘
+							</li>
+							<li>
+								普通报盘
+							</li>
+							<li>
+								特价报盘
+								
+							</li>
+							<li>
+								特价管理
+								
+							</li>
+						</ul>
+						
+						
+						
+					</div>
+	</div>
+
+		<div class="theAllmengban"></div>
+	
+     </div>	
+	
+	
+	<!--隐藏全部 不限时 筛选 切换-->
+	
+	<div class="thaAllDaHuo" style="margin-top: 1rem;">
+	<!--商品-->
+	<div class="daHuoShangpin" style="display: block;">
+		<ul>
+			<li>
+				<img src="img/zhuer.png"  />
+				
+				
+			</li>
+				
+				
+			<li>
+				<p>猪耳</p>
+				<p>202</p>
+				<p>德国</p>
+				<p>10kg/件</p>
+				<p>盐田港</p>
+				<p>2016-8-18</p>
+			</li>
+			<li>
+				<p>324560.00<span>元/柜</span></p>
+				
+				
+			</li>
+		</ul>
+		<div class="addnumDaHuo">
+			<ul>
+				<li>
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					
+				</li>
+				<li>
+					<img src="img/houqigaidongtupianbutianchong.png"  />
+					<img src="img/houqigaidongtupaintianchong.png"  />
+					
+				
+					<span class="shoucangyufeishoucang" style="display: block;text-align: center;margin-top: 0.1rem;">收藏</span>
+					
+				</li>
+				<li>
+					<p>加入购物车</p>
+					<p>立即抢购</p>
+					
+				</li>
+			</ul>
+			
+		</div>
+		
+		
+		
+		
+	</div>
+	<!---->
+	<div class="daHuoShangpin">
+		<ul>
+			<li>
+				<img src="img/datussad.png"  />
+				
+				
+			</li>
+			<li>
+				<p>猪棒骨</p>
+				<p>202</p>
+				<p>德国</p>
+				<p>10kg/件</p>
+				<p>盐田港</p>
+				<p>2016-07-23</p>
+			</li>
+			<li>
+				<p>253500.00<span>元/柜</span></p>
+				
+				
+			</li>
+		</ul>
+		<div class="addnumDaHuo">
+			<ul>
+				<li>
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					
+				</li>
+				<li>
+					<img src="img/houqigaidongtupianbutianchong.png"  />
+					<img src="img/houqigaidongtupaintianchong.png"  />
+					
+					
+					<span class="shoucangyufeishoucang" style="display: block;text-align: center;margin-top: 0.1rem;">收藏</span>
+					
+					
+				</li>
+				<li>
+					<p>加入购物车</p>
+					<p>立即抢购</p>
+					
+				</li>
+			</ul>
+			
+		</div>
+		
+		
+		
+		
+	</div>
+	<div class="daHuoShangpin zxc" style="padding: 0;">
+		<ul>
+			<li>
+				<img src="img/zhushouwerwe.png"  />
+				
+				
+			</li>
+			<li>
+				<p>猪手</p>
+				<p>717</p>
+				<p>美国</p>
+				<p>10kg/件</p>
+				<p>塘沽港</p>
+				<p>2016-07-23</p>
+			</li>
+			<li>
+				<p>312800.00<span>元/柜</span></p>
+				
+				
+			</li>
+		</ul>
+		<div class="addnumDaHuo">
+			<ul>
+				<li>
+					<p class="down">-</p>
+					<p class="num">1</p>
+					<p class="up">+</p>
+					
+				</li>
+				<li>
+						<img src="img/houqigaidongtupianbutianchong.png"  />
+					<img src="img/houqigaidongtupaintianchong.png"  />
+					
+				
+					<span class="shoucangyufeishoucang" style="display: block;text-align: center;margin-top: 0.1rem;">收藏</span>
+					
+				</li>
+				<li>
+					<p>加入购物车</p>
+					<p>立即抢购</p>
+					
+				</li>
+			</ul>
+			
+		</div>
+		
+		
+		
+		
+	</div>
+	
+	
+	
+	</div>	
+		
+	<!--end-->
+	<!--不限时-->
+
+	<div class="dahuoBuxianshi" style="display: none;">
+		<ul>
+			<li>不限时</li>
+			<li>一周内</li>
+			<li>两周内</li>
+			<li>三周内</li>
+			<li>四周内</li>
+			<li>一个月</li>
+			<li>两个月</li>
+			<li>三个月</li>
+			<li>半年</li>
+			<li>其他</li>
+			
+			
+		</ul>
+		
+	</div>
+	
+	<!--筛选-->
+	<div class="shaixuan"  style="display: none;">
+	<div class="dahuo_shangxuan" >
+		<p>
+			已选： <span>B级猪脚</span>
+		</p>
+		<div class="theAllshuJu">
+			<ul class="theTabMessage">
+				<li>
+					产品名
+				</li>
+				<li>
+					全部
+				</li>
+				<li>
+					<span class="fa fa-caret-down" aria-hidden="true"></span>
+					
+				</li>
+			</ul>
+			<div class="quanbu_message" style="display: none;">
+				<ul>
+					<li>全部</li>
+					<li>1号肉</li>
+					<li>2号肉</li>
+					<li>3号肉</li>
+					<li>4号肉</li>
+					<li>猪耳朵</li>
+					<li>B级猪脚</li>
+					<li>猪大腿</li>
+					<li>顶级猪背</li>
+					<li>B级猪脚</li>
+					<li>...</li>
+				</ul>
+				
+				
+			</div>
+			
+			
+		</div>
+		
+		
+	</div>
+	
+	<!--
+		
+	-->
+	
+	<div class="dahuo_shangxuan">
+		<!--<p>
+			已选： <span>B级猪脚</span>
+		</p>-->
+		<div class="theAllshuJu">
+			<ul class="theTabMessage">
+				<li>
+					产品名
+				</li>
+				<li>
+					全部
+				</li>
+				<li>
+					<span class="fa fa-caret-down" aria-hidden="true"></span>
+					
+				</li>
+			</ul>
+			<div class="quanbu_message" style="display: none;">
+				<ul>
+					<li>全部</li>
+					<li>1号肉</li>
+					<li>2号肉</li>
+					<li>3号肉</li>
+					<li>4号肉</li>
+					<li>猪耳朵</li>
+					<li>B级猪脚</li>
+					<li>猪大腿</li>
+					<li>顶级猪背</li>
+					<li>B级猪脚</li>
+					<li>...</li>
+				</ul>
+				
+				
+			</div>
+			
+			
+		</div>
+		
+		
+	</div>
+	
+	<!---->
+	<div class="dahuo_shangxuan">
+		<!--<p>
+			已选： <span>B级猪脚</span>
+		</p>-->
+		<div class="theAllshuJu">
+			<ul class="theTabMessage">
+				<li>
+					产品名
+				</li>
+				<li>
+					全部
+				</li>
+				<li>
+					<span class="fa fa-caret-down" aria-hidden="true"></span>
+					
+				</li>
+			</ul>
+			<div class="quanbu_message" style="display: none;">
+				<ul>
+					<li>全部</li>
+					<li>1号肉</li>
+					<li>2号肉</li>
+					<li>3号肉</li>
+					<li>4号肉</li>
+					<li>猪耳朵</li>
+					<li>B级猪脚</li>
+					<li>猪大腿</li>
+					<li>顶级猪背</li>
+					<li>B级猪脚</li>
+					<li>...</li>
+				</ul>
+				
+				
+			</div>
+			
+			
+		</div>
+		
+		
+	</div>
+	
+	<!---->
+	<div class="dahuo_shangxuan">
+		<!--<p>
+			已选： <span>B级猪脚</span>
+		</p>-->
+		<div class="theAllshuJu">
+			<ul class="theTabMessage">
+				<li>
+					产品名
+				</li>
+				<li>
+					全部
+				</li>
+				<li>
+					<span class="fa fa-caret-down" aria-hidden="true"></span>
+					
+				</li>
+			</ul>
+			<div class="quanbu_message" style="display: none;">
+				<ul>
+					<li>全部</li>
+					<li>1号肉</li>
+					<li>2号肉</li>
+					<li>3号肉</li>
+					<li>4号肉</li>
+					<li>猪耳朵</li>
+					<li>B级猪脚</li>
+					<li>猪大腿</li>
+					<li>顶级猪背</li>
+					<li>B级猪脚</li>
+					<li>...</li>
+				</ul>
+				
+				
+			</div>
+			
+			
+		</div>
+		
+		
+	</div>
+	
+	<!---->
+	<div class="dahuo_shangxuan">
+		<!--<p>
+			已选： <span>B级猪脚</span>
+		</p>-->
+		<div class="theAllshuJu">
+			<ul class="theTabMessage">
+				<li>
+					产品名
+				</li>
+				<li>
+					全部
+				</li>
+				<li>
+					<span class="fa fa-caret-down" aria-hidden="true"></span>
+					
+				</li>
+			</ul>
+			<div class="quanbu_message" style="display: none;">
+				<ul>
+					<li>全部</li>
+					<li>1号肉</li>
+					<li>2号肉</li>
+					<li>3号肉</li>
+					<li>4号肉</li>
+					<li>猪耳朵</li>
+					<li>B级猪脚</li>
+					<li>猪大腿</li>
+					<li>顶级猪背</li>
+					<li>B级猪脚</li>
+					<li>...</li>
+				</ul>
+				
+				
+			</div>
+			
+			
+		</div>
+		
+		
+	</div>
+	
+	<!---->
+	<div class="dahuo_shangxuan">
+		<!--<p>
+			已选： <span>B级猪脚</span>
+		</p>-->
+		<div class="theAllshuJu">
+			<ul class="theTabMessage">
+				<li>
+					产品名
+				</li>
+				<li>
+					全部
+				</li>
+				<li>
+					<span class="fa fa-caret-down" aria-hidden="true"></span>
+					
+				</li>
+			</ul>
+			<div class="quanbu_message" style="display: none;">
+				<ul>
+					<li>全部</li>
+					<li>1号肉</li>
+					<li>2号肉</li>
+					<li>3号肉</li>
+					<li>4号肉</li>
+					<li>猪耳朵</li>
+					<li>B级猪脚</li>
+					<li>猪大腿</li>
+					<li>顶级猪背</li>
+					<li>B级猪脚</li>
+					<li>...</li>
+				</ul>
+				
+				
+			</div>
+			
+			
+		</div>
+		
+		
+	</div>
+	
+	 
+	</div>
+	
+	<!--</div>-->
+	<!--footer-->
+	<!--<footer>
+		<div class="footer" >
+			<ul>
+				<li>
+				<img src="img/bighou.png"/>
+				<img src="img/big.png" />
+				
+				</li>
+				
+				
+				<li>
+					<img src="img/xunpan.png"  />
+					<img src="img/xunpanimg.png" />
+					
+				</li>
+				
+				<li>
+					<img src="img/homehou.png"  />
+					<img  src="img/home.png"  />
+					
+				</li>
+				<li>
+					<img src="img/lingshouhou.png"  />
+					<img src="img/lingshou.png"  />
+					
+					
+				</li>
+				<li>
+					<img src="img/mined.png"  />
+					<img src="img/mine.png"  />
+					
+				</li>
+			</ul>
+			
+		</div>
+		
+		
+		
+	</footer>
+	-->
+</body>
+	<script type="text/javascript" src="js/mui.js" ></script>
+	<script type="text/javascript" src="js/buju.js" ></script>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js" ></script>
+<!--<script type="text/javascript" src="js/mui.js" ></script>-->
+<!--<script type="text/javascript" src="js/feedback.js" ></script>-->
+<!--<script type="text/javascript" src="js/script.js" ></script>-->
+<script type="text/javascript" src="js/tab.js" ></script>
+<script type="text/javascript" src="js/clickmodeo.js" ></script>
+<script>
+	
+	$(".searches").on("click",function(){
+			
+			var theword=$(".thebigheader ul li:nth-child(2) input").val()
+			
+//			console.log(theword)
+ 	
+ 		if (theword=="猪手") {
+// 			window.location.href="dahuosanjiCaiNixihuan.html"
+mui.openWindow({
+				url:'dahuosanjiCaiNixihuan.html',
+				id:'dahuosanjiCaiNixihuan.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+ 		} else{
+// 			alert("服务器开小差了，咱们去看看其他商品吧！")
+// 			window.location.href="lingshouErji.html"
+ 		}
+			
+			
+		})
+	$('.addnumDaHuo ul li:nth-child(3) p:nth-child(1)').on("click",function(){
+//		window.location.href="html/gouWuChe/gouwucheBianji.html"
+mui.openWindow({
+				url:'html/gouWuChe/gouwucheBianji.html',
+				id:'html/gouWuChe/gouwucheBianji.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		
+	})
+	
+	$(".addnumDaHuo ul li:nth-child(3) p:nth-child(2)").on("click",function(){
+		
+//		window.location.href="html/shangPinXiangQingLiJIGouMai/querendingdan.html"
+mui.openWindow({
+				url:'html/shangPinXiangQingLiJIGouMai/querendingdan.html',
+				id:'html/shangPinXiangQingLiJIGouMai/querendingdan.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+	})
+	
+	
+	$(".thebigheader li:nth-child(3)").on("click",function(){
+		
+//		window.location.href="html/gouWuChe/gouwucheBianji.html"
+mui.openWindow({
+				url:'html/gouWuChe/gouwucheBianji.html',
+				id:'html/gouWuChe/gouwucheBianji.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		
+		
+	})
+	
+	//下拉菜单
+	
+		$(".liebiaozuanfu").on("click",function(e){
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+		
+		
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+	
+	//消息
+		$('.xialacaidan li:nth-child(3)').on('click',function(){
+			window.location.href="html/xiaoxiliebiao.html";
+//mui.openWindow({
+//				url:'html/xiaoxiliebiao.html',
+//				id:'html/xiaoxiliebiao.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		//首页
+		$('.xialacaidan li:nth-child(2)').on('click',function(){
+			window.location.href ="index.html";
+//mui.openWindow({
+//				url:'index.html',
+//				id:'index.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		
+			
+		$(".daHuoShangpin li:nth-child(1) img").on("click",function(){
+			
+			mui.openWindow({
+				url:'html/shangPinXiangQingLiJIGouMai/shangPinXiangQing.html',
+				id:'html/shangPinXiangQingLiJIGouMai/shangPinXiangQing.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+			
+			
+		})
+</script>
+</html>

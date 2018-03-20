@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>我的消息</title>
+		
+		<!--<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">-->
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href=" ../css/mui.min.css">
+		<link rel="stylesheet" href="../css/commen.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel="stylesheet" href="../css/ziyemain.css" />
+		<link rel="stylesheet" href="../css/font-awesome.min.css" />
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css" />-->
+		<style>
+			.mui-table-view-cell{
+				border-bottom: 1px solid #E5E5E5;
+			}
+			.mui-ios .mui-table-view-cell{
+				width: 7.5rem;
+			}
+			.mui-btn{
+				font-size: 0.2rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<!--<header class="mui-bar mui-bar-nav" style="padding:0;margin:0;">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="padding:0;margin:0;color:#ea0607;text-decoration:none;line-height:60px;height: 60px;"></a>
+			<h1 class="mui-title" style="line-height:60px;height: 60px;padding:0;margin:0;">我的消息</h1>
+			<p class="liebiaozuanfu" style="font-size: 0.6rem;color: #ea0607;float:right;margin-right: 0.1rem;font-family: '微软雅黑';line-height: 20px;">...</p>
+			<ul class="xialacaidan" style="display: none;" >
+				<div class="xiaojiao"></div>
+				<li style="width: 1.2rem;">
+					<img src="../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+				<li style="width: 1.2rem;"><img src="../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+				
+				<li style="width: 1.2rem;"><img src="../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+				<li style="width: 1.2rem;"><img src="../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+			</ul>
+		</header>-->
+			<header class="dingdanquanbu" style="position: fixed;background: #f8f8f8;border-bottom: 0.8px solid #E5E5E5;z-index: 999;">
+				<ul class="wodedingdanheader yincang" style=" width: 7.5rem;">
+					<li style="margin-left: 0.3rem;">
+						
+						<i class="fa fa-angle-left mui-action-back" aria-hidden="true" style="font-size: 0.66rem;"></i>
+					</li>
+	
+					<li style="text-align: center;width: 5.35rem;">
+						我的消息
+					</li>
+					<!--<li style="line-height: 0.8rem;font-size: 0.24rem;margin-left: 0.3rem;">
+					<img src="../../img/search.png"  />
+				</li>-->
+					<li class="liebiaozuanfu" style="text-align: center;line-height: 0.6rem; font-size: 0.6rem; color: #ea0607;font-family: '微软雅黑';float: right;margin-right: 0.3rem;">...</li>
+				</ul>
+	
+	
+			</header>
+	        <div class="xialacaidan" style="display: none; z-index: 1001;float: right;text-align: center;" >
+				<div class="xiaojiao"></div>
+				<ul style="float: right;margin-right: 0.2rem;">
+				<li class="shouye"><img src="../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+				<li><img src="../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+				
+				<li><img src="../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+				<li><img src="../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+			
+				</ul>
+			</div>
+		
+		
+		
+			<div class="mui-content" style="margin-top: 0.8rem;float: left;">
+				
+				
+		
+			<ul id="OA_task_1" class="mui-table-view" style="margin: 0;">
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<p class="mui-btn mui-btn-red">删除</p>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 0.24rem;color: #999;">
+						<img src="../img/gonggaoxiaoxili.png"  style="float: left;width: 0.8rem;height: 0.8rem;margin-right: 0.3rem;"/>
+						<p style="font-size: 0.28rem;">
+							<span style="color: #333333;"> 系统消息 </span>
+							<span style="float: right;">2016-10-28</span>
+						</p>
+						冻冻在线重大升级，请在各商城下载
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red" style="text-decoration: none;">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 0.24rem;color: #999;">
+						<img src="../img/touxiangFive.png"  style="float: left;width: 0.8rem;height: 0.8rem;margin-right: 0.3rem;"/>
+						<p style="font-size: 0.28rem;">
+							<span style="color: #333333;"> 系统消息 </span>
+							<span style="float: right;">2016-10-28</span>
+						</p>
+						冻冻在线重大升级，请在各商城下载
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red" style="text-decoration: none;">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 0.24rem;color: #999;">
+						<img src="../img/touxiangone.png"  style="float: left;width: 0.8rem;height: 0.8rem;margin-right: 0.3rem;"/>
+						<p style="font-size: 0.28rem;">
+							<span style="color: #333333;"> 系统消息 </span>
+							<span style="float: right;">2016-10-28</span>
+						</p>
+						冻冻在线重大升级，请在各商城下载
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red" style="text-decoration: none;">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 0.24rem;color: #999;">
+						<img src="../img/touxiangseven.png"  style="float: left;width: 0.8rem;height: 0.8rem;margin-right: 0.3rem;"/>
+						<p style="font-size: 0.28rem;">
+							<span style="color: #333333;"> 系统消息 </span>
+							<span style="float: right;">2016-10-28</span>
+						</p>
+						冻冻在线重大升级，请在各商城下载
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red" style="text-decoration: none;">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 0.24rem;color: #999;">
+						<img src="../img/touxiangsix.png"  style="float: left;width: 0.8rem;height: 0.8rem;margin-right: 0.3rem;"/>
+						<p style="font-size: 0.28rem;">
+							<span style="color: #333333;"> 系统消息 </span>
+							<span style="float: right;">2016-10-28</span>
+						</p>
+						冻冻在线重大升级，请在各商城下载
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red" style="text-decoration: none;">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 0.24rem;color: #999;">
+						<img src="../img/touxiangthree.png"  style="float: left;width: 0.8rem;height: 0.8rem;margin-right: 0.3rem;"/>
+						<p style="font-size: 0.28rem;">
+							<span style="color: #333333;"> 系统消息 </span>
+							<span style="float: right;">2016-10-28</span>
+						</p>
+						冻冻在线重大升级，请在各商城下载
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red" style="text-decoration: none;"> 删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 0.24rem;color: #999;">
+						<img src="../img/touxiangtwo.png"  style="float: left;width: 0.8rem;height: 0.8rem;margin-right: 0.3rem;"/>
+						<p style="font-size: 0.28rem;">
+							<span style="color: #333333;"> 系统消息 </span>
+							<span style="float: right;">2016-10-28</span>
+						</p>
+						冻冻在线重大升级，请在各商城下载
+					</div>
+				</li>
+				
+			</ul>
+			
+			
+		</div>
+		
+		<script src=" ../js/mui.js"></script>
+		<script type="text/javascript" src="../js/jquery-2.1.3.min.js" ></script>
+		<script type="text/javascript" src=" ../js/buju.js" ></script>
+		
+		<script type="text/javascript" src=" ../js/tab.js" ></script>
+		<script type="text/javascript" src="../js/clickmodeo.js" ></script>
+		<script>
+			mui.init();
+			(function($) {
+				//$.swipeoutOpen(el,direction)//打开指定列的滑动菜单，el:指定列的dom对象，direction：取值left|right，指定打开的是左侧或右侧滑动菜单
+				//$.swipeoutClose(el);//关闭指定列的滑动菜单，el:指定列的dom对象
+				//				setTimeout(function() {
+				//					$.swipeoutOpen(document.getElementById("OA_task_1").querySelector('li:last-child'), 'left');
+				//					setTimeout(function() {
+				//						$.swipeoutClose(document.getElementById("OA_task_1").querySelector('li:last-child'));
+				//					}, 1000);
+				//				}, 1000);
+				//第一个demo，拖拽后显示操作图标，点击操作图标删除元素；
+				$('#OA_task_1').on('tap', '.mui-btn', function(event) {
+					var elem = this;
+					var li = elem.parentNode.parentNode;
+					mui.confirm('确认删除该条消息？', '消息', btnArray, function(e) {
+						if (e.index == 0) {
+							li.parentNode.removeChild(li);
+						} else {
+							setTimeout(function() {
+								$.swipeoutClose(li);
+							}, 0);
+						}
+					});
+				});
+				var btnArray = ['确认', '取消'];
+				
+				
+			})(mui);
+			//下拉菜单
+	
+		$(".liebiaozuanfu").on("click",function(e){
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+		
+		
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+	
+	//消息
+//		$('.xialacaidan li:nth-child(3)').on('click',function(){
+//			window.location.href="../html/xiaoxiliebiao.html";
+//		})
+		//首页
+		$('.shouye').on('click',function(){
+			window.location.href ="../index.html";
+//mui.openWindow({
+//				url:'../index.html',
+//				id:'../index.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+	
+	
+		</script>
+	</body>
+
+</html>

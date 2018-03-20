@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/commen.css" />
+		<!--<link rel="stylesheet" type="text/css" href="../../css/alipay.css"/>-->
+		<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../../css/index.css" />
+
+		<style>
+			.thebigheader {
+				background: #f8f8f8;
+				position: fixed;
+				width: 7.5rem;
+				border-bottom: 0.8px solid #e5e5e5;
+			}
+			
+			.zhifuguanliliebiao {
+				width: 7.5rem;
+				float: left;
+			}
+			
+			.zhifuguanliliebiao ul {
+				width: 7.2rem;
+				margin-left: 0.3rem;
+			}
+			
+			.zhifuguanliliebiao ul li {
+				width: 7.2rem;
+				height: 0.8rem;
+				border-bottom: 0.8px solid #E5E5E5;
+				line-height: 0.8rem;
+			}
+			
+			.zhifuguanliliebiao ul li p {
+				width: 5rem;
+				height: 0.8rem;
+				line-height: 0.8rem;
+				font-size: 0.28rem;
+				color: #333;
+				float: left;
+			}
+			
+			.zhifuguanliliebiao ul li i {
+				float: right;
+				font-size: 0.28rem;
+				color: #333333;
+				line-height: 0.8rem;
+				margin-right: 0.3rem;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<!--01-->
+
+		<header class="thebigheader">
+			<ul style=" width: 7.5rem;">
+				<li>
+					<i class="fa fa-angle-left mui-action-back" aria-hidden="true" style="font-size: 0.66rem;text-align: center;"></i>
+				</li>
+
+				<li style="text-align: center;width:5.2rem;">
+					支付管理
+				</li>
+				
+	<li class="liebiaozuanfu" style="text-align: center;line-height: 0.6rem; font-size: 0.6rem; color: #ea0607;float:right;margin-right:0.3rem;font-family: '微软雅黑';">...</li>
+			</ul>
+			
+	
+
+		</header>
+		
+		<ul class="xialacaidan" style="display: none; z-index: 1000;" >
+				<div class="xiaojiao"></div>
+				<li><img src="../../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+				<li><img src="../../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+				
+				<li><img src="../../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+				<li><img src="../../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+			</ul>
+	
+		<div class="zhifuguanliliebiao" style="margin-top:0.87rem;">
+			<ul>
+				<li>
+					<p>信用付管理</p>
+					<i class="fa fa-angle-right" aria-hidden="true"></i>
+				</li>
+				<li>
+					<p>银行账户管理</p>
+					<i class="fa fa-angle-right" aria-hidden="true"></i>
+				</li>
+				<li>
+					<p>支付宝账号管理</p>
+					<i class="fa fa-angle-right" aria-hidden="true"></i>
+				</li>
+				<li>
+					<p>易宝账号管理</p>
+					<i class="fa fa-angle-right" aria-hidden="true"></i>
+				</li>
+			</ul>
+
+		</div>
+
+	</body>
+	<script type="text/javascript" src="../../js/mui.js"></script>
+	<script src="../../js/buju.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/jquery-2.1.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../../js/clickmodeo.js"></script>
+	<script type="text/javascript" src="../../js/tab.js"></script>
+	<script>
+		$(".zhifuguanliliebiao ul li:nth-child(1)").on("click", function() {
+//			window.location.href = "../xinyongfu/xinyongfu.html";
+mui.openWindow({
+				url:'../xinyongfu/xinyongfu.html',
+				id:'../xinyongfu/xinyongfu.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+
+		})
+		$(".zhifuguanliliebiao ul li:nth-child(2)").on("click", function() {
+//			window.location.href = "bank.html";
+mui.openWindow({
+				url:'bank.html',
+				id:'bank.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+
+		})
+
+		$(".zhifuguanliliebiao ul li:nth-child(3)").on("click", function() {
+//			window.location.href = "index.html";
+mui.openWindow({
+				url:'index.html',
+				id:'index.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+
+		})
+		$(".zhifuguanliliebiao ul li:nth-child(4)").on("click", function() {
+//			window.location.href = "yibabyguanli.html";
+mui.openWindow({
+				url:'yibabyguanli.html',
+				id:'yibabyguanli.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+
+		})
+				//下拉菜单
+	
+		$(".liebiaozuanfu").on("click",function(e){
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+		
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+	
+	//消息
+		$('.xialacaidan li:nth-child(3)').on('click',function(){
+//			window.location.href="../xiaoxiliebiao.html";
+mui.openWindow({
+				url:'../xiaoxiliebiao.html',
+				id:'../xiaoxiliebiao.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+		//首页
+		$('.xialacaidan li:nth-child(2)').on('click',function(){
+//			window.location.href ="../../index.html";
+mui.openWindow({
+				url:'../../index.html',
+				id:'../../index.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+	
+	
+	</script>
+
+</html>

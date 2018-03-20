@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		   <meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-touch-fullscreen" content="yes" />
+		<title>我的报盘</title>
+	</head>
+	<link rel="stylesheet" href=" css/commen.css" />
+	<link rel="stylesheet" href=" css/font-awesome.min.css" />
+	<link rel="stylesheet" href=" css/index.css" />
+	<link rel="stylesheet" href=" css/ziyemain.css" />
+	<style>
+		.wodedingdan_shangpin {
+			float: left;
+		}
+		
+		.wodedingdan_xinxi li:nth-child(3) {
+			text-align: right;
+		}
+		
+		#wodebaopan_xinxi span {
+			background: #fff;
+			border: 0.03rem solid #E5E5E5;
+			padding: 0.03rem 0.05rem;
+			border-radius: 0.05rem;
+			color: #999999;
+		}
+		.wodebaopan_xuanzeyonghuleixing{
+			display: none;
+			width: 7.5rem;
+			height: 14rem;
+			position: fixed;
+			background: #000000;
+			opacity: 0.3;
+			filter: alpha(opacity:30;);
+			top: 0;
+		}
+		.yonghuxianze{
+			display: none;
+			width:5.4rem;
+			margin: 0 auto;
+			position: fixed;
+			top: 4rem;
+			height:3.13rem;
+			background: #fff;
+			border-radius:0.03rem ;
+			color: #999;
+			margin-left: 1rem;
+		}
+		.yonghuxianze ul li{
+			width: 5.4rem;
+			height:0.95rem ;
+			text-align: center;
+			line-height: 0.95rem;
+		}
+		.yonghuxianze ul li:nth-child(1){
+			position: relative;
+			color: #333333;
+		}
+		.yonghuxianze ul li:nth-child(1) span{
+			width: 0.54rem;
+			height: 0.54rem;
+			position: absolute;
+			color: #Fff;
+			right: 0;
+			top: -0.8rem;
+			font-size: 0.5rem;
+		}
+			.yonghuxianze ul li:nth-child(2){
+				border-bottom: 0.03rem solid #E5E5E5;
+				border-top: 0.03rem solid #E5E5E5;
+			}
+			
+	</style>
+	<script type="text/javascript" src="js/buju.js" ></script>
+	<body>
+		<header class="dingdanquanbu" style="position: fixed;background: #f8f8f8;z-index: 999;border-bottom: none;">
+			<ul class="wodedingdanheader yincang" style=" width: 7.5rem;">
+				<li style="margin-left: 0.3rem;">
+					<!--<i class="fa fa-angle-left mui-action-back" aria-hidden="true" style="font-size: 0.66rem;"></i>-->
+				</li> 
+
+				<li style="text-align: center;width: 5.2rem;">
+					我的报盘
+				</li>
+				<!--<li style="line-height: 0.8rem;font-size: 0.24rem;margin-left: 0.3rem;">
+				<img src="../../img/search.png"  />
+			</li>-->
+				<li class="liebiaozuanfu" style="text-align: center;line-height: 0.6rem; font-size: 0.6rem; color: #ea0607;font-family: '微软雅黑';float: right;margin-right: 0.3rem;">...</li>
+			</ul>
+
+		</header>
+		
+		<ul class="xialacaidan" style="display: none; z-index: 1001;" >
+			<div class="xiaojiao"></div>
+			<li><img src="img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+			<li><img src="img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+			
+			<li><img src="img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+			<li><img src="img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+		</ul>
+	
+		<div style="float: left;margin-top: 0.86rem;">
+		<div class="wodedingdan_shangpin" style="border-top: none;margin-top: 0;">
+			<div class="wodedingdan_zhanshishangpin" style="height: initial;">
+
+				<ul class="wodedingdan_xinxi" style="height: 1.8rem;margin-top: 0.3rem;">
+
+					<li style="line-height: 0;">
+						<img src="img/datussad.png" style="margin-top: 0;height: 1.47rem;"/>
+
+					</li>
+					<li style="width: 3.5rem;">
+						<p>
+							<a href="javascript::" style="color: #333333;display: inline-block;float: left;margin-top: 0.01rem;font-size: 0.28rem;">猪棒骨</a>
+							<!--<span style="font-size: 0.20rem;border-radius: 0.03rem;padding: 0 0.08rem;border: 0.8px solid #64c790;color: #64C790;border-radius:0.03rem;">现货</span>-->
+							<span style="font-size: 0.20rem;border-radius: 0.03rem;padding: 0 0.08rem;border: 0.8px solid #ea0406;color: #ea0406;border-radius:0.03rem;">期货</span>
+						</p>
+
+						<p id="wodebaopan_xinxi" style="font-size: 0.2rem;margin-top: 0.14rem;">
+							<span style="border-radius:0;border: 0.8px solid #999;padding: 0 0.08rem;">德国</span>
+							<span style="border-radius:0;border: 0.8px solid #999;padding: 0 0.08rem;">202</span>
+							<span style="border-radius:0;border: 0.8px solid #999;padding: 0 0.08rem;">整柜</span>
+						</p>
+
+					</li>
+
+					<li style="width: 1.9rem;color: #ffbb00;text-align: right;">
+						<p style="color: #EA0607;margin-top: 0.07rem;">报盘审批中</p>
+						<p style="margin-top: 0.1rem;margin-right: -0.06rem;">253500.00元/柜 <br /><span style="color: #999;margin-right: 0.06rem;">(库存:2柜)</span></p>
+					</li>
+				</ul>
+
+				<div class="baopanzhuangtai" style="height: 0.94rem;border-top:0.8px solid #E5E5E5;">
+					<p style="margin-top: 0.2rem;margin-right: -0.24rem;">
+						<span style="border: 0.8px solid #999;">
+		   				取消报盘
+		   			</span>
+						<span style="margin-left: 0.2rem;border: 0.8px solid #999;">
+		   				编辑报盘
+		   			</span>
+					</p>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="wodedingdan_shangpin" style="margin-top: 0;border-top: 0.8px solid #E5E5E5;">
+			<div class="wodedingdan_zhanshishangpin" style="height: initial;">
+
+				<ul class="wodedingdan_xinxi" style="height: 1.8rem;margin-top: 0.3rem;">
+
+					<li style="line-height: 0;">
+						<img src="img/zhupai.png" style="margin-top: 0;height: 1.47rem;"/>
+
+					</li>
+					<li style="width: 3.5rem;">
+						<p>
+							<a href="javascript::" style="color: #333333;display: inline-block;float: left;margin-top: 0.02rem;font-size: 0.28rem;">猪排</a>
+							<!--<span style="font-size: 0.20rem;border-radius: 0.03rem;padding: 0 0.08rem;border:0.8px solid #64c790;color: #64C790;border-radius:0.03rem;">现货</span>-->
+							<span style="font-size: 0.20rem;border-radius: 0.03rem;padding: 0 0.08rem;border: 0.8px solid #ea0406;color: #ea0406;border-radius:0.03rem;">期货</span>
+						</p>
+
+						<p id="wodebaopan_xinxi" style="font-size: 0.2rem;margin-top: 0.14rem;">
+							<span style="border-radius:0;border: 0.8px solid #999;padding: 0 0.08rem;">美国</span>
+							<span style="border-radius:0;border: 0.8px solid #999;padding: 0 0.08rem;">717</span>
+							<span style="border-radius:0;border: 0.8px solid #999;padding: 0 0.08rem;">整柜</span>
+						</p>
+
+					</li>
+
+					<li style="width: 1.9rem;color: #ffbb00;text-align: right;">
+						<p style="color: #EA0607;margin-top: 0.07rem;">报盘成功</p>
+						<p style="margin-top: 0.1rem;margin-right: -0.06rem;">97550.00元/吨 <br /><span style="color: #999;margin-right: 0.06rem;">(库存:5柜)</span></p>
+					</li>
+				</ul>
+
+				<div class="baopanzhuangtai" style="height: 0.94rem;border-top: 0.8px solid #E5E5E5;">
+					<p style="margin-top: 0.2rem;margin-right: -0.24rem;">
+						<span style="border: 0.8px solid #999;">
+		   				停止报盘
+		   			</span>
+						<span style="margin-left: 0.2rem;border: 0.8px solid #999;">
+		   				编辑报盘
+		   			</span>
+					</p>
+
+				</div>
+
+			</div>
+
+		</div>
+			
+		<div class="wodedingdan_shangpin" style="border-bottom: 0.8px solid #E5E5E5;margin-top: 0;border-top: 0.8px solid #E5E5E5;">
+			<div class="wodedingdan_zhanshishangpin" style="height: initial;">
+				<ul class="wodedingdan_xinxi" style="height: 1.8rem;margin-top: 0.3rem;">
+					<li style="line-height: 0;">
+						<img src="img/zhushouxiao.png" style="margin-top: 0;height: 1.47rem;"/>
+					</li>
+					<li style="width: 3.5rem;">
+						<p>
+							<a href="javascript::" style="color: #333333;display: inline-block;float: left;margin-top: 0.02rem;font-size: 0.28rem;">猪手</a>
+							<span style="font-size: 0.20rem;border-radius: 0.03rem;padding: 0 0.08rem;border: 0.8px solid #64c790;color: #64C790;border-radius:0.03rem;">现货</span>
+						</p>
+
+						<p id="wodebaopan_xinxi" style="font-size: 0.2rem;margin-top: 0.14rem;">
+							<span style="border-radius:0;border: 0.8px solid #999;padding: 0 0.08rem;">巴西</span>
+							<span style="border-radius:0;border: 0.8px solid #999;padding: 0 0.08rem;">SIF1001</span>
+							<span style="border-radius:0;border: 0.8px solid #999;padding: 0 0.08rem;">整柜</span>
+						</p>
+
+					</li>
+
+					<li style="width: 1.9rem;color: #ffbb00;text-align: right;">
+						<p style="color: #EA0607;margin-top: 0.07rem;">报盘失败</p>
+						<p style="margin-top: 0.1rem;margin-right: -0.06rem;">265.00元/件 <br /><span style="color: #999;margin-right: 0.06rem;">(库存:30件)</span></p>
+					</li>
+				</ul>
+
+				<div class="baopanzhuangtai" style="height: 0.94rem;border-top: 0.8px solid #e5e5e5;">
+					
+					<p style="margin-top: 0.20rem;margin-right: -0.24rem;">
+						<span style="border: 0.8px solid #999;">
+		   				取消报盘
+		   			</span>
+						<span style="margin-left: 0.2rem;border: 0.8px solid #999;">
+		   				编辑报盘
+		   			</span>
+					</p>
+
+				</div>
+
+			</div>
+
+		</div>
+		<div class="zengjiabaopan" style="margin-bottom: 0.38rem;">
+			<p style="border: 1px solid #999;">增加报盘</p>
+		</div>
+		</div>
+		 
+
+		<!--选择用户类型-->
+		
+		<!--<div class="wodebaopan_xuanzeyonghuleixing"></div>
+		
+		<div class="yonghuxianze">
+			<ul>
+				<li>
+					选择用户类型
+					 <span>×</span>
+				</li>
+				<li>
+					个体工商户
+				</li>
+				<li>
+					企业用户
+					
+				</li>
+			</ul>
+			 
+			 
+			
+		</div>-->
+		
+			<!--footer-->
+	<footer >
+		<div class="footer" >
+			<ul>
+				<li>
+					
+				<img src=" img/bighou.png"/>
+				<img src=" img/big.png" />
+				
+				</li>
+				
+				
+				<li>
+					
+					<img src=" img/xunpan.png"  />
+					
+					<img src=" img/xunpanimg.png" />
+				</li>
+				
+				<li>
+					<img  src=" img/home.png"  />
+					<img src=" img/homehou.png"  />
+					
+					
+				</li>
+				<li>
+					
+					<img src=" img/lingshou.png"  />
+					<img src=" img/lingshouhou.png"  />
+					
+					
+					
+				</li>
+				<li>
+					<img src=" img/mined.png"  />
+					<img src=" img/mine.png"  />
+					
+				</li>
+			</ul>
+			
+		</div>
+		
+		
+		
+	</footer>
+	</body>
+    <!--<script type="text/javascript" src=" js/buju.js" ></script>-->
+    <script type="text/javascript" src="js/mui.js" ></script>
+	<script type="text/javascript" src=" js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript" src=" js/tab.js" ></script>
+	<script src="js/clickmodeo.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		
+		$(".baopanzhuangtai p span:nth-child(1)").on("click",function(){
+			
+			$(this).closest(".wodedingdan_shangpin").slideUp(500)
+		})
+		
+		$(".zengjiabaopan p").on("click",function(){
+//			window.location.href="html/baopan/wodebaopanTab.html"
+			mui.openWindow({
+				url:'html/baopan/wodebaopanTab.html',
+				id:'html/baopan/wodebaopanTab.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+			
+			
+		})
+		
+		$(".baopanzhuangtai p span:nth-child(2)").on("click",function(){
+			
+//		window.location.href="html/baopan/wodebaopanTab.html"
+mui.openWindow({
+				url:'html/baopan/wodebaopanTab.html',
+				id:'html/baopan/wodebaopanTab.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+		
+		//下拉菜单
+		$(".liebiaozuanfu").on("click",function(e){
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+	
+	//消息
+		$('.xialacaidan li:nth-child(3)').on('click',function(){
+			window.location.href="html/xiaoxiliebiao.html";
+//mui.openWindow({
+//				url:'html/xiaoxiliebiao.html',
+//				id:'html/xiaoxiliebiao.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		//首页
+		$('.xialacaidan li:nth-child(2)').on('click',function(){
+			window.location.href ="index.html";
+//mui.openWindow({
+//				url:'index.html',
+//				id:'index.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+	</script>
+</html>

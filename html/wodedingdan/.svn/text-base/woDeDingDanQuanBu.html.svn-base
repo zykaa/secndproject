@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>我的订单</title>
+	</head>
+	<link rel="stylesheet" href="../../css/commen.css" />
+	<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../../css/index.css" />
+	<link rel="stylesheet" href="../../css/ziyemain.css" />
+	<style>
+		div.wodedingdan_shangpin .wodedingdan_zhanshishangpin{
+			margin-left: 0.3rem;
+			box-sizing: border-box;
+			overflow: hidden;
+		}
+		#hougai {
+			width: auto;
+			height: auto;
+			margin-top: 0.2rem;
+			margin-left: 0.3rem;
+		}
+		
+		#hougai span {
+			line-height: 0.5rem;
+			background: none;
+			border: 0.03rem solid #E5E5E5;
+			font-size: 0.2rem;
+			color: #999999;
+			border-radius: 0.02rem;
+			padding: 0.03rem 0.1rem;
+		}
+		
+		.zongjiage {
+			width: 6.9rem;
+			float: left;
+			height: 1.64rem;
+			/*margin-right: 0.3rem;*/
+		}
+		
+		.zongjiage ul {
+			widows: 6.9rem;
+			height: 1.64rem;
+			/*margin-right: 0.3rem;*/
+		}
+		
+		.zongjiage ul li {
+			width: 6.9rem;
+			margin: 0 auto;
+			height: 1.64rem;
+			height: 0.88rem;
+			line-height: 0.7rem;
+		}
+		
+		.zongjiage ul li span {
+			float: left;
+			font-size: 0.2rem;
+			color: #333;
+		}
+		
+		.zongjiage ul li span:nth-child(2) {
+			font-size: 0.28rem;
+		}
+		
+		.zongjiage ul li:nth-child(2) {
+			/*width: 1.23rem;*/
+			height: 0.5rem;
+			text-align: center;
+			line-height: 0.5rem;
+			color: #333333;
+			font-size: 0.28rem;
+		}
+		
+		.zongjiage ul li:nth-child(2) span {
+			float: left;
+			width: 1.23rem;
+			font-size: 0.24rem;
+			height: 0.5rem;
+			border: 0.8px solid #e5e5e5999;
+		}
+		div.wodedingdanquanbuTab .wodedingdanlist li:nth-child(1){
+			color: #333;
+			border-bottom: none;
+		}
+		div.wodedingdanquanbuTab .wodedingdanlist li.on{
+			border-bottom: 0.05rem solid #EA0607;
+			color: #ea0607;
+			box-sizing: border-box;
+		}
+		div.wodedingdanquanbuTab .wodedingdanlist li{
+			font-size: 0.28rem;
+		}
+		
+		
+	</style>
+
+	<body style="display: block;">
+		<header class="dingdanquanbu" style="background:#f8f8f8;border-bottom: 0.8px solid #E5E5E5;position: fixed;top: 0;z-index: 1000;">
+			<ul class="wodedingdanheader yincang" style=" width: 7.5rem; border-bottom: 0.8px solid #E5E5E5;">
+				<li style="margin-left: 0.3rem;">
+					<i class="fa fa-angle-left mui-action-back" aria-hidden="true" style="font-size: 0.66rem;"></i>
+				</li>
+				<li style="text-align: center;width: 5.4rem;">
+					我的订单
+				</li>
+				<!--<li style="line-height: 0.8rem;font-size: 0.2rem;margin-left: 0.3rem;">
+					<img src="../../img/search.png"/>
+				</li>-->
+				<li class="liebiaozuanfu" style="text-align: center;line-height: 0.6rem; font-size: 0.6rem; color: #ea0607;font-family: '微软雅黑';margin-right: 0.3rem;float: right;">...</li>
+			</ul>
+			<!--<div class="wodedingdanSearch">
+				<input type="text" placeholder="请输入您要搜索的商品" />
+				<span>取消</span>
+			</div>
+			<div class="wodedingdanSousuo"></div>-->
+		</header>
+	<ul class="xialacaidan" style="display: none; z-index: 1001;" >
+				<div class="xiaojiao"></div>
+				<li><img src="../../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+				<li><img src="../../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+				
+				<li><img src="../../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+				<li><img src="../../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+			</ul>
+		<!--banner-->
+		<div class="wodedingdanquanbuTab" style="position: fixed;top:0.87rem;z-index: 1000;background: #fff;">
+			<ul class="wodedingdanlist" style="border-bottom: 0.8px solid #E5E5E5;box-sizing: border-box;">
+
+				<li class="hua on" style="height: 0.8rem;width: 1.72rem;">全部</li>
+				<li class="hua" style="height: 0.8rem;width: 1.72rem;">待付款</li>
+				<li class="hua" style="height: 0.8rem;width: 1.72rem;">待收货</li>
+				<li class="hua" style="height: 0.8rem;width: 1.72rem;">待评价</li>
+			</ul>
+
+		</div>
+		<style type="text/css">
+			.zongjiage ul li:nth-child(1) span:nth-child(3) {
+				width: 4.7rem;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+		</style>
+		
+
+		<!--订单商品 全部-->
+		<div class="tabAll" style="margin-top: 1.64rem;">
+			<div class="wodedingdanfirst wo">
+				<div class="wodedingdan_shangpin" style="float: left; border-top: 0;">
+					<div style="height: auto;" class="wodedingdan_zhanshishangpin">
+						<p>
+							<img src="../../img/shanghu.png" />
+							<span>宝珠冻品商行</span>
+							<span style="float: right;color: #EA0607;">交易成功</span>
+
+						</p>
+						<ul class="wodedingdan_xinxi" style="height: 1.5rem;">
+
+							<li class="jiaoyichenggong">
+								<img src="../../img/zhubangguindex.png" style="margin-top: 0;"/>
+
+							</li>
+							<li>
+								<p>
+									猪棒骨
+									
+									<span style="font-size:0.2rem;border-radius:0.03rem;padding-top: 0 0.08rem;border: 0.8px solid #EA0607;background: none;color: #EA0607;">期货</span>
+								</p>
+
+								<p id="hougai" style="margin-left: 0.18rem;margin-top: 0.13rem;">
+									<span style="border-radius:0;padding: 0 0.08rem;margin-left: -0.17rem;border: 0.8px solid #e5e5e5;">德国</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #e5e5e5;">202</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #e5e5e5;">10kg/件</span><br />
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #e5e5e5;">2016-08-18</span>
+								</p>
+							</li>
+							<li style="margin-left: 0.099rem;">
+								<p style="margin: 0;">298000.00元</p>
+								<p style="margin: 0;">x2柜</p>
+
+							</li>
+						</ul>
+						<div class="zongjiage">
+							<ul>
+								<li>
+									<span>总价:</span>
+									<span>598900.00元</span>
+									<span>(含国际物流、国内清关、国内仓储、国内物流费用)</span>
+								</li>
+								<li class="jiaoyicg" style="margin-left: 0.5rem;">
+									<span style="margin-left:2rem;border: 0.8px solid #e5e5e5;">货物状态</span>
+									<span style="margin-left: 0.2rem;border: 0.8px solid #e5e5e5;">删除订单</span>
+									<span style="margin-left: 0.2rem;border:0.8px solid #EA0607 ;color: #EA0607;display: block;">评价晒单</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="wodedingdan_shangpin" style="border-bottom: 0.8px solid #E5E5E5; float: left;border-top: 0.8px solid #E5E5E5;">
+					<div style="height: auto;" class="wodedingdan_zhanshishangpin">
+						<p>
+							<img src="../../img/shanghua.png" />
+
+							<span style="color: #333;">天津正标食品有限公司</span>
+
+							<!--<span style="color: #EA0607;">宝珠冻品商行</span>-->
+
+							<span style="float: right;color: #EA0607;">交易关闭 <span style="font-size: 0.2rem;color: #999;"></span></span>
+
+						</p>
+						<ul class="wodedingdan_xinxi" style="height: 1.5rem;">
+							<li class="jiaoyichenggong">
+								<img src="../../img/zhupai.png" style="margin-top: 0"/>
+							</li>
+							<li>
+								<p>
+									猪排
+									<!--<span style="border-radius:0.03rem;font-size: 0.24rem;padding: 0 0.05rem;border: 0.8px solid #EA0607;">自营</span>-->
+									<span style="font-size:0.2rem;border-radius:0.03rem;padding-top: 0 0.05rem;border: 0.8px solid #EA0607;background: none;color: #EA0607;">期货</span>
+								</p>
+
+								<p id="hougai" style="margin-left: 0.18rem;margin-top: 0.13rem;">
+									<span style="border-radius:0;padding: 0 0.08rem;margin-left: -0.17rem;border: 0.8px solid #e5e5e5;">德国</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #e5e5e5;">202</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #e5e5e5;">10kg/件</span><br />
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #e5e5e5;">盐田港</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #e5e5e5;">2016-07-09</span>
+								</p>
+							</li>
+							<li style="margin-left: 0.099rem;">
+								<p style="margin: 0;">45250.00元</p>
+								<p style="margin: 0;">x5吨</p>
+
+							</li>
+						</ul>
+						<div class="zongjiage">
+							<ul>
+								<li>
+									<span>总价:</span>
+									<span>229150.00元</span>
+									<span>(含国际物流、国内清关、国内仓储、国内物流费用)</span>
+								</li>
+								<li class="jiaoyigb" style="">
+									<span style="margin-left:4rem;border: 0.8px solid #e5e5e5;">货物状态</span>
+									<span style="margin-left: 0.2rem;border: 0.8px solid #e5e5e5;">删除订单</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div class="wodedingdan_shangpin" style="float: left; border-top: 0;border-bottom: 0.8px solid #E5E5E5;">
+					<div style="height: auto;" class="wodedingdan_zhanshishangpin">
+						<p>
+							<img src="../../img/shanghu.png" />
+							<span>宝珠冻品商行</span>
+							<span style="float: right;color: #EA0607;">待付全款</span>
+							<span style="float: right;color: #999;margin-right: 0.5rem;font-size: 0.2rem;">倒计时：14分59秒</span>
+
+						</p>
+						<ul class="wodedingdan_xinxi" style="height: 1.5rem;">
+							<li class="jiaoyichenggong">
+								<img src="../../img/zhushou.png" style="margin-top: 0;"/>
+
+							</li>
+							<li>
+								<p>
+									猪手
+									<span style="border-radius:0.03rem;font-size: 0.2rem;padding: 0 0.05rem;border: 0.8px solid #EA0607;background: none;color: #EA0607;">期货</span>
+								</p>
+
+								<p id="hougai" style="margin-left: 0.18rem;margin-top: 0.13rem;">
+									<span style="border-radius:0;padding: 0 0.08rem;margin-left: -0.17rem;border: 0.8px solid #E5E5E5;">德国</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">202</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">10kg/件</span><br />
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">盐田港</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">2016-07-09</span>
+								</p>
+							</li>
+							<li style="margin-left: 0.12rem;">
+								<p style="margin: 0;">1810.00元</p>
+								<p style="margin: 0;">x10柜</p>
+
+							</li>
+						</ul>
+						<div class="zongjiage">
+							<ul>
+								<li>
+									<span>总价:</span>
+									<span>21000.00元</span>
+									<span>(含国际物流、国内清关、国内仓储、国内物流费用)</span>
+								</li>
+								<li class="daifu" style="margin-left: 0.085rem;">
+									<span style="margin-left: 4rem;border: 0.8px solid #e5e5e5;">取消订单</span>
+									<span style="margin-left: 0.2rem;border: 0.8px solid #e5e5e5;">继续付款</span>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+					<div class="quxiaoliyou quxiaoly" style="border-radius: 0.03rem;border: 0.8px solid #e5e5e5;">
+						<ul>
+							<li style="background: #f8f8f8;text-align: center;width: auto;border-bottom: 0.8px solid #e5e5e5;">取消理由</li>
+							<li>							
+								<img style="display: none;" src="../../img/shouhoudizhixuanze.png" />
+								<img style="display: block;" src="../../img/shouhuodizhiyixuanze.png"  />						
+								<p>
+									我不想买了
+								</p>
+								
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+								<p>
+									信息填写错误
+								</p>
+								
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+								
+								<p>
+									卖家缺货
+								</p>
+								
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+								
+								<p>
+									其他原因
+								</p>
+								
+							</li>
+						</ul>
+						<p class="bgqueding">
+							<span>取消</span>
+							<span>确定</span>
+						</p>
+					</div>
+				</div>
+				
+				<div class="wodedingdan_shangpin" style="float: left;border-top: 0;border-bottom: 0.8px solid #E5E5E5;" >
+					<div style="height: auto;" class="wodedingdan_zhanshishangpin">
+						<p>
+							<img src="../../img/shanghu.png" />
+							<span>宝珠冻品商行</span>
+							<span style="float: right;color: #EA0607;">已发货</span>
+						</p>
+						<ul class="wodedingdan_xinxi" style="height: 1.5rem;">
+							<li class="jiaoyichenggong">
+								<img src="../../img/zhubangguindex.png" style="margin-top: 0;"/>
+							</li>
+							<li>
+								<p>
+									猪棒骨
+									<span style="border-radius:0.03rem;font-size: 0.2rem;padding: 0 0.05rem;border: 0.8px solid #EA0607;background: none;color: #EA0607;">期货</span>
+								</p>
+
+								<p id="hougai" style="margin-left: 0.18rem;margin-top: 0.13rem;">
+									<span style="border-radius:0;padding: 0 0.08rem;margin-left: -0.17rem;border: 0.8px solid #E5E5E5;">德国</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">202</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">10kg/件</span><br />
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">盐田港</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">2016-07-09</span>
+								</p>
+							</li>
+							<li style="margin-left: 0.12rem;">
+								<p style="margin: 0;">198000.00元</p>
+								<p style="margin: 0;">x5柜</p>
+
+							</li>
+						</ul>
+						<div class="zongjiage">
+							<ul>
+								<li>
+									<span>总价:</span>
+									<span>990000.00元</span>
+									<span>(含国际物流、国内清关、国内仓储、国内物流费用)</span>
+								</li>
+								<li class="daishou" style="">
+									<span style="margin-left:4rem;border: 0.8px solid #e5e5e5;">延长收货</span>
+									<!--<span style="margin-left: 0.2rem;border: 0.8px solid #e5e5e5;">货物状态</span>-->
+									<span style="margin-left: 0.2rem;border:0.8px solid #EA0607 ;color: #EA0607;display: block;">确认收货</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+					
+				<div class="quxiaoliyou yanchang" style="border-bottom: 0.8px solid #E5E5E5; left:1.15rem;border-radius: 0.03rem;border: 0.8px solid #e5e5e5;">
+					<ul>
+						<li style="background: #f8f8f8;text-align: center;width: auto;border-bottom: 0.8px solid #e5e5e5;">延长收货时间</li>
+						<li style="width: auto;">					
+							<p style="padding: 0.3rem;padding-top:0;margin-left: 0;line-height: 0.4rem;font-size: 0.24rem;">
+								您可以延长该订单收货时间，将有更多的时间进行“确认收货”，延长天数为<em style="color: #EA0607;font-weight: 600;margin: 0 0.08rem;">3</em>天！
+							</p>
+							<p style="line-height: 0.05rem;font-size: 0.24rem;color: #999;margin-left:0.78rem;">提示：收货时间买家只能延长一次！</p>
+								
+						</li>
+							
+					</ul>
+					<p class="bgqueding"  style="margin-top: 85px;">
+						<span>取消</span>
+						<span>确定</span>
+					</p>
+				</div>
+				
+				
+			</div>
+
+			<!--待付款-->
+			<div class="wodedingdansecond wo" style="display: none;">
+				<div class="wodedingdan_shangpin" style="float: left; border-top: 0;">
+					<div style="height: auto;" class="wodedingdan_zhanshishangpin">
+						<p>
+							<img src="../../img/shanghu.png" />
+							<span>宝珠冻品商行</span>
+							<span style="float: right;color: #EA0607;">待付全款</span>
+							<span style="float: right;color: #999;margin-right: 0.5rem;font-size: 0.2rem;">倒计时：14分59秒</span>
+
+						</p>
+						<ul class="wodedingdan_xinxi" style="height: 1.5rem;">
+							<li class="jiaoyichenggong">
+								<img src="../../img/zhushou.png" style="margin-top: 0;"/>
+
+							</li>
+							<li>
+								<p>
+									猪手
+									<span style="border-radius:0.03rem;font-size: 0.2rem;padding: 0 0.05rem;border: 0.8px solid #EA0607;background: none;color: #EA0607;">期货</span>
+								</p>
+
+								<p id="hougai" style="margin-left: 0.18rem;margin-top: 0.13rem;">
+									<span style="border-radius:0;padding: 0 0.08rem;margin-left: -0.17rem;border: 0.8px solid #E5E5E5;">德国</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">202</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">10kg/件</span><br />
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">盐田港</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">2016-07-09</span>
+								</p>
+							</li>
+							<li style="margin-left: 0.12rem;">
+								<p style="margin: 0;">1810.00元</p>
+								<p style="margin: 0;">x10柜</p>
+
+							</li>
+						</ul>
+						<div class="zongjiage">
+							<ul>
+								<li>
+									<span>总价:</span>
+									<span>21000.00元</span>
+									<span>(含国际物流、国内清关、国内仓储、国内物流费用)</span>
+								</li>
+								<li class="daifu" style="margin-left: 0.085rem;">
+									<span style="margin-left: 4rem;border: 0.8px solid #e5e5e5;">取消订单</span>
+									<span style="margin-left: 0.2rem;border: 0.8px solid #e5e5e5;">继续付款</span>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+				<!--<div class="wodedingdan_shangpin" style="float: left; ">
+					<div style="height: auto;" class="wodedingdan_zhanshishangpin">
+						<p>
+							<img src="../../img/shanghu.png" />
+							<span>宝珠冻品商行</span>
+							<span style="float: right;color: #EA0607;">待付订金</span>
+							<span style="float: right;color: #999;margin-right: 0.5rem;font-size: 0.2rem;">倒计时：14分59秒</span>
+						</p>
+						<ul class="wodedingdan_xinxi" style="height: 1.5rem;">
+							<li class="jiaoyichenggong">
+								<img src="../../img/zhubangguindex.png" style="margin-top: 0;"/>
+							</li>
+							<li>
+								<p>
+									猪排
+									<span style="border-radius:0.03rem;font-size: 0.2rem;padding: 0 0.05rem;border: 0.8px solid #64c790;background: none;color: #64c790;">期货</span>
+								</p>
+
+								<p id="hougai" style="margin-left: 0.18rem;margin-top: 0.13rem;">
+									<span style="border-radius:0;padding: 0 0.08rem;margin-left: -0.17rem;border: 0.8px solid #E5E5E5;">德国</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">202</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">10kg/件</span><br />
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">盐田港</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">2016-8-18</span>
+								</p>
+							</li>
+							<li style="margin-left: 0.12rem;">
+								<p style="margin: 0;">￥98.00</p>
+								<p style="margin: 0;">x2柜</p>
+
+							</li>
+						</ul>
+						<div class="zongjiage">
+							<ul>
+								<li>
+									<span>总价:</span>
+									<span>￥2196</span>
+									<span>.00(含国际物流、国内清关、国内仓储、国内物流费用)</span>
+								</li>
+								<li class="quxiao" style="margin-left: 0.085rem;">
+									<span style="margin-left: 4rem;border: 0.8px solid #e5e5e5;">取消订单</span>
+									<span style="margin-left: 0.2rem;border: 0.8px solid #e5e5e5;">继续付款</span>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>-->
+				
+					
+					<div class="quxiaoliyou quxiaoly" style="border-radius: 0.03rem;border: 0.8px solid #e5e5e5;">
+						<ul>
+							<li style="background: #f8f8f8;text-align: center;width: auto;border-bottom: 0.8px solid #e5e5e5;">取消理由</li>
+							<li>							
+								<img style="display: none;" src="../../img/shouhoudizhixuanze.png" />
+								<img style="display: block;" src="../../img/shouhuodizhiyixuanze.png"  />						
+								<p>
+									我不想买了
+								</p>
+								
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+								<p>
+									信息填写错误
+								</p>
+								
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+								
+								<p>
+									卖家缺货
+								</p>
+								
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" />
+								<img src="../../img/shouhuodizhiyixuanze.png"  />
+								
+								<p>
+									其他原因
+								</p>
+								
+							</li>
+						</ul>
+						<p class="bgqueding">
+							<span>取消</span>
+							<span>确定</span>
+						</p>
+					</div>
+					
+					
+				</div>
+			<!--待发货-->
+			<!--<div class="wodedingdanthird wo" style="display: none;">
+				<div class="wodedingdan_shangpin">
+		   			<div  class="wodedingdan_zhanshishangpin">
+		   				<p>
+		   					<img src="../../img/shanghu.png"  />
+		   					<span>天际外贸</span>
+		   				</p>
+		   				<ul class="wodedingdan_xinxi">
+		   			
+		   					<li>
+		   						<img src="../../img/rou.png"  />
+		   				
+		   					</li>
+		   					<li>
+		   						<p>
+		   							新西兰牛仔骨
+		   					
+		   							<span>自营</span>
+		   							<span>现货</span>
+		   						</p>
+		   						<p>￥1899.00</p>
+		   						<p>x20</p>
+		   						<p>总价：￥1899.00</p>
+		   					</li>
+		   					<li id="daifukuan">
+		   						等待出库
+		   					</li>
+		   				</ul>   	
+		 			</div>	
+					<div class="wodedingdan_xiangxixinxi">
+						<ul class="woddingdan_xinxilist">
+							<li>
+								<img src="../../img/toleftsthring.png"  /> 
+						
+							</li>
+							<li>
+								<p>新西兰牛仔骨</p>
+								<p>原产地：新西兰</p>
+								<p>厂号：2323</p>
+								<p>定装：10kg/件</p>
+								<p>装船期：2016-07-23</p>
+								<p>到货港口：塘沽</p>
+						
+							</li>
+							<li>
+								<p>删除订单</p>
+								<p>查看物流</p>
+							</li>
+						</ul>				
+					</div>	
+				</div>
+				<div class="wodedingdan_shangpin">
+			   		<div  class="wodedingdan_zhanshishangpin">
+				   		<p>
+				   			<img src="../../img/shanghu.png"  />
+				   			<span>天际外贸</span>
+				   		</p>
+				   		<ul class="wodedingdan_xinxi">
+				   			<li>
+				   				<img src="../../img/rou.png"  />	
+				   			</li>
+				   			<li>
+				   				<p>
+				   					新西兰牛仔骨	
+				   						<span>自营</span>
+				   						<span>现货</span>
+				   				</p>
+				   				<p>￥1899.00</p>
+				   				<p>x20</p>
+				   				<p>总价：￥1899.00</p>
+				   			</li>
+				   			<li id="daifukuan">
+				   				等待出库
+				   				
+				   			</li>
+				   		</ul>
+			   		</div>
+					<div class="wodedingdan_xiangxixinxi">
+						<ul class="woddingdan_xinxilist">
+							<li>
+								<img src="../../img/toleftsthring.png"  /> 	
+							</li>
+							<li>
+								<p>新西兰牛仔骨</p>
+								<p>原产地：新西兰</p>
+								<p>厂号：2323</p>
+								<p>定装：10kg/件</p>
+								<p>装船期：2016-07-23</p>
+								<p>到货港口：塘沽</p>				
+							</li>
+							<li>
+								<p>删除订单</p>
+								<p>查看物流</p>
+							</li>
+						</ul>			
+					</div>
+				</div>
+				<div class="wodedingdan_shangpin">
+			  	 	<div  class="wodedingdan_zhanshishangpin">
+			   			<p>
+				   			<img src="../../img/shanghu.png"  />
+				   			<span>天际外贸</span>
+				   		</p>
+				   		<ul class="wodedingdan_xinxi">
+			   			
+				   			<li>
+				   				<img src="../../img/rou.png"  />
+				   				
+				   			</li>
+			   				<li>
+			   					<p>
+			   						新西兰牛仔骨
+			   						<span>自营</span>
+			   						<span>现货</span>
+			   					</p>
+				   				<p>￥1899.00</p>
+				   				<p>x20</p>
+				   				<p>总价：￥1899.00</p>
+				   			</li>
+				   			<li id="daifukuan">
+				   				等待出库
+				   				
+				   			</li>
+			   			</ul>
+			    	</div>
+			
+			
+					<div class="wodedingdan_xiangxixinxi">
+						<ul class="woddingdan_xinxilist">
+							<li>
+								<img src="../../img/toleftsthring.png"  /> 
+							
+							</li>
+							<li>
+								<p>新西兰牛仔骨</p>
+								<p>原产地：新西兰</p>
+								<p>厂号：2323</p>
+								<p>定装：10kg/件</p>
+								<p>装船期：2016-07-23</p>
+								<p>到货港口：塘沽</p>	
+							</li>
+							<li>
+								<p>删除订单</p>
+								<p>查看物流</p>
+							</li>
+						</ul>	
+					</div>
+				</div>
+			</div>-->
+			<!--待收货-->
+			<div class="wodedingdanfopurth wo" style="display: none;">
+				<div class="wodedingdan_shangpin" style="float: left;border-top: 0;" >
+					<div style="height: auto;" class="wodedingdan_zhanshishangpin">
+						<p>
+							<img src="../../img/shanghu.png" />
+							<span>宝珠冻品商行</span>
+							<span style="float: right;color: #EA0607;">已发货</span>
+						</p>
+						<ul class="wodedingdan_xinxi" style="height: 1.5rem;">
+							<li class="jiaoyichenggong">
+								<img src="../../img/zhubangguindex.png" style="margin-top: 0;"/>
+							</li>
+							<li>
+								<p>
+									猪棒骨
+									<span style="border-radius:0.03rem;font-size: 0.2rem;padding: 0 0.05rem;border: 0.8px solid #EA0607;background: none;color: #EA0607;">期货</span>
+								</p>
+
+								<p id="hougai" style="margin-left: 0.18rem;margin-top: 0.13rem;">
+									<span style="border-radius:0;padding: 0 0.08rem;margin-left: -0.17rem;border: 0.8px solid #E5E5E5;">德国</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">202</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">10kg/件</span><br />
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">盐田港</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #E5E5E5;">2016-07-09</span>
+								</p>
+							</li>
+							<li style="margin-left: 0.12rem;">
+								<p style="margin: 0;">198000.00元</p>
+								<p style="margin: 0;">x5柜</p>
+
+							</li>
+						</ul>
+						<div class="zongjiage">
+							<ul>
+								<li>
+									<span>总价:</span>
+									<span>990000.00元</span>
+									<span>(含国际物流、国内清关、国内仓储、国内物流费用)</span>
+								</li>
+								<li class="daishou" style="">
+									<span style="margin-left:4rem;border: 0.8px solid #e5e5e5;">延长收货</span>
+									<!--<span style="margin-left: 0.2rem;border: 0.8px solid #e5e5e5;">货物状态</span>-->
+									<span style="margin-left: 0.2rem;border:0.8px solid #EA0607 ;color: #EA0607;display: block;">确认收货</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+					
+				<div class="quxiaoliyou yanchang" style="border-bottom: 0.8px solid #E5E5E5; left:1.15rem;border-radius: 0.03rem;border: 0.8px solid #e5e5e5;">
+					<ul>
+						<li style="background: #f8f8f8;text-align: center;width: auto;border-bottom: 0.8px solid #e5e5e5;">延长收货时间</li>
+						<li style="width: auto;">					
+							<p style="padding: 0.3rem;padding-top:0;margin-left: 0;line-height: 0.4rem;font-size: 0.24rem;">
+								您可以延长该订单收货时间，将有更多的时间进行“确认收货”，延长天数为<em style="color: #EA0607;font-weight: 600;margin: 0 0.08rem;">3</em>天！
+							</p>
+							<p style="line-height: 0.05rem;font-size: 0.24rem;color: #999;margin-left:0.78rem;">提示：收货时间买家只能延长一次！</p>
+								
+						</li>
+							
+					</ul>
+					<p class="bgqueding"  style="margin-top: 85px;">
+						<span>取消</span>
+						<span>确定</span>
+					</p>
+				</div>
+			</div>
+			<!--待评价-->
+			<div class="wodedingdanfive wo" style="display: none;">
+				<div class="wodedingdan_shangpin" style="float: left; border-top: 0;">
+					<div style="height: auto;" class="wodedingdan_zhanshishangpin">
+						<p>
+							<img src="../../img/shanghu.png" />
+							<span>宝珠冻品商行</span>
+							<span style="float: right;color: #EA0607;">交易成功</span>
+
+						</p>
+						<ul class="wodedingdan_xinxi" style="height: 1.5rem;">
+
+							<li class="jiaoyichenggong">
+								<img src="../../img/zhubangguindex.png" style="margin-top: 0;"/>
+
+							</li>
+							<li>
+								<p>
+									猪棒骨
+									
+									<span style="font-size:0.2rem;border-radius:0.03rem;padding-top: 0 0.08rem;border: 0.8px solid #EA0607;background: none;color: #EA0607;">期货</span>
+								</p>
+
+								<p id="hougai" style="margin-left: 0.18rem;margin-top: 0.13rem;">
+									<span style="border-radius:0;padding: 0 0.08rem;margin-left: -0.17rem;border: 0.8px solid #e5e5e5;">德国</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #e5e5e5;">202</span>
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #e5e5e5;">10kg/件</span><br />
+									<span style="border-radius:0;padding: 0 0.08rem;border: 0.8px solid #e5e5e5;">2016-08-18</span>
+								</p>
+							</li>
+							<li style="margin-left: 0.099rem;">
+								<p style="margin: 0;">298000.00元</p>
+								<p style="margin: 0;">x2柜</p>
+
+							</li>
+						</ul>
+						<div class="zongjiage">
+							<ul>
+								<li>
+									<span>总价:</span>
+									<span>598900.00元</span>
+									<span>(含国际物流、国内清关、国内仓储、国内物流费用)</span>
+								</li>
+								<li class="jiaoyicg" style="margin-left: 0.5rem;">
+									<span style="margin-left:2rem;border: 0.8px solid #e5e5e5;">货物状态</span>
+									<span style="margin-left: 0.2rem;border: 0.8px solid #e5e5e5;">删除订单</span>
+									<span style="margin-left: 0.2rem;border:0.8px solid #EA0607 ;color: #EA0607;display: block;">评价晒单</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+				<div class="bgshanchudingdan"></div>
+			<div class="shangchudingdan shanchu1" style="border: 0.8px solid #e5e5e5;border-radius: 0.03rem;">
+					<ul>
+						<li>删除之后可以从电脑端<br/>订单回收站恢复订单</li>
+						<li style="border-top: 0.8px solid #e5e5e5;">
+							
+							<span style="border-top: none;">取消</span>
+							<span style="border-top: none;">确认</span>
+						</li>
+					</ul>
+					
+				</div>
+				<div class="shangchudingdan shanchu2" style="border: 0.8px solid #e5e5e5;border-radius: 0.03rem;">
+					<ul>
+						<li>删除之后可以从电脑端<br/>订单回收站恢复订单</li>
+						<li style="border-top: 0.8px solid #e5e5e5;">
+							
+							<span style="border-top: none;">取消</span>
+							<span style="border-top: none;">确认</span>
+						</li>
+					</ul>
+					
+				</div>
+	</body>
+	<script type="text/javascript" src="../../js/mui.js"></script>
+	<script type="text/javascript" src="../../js/buju.js"></script>
+	<script type="text/javascript" src="../../js/jquery-2.1.3.min.js"></script>
+	<!--<script type="text/javascript" src="../../js/tab.js"></script>-->
+	<script type="text/javascript" src="../../js/clickmodeo.js"></script>
+	<script>
+	$(function() {
+		FastClick.attach(document.body);
+	});
+
+	$("body").fadeIn(10)
+//		货物状态
+		$('.zongjiage .jiaoyigb span:nth-child(1)').on("click",function(){		
+			window.location.href="huowuzhuangtai.html"		
+//mui.openWindow({
+//				url:'huowuzhuangtai.html',
+//				id:'huowuzhuangtai.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		$('.zongjiage .jiaoyicg span:nth-child(1)').on("click",function(){		
+			window.location.href="../wuliuxinxi/wuliuxinxi.html"		
+//mui.openWindow({
+//				url:'../wuliuxinxi/wuliuxinxi.html',
+//				id:'../wuliuxinxi/wuliuxinxi.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+//		$('.zongjiage .pingjiashaidan span:nth-child(1)').on("click",function(){		
+//			window.location.href="../wuliuxinxi/wuliuxinxi.html"		
+//		})
+//		删除订单
+	
+	$(".shanchu1 ul li:nth-child(2) span:nth-child(2)").on("click",function(){	
+		$(".zongjiage .jiaoyicg").closest(".wodedingdan_shangpin").slideUp(500,function(){
+			$(".shangchudingdan").slideUp(500)
+			$(".wodedingdanfive .wodedingdan_shangpin").hide();
+			$(".wodedingdanfirst .wodedingdan_shangpin").eq(0).hide();
+			});
+	})
+	$(".shanchu2 ul li:nth-child(2) span:nth-child(2)").on("click",function(){	
+		$(".zongjiage .jiaoyigb").closest(".wodedingdan_shangpin").slideUp(500,function(){
+			$(".shangchudingdan").slideUp(500)		
+			});
+	})
+	$(".shangchudingdan ul li:nth-child(2) span:nth-child(1)").on("click",function(){
+		$(".shangchudingdan").slideUp(500)
+	})
+
+		$(".zongjiage .jiaoyigb span:nth-child(2)").on("click",function(){
+			$(".shanchu2").slideDown(500);			
+		})
+		$('.zongjiage .jiaoyicg span:nth-child(2)').on("click",function(){		
+			$(".shanchu1").slideDown(500);			
+		})
+//		取消订单
+		$('.zongjiage .daifu span:nth-child(1)').on("click",function(){
+			$(".quxiaoly").show(500);
+		})
+		$('.bgqueding span:nth-child(1)').on("click",function(){	
+			$(".quxiaoly").hide(500);
+				
+		})
+		$('.quxiaoly .bgqueding span:nth-child(2)').on("click",function(){	
+			window.location.href="guanBiDingDanXiangQIng.html";
+//mui.openWindow({
+//				url:'guanBiDingDanXiangQIng.html',
+//				id:'guanBiDingDanXiangQIng.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+				
+		})
+//		$('.bgqueding span:nth-child(2)').each(function(index,val){
+//			$(val).on("click",function(){	
+//				$(".quxiaoly").hide(500,function(){
+//					$('.quxiao span:nth-child(1)').eq(index).closest(".wodedingdan_shangpin").slideUp(500);
+//					window.location.href="guanBiDingDanXiangQIng.html";
+//				});
+//			})
+//		})
+//		$('.bgqueding span:nth-child(2)').on("click",function(){	
+//			$(".quxiaoliyou").slideDown(500,function(){
+//				$('.quxiao span:nth-child(1)').closest(".wodedingdan_shangpin").slideUp(500,function(){
+//				alert("此订单已取消")
+//				})
+//			});
+//		})
+//		继续付款
+		$('.zongjiage .daifu span:nth-child(2)').on("click",function(){
+			window.location.href="../fukuan.html";
+//mui.openWindow({
+//				url:'../fukuan.html',
+//				id:'../fukuan.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+//		延长收货
+		$(".zongjiage .daishou span:nth-child(1)").on("click",function(){
+//			confirm("抱歉！此功能暂未开通")
+			$(".yanchang").show(500);
+		})
+		$('.bgqueding span:nth-child(2)').on("click",function(){	
+			$(".quxiaoliyou").hide(500);
+				
+		})
+		$('.bgqueding span:nth-child(1)').on("click",function(){	
+			$(".quxiaoliyou").hide(500);
+				
+		})
+//		确认收货
+		$(".zongjiage .daishou span:nth-child(2)").on("click",function(){
+
+//			window.location.href="../fukuan.html";
+			window.location.href="../fukuanweikuan.html";
+//mui.openWindow({
+//				url:'../fukuan.html',
+//				id:'../fukuan.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+
+			
+
+		})
+//		评价晒单
+		$(".zongjiage .jiaoyicg span:nth-child(3)").on("click",function(){
+			window.location.href="pingjiafankui.html"
+//mui.openWindow({
+//				url:'pingjiafankui.html',
+//				id:'pingjiafankui.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		
+		//		交易成功失败
+//		$('.wodedingdanfirst .wodedingdan_xinxi').each(function(index,val){
+//			$(val).click(function(){
+//				if($(".wodedingdan_zhanshishangpin>p").eq(index).children("span").eq(1).html()=="交易成功"){
+//					
+//					window.location.href="jiaoyichenggong.html";
+//				}else if($(".wodedingdan_zhanshishangpin>p").eq(index).children("span").eq(1).html()=="交易关闭"){
+//					window.location.href="guanBiDingDanXiangQIng.html";
+//				}
+//			})
+//		})
+		$('.wodedingdanfirst .wodedingdan_xinxi').eq(0).click(function(){
+			window.location.href="jiaoyichenggong.html";
+//mui.openWindow({
+//				url:'jiaoyichenggong.html',
+//				id:'jiaoyichenggong.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		$('.wodedingdanfirst .wodedingdan_xinxi').eq(1).click(function(){
+			window.location.href="guanBiDingDanXiangQIng.html";
+//mui.openWindow({
+//				url:'guanBiDingDanXiangQIng.html',
+//				id:'guanBiDingDanXiangQIng.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		$('.wodedingdanfirst .wodedingdan_xinxi').eq(2).click(function(){
+			window.location.href="dingdanxiangqing.html";
+//mui.openWindow({
+//				url:'dingdanxiangqing.html',
+//				id:'dingdanxiangqing.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		$('.wodedingdanfirst .wodedingdan_xinxi').eq(3).click(function(){
+			window.location.href="daishouhuoxiangqing.html";
+//mui.openWindow({
+//				url:'daishouhuoxiangqing.html',
+//				id:'daishouhuoxiangqing.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+//		待付款
+		$('.wodedingdansecond .wodedingdan_xinxi').each(function(index,val){
+			$(val).click(function(){	
+				window.location.href="dingdanxiangqing.html";
+//mui.openWindow({
+//				url:'dingdanxiangqing.html',
+//				id:'dingdanxiangqing.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+			})
+		})
+//		待收货
+		$('.wodedingdanfopurth .wodedingdan_xinxi').each(function(index,val){
+			$(val).click(function(){	
+				window.location.href="daishouhuoxiangqing.html";
+//mui.openWindow({
+//				url:'daishouhuoxiangqing.html',
+//				id:'daishouhuoxiangqing.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+			})
+		})
+//		待评价
+		$('.wodedingdanfive .wodedingdan_xinxi').each(function(index,val){
+			$(val).click(function(){	
+				window.location.href="jiaoyichenggong.html";
+//mui.openWindow({
+//				url:'jiaoyichenggong.html',
+//				id:'jiaoyichenggong.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+			})
+		})
+		
+		
+		
+//		$(".daifukuan span:nth-child(1)").on("click",function(){
+//			
+//			
+//			window.location.href="dingdanxiangqing.html"
+//			
+//		})
+		
+		
+		
+//		$(".jiaoyichenggong").on("click",function(){			
+//			window.location.href="jiaoyichenggong.html"			
+//		})
+//		
+//		$(".jiaoyishibai").on("click",function(){			
+//			window.location.href="jiaoyishibai.html"			
+//		})
+		$(".hua").each(function(index,val){
+			$(val).click(function(){
+				
+				if(index==0){
+					$(".hua").eq(0).css({"border-bottom":"0.05rem solid #ea0607","color":"#ea0607"});
+					$(".hua").removeClass("on");
+					$(this).addClass("on");
+					$(".wo").hide();
+					$(".wo").eq(index).show();
+				}else{
+					$(".hua").eq(0).css({"border-bottom":"none","color":"#333"});
+					$(".hua").removeClass("on");
+					$(this).addClass("on");
+					$(".wo").hide();
+					$(".wo").eq(index).show();
+				}
+				
+			})
+		})
+			//下拉菜单
+	
+		$(".liebiaozuanfu").on("click",function(e){
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+		
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+	
+	//消息
+		$('.xialacaidan li:nth-child(3)').on('click',function(){
+			window.location.href="../../html/xiaoxiliebiao.html";
+//			mui.openWindow({
+//				url:'../../html/xiaoxiliebiao.html',
+//				id:'../../html/xiaoxiliebiao.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		//首页
+		$('.xialacaidan li:nth-child(2)').on('click',function(){
+			window.location.href ="../../index.html";
+//mui.openWindow({
+//				url:'../../index.html',
+//				id:'../../index.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+	</script>
+
+</html>

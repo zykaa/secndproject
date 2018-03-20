@@ -1,0 +1,2133 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>确认订单</title>
+		<style type="text/css">
+			body {
+				font-family: "微软雅黑";
+			}
+			
+			.dottop_left {
+				position: absolute;
+				top: -0.15rem;
+				left: -0.15rem;
+				width: 0.3rem;
+				height: 0.3rem;
+				background: #333;
+				border-radius: 100%;
+			}
+			
+			.dottop_right {
+				position: absolute;
+				top: -0.15rem;
+				right: -0.15rem;
+				width: 0.3rem;
+				height: 0.3rem;
+				background: #333;
+				border-radius: 100%;
+			}
+			
+			.first-p {
+				margin-top: 0.17rem;
+				margin-left: 0.3rem;
+				height: 0.54rem;
+				/*line-height: 0.54rem;*/
+			}
+			
+			.first-p span {
+				font-size: 0.26rem;
+				font-family: '微软雅黑';
+			}
+			
+			.shangpinxiang ul li {
+				float: left;
+			}
+			
+			.shangpinxiang ul li:nth-child(1) img {
+				width: 1.44rem;
+				height: 1.4rem;
+				vertical-align: middle;
+			}
+			
+			.shangpinxiang ul li:nth-child(2) span {
+				font-size: 0.18rem;
+			}
+			
+			.shangpinxiang ul li:nth-child(2) p:nth-child(2) span {
+				color: #999;
+				border: 0.8px solid #999;
+				height: 0.26rem;
+				display: inline-block;
+				line-height: 0.26rem;
+			}
+			
+			.shangpinxiang ul li:nth-child(3) span:nth-child(1) {
+				font-size: 0.27rem;
+				color: #e80405;
+			}
+			
+			.shangpinxiang ul li:nth-child(3) span:nth-child(2) {
+				font-size: 0.21rem;
+				color: #e80405;
+			}
+			
+			.peisongfangshi ul li {
+				float: left;
+				padding: 0 0.12rem;
+				height: 0.4rem;
+				line-height: 0.4rem;
+				color: #999;
+				border: 0.8px solid #999;
+				border-radius: 0.03rem;
+				font-size: 0.22rem;
+			}
+			
+			.peisongfangshi ul li:nth-child(2),
+			.peisongfangshi ul li:nth-child(4) {
+				margin: 0 0.25rem
+			}
+			
+			.peisongfangshi ul .clickbs {
+				background: #ea0406;
+				color: #fff;
+				border: 0;
+			}
+			
+			.shuliang span {
+				margin-top: 0.34rem;
+				width: 0.66rem;
+				display: block;
+				float: right;
+				height: 0.66rem;
+				border: solid #E5E5E5 0.03rem;
+				text-align: center;
+				font-size: 0.28rem;
+				line-height: 0.66rem;
+			}
+			
+			.bianjiright {
+				text-align: left;
+				line-height: 0.8rem;
+				font-size: 0.24rem;
+				padding-left: 6.4rem;
+				border-bottom: 0.8px dashed #E5E5E5;
+			}
+			
+			.bianjiright img {
+				width: 0.28rem;
+				height: 0.28rem;
+				float: right;
+				/* margin-right: 0.1rem; */
+				margin-top: 0.26rem;
+				margin-right: 0.2rem;
+			}
+			/*地址编辑内容*/
+			
+			.bianjicontent {
+				width: 7.5rem;
+				/*margin-top: 2.8rem;*/
+				border-top: 0.8px dashed #E5E5E5;
+				background: #f5f5f5;
+			}
+			
+			.bianjicontent .shouhuobiaoti {
+				width: 7.2rem;
+				height: 0.93rem;
+				line-height: 0.93rem;
+				border-bottom: 0.8px solid #E5E5E5;
+				padding-left: 0.3rem;
+			}
+			
+			.bianjicontent .shouhuobiaoti span:nth-child(2) {
+				float: right;
+				margin-right: 0.29rem;
+				padding: 0 0.15rem;
+				height: 0.34rem;
+				border: 0.8px solid #999;
+				-webkit-border-radius: 0.03rem;
+				-moz-border-radius: 0.03rem;
+				border-radius: 0.03rem;
+				color: #333;
+				line-height: 0.34rem;
+				margin-top: 0.35rem;
+			}
+			
+			.defaultaddress {
+				width: 7.2rem;
+				height: 1.62rem;
+				border-bottom: 0.8px solid #E5E5E5;
+				padding-left: 0.3rem;
+			}
+			
+			.defaultaddress ul li {
+				float: left;
+			}
+			
+			.defaultaddress ul li {
+				font-size: 0.22rem;
+			}
+			
+			.defaultaddress ul li:nth-child(1) img {
+				width: 0.35rem;
+				height: 0.35rem;
+				margin-top: 0.62rem;
+			}
+			
+			.defaultaddress ul li:nth-child(2) {
+				line-height: 1.62rem;
+				color: #999;
+				margin-left: 0.25rem;
+				margin-right: 0.38rem;
+			}
+			
+			.defaultaddress ul li:nth-child(3) p:nth-child(1) {
+				margin-top: 0.3rem;
+			}
+			
+			.defaultaddress ul li:nth-child(3) p {
+				line-height: 0.36rem;
+			}
+			
+			.tianjiadizhi {
+				height: 1.34rem;
+				width: 7.2rem;
+				line-height: 1.34rem;
+				border-bottom: 0.8px solid #E5E5E5;
+				text-align: center;
+				padding-left: 0.3rem;
+			}
+			
+			.tianjiadizhi span {
+				padding: 0 0.6rem;
+				border: 0.8px solid #999;
+				color: #333;
+				height: 0.5rem;
+				display: inline-block;
+				line-height: 0.5rem;
+				-webkit-border-radius: 0.03rem;
+				-moz-border-radius: 0.03rem;
+				border-radius: 0.03rem;
+			}
+			
+			.peisongliucheng {
+				width: 7.5rem;
+			}
+			
+			.peisongliucheng .peisongbiaoti {
+				font-size: 0.26rem;
+				height: 1.18rem;
+				line-height: 1.18rem;
+				color: #323232;
+				padding-left: 0.3rem;
+			}
+			
+			.peisongul {
+				width: 7.2rem;
+				padding-left: 0.3rem;
+			}
+			
+			.peisongliucheng ul li img {
+				width: 0.62rem;
+				height: 0.62rem;
+				background: #F5F5F5;
+			}
+			
+			.peisongliucheng ul li {
+				float: left;
+			}
+			
+			.peisongul {
+				height: 1.52rem;
+				z-index: 1000;
+				position: relative;
+			}
+			
+			.peisongulli {
+				width: 7.2rem;
+				padding-left: 0.3rem;
+				height: 1.17rem;
+				padding-top: 0.40rem;
+				border-bottom: 0.8px solid #E5E5E5;
+			}
+			
+			.peisongulli li {
+				float: left;
+			}
+			
+			.peisongulli li p {
+				font-size: 0.16rem;
+			}
+			
+			.xuanzewuliu {
+				width: 7.2rem;
+				padding-left: 0.3rem;
+			}
+			
+			.xuanzewuliu .xuanzewuliubt {
+				text-align: left;
+				font-size: 0.26rem;
+				height: 0.65rem;
+				line-height: 0.65rem;
+				color: #323232;
+				border-bottom: 0.8px solid #E5E5E5;
+			}
+			
+			.xuanzewuliu span {
+				float: left;
+				margin-top: 0.19rem;
+			}
+			
+			.xuanzewuliu p {
+				text-align: center;
+			}
+			
+			.xuanzewuliu p img {
+				width: 0.28rem;
+				height: 0.28rem;
+				display: inline-block;
+			}
+			
+			.onestar,
+			.twostar,
+			.threestar,
+			.fourstar,
+			.fivestar {
+				height: 0.66rem;
+				border-bottom: 0.8px solid #E5E5E5;
+				line-height: 0.66rem;
+			}
+			
+			.caozuo {
+				width: 7.2rem;
+				padding-left: 0.3rem;
+				height: 1.49rem;
+				border-bottom: 0.8px dashed #E5E5E5;
+			}
+			
+			.caozuo span {
+				padding: 0 0.36rem;
+				height: 0.4rem;
+				display: inline-block;
+				border: 0.8px solid #999;
+				-webkit-border-radius: 0.03rem;
+				-moz-border-radius: 0.03rem;
+				border-radius: 0.03rem;
+				line-height: 0.4rem;
+				float: right;
+				color: #333;
+				margin-top: 0.54rem;
+			}
+			
+			.xuanzeyufu {
+				padding-left: 0.3rem;
+			}
+			
+			.xuanzeyufu p:nth-child(1) {
+				font-size: 0.26rem;
+				line-height: 0.84rem;
+				font-family: '微软雅黑';
+				/*margin-top: 0.2rem;*/
+			}
+			
+			.xuanzeyufu ul li p img {
+				width: 0.35rem;
+				height: 0.35rem;
+				float: left;
+				margin-right: 0.4rem;
+			}
+			
+			.xuanzeyufu ul li:nth-child(2) {
+				height: 0.99rem;
+				border-top: 0.8px solid #E5E5E5;
+				border-bottom: 0.8px solid #E5E5E5;
+				line-height: 0.99rem;
+			}
+			
+			.xuanzeyufu ul li img {
+				margin-top: 0.22rem;
+			}
+			/*收货地址*/
+			
+			.xiugaishouhuo {
+				padding: 0.26rem 0 0.26rem 0.3rem;
+				/*border-bottom: 0.8px solid #E5E5E5;*/
+			}
+			
+			.xiugaishouhuo ul li p:nth-child(1) {
+				color: #333;
+				font-size: 0.26rem;
+				height: 0.48rem;
+			}
+			
+			.xiugaishouhuo ul li p:nth-child(2),
+			.xiugaishouhuo ul li p:nth-child(3) {
+				line-height: 0.32rem;
+				font-size: 0.22rem;
+				color: #757575;
+				margin-left: .44rem;
+				font-family: '微软雅黑';
+			}
+			
+			.xiugaishouhuo ul li p:nth-child(1) .shouhuospan {
+				width: 5.69rem;
+				display: inline-block;
+				font-family: '微软雅黑';
+			}
+			
+			.xiugaishouhuo ul li p:nth-child(1) .xiugai {
+				height: 0.34rem;
+				padding: 0 0.15rem;
+				border: 0.8px solid #999;
+				-webkit-border-radius: 0.03rem;
+				-moz-border-radius: 0.03rem;
+				border-radius: 0.03rem;
+			}
+			
+			.peisongfangshiabc {
+				padding-left: 0.3rem;
+			}
+			
+			.peisongfangshiabc p:nth-child(1) {
+				height: 0.72rem;
+				line-height: 0.92rem;
+				border-top: 0.8px solid #E5E5E5;
+				font-size: 0.25rem;
+				border-bottom: 0.8px solid #E5E5E5;
+				padding-left: 0.3rem;
+				font-family: '微软雅黑';
+			}
+			
+			.peisongfangshiabc .dierhang {
+				width: 7.2rem;
+				text-align: center;
+				color: #757575;
+				font-size: 0.22rem;
+			}
+			
+			.peisongfangshiabc p:nth-child(2) {
+				/*height: 1.33rem;
+				line-height: 1.33rem;*/
+				/*margin-left: 3.56rem;*/
+				text-align: center;
+			}
+			/*配送方式*/
+			
+			.peisongfangshia {
+				padding-left: 0.3rem;
+				border-bottom: 0.8px solid #E5E5E5;
+			}
+			
+			.peisongfangshia ul li {
+				float: left;
+				/*padding: 0 0.13rem;*/
+				border: 0.8px solid #999999;
+				-webkit-border-radius: 0.03rem;
+				-moz-border-radius: 0.03rem;
+				border-radius: 0.03rem;
+				height: .4rem;
+				line-height: .4rem;
+				font-size: 0.24rem;
+				font-family: "微软雅黑";
+				width: 1.5rem;
+				text-align: center;
+			}
+			
+			.peisongfangshia ul .clickbs {
+				background: #ea0406;
+				color: #fff;
+				border: 0;
+			}
+			
+			.peisongfangshia p:nth-child(1) {
+				height: 0.77rem;
+				line-height: 0.77rem;
+				border-top: 0.8px solid #E5E5E5;
+				font-size: 0.26rem;
+				font-family: '微软雅黑';
+			}
+			
+			.peisongfangshia p:nth-child(1) span {
+				color: #eb0508;
+			}
+			
+			.peisongfangshia p:nth-child(2) {
+				height: 1.33rem;
+				line-height: 1.33rem;
+			}
+			
+			.zhuanshu {
+				height: 1.83rem;
+				padding-left: 0.3rem;
+				border-bottom: 0.8px solid #E5E5E5;
+			}
+			
+			.zhuanshu ul {
+				height: 1.05rem;
+			}
+			
+			.zhuanshu ul li {
+				float: left;
+				line-height: 1.05rem;
+			}
+			
+			.zhuanshu ul li:nth-child(2) {
+				font-size: 0.26rem;
+				color: #333;
+				width: 2.52rem;
+			}
+			
+			.zhuanshu ul li:nth-child(3) {
+				font-size: 0.2rem;
+				color: #ea0404;
+			}
+			
+			.zhuanshu ul li:nth-child(4) {
+				margin-left: 0.54rem;
+				margin-right: 0.48rem;
+			}
+			
+			.zhuanshu ul li:nth-child(4) img,
+			.zhuanshu ul li:nth-child(5) img {
+				width: 0.55rem;
+				height: 0.55rem;
+			}
+			
+			.zhuanshu .tishi {
+				width: 5.6rem;
+				margin: 0 auto;
+			}
+			
+			.zhuanshu .tishi p {
+				text-align: center;
+				padding: 0 0.16rem;
+				border: 0.8px solid #ea0406;
+				font-size: 0.19rem;
+				/*width: 5.6rem;*/
+				color: #333;
+				line-height: .4rem;
+			}
+			
+			.zhuanshu p img {
+				width: 0.28rem;
+				height: 0.28rem;
+			}
+			
+			.daiding {
+				height: 1.12rem;
+				line-height: 1.12rem;
+				/*float: right;*/
+				margin-left: 5.0rem;
+			}
+			
+			.daiding p {
+				color: #333;
+				font-size: 0.26rem;
+			}
+			
+			.daiding p span {
+				color: #eb1517;
+			}
+			/*买家留言*/
+			
+			.maijiamessage {
+				position: relative;
+				/*height: 2.84rem;*/
+				padding-bottom: 0.6rem;
+				border-top: 0.8px dashed #333;
+				padding-left: 0.3rem;
+				/*border-bottom: 0.8px solid #E5E5E5;*/
+			}
+			
+			.maijiamessage p {
+				width: 6.9rem;
+				height: 0.8rem;
+				font-size: 0.28rem;
+				color: #333333;
+				line-height: 0.8rem;
+				font-family: '微软雅黑';
+			}
+			
+			textarea {
+				width: 6.98rem;
+				height: 1.2rem;
+				margin: 0 auto;
+				font-size: 0.2rem;
+				outline: none;
+				/*resize: none;*/
+				background: #f5f5f5;
+				margin-bottom: 0.4rem;
+				border: #e5e5e5 solid 0.8px;
+				line-height: 0.4rem;
+				/*text-indent: 0.3rem;*/
+				-webkit-border-radius: 0.05rem;
+				-moz-border-radius: 0.05rem;
+				border-radius: 0.05rem;
+				color: #333;
+				font-family: "微软雅黑";
+			}
+			
+			.fukuananniu {
+				height: 0.77rem;
+				margin-bottom: 1.14rem;
+			}
+			
+			.fukuananniu .fukuananniup {
+				width: 5.7rem;
+				height: 0.77rem;
+				line-height: 0.77rem;
+				background: #ea0406;
+				color: #FFFFFF;
+				font-size: 0.24rem;
+			}
+			
+			.peisongfangshia .teshu {
+				border: 0.8px solid #996f1b;
+				color: #996f1b;
+				background: #f5f5f5;
+			}
+			
+			.peisongfangshia ul li:nth-child(2) {
+				margin-left: 0.28rem;
+				margin-right: 0.28rem;
+			}
+			
+			.peisongfangshia ul li:nth-child(3) {
+				margin-right: 0.28rem;
+			}
+			/*直冷冻套餐包*/
+			
+			.selecttaocan {
+				width: 7.2rem;
+				padding-left: 0.3rem;
+				height: 3.66rem;
+				padding-top: 0.36rem;
+				border-bottom: 0.8px solid #E5E5E5;
+			}
+			
+			.selecttaocan .taocanbiaoti {
+				height: 0.55rem;
+				line-height: 0.55rem;
+				font-size: 0.26rem;
+				color: #333;
+			}
+			
+			.selecttaocan ul li {
+				float: left;
+				width: 3.25rem;
+				height: 0.75rem;
+				text-align: center;
+				color: #999999;
+				border: 0.8px solid #999999;
+				-webkit-border-radius: 0.03rem;
+				-moz-border-radius: 0.03rem;
+				border-radius: 0.03rem;
+				font-size: 0.22rem;
+				margin-top: 0.18rem;
+				padding: 0.19rem 0 0 0.08rem;
+				position: relative;
+			}
+			
+			.selecttaocan ul li:nth-child(1) {
+				margin-right: 0.18rem;
+			}
+			
+			.selecttaocan ul li:nth-child(3) {
+				margin-right: 0.18rem;
+			}
+			
+			.taocanul li:nth-child(1) img {
+				width: 0.31rem;
+				height: 0.35rem;
+				float: left;
+			}
+			
+			.taocanul li:nth-child(2) img {
+				width: 0.36rem;
+				height: 0.36rem;
+				float: left;
+			}
+			
+			.taocanul li:nth-child(3) img {
+				width: 0.16rem;
+				height: 0.36rem;
+				float: left;
+			}
+			
+			.taocanul li:nth-child(4) img {
+				width: 0.31rem;
+				height: 0.36rem;
+				float: left;
+			}
+			
+			.taocanul li img:last-child {
+				width: 0.32rem;
+				height: 0.33rem;
+			}
+			
+			.taocanul li .duoxuanp {
+				margin-top: 0.06rem;
+			}
+			
+			.taocanul li .duoxuanp span {
+				font-size: 0.1rem;
+				border: 0.8px solid #E5E5E5;
+				padding: 0.03rem;
+				margin-top: 0.06rem;
+				display: inline-block;
+			}
+			/*自提*/
+			
+			.sijiinfo .sijiinfolist {
+				width: 7.2rem;
+				padding-left: 0.3rem;
+				padding-top: 0.22rem;
+			}
+			
+			.sijiinfo .sijiinfolist li {
+				margin-bottom: 0.14rem;
+			}
+			
+			.sijiinfo .sijiinfolist li span {
+				width: 2.1rem;
+				display: inline-block;
+				text-align: left;
+			}
+			
+			.sijiinfo .sijiinfolist li input {
+				height: 0.58rem;
+				border: none;
+				border: 0.8px solid #e5e5e5;
+				outline: none;
+			}
+			
+			.shenfenzhengming {
+				width: 7.2rem;
+				padding-left: 0.3rem;
+				padding-top: 0.35rem;
+				height: 1.97rem;
+			}
+			
+			.shenfenzhenglist li {
+				float: left;
+				border: 0.8px solid #E5E5E5;
+			}
+			
+			.shenfenzhenglist li:nth-child(1) {
+				margin-right: 0.17rem;
+			}
+			
+			.jiashizheng {
+				width: 7.2rem;
+				padding-left: 0.3rem;
+			}
+			
+			.tianjiaphoto {
+				width: 1.4rem;
+				height: 1.4rem;
+				position: relative;
+				border: 0.8px solid #E5E5E5;
+				background: #fff;
+			}
+			
+			.tianjiaphoto img:nth-child(1) {
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+			}
+			
+			.tianjiaphoto img:nth-child(2) {
+				position: absolute;
+				right: -0.21rem;
+				top: -0.15rem;
+			}
+			
+			.wuliulist {
+				background: #E5E5E5;
+				margin-right: 0.3rem;
+			}
+			
+			.wuliulistcon {
+				padding-left: 1.18rem;
+			}
+			
+			.wuliulistcon li {
+				line-height: 0.56rem;
+			}
+			
+			.wuliulist1 .wuliulistcon li img,
+			.wuliulist2 .wuliulistcon li img,
+			.wuliulist3 .wuliulistcon li img,
+			.wuliulist4 .wuliulistcon li img,
+			.wuliulist5 .wuliulistcon li img {
+				width: 0.35rem;
+				float: left;
+				margin-top: 0.15rem;
+				height: 0.35rem;
+				margin-right: 0.72rem;
+			}
+			
+			.liuyanlist {
+				padding-left: 1.18rem;
+				margin-bottom: 0.3rem;
+			}
+			
+			.liuyanlist li {
+				line-height: 0.56rem;
+				font-size: 0.22rem;
+				font-family: "微软雅黑";
+				color: #757575;
+			}
+			
+			.liuyanlist li img {
+				width: 0.35rem;
+				float: left;
+				margin-top: 0.15rem;
+				height: 0.35rem;
+				margin-right: 0.72rem;
+			}
+			
+			.sijiinfolist li i {
+				margin-right: 0.1rem;
+				line-height: 0.58rem;
+				font-style: normal;
+			}
+			/*.theThirdPage{
+				-webkit-overflow-scrolling: touch;
+				overflow: auto;
+				height: 13rem;
+			}*/
+			/*底部*/
+			
+			.fukuanBottom{
+				width: 7.5rem;
+				height: 0.98rem;
+				border-top: 0.8px solid #E5E5E5;
+				position: fixed;
+				bottom: 0;
+				background: #fff;
+				z-index: 9999;
+			}
+			.fukuanBottom ul li{
+					float: left;
+				}
+				.fukuanBottom ul li:first-child{
+					width: 5.2rem;
+					height: 0.98rem;
+					/*background: pink;*/
+					font-size: 0.32rem;
+					text-align: center;
+					line-height: 0.98rem;
+				}
+				.fukuanBottom ul li:last-child{
+					float: right;
+					font-size: 0.32rem;
+					width: 2.24rem;
+					background: #ff0103;
+					height: 0.98rem;
+					text-align: center;
+					line-height: 0.98rem;
+					color: #fff;
+				}
+				.fukuanZonge{
+					color: #EA0607;
+					font-size: 0.4rem;
+					margin-left: 0.2rem;
+				}
+			
+		</style>
+	</head>
+	<link rel="stylesheet" href="../../css/commen.css" />
+	<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../../css/index.css" />
+	<link rel="stylesheet" href="../../css/ziyemain.css" />
+
+	<body style="overflow-x: hidden;">
+		<header class=" dingdanquanbu" style="z-index: 1000;width: 7.5rem;background: #f8f8f8;position: fixed;top: 0;">
+			<ul class="wodedingdanheader yincang" style=" width: 7.5rem;">
+				<li style="margin-left: 0.3rem;font-size: 0.3rem;">
+					<i class="fa fa-angle-left mui-action-back" aria-hidden="true" style="font-size: 0.66rem;"></i>
+				</li>
+
+				<li style="text-align: center;width: 5.18rem;font-size: 0.34rem;">
+					确认订单
+				</li>
+				<li class="liebiaozuanfu" style="text-align: center;line-height: 0.6rem; font-size: 0.6rem; color: #ea0607;font-family: '微软雅黑';float: right;margin-right: 0.3rem;">...</li>
+			</ul>
+
+		</header>
+		<ul class="xialacaidan" style="display: none; z-index: 1001;">
+			<div class="xiaojiao"></div>
+			<li><img src="../../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+			<li><img src="../../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+
+			<li><img src="../../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+			<li><img src="../../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+		</ul>
+
+	<div class="theThirdPage">
+		
+	<div class="allquerental">
+
+			<!--*************直冷送***************-->
+			<!--<div class="querenlist1" style=" overflow: hidden;">-->
+			<div class=" baozhushanghang" style="margin-top: 1rem; background: #fff; border-bottom:none; position: relative; border-top: 0.8px dashed #333; overflow: hidden;">
+				<div class="dottop_left"></div>
+				<div class="dottop_right"></div>
+
+				<p class="first-p"><img src="../../img/shanghu.png" style="height: 0.32rem; width: 0.32rem;font-size: 0.26rem; font-family: '微软雅黑';margin-right: 0.1rem;float: left;" /><span style="float: left;">宝珠冻品商行</span></p>
+				<div class="shangpinxiang" style="height: 1.78rem; width: 7.2rem; background: #f5f5f5; padding:0.15rem 0 0 0.3rem;">
+					<ul>
+						<li><img src="../../img/zhushouphoto.png" /></li>
+						<li style="margin-left: 0.1rem;">
+							<p style="line-height: 0.34rem;">
+								<span style="font-size: 0.26rem;">猪手</span>
+								<span style="background: url(../../img/qihuobg.png) no-repeat; padding: 0 0.25rem; border-radius: 0.03rem; color: #fff;">皇冠</span>
+								<span style="padding:0 0.04rem; border: 0.8px solid #4cc07f; color: #4cc07f; border-radius: 0.03rem;">现货</span>
+							</p>
+							<p style="margin-top: 0.13rem; margin-bottom: 0.07rem;">
+								<span style="padding: 0 0.12rem; ">717</span>
+								<span style="padding: 0 0.09rem;">美国</span>
+								<span style="padding: 0 0.04rem;">27吨/柜</span>
+								<span style="padding: 0 0.1rem;">塘沽港</span>
+							</p>
+							<p><span style="color: #999; border: 0.8px solid #999; padding: 0 0.08rem">2016-8-18</span></p>
+						</li>
+						<li style="float: right; margin-right: 0.4rem;"><span style="font-family: '微软雅黑';">12000.00元</span><span></span></li>
+					</ul>
+				</div>
+
+				<p class="shuliang" style="margin-right: 0.5rem; line-height: 1.26rem; font-size: 0.24rem; margin-left: 4.1rem; font-family: '微软雅黑';">
+					数量:
+					<i style="font-style: normal; float: right;  margin-left: 0.06rem;">吨</i>
+					<span class="up" style="font-size: 0.26rem; border:0.8px solid #E5E5E5">＋</span>
+					<span class="num" style="border-top: 0.8px solid #E5E5E5;border-bottom: 0.8px solid #E5E5E5;  border-left:none; border-right: none; font-size: 0.24rem;">2</span>
+					<span class="down" style="font-size: 0.26rem; border:0.8px solid #E5E5E5;">－</span>
+				</p>
+			</div>
+
+			<div class="querenlist1" style=" overflow: hidden;">
+				<!--选择配送方式-->
+				<div class="peisongfangshia" style="height: 1.53rem;">
+					<p style="width: 7.2rem;"><img src="../../img/peisong.png" style="width: 0.36rem; height: 0.3rem; margin-right: 0.07rem; font-family: '微软雅黑';" />选择配送方式</p>
+					<ul>
+						<li class="clickbs teshu">直冷送</li>
+						<li>商品自提</li>
+						<li>自选流程</li>
+						<li>人工电话</li>
+					</ul>
+				</div>
+
+				<div class="bianjiright" style="font-family: '微软雅黑';">
+					<img src="../../img/bianjixia.png" />
+					<img src="../../img/bianjishangjiao.png" style="display: none;" /> 编辑
+				</div>
+				<div class="bianjicontent">
+					<p class="shouhuobiaoti"><span style="font-size: 0.26rem;">选择收货地址</span><span style="color: #cecece; border: 0.8px solid #cecece;">修改</span></p>
+					<div class="defaultaddress">
+						<ul>
+							<li><img src="../../img/shouhuodizhiyixuanze.png" />
+								<img src="../../img/shouhoudizhixuanze.png" style="display: none;" />
+							</li>
+							<li>默认地址</li>
+							<li>
+								<p>联系人：<span>宋华鑫</span></p>
+								<p>联系方式：<span>15387049658</span></p>
+								<p>地址：<span>北京市朝阳区世贸天阶冷库404</span></p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="tianjiadizhi">
+						<span style="color: #cecece; border: 0.8px solid #cecece;">添加地址</span>
+					</div>
+
+					<!--选择套餐包-->
+					<div class="selecttaocan">
+						<p class="taocanbiaoti">选择套餐包</p>
+						<ul class="taocanul">
+							<li>
+								<img src="../../img/taocan1.png" />
+								<img src="../../img/taocan1red.png" style="display: none;" />
+								<p>安全优先3500元~4000元</p>
+								<p class="duoxuanp"><span>温度查验</span> <span>质量检验</span></p>
+								<img src="../../img/redsanjiao.png" style="position: absolute; left: 3.02rem; top: 0.61rem; display: none;" />
+							</li>
+							<li>
+								<img src="../../img/taocan2.png" />
+								<img src="../../img/taocan2red.png" style="display: none;" />
+								<p>时效优先2500元~3000元</p>
+								<p class="duoxuanp"><span>清关快</span> <span>运输速达</span></p>
+								<img src="../../img/redsanjiao.png" style="position: absolute; left: 3.02rem; top: 0.61rem; display: none;" />
+							</li>
+							<li>
+								<img src="../../img/taocan3.png" />
+								<img src="../../img/taocan3red.png" style="display: none;" />
+								<p>性价比优先1500元~2000元</p>
+								<p class="duoxuanp"><span>价格最低</span></p>
+								<img src="../../img/redsanjiao.png" style="position: absolute; left: 3.02rem; top: 0.61rem; display: none;" />
+							</li>
+							<li>
+								<img src="../../img/taocan4.png" />
+								<img src="../../img/taocan4red.png" style="display: none;" />
+								<p>服务优先3500元~5000元</p>
+								<p class="duoxuanp"><span>管家式服务</span></p>
+								<img src="../../img/redsanjiao.png" style="position: absolute; left: 3.02rem; top: 0.61rem; display: none;" />
+							</li>
+						</ul>
+					</div>
+
+					<!--编辑底部按钮-->
+					<div class="caozuo">
+						<span style="margin-right: 0.29rem; margin-left: 0.15rem;">完成</span>
+						<span>取消</span>
+					</div>
+				</div>
+
+				<!--选择预付款-->
+				<div class="xuanzeyufu">
+					<p><img src="../../img/yufuhao.png" style="width: 0.36rem; height: 0.36rem; margin-right: 0.11rem;" />选择预付款</p>
+					<ul>
+						<li>
+							<p><img src="../../img/shouhuodizhiyixuanze.png" />
+								<img src="../../img/shouhoudizhixuanze.png" style="display: none;" />
+								<span style="display: inline-block; width: 4.63rem; font-size: 0.22rem; color: #333;">全款</span><span style="color: #757575; font-family: '微软雅黑';">24000.00元</span><span style="font-size: 0.14rem; color: #757575;"></span></p>
+						</li>
+						<li>
+							<p><img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<img src="../../img/shouhoudizhixuanze.png" />
+								<span style="display: inline-block; width: 4.74rem; font-size: 0.22rem; color: #333;">20%</span><span style="color: #757575; font-family: '微软雅黑';">4800.00元</span><span style="font-size: 0.15rem; color: #757575;"></span></p>
+						</li>
+					</ul>
+				</div>
+				<!--收货地址-->
+				<div class="xiugaishouhuo">
+					<ul>
+						<li>
+							<p><img src="../../img/dizhitubiao.png" style="width: 0.29rem; height: 0.36rem; margin-right: 0.13rem;" /><span class="shouhuospan">收货地址</span><span class="xiugai" style="color: #cecece; border: 0.8px solid #cecece;">修改</span></p>
+							<p>联系人：宋华鑫<span style="margin-left: 0.41rem;">联系方式：15387049658</span> </p>
+							<p>地址：北京市 朝阳区 呼家楼街道 世贸天阶冷库404</p>
+						</li>
+					</ul>
+				</div>
+				<!--配送方式-->
+				<div class="peisongfangshiabc" style="height: 1.72rem;">
+					<p style="width: 6.57rem; text-align: center; border-bottom: none;"><span style="color: #333; font-size: 0.26rem;">共计：</span><span style="color: #eb1517; font-size: 0.28rem; font-family: '微软雅黑';"></span><span style="font-size: 0.36rem; color: #EB0508; font-family: '微软雅黑';font-weight: 600;">24000.00元</span><span style="color: #eb1517; font-size: 0.28rem;"></span></p>
+					<div class="dierhang">(含国际物流费、仓储费、清关费、国内物流费)</div>
+				</div>
+
+				<!--买家留言-->
+				<div class="maijiamessagecon" style=" overflow: hidden; padding-top: 0.12rem;">
+					<div class="maijiamessage theOne">
+						<div class="dottop_left"></div>
+						<div class="dottop_right"></div>
+						<p>买家留言</p>
+
+						<ul class="liuyanlist  ">
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" alt="" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<span>一定要确保质量</span>
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" alt="" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<span>请确保运送货物包装密封</span>
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" alt="" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<span>请确保货物冷藏温度，尽快到达</span>
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" alt="" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<span>请确保货物数量无误</span>
+							</li>
+						</ul>
+
+						<textarea placeholder="请输入留言"></textarea>
+					</div>
+				</div>
+				<!--应付金额-->
+
+				<div class="xvfukuan">
+					<!--<p style="font-family: '微软雅黑';">
+						应付金额：
+						<span style="font-family: '微软雅黑';"><span style="font-family: '微软雅黑'; font-size: 0.28rem;"></span><span style="font-family: '微软雅黑'; font-size: 0.36rem;">24000.00元</span></span><span></span>
+					</p>-->
+					<div class="dengluxieyi">
+						<img src="../../img/shouhoudizhixuanze.png" />
+						<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+						<p class="xieyip" style="font-family: '微软雅黑'; margin-bottom: 1.65rem;" >我已阅读并同意《用户购买协议》</p>
+					</div>
+
+					
+				</div>
+				<div class="xieyitupianbg" style="position: fixed; left: 0; top: 0.86rem; bottom: 0; right: 0; background: #000; opacity: 0.3; display: none; z-index: 100;"></div>
+				<div class="xieyitupian" style="display: none; z-index: 2000;">
+					<img src="../../img/xieyitupiana.png" style=" position: fixed; width: 5.63rem; height: 7rem; left: 0rem; top: 1rem; bottom: 0; right: 0; margin: auto; z-index: 10000;" />
+					<!--<img src="../../img/chaxieyi.png" style="position: absolute; left: 5rem; top: 0.3rem; width: 0.3rem; height: 0.3rem; z-index: 202;"/>-->
+				</div>
+			</div>
+
+			<!--*******商品自提*************-->
+
+			<div class="querenlist2" style="display: none; overflow: hidden;">
+				<!--选择配送方式-->
+				<div class="peisongfangshia" style="height: 1.53rem;">
+					<p style="width: 7.2rem;"><img src="../../img/peisong.png" style="width: 0.36rem; height: 0.3rem; margin-right: 0.07rem; font-family: '微软雅黑';" />选择配送方式</p>
+					<ul>
+						<li class="teshu">直冷送</li>
+						<li class="clickbs">商品自提</li>
+						<li>自选流程</li>
+						<li>人工电话</li>
+					</ul>
+				</div>
+
+				<div class="bianjiright" style="font-family: '微软雅黑';"><img src="../../img/bianjixia.png" /><img src="../../img/bianjishangjiao.png" style="display: none;" />编辑</div>
+				<div class="bianjicontent">
+					<div class="sijiinfo">
+						<ul class="sijiinfolist">
+							<li>
+								<i>*</i><span style="font-size: 0.22rem;">物流公司名称</span>
+								<input type="text" />
+							</li>
+							<li>
+								<i>*</i><span style="font-size: 0.22rem;">司机姓名</span>
+								<input type="text" />
+							</li>
+							<li>
+								<i>*</i><span style="font-size: 0.22rem;">手机号</span>
+								<input type="text" />
+							</li>
+							<li>
+								<i>*</i><span style="font-size: 0.22rem;">车牌号</span>
+								<input type="text" />
+							</li>
+							<li>
+								<i>*</i><span style="font-size: 0.22rem;">身份证号</span>
+								<input type="text" />
+							</li>
+							<li>
+								<i>*</i><span style="font-size: 0.22rem;">驾驶证号</span>
+								<input type="text" />
+							</li>
+						</ul>
+
+					</div>
+
+					<div class="shenfenzhengming">
+						<p style="height: 0.48rem; line-height: 0.48rem;">身份证照</p>
+						<ul class="shenfenzhenglist">
+							<li><img src="../../img/shenfenzhengmian.png" style="width: 1.40rem; height: 1.40rem;" /></li>
+							<li>
+								<div class="tianjiaphoto">
+									<img src="../../img/jiahaophoto.png" style="width: 0.35rem; height: 0.35rem;" />
+									<img src="../../img/chahaophoto.png" style="width: 0.4rem; height: 0.4rem;" />
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="jiashizheng">
+
+						<p style="height: 0.56rem; line-height: 0.56rem;">驾驶证</p>
+						<div class="tianjiaphoto">
+							<img src="../../img/jiahaophoto.png" style="width: 0.35rem; height: 0.35rem;" />
+							<img src="../../img/chahaophoto.png" style="width: 0.4rem; height: 0.4rem;" />
+						</div>
+					</div>
+
+					<!--编辑底部按钮-->
+					<div class="caozuo">
+						<span style="margin-right: 0.29rem; margin-left: 0.15rem;">完成</span>
+						<span>取消</span>
+					</div>
+				</div>
+				<!--选择预付款-->
+				<div class="xuanzeyufu">
+					<p><img src="../../img/yufuhao.png" style="width: 0.36rem; height: 0.36rem; margin-right: 0.11rem;" />选择预付款</p>
+					<ul>
+						<li>
+							<p><img src="../../img/shouhuodizhiyixuanze.png" />
+								<img src="../../img/shouhoudizhixuanze.png" style="display: none;" />
+								<span style="display: inline-block; width: 4.63rem; font-size: 0.22rem; color: #333;">全款</span><span style="color: #757575; font-family: '微软雅黑';">24000.00元</span><span style="font-size: 0.14rem; color: #757575;"></span></p>
+						</li>
+						<li>
+							<p><img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<img src="../../img/shouhoudizhixuanze.png" />
+								<span style="display: inline-block; width: 4.74rem; font-size: 0.22rem; color: #333;">20%</span><span style="color: #757575; font-family: '微软雅黑';">4800.00元</span><span style="font-size: 0.15rem; color: #757575;"></span></p>
+						</li>
+					</ul>
+				</div>
+				<!--收货地 址-->
+				<div class="xiugaishouhuo">
+					<ul>
+						<li>
+							<p><img src="../../img/dizhitubiao.png" style="width: 0.29rem; height: 0.36rem; margin-right: 0.13rem;" /><span class="shouhuospan">收货地址</span><span class="xiugai" style="color: #cecece; border: 0.8px solid #cecece;">修改</span></p>
+							<p>联系人：宋华鑫<span style="margin-left: 0.41rem;">联系方式：15387049658</span> </p>
+							<p>地址：北京市朝阳区世贸天阶冷库404</p>
+						</li>
+					</ul>
+				</div>
+
+				<!--配送方式-->
+				<div class="peisongfangshiabc">
+					<p style="width: 6.57rem; text-align: center; border-bottom: none;"><span style="color: #333; font-size: 0.26rem;">共计：</span><span style="color: #eb1517; font-size: 0.28rem;"></span><span style="font-size: 0.36rem; color: #EB0508; font-family: '微软雅黑';font-weight: 600;">24000.00元</span><span style="color: #eb1517; font-size: 0.28rem;"></span></p>
+					<div class="dierhang" style="height: 0.86rem;">(不含运费)</div>
+				</div>
+
+				<!--买家留言-->
+				<div class="maijiamessagecon" style=" overflow: hidden; padding-top: 0.12rem;">
+					<div class="maijiamessage theTwo">
+						<div class="dottop_left"></div>
+						<div class="dottop_right"></div>
+						<p>买家留言</p>
+						<ul class="liuyanlist  ">
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" alt="" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<span>一定要确保质量</span>
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" alt="" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<span>确保运送货物包装密封</span>
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" alt="" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<span>请确保货物冷藏温度，尽快到达</span>
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" alt="" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<span>请确保货物数量无误</span>
+							</li>
+						</ul>
+						<textarea placeholder="请输入留言"></textarea>
+					</div>
+				</div>
+
+				<!--应付金额-->
+
+				<div class="xvfukuan">
+					<div class="dengluxieyi" style=" margin-top: 0.2rem;">
+						<img src="../../img/shouhoudizhixuanze.png" />
+						<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+						<p class="xieyip" style="font-family: '微软雅黑'; margin-bottom: 1.65rem;">我已阅读并同意《用户购买协议》</p>
+					</div>
+
+					<!--<div class="fukuananniu">
+						<p class="fukuananniup" style="background: #E5E5E5;">付款</p>
+					</div>-->
+				</div>
+				<div class="xieyitupianbg" style="position: fixed; left: 0; top: 0.86rem; bottom: 0; right: 0; background: #000; opacity: 0.3; display: none; z-index: 100;"></div>
+				<div class="xieyitupian" style="display: none; z-index: 2000;">
+					<img src="../../img/xieyitupiana.png" style=" position: fixed; width: 5.63rem; height: 7rem; left: 0rem; top: 1rem; bottom: 0; right: 0; margin: auto; z-index: 10000;" />
+					<!--<img src="../../img/chaxieyi.png" style="position: absolute; left: 5rem; top: 0.3rem; width: 0.3rem; height: 0.3rem; z-index: 202;"/>-->
+				</div>
+				
+				
+				
+			</div>
+
+			<!--自选流程-->
+			<!--<div class="querenlist3"  style="display: none; overflow: hidden;"> -->
+			<!--<div class=" baozhushanghang" style="margin-top: 1rem; background: #fff; border-bottom:none; position: relative; border-top: 0.8px dashed #333;">
+					<div class="dottop_left"></div>
+					<div class="dottop_right"></div>
+					
+					<p class="first-p"><img src="../../img/shanghu.png" style="height: 0.32rem; width: 0.29rem;font-size: 0.26rem"; font-family: '微软雅黑'; /><span>宝珠冻品商行</span></p>
+					<div class="shangpinxiang" style="height: 1.78rem; width: 7.2rem; background: #f5f5f5; padding:0.15rem 0 0 0.3rem;">
+						<ul>
+							<li><img src="../../img/zhubanguxiao.png" /></li>
+							<li style="margin-left: 0.1rem;">
+								<p style="line-height: 0.34rem;">
+									<span style="font-size: 0.26rem;">猪棒骨</span>
+									<span style="background: url(../../img/qihuobg.png) no-repeat; padding: 0 0.14rem; border-radius: 0.03rem; color: #fff;">好又鲜</span>
+									<span style="padding:0 0.04rem; border: 0.8px solid #ea0406; color: #ea0406; border-radius: 0.03rem;">期货</span>
+								</p>
+								<p style="margin-top: 0.13rem; margin-bottom: 0.07rem;">
+									<span style="padding: 0 0.12rem;">德国</span>
+									<span style="padding: 0 0.04rem;">10kg/件</span>
+									<span style="padding: 0 0.1rem;">盐田港</span>
+								</p>
+								<p><span style="color: #999; border: 0.8px solid #999; padding: 0 0.08rem">2016-8-18</span></p>
+							</li>.09rem;">202</span>
+									<span style="padding: 0 0
+							<li style="float: right; margin-right: 0.4rem;"><span style="font-family: '微软雅黑';">￥98.</span><span>00</span></li>
+						</ul>
+					</div>
+					
+					<p class="shuliang" style="margin-right: 0.5rem; line-height: 1.26rem;font-size: 0.24rem; margin-left: 4.1rem; font-family: '微软雅黑';">
+						数量:
+						<span class="up">+</span>
+						<span class="num" style="border-right: 0;border-left: 0;">1</span>
+						<span class="down">-</span>
+					</p>
+				</div> -->
+
+			<div class="querenlist3" style="display: none; overflow: hidden;">
+				<!--选择配送方式-->
+				<div class="peisongfangshia" style="height: 1.53rem;">
+					<p style="width: 7.2rem;"><img src="../../img/peisong.png" style="width: 0.36rem; height: 0.3rem; margin-right: 0.07rem; font-family: '微软雅黑';" />选择配送方式</p>
+					<ul>
+						<li class="teshu">直冷送</li>
+						<li>商品自提</li>
+						<li class="clickbs">自选流程</li>
+						<li>人工电话</li>
+						<!--<li>系统推荐</li>-->
+					</ul>
+				</div>
+
+				<div class="bianjiright" style="font-family: '微软雅黑';"><img src="../../img/bianjixia.png" style="" /><img src="../../img/bianjishangjiao.png" style="display: none;" />编辑</div>
+				<!--编辑修改的隐藏部分-->
+				<div class="bianjicontent">
+					<p class="shouhuobiaoti"><span style="font-size: 0.26rem;">选择收货地址</span><span style="color: #cecece; border: 0.8px solid #cecece;">修改</span></p>
+					<div class="defaultaddress">
+						<ul>
+							<li><img src="../../img/shouhuodizhiyixuanze.png" />
+								<img src="../../img/shouhoudizhixuanze.png" style="display: none;" />
+							</li>
+							<li>默认地址</li>
+							<li>
+								<p>联系人：<span>宋华鑫</span></p>
+								<p>联系方式：<span>15387049658</span></p>
+								<p>地址：<span>北京市朝阳区世贸天阶冷库404</span></p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="tianjiadizhi">
+						<span style="color: #cecece; border: 0.8px solid #cecece;">添加地址</span>
+					</div>
+					<div style=" position: relative;top: 1.1rem;width: 6.33rem;height: 1.17rem;">
+						<img src="../../img/xuxian.png" style=" width: 6rem;height: 1rem; margin-left: 0.7rem;" />
+					</div>
+					<div class="peisongliucheng" style="margin-top: -1.5rem;">
+						<p class="peisongbiaoti">选择配送流程</p>
+						<ul class="peisongul">
+							<li>
+								<img src="../../img/haiwaiwuliu.png" style=" margin-right: 0.13rem;" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none; margin-right: 0.13rem;" />
+							</li>
+							<li style="position: relative;">
+								<img src="../../img/haiwaicangchu.png" style="margin-top: 0.42rem; margin-right: 0.31rem;" />
+
+								<!--<li>
+										<img src="../../img/shangtuxiaobiao2.png" style="width: 0.36rem; height: 0.33rem; position: absolute; left: 1.52rem; top: 0.23rem;"/>
+										<img src="../../img/shangtuxiaobiao.png"/ style="display: none;width: 0.36rem; height: 0.33rem; position: absolute;">
+									</li>
+									-->
+
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;margin-top: 0.42rem; margin-right: 0.31rem;" />
+							</li>
+							<li>
+								<img src="../../img/haiwaiqingguan.png" style="margin-top: 0.64rem;margin-right: 0.32rem;" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;margin-top: 0.64rem;margin-right: 0.32rem;" />
+							</li>
+							<li>
+								<img src="../../img/guojiyunshu.png" style="margin-top: 0.77rem; margin-right: 0.48rem;" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;margin-top: 0.77rem; margin-right: 0.48rem;" />
+							</li>
+							<li>
+								<img src="../../img/qingguan.png" style="margin-top: 0.89rem;margin-right: 0.51rem;" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;margin-top: 0.89rem;margin-right: 0.51rem;" />
+							</li>
+							<li>
+								<img src="../../img/cangchu.png" style="margin-top: 0.89rem; margin-right: 0.44rem;" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;margin-top: 0.89rem; margin-right: 0.44rem;" />
+							</li>
+							<li>
+								<img src="../../img/wuliuzhongguo.png" style="display: none; margin-top: 0.89rem;" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="margin-top: 0.89rem;" />
+							</li>
+						</ul>
+
+						<ul class="peisongulli">
+							<li style="margin-right: 0.41rem; margin-left: 0.13rem;">
+								<p>海外<br>物流</p>
+							</li>
+							<li style="margin-right: 0.59rem">
+								<p>海外</p>
+								<p>仓储</p>
+							</li>
+							<li style="margin-right: 0.59rem">
+								<p>海外</p>
+								<p>清关</p>
+							</li>
+							<li style="margin-right: 0.76rem">
+								<p>国际</p>
+								<p>运输</p>
+							</li>
+							<li style="margin-right: 0.75rem">
+								<p style="text-align: center;">清关</p>
+								<p>(中国)</p>
+							</li>
+							<li style="margin-right: 0.77rem">
+								<p style="text-align: center;">仓储</p>
+								<p>(中国)</p>
+							</li>
+							<li style="color: #EA0404;">
+								<p style="text-align: center;">物流</p>
+								<p>(中国)</p>
+							</li>
+						</ul>
+
+					</div>
+
+					<!--选择物流-->
+					<div class="xuanzewuliu">
+						<p class="xuanzewuliubt">选择物流</p>
+
+						<span>五星</span>
+						<div class="fivestardiv">
+							<p class="fivestar">
+								<img src="../../img/houqigaidongtupianbutianchong.png" />
+								<img src="../../img/houqigaidongtupianbutianchong.png" />
+								<img src="../../img/houqigaidongtupianbutianchong.png" />
+								<img src="../../img/houqigaidongtupianbutianchong.png" />
+								<img src="../../img/houqigaidongtupianbutianchong.png" />
+							</p>
+							<p class="fivestar" style="display: none;">
+								<img src="../../img/houqigaidongtupaintianchong.png" />
+								<img src="../../img/houqigaidongtupaintianchong.png" />
+								<img src="../../img/houqigaidongtupaintianchong.png" />
+								<img src="../../img/houqigaidongtupaintianchong.png" />
+								<img src="../../img/houqigaidongtupaintianchong.png" />
+
+							</p>
+
+							<div class="wuliulist5" style="display: none;">
+								<ul class="wuliulistcon">
+									<li>
+										<img src="../../img/shouhoudizhixuanze.png" />
+										<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" /> 恒祥伟业物流有限公司3500.00元~4000.00元
+									</li>
+									<li>
+										<img src="../../img/shouhoudizhixuanze.png" />
+										<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" /> 锦城物流2500.00元~3000.00元
+									</li>
+									<li>
+										<img src="../../img/shouhoudizhixuanze.png" />
+										<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" /> 新邦物流1500.00元~2000.00元
+									</li>
+									<li>
+										<img src="../../img/shouhoudizhixuanze.png" />
+										<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" /> 大众物流500.00元~1000.00元
+									</li>
+								</ul>
+								<!--<p><span>完成</span></p>-->
+							</div>
+						</div>
+
+						<span>四星</span>
+						<div class="fourstardiv">
+							<p class="fourstar">
+								<img src="../../img/houqigaidongtupianbutianchong.png" />
+								<img src="../../img/houqigaidongtupianbutianchong.png" />
+								<img src="../../img/houqigaidongtupianbutianchong.png" />
+								<img src="../../img/houqigaidongtupianbutianchong.png" />
+							</p>
+							<p class="fourstar" style="display: none;">
+								<img src="../../img/houqigaidongtupaintianchong.png" />
+								<img src="../../img/houqigaidongtupaintianchong.png" />
+								<img src="../../img/houqigaidongtupaintianchong.png" />
+								<img src="../../img/houqigaidongtupaintianchong.png" />
+							</p>
+							<div class="wuliulist4" style="display: none;">
+								<ul class="wuliulistcon">
+									<li><img src="../../img/shouhoudizhixuanze.png" /><img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />恒祥伟业物流有限公司3500.00元~4000.00元</li>
+									<li><img src="../../img/shouhoudizhixuanze.png" /><img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />锦城物流2500.00元~3000.00元</li>
+									<li><img src="../../img/shouhoudizhixuanze.png" /><img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />锦城物流2500.00元~3000.00元</li>
+									<li><img src="../../img/shouhoudizhixuanze.png" /><img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />新邦物流1500.00元~2000.00元</li>
+								</ul>
+								<!--<p><span>完成</span></p>-->
+							</div>
+						</div>
+						<span>三星</span>
+						<div class="threestardiv">
+							<p class="threestar">
+								<img src="../../img/houqigaidongtupianbutianchong.png" />
+								<img src="../../img/houqigaidongtupianbutianchong.png" />
+								<img src="../../img/houqigaidongtupianbutianchong.png" />
+							</p>
+							<p class="threestar" style="display: none;">
+								<img src="../../img/houqigaidongtupaintianchong.png" />
+								<img src="../../img/houqigaidongtupaintianchong.png" />
+								<img src="../../img/houqigaidongtupaintianchong.png" />
+							</p>
+							<div class="wuliulist3" style="display: none;">
+								<ul class="wuliulistcon">
+									<li> <img src="../../img/shouhoudizhixuanze.png" /><img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />恒祥伟业物流有限公司3500.00元~4000.00元</li>
+									<li><img src="../../img/shouhoudizhixuanze.png" /><img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />锦城物流2500.00元~3000.00元</li>
+									<li><img src="../../img/shouhoudizhixuanze.png" /><img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />新邦物流1500.00元~2000.00元</li>
+								</ul>
+								<!--<p><span>完成</span></p>-->
+							</div>
+						</div>
+
+						<span>二星</span>
+						<div class="twostardiv">
+							<p class="twostar">
+								<img src="../../img/houqigaidongtupianbutianchong.png" />
+								<img src="../../img/houqigaidongtupianbutianchong.png" />
+							</p>
+							<p class="twostar" style="display: none;">
+								<img src="../../img/houqigaidongtupaintianchong.png" />
+								<img src="../../img/houqigaidongtupaintianchong.png" />
+							</p>
+							<div class="wuliulist2" style="display: none;">
+								<ul class="wuliulistcon">
+									<li><img src="../../img/shouhoudizhixuanze.png" /><img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />恒祥伟业物流有限公司3500.00元~4000.00元</li>
+									<li><img src="../../img/shouhoudizhixuanze.png" /><img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />锦城物流2500.00元~3000.00元</li>
+								</ul>
+								<!--<p><span>完成</span></p>-->
+							</div>
+						</div>
+
+						<span>一星</span>
+						<div class="onestardiv">
+							<p class="onestar">
+								<img src="../../img/houqigaidongtupianbutianchong.png" />
+							</p>
+							<p class="onestar" style="display: none;">
+								<img src="../../img/houqigaidongtupaintianchong.png" />
+							</p>
+							<div class="wuliulist1" style="display: none;">
+								<ul class="wuliulistcon">
+									<li><img src="../../img/shouhoudizhixuanze.png" /><img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />新邦物流1500.00元~2000.00元</li>
+									<li><img src="../../img/shouhoudizhixuanze.png" /><img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />大众物流500.00元~1000.00元</li>
+								</ul>
+								<!--<p><span>完成</span></p>-->
+							</div>
+
+						</div>
+
+					</div>
+					<!--编辑底部按钮-->
+					<div class="caozuo">
+						<span style="margin-right: 0.29rem; margin-left: 0.15rem;">完成</span>
+						<span>取消</span>
+					</div>
+				</div>
+				<!--选择预付款-->
+				<div class="xuanzeyufu">
+					<p><img src="../../img/yufuhao.png" style="width: 0.36rem; height: 0.36rem; margin-right: 0.11rem;" />选择预付款</p>
+					<ul>
+						<li>
+							<p><img src="../../img/shouhuodizhiyixuanze.png" />
+								<img src="../../img/shouhoudizhixuanze.png" style="display: none;" />
+								<span style="display: inline-block; width: 4.63rem; font-size: 0.22rem; color: #333;">全款</span><span style="color: #757575; font-family: '微软雅黑';">26000.00元</span><span style="font-size: 0.14rem; color: #757575;"></span></p>
+						</li>
+						<li>
+							<p><img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<img src="../../img/shouhoudizhixuanze.png" />
+								<span style="display: inline-block; width: 4.74rem; font-size: 0.22rem; color: #333;">20%</span><span style="color: #757575; font-family: '微软雅黑';">5200.00元</span><span style="font-size: 0.15rem; color: #757575;"></span></p>
+						</li>
+					</ul>
+				</div>
+				<!--收货地 址-->
+				<div class="xiugaishouhuo">
+					<ul>
+						<li>
+							<p><img src="../../img/dizhitubiao.png" style="width: 0.29rem; height: 0.36rem; margin-right: 0.13rem;" /><span class="shouhuospan">收货地址</span><span class="xiugai" style="color: #cecece; border: 0.8px solid #cecece;">修改</span></p>
+							<p>联系人：宋华鑫<span style="margin-left: 0.41rem;">联系方式：15387049658</span> </p>
+							<p>地址：北京市朝阳区世贸天阶冷库404</p>
+						</li>
+					</ul>
+				</div>
+
+				<!--配送方式-->
+				<div class="peisongfangshiabc">
+					<p style="height: 1.05rem; line-height: 1.05rem;">配送方式：<span class="peisongwuliu" style="color: #EA0404;">物流(中国)</span></p>
+					<p style="height: 0.72rem; line-height: 0.92rem;"><span style="color: #333; font-size: 0.26rem;">共计：</span><span style="color: #eb1517; font-size: 0.28rem; font-family: '微软雅黑';"></span><span style="font-size: 0.36rem; color: #EB0508; font-family: '微软雅黑';font-weight: 600;">26000.00元</span><span style="color: #eb1517; font-size: 0.28rem;"></span></p>
+					<div class="dierhang" style="height: 0.86rem;">(含运费)</div>
+				</div>
+
+				<!--买家留言-->
+				<div class="maijiamessagecon" style="overflow: hidden; padding-top: 0.12rem;">
+					<div class="maijiamessage theThree">
+						<div class="dottop_left"></div>
+						<div class="dottop_right"></div>
+
+						<p>买家留言</p>
+						<ul class="liuyanlist  ">
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" alt="" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<span>一定要确保质量</span>
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" alt="" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<span>确保运送货物包装密封</span>
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" alt="" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<span>请确保货物冷藏温度，尽快到达</span>
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" alt="" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<span>请确保货物数量无误</span>
+							</li>
+						</ul>
+						<textarea id="textareaid" placeholder="请输入留言" style="text-indent: 0.3rem;"></textarea>
+					</div>
+				</div>
+
+				<!--应付金额-->
+
+				<div class="xvfukuan">
+					<!--<p style="font-family: '微软雅黑';">
+						应付金额：
+						<span style="font-family: '微软雅黑';"><span style="font-family: '微软雅黑'; font-size: 0.28rem;"></span><span style="font-family: '微软雅黑'; font-size: 0.36rem;">26000.00元</span></span><span></span>
+					</p>-->
+					<div class="dengluxieyi">
+						<img src="../../img/shouhoudizhixuanze.png" />
+						<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+						<p class="xieyip" style="font-family: '微软雅黑'; margin-bottom: 1.65rem;">我已阅读并同意《用户购买协议》</p>
+					</div>
+
+				</div>
+				
+		
+				
+				
+				<div class="xieyitupianbg" style="position: fixed; left: 0; top: 0.86rem; bottom: 0; right: 0; background: #000; opacity: 0.3; display: none; z-index: 100;"></div>
+				<div class="xieyitupian" style="display: none; z-index: 2000;">
+					<img src="../../img/xieyitupiana.png" style=" position: fixed; width: 5.63rem; height: 7rem; left: 0rem; top: 1rem; bottom: 0; right: 0; margin: auto; z-index: 10000;" />
+					<!--<img src="../../img/chaxieyi.png" style="position: absolute; left: 5rem; top: 0.3rem; width: 0.3rem; height: 0.3rem; z-index: 202;"/>-->
+				</div>
+
+			</div>
+
+
+		<!--底部-->
+
+		<div class="fukuanBottom" >
+				<li class="goumaidibu">立即购买</li>
+			</ul>
+		</div>
+			<!--人工电话-->
+			<!--<div class="querenlist4" style="display: none; overflow: hidden;">-->
+
+			<!--<div class=" baozhushanghang" style="margin-top: 1rem; background: #fff; border-bottom:none; position: relative; border-top: 0.8px dashed #333;">
+					<div class="dottop_left"></div>
+					<div class="dottop_right"></div>
+					
+					<p class="first-p"><img src="../../img/shanghu.png" style="height: 0.32rem; width: 0.29rem; font-size: 0.26rem; font-family: '微软雅黑';"/><span>宝珠冻品商行</span></p>
+					<div class="shangpinxiang" style="height: 1.78rem; width: 7.2rem; background: #f5f5f5; padding:0.15rem 0 0 0.3rem;">
+						<ul>
+							<li><img src="../../img/zhushouphoto.png" /></li>
+							<li style="margin-left: 0.1rem;">
+								<p style="line-height: 0.34rem;">
+									<span style="font-size: 0.26rem;">猪手</span>
+									<span style="background: url(../../img/qihuobg.png) no-repeat; padding: 0 0.25rem; border-radius: 0.03rem; color: #fff;">皇冠</span>
+									<span style="padding:0 0.04rem; border: 0.8px solid #4cc07f; color: #4cc07f; border-radius: 0.03rem;">现货</span>
+								</p>
+								<p style="margin-top: 0.13rem; margin-bottom: 0.07rem;">
+									<span style="padding: 0 0.12rem; ">717</span>
+									<span style="padding: 0 0.09rem;">美国</span>
+									<span style="padding: 0 0.04rem;">27吨/柜</span>
+									<span style="padding: 0 0.1rem;">塘沽港</span>
+								</p>
+								<p><span style="color: #999; border: 0.8px solid #999; padding: 0 0.08rem">2016-8-8</span></p>
+							</li>
+							<li style="float: right; margin-right: 0.4rem;"><span style="font-family: '微软雅黑';">￥98.</span><span>00</span></li>
+						</ul>
+					</div>
+				
+					<p class="shuliang" style="margin-right: 0.5rem; line-height: 1.26rem; font-family: '微软雅黑'; font-size: 0.24rem; margin-left: 4.1rem;">
+						数量:
+						<span class="up">+</span>
+						<span class="num" style="border-right: 0;border-left: 0;">1</span>
+						<span class="down">-</span>
+					</p>
+				</div>-->
+
+			<div class="querenlist4" style="display: none; overflow: hidden;">
+				<!--选择配送方式-->
+				<div class="peisongfangshia" style="height: 1.53rem;">
+					<p style="width: 7.2rem;"><img src="../../img/peisong.png" style="width: 0.36rem; height: 0.3rem; margin-right: 0.07rem; font-family: '微软雅黑';" />选择配送方式</p>
+					<ul>
+						<li class="teshu">直冷送</li>
+						<li>商品自提</li>
+						<li>自选流程</li>
+						<li class="clickbs">人工电话</li>
+						<!--<li>系统推荐</li>-->
+					</ul>
+				</div>
+
+				<!--专属客服-->
+				<div class="zhuanshu">
+					<ul>
+						<li><img src="../../img/kefuphoto.png" style="width: 0.33rem; height: 0.36rem;" /></li>
+						<li>专属客服芸芸：</li>
+						<li>15398764456</li>
+						<li><img src="../../img/dianhuayuan.png" /></li>
+						<li><img src="../../img/xinxiyuan.png" /></li>
+					</ul>
+					<div class="tishi">
+						<p><img src="../../img/gantantixing.png" style="margin-right: 0.1rem;" />提示：订单到此待定，可在待付款订单里找到</p>
+					</div>
+				</div>
+
+				<div class="daiding">
+					<p>共计：<span>待定</span></p>
+				</div>
+
+				<!--买家留言-->
+				<div class="maijiamessagecon" style="overflow: hidden; padding-top: 0.12rem;">
+					<div class="maijiamessage theFive">
+						<div class="dottop_left"></div>
+						<div class="dottop_right"></div>
+						<p>买家留言</p>
+						<ul class="liuyanlist ">
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" alt="" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<span>一定要确保质量</span>
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" alt="" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<span>确保运送货物包装密封</span>
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" alt="" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<span>请确保货物冷藏温度，尽快到达</span>
+							</li>
+							<li>
+								<img src="../../img/shouhoudizhixuanze.png" alt="" />
+								<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+								<span>请确保货物数量无误</span>
+							</li>
+						</ul>
+						<textarea placeholder="请输入留言"></textarea>
+					</div>
+				</div>
+
+				<!--应付金额-->
+
+				<div class="xvfukuan">
+					<div class="dengluxieyi" style=" margin-top: 0.2rem;">
+						<img src="../../img/shouhoudizhixuanze.png" />
+						<img src="../../img/shouhuodizhiyixuanze.png" style="display: none;" />
+						<p class="xieyip" style="font-family: '微软雅黑'; margin-bottom: 1.65rem;">我已阅读并同意《用户购买协议》</p>
+					</div>
+
+					<!--<div class="fukuananniu">
+						<p class="fukuananniup" style="background: #E5E5E5;">付款</p>
+					</div>-->
+				</div>
+				<div class="xieyitupianbg" style="position: fixed; left: 0; top: 0.86rem; bottom: 0; right: 0; background: #000; opacity: 0.3; display: none; z-index: 100;"></div>
+				<div class="xieyitupian" style="display: none; z-index: 2000;">
+					<img src="../../img/xieyitupiana.png" style=" position: fixed; width: 5.63rem; height: 7rem; left: 0rem; top: 1rem; bottom: 0; right: 0; margin: auto; z-index: 10000;" />
+					<!--<img src="../../img/chaxieyi.png" style="position: absolute; left: 5rem; top: 0.3rem; width: 0.3rem; height: 0.3rem; z-index: 202;"/>-->
+				</div>
+
+			</div>
+			</div>
+			<div class="fukuanBottom">
+				<ul>
+					<li>应付金额: <span class="fukuanZonge">24000.00元</span></li>
+					<li>付款</li>
+				</ul>
+			</div>
+		
+	</body>
+ 
+	<script type="text/javascript" src="../../js/mui.js"></script>
+	<script type="text/javascript" src="../../js/buju.js"></script>
+	<script type="text/javascript" src="../../js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="../../js/tab.js"></script>
+	<script type="text/javascript" src="../../js/clickmodeo.js"></script>
+	<script>
+		$(".dengluxieyi img:nth-child(1)").on("click", function() {
+			$(this).css("display", "none").siblings("img").css("display", "block");
+			$('.xieyip').on('click', function() {
+				$('.xieyitupian').css('display', 'block');
+			})
+			$('.fukuanBottom ul li:nth-child(2)').on('click', function() {
+				//				window.location.href = '../fukuan.html';
+				mui.openWindow({
+					url: '../fukuan.html',
+					id: '../fukuan.html',
+					styles: {
+						top: '0',
+						bottom: '0px',
+						width: '100%',
+						height: '100%'
+					},
+					extras: {
+
+					},
+					show: {
+						autoShow: true,
+						aniShow: 'slide-in-right',
+						duration: '500'
+					},
+					waiting: {
+						autoShow: true,
+						title: '正在加载...',
+						options: {
+							width: 'waiting-dialog-widht',
+							height: 'waiting-dialog-height'
+						}
+					}
+				})
+			})
+
+		});
+
+	
+	
+	
+//		$(".liuyanlist li img").on("click", function() {
+//			$(this).css("display", "none").siblings("img").css("display", "block").parent().siblings().children("img:nth-child(1)").css("display", "block").siblings("img").css("display", "none")
+//		})
+		$(".liuyanlist li img").on("click", function() {
+			$(this).css("display", "none").siblings("img").css("display", "block");
+		})
+
+		$(".liuyanlist li img:nth-child(1)").on("click", function() {
+			var spantext = $(this).siblings("span").text()
+			$(this).closest(".maijiamessage").children("textarea").val(spantext);
+
+			
+				
+//			$(".maijiamessage textarea").val(spantext)
+//			$(".theTwo textarea").val(spantext)
+//			$(".theThree textarea").val(spantext)
+//			$(".theFive textarea").val(spantext)
+//			$(".maijiamessage").closest()
+//			$(this).siblings("img").on('click',function(){
+//				$(this).closest(".maijiamessage").children("textarea").val();
+//			})
+		});
+//		$(".liuyanlist li img:nth-child(2)").on("click", function() {
+//			$(this).closest(".maijiamessage").children("textarea").val('');
+//		});
+//		
+		
+		
+		$(".defaultaddress img").on("click", function() {
+			$(this).css("display", "none").siblings("img").css("display", "block")
+		});
+
+		$(".xuanzeyufu ul li p img").on("click", function() {
+			$(this).css("display", "none").siblings("img").css("display", "block").closest(".xuanzeyufu ul li").siblings().children("p").children("img:nth-child(2)").css("display", "block").siblings("img").css("display", "none")
+		});
+
+		$('.bianjiright').on('click', function() {
+			$('.bianjicontent').toggle();
+		});
+
+		$('.caozuo span:nth-child(1)').on('click', function() {
+			$('.bianjicontent').hide(300);
+		});
+		$('.caozuo span:nth-child(2)').on('click', function() {
+			$('.bianjicontent').hide(300);
+		})
+
+		//后填
+
+		//		$(".peisongfangshia ul li ").on("click",function(){
+		//			
+		//			$(this).css({
+		//				background:"#ea0607",
+		//				color:"#fff"
+		//			}).siblings().css({
+		//				background:"#fff",
+		//				color:"#333",
+		//				border:"0.8px solid #999"
+		//			})
+		//			
+		//			
+		//		})
+
+
+		$('.peisongfangshia ul li:nth-child(1)').on('click', function() {
+			$('.querenlist1').css('display', 'block');
+			$('.querenlist2').css('display', 'none');
+			$('.querenlist3').css('display', 'none');
+			$('.querenlist4').css('display', 'none');
+		});
+
+		$('.peisongfangshia ul li:nth-child(2)').on('click', function() {
+			$('.querenlist1').css('display', 'none');
+			$('.querenlist2').css('display', 'block');
+			$('.querenlist3').css('display', 'none');
+			$('.querenlist4').css('display', 'none');
+		});
+
+		$('.peisongfangshia ul li:nth-child(3)').on('click', function() {
+			$('.querenlist1').css('display', 'none');
+			$('.querenlist2').css('display', 'none');
+			$('.querenlist3').css('display', 'block');
+			$('.querenlist4').css('display', 'none');
+		});
+
+		$('.peisongfangshia ul li:nth-child(4)').on('click', function() {
+			$('.querenlist1').css('display', 'none');
+			$('.querenlist2').css('display', 'none');
+			$('.querenlist4').css('display', 'block');
+			$('.querenlist3').css('display', 'none');
+		});
+
+		$('.tianjiaphoto img:nth-child(2)').on('click', function() {
+			$(this).parent().remove();
+		});
+
+		$('.fivestardiv .fivestar').on('click', function() {
+			$(this).hide().siblings(".fivestar").show().siblings('.wuliulist5').toggle();
+			$(this).parent().siblings().children('p:nth-child(1)').show().siblings().hide();
+
+		});
+		$('.fourstardiv .fourstar').on('click', function() {
+			$(this).hide().siblings(".fourstar").show().siblings('.wuliulist4').toggle();
+			$(this).parent().siblings().children('p:nth-child(1)').show().siblings().hide();
+			//			$(this).hide().siblings().show();
+			//			$('.wuliulist4').toggle();
+		});
+		$('.threestardiv .threestar').on('click', function() {
+			$(this).hide().siblings(".threestar").show().siblings('.wuliulist3').toggle();
+			$(this).parent().siblings().children('p:nth-child(1)').show().siblings().hide();
+			//			$(this).hide().siblings().show();
+			//			$('.wuliulist3').toggle();
+		});
+		$('.twostardiv .twostar').on('click', function() {
+			$(this).hide().siblings(".twostar").show().siblings('.wuliulist2').toggle();
+			$(this).parent().siblings().children('p:nth-child(1)').show().siblings().hide();
+			//			$(this).hide().siblings().show();
+			//			$('.wuliulist2').toggle();
+		});
+		$('.onestardiv .onestar').on('click', function() {
+			$(this).hide().siblings(".onestar").show().siblings('.wuliulist1').toggle();
+			$(this).parent().siblings().children('p:nth-child(1)').show().siblings().hide();
+			//			$(this).hide().siblings().show();
+			//			$('.wuliulist1').toggle();
+		});
+
+		$(".wuliulistcon li img").on("click", function() {
+			$(this).css("display", "none").siblings("img").css("display", "block").parent().siblings().children("img:nth-child(1)").css("display", "block").siblings("img").css("display", "none")
+		})
+
+		$('.selecttaocan ul li').on('click', function() {
+			$(this).css('border', '0.8px solid #ea0406').siblings().css('border', '0.8px solid #e5e5e5');
+			$(this).children("p:nth-child(3)").css('color', '#EA0406').parent().siblings().children('p:nth-child(3)').css('color', '#999')
+			$(this).children("img:nth-child(1)").hide().siblings().show().parent().siblings().children('img:nth-child(1)').show().siblings('img').hide();
+			//			$(this).children().children('span').css('border','0.8px solid #ea0406').parent().parent().siblings().children('p').children("span").css('border','0.8px solid #e5e5e5');
+		});
+
+		//		$('.peisongul li img:nth-child(1)').on('click',function(){
+		//
+		//			$(this).css("display","none").siblings("img").css("display","block").parents().siblings().children("img:nth-child(1)").css("display","block").siblings("img:nth-child(2)").css("display","none");
+		//			$('.peisongulli li:nth-child(1) p').css('color','#EA0404').parent().siblings().children().css('color','#999');
+		//		
+		//		});
+
+		//zhaihu
+		$(".peisongul li img").each(function(index, val) {
+			$(val).click(function() {
+				//      alert(index);
+				$(this).css("display", "none").siblings("img").css("display", "block").parents().siblings().children("img:nth-child(1)").css("display", "block").siblings("img:nth-child(2)").css("display", "none");
+				//	      alert(index);
+				if(index == 0) {
+					$(".peisongulli li:nth-child(1) p").css("color", "#EA0404");
+					$(".peisongulli li:nth-child(1)").siblings().children().css("color", "#999");
+					var litext = $('.peisongulli li:nth-child(1)').text();
+//					console.log(litext);
+					$('.peisongfangshiabc p .peisongwuliu').text(litext);
+				} else if(index == 2) {
+					$(".peisongulli li:nth-child(2) p").css("color", "#EA0404");
+					$(".peisongulli li:nth-child(2)").siblings().children().css("color", "#999");
+					var litext = $('.peisongulli li:nth-child(2)').text();
+					$('.peisongfangshiabc p .peisongwuliu').text(litext);
+				} else if(index == 4) {
+					$(".peisongulli li:nth-child(3) p").css("color", "#EA0404");
+					$(".peisongulli li:nth-child(3)").siblings().children().css("color", "#999");
+					var litext = $('.peisongulli li:nth-child(3)').text();
+					$('.peisongfangshiabc p .peisongwuliu').text(litext);
+				} else if(index == 6) {
+					$(".peisongulli li:nth-child(4) p").css("color", "#EA0404");
+					$(".peisongulli li:nth-child(4)").siblings().children().css("color", "#999");
+					var litext = $('.peisongulli li:nth-child(4)').text();
+					$('.peisongfangshiabc p .peisongwuliu').text(litext);
+				} else if(index == 8) {
+					$(".peisongulli li:nth-child(5) p").css("color", "#EA0404");
+					$(".peisongulli li:nth-child(5)").siblings().children().css("color", "#999");
+					var litext = $('.peisongulli li:nth-child(5)').text();
+					$('.peisongfangshiabc p .peisongwuliu').text(litext);
+				} else if(index == 10) {
+					$(".peisongulli li:nth-child(6) p").css("color", "#EA0404");
+					$(".peisongulli li:nth-child(6)").siblings().children().css("color", "#999");
+					var litext = $('.peisongulli li:nth-child(6)').text();
+					$('.peisongfangshiabc p .peisongwuliu').text(litext);
+				} else if(index == 12) {
+					$(".peisongulli li:nth-child(7) p").css("color", "#EA0404");
+					$(".peisongulli li:nth-child(7)").siblings().children().css("color", "#999");
+					var litext = $('.peisongulli li:nth-child(7)').text();
+					$('.peisongfangshiabc p .peisongwuliu').text(litext);
+				}
+
+			})
+
+		})
+
+//		$(".dengluxieyi img:nth-child(1)").on("click", function() {
+//			$(this).css("display", "none").siblings("img").css("display", "block").parent().siblings('.fukuananniu').children().css('background', '#EA0404');
+//			$('.xieyip').on('click', function() {
+//				$('.xieyitupian').css('display', 'block');
+//			})
+//			$(this).parent().siblings('.fukuananniu').children().on('click', function() {
+//				//				window.location.href = '../fukuan.html';
+//				mui.openWindow({
+//					url: '../fukuan.html',
+//					id: '../fukuan.html',
+//					styles: {
+//						top: '0',
+//						bottom: '0px',
+//						width: '100%',
+//						height: '100%'
+//					},
+//					extras: {
+//
+//					},
+//					show: {
+//						autoShow: true,
+//						aniShow: 'slide-in-right',
+//						duration: '500'
+//					},
+//					waiting: {
+//						autoShow: true,
+//						title: '正在加载...',
+//						options: {
+//							width: 'waiting-dialog-widht',
+//							height: 'waiting-dialog-height'
+//						}
+//					}
+//				})
+//			})
+//
+//		});
+//
+//		$(".dengluxieyi img:nth-child(2)").on("click", function() {
+//			$(this).css("display", "none").siblings("img").css("display", "block").parent().siblings('.fukuananniu').children().css('background', '#E5E5E5');
+//			$(this).parent().siblings('.fukuananniu').children().on('click', function() {
+//				$(this).unbind('click');
+//			})
+//		});
+
+		$('.xieyip').on('click', function() {
+			$('.xieyitupianbg').css('display', 'block');
+			$('.xieyitupian').css('display', 'block');
+		})
+		$('.xieyitupian img').on('click', function() {
+			$('.xieyitupianbg').css('display', 'none');
+			$('.xieyitupian').css('display', 'none');
+		})
+
+		//下拉菜单
+
+		$(".liebiaozuanfu").on("click", function(e) {
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+
+		$(document).click(function() {　　
+			$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function() {
+			$(".xialacaidan").hide(300);
+		})
+
+		$(".xialacaidan").click(function(e) {　　
+			e.stopPropagation();
+		});
+
+		//消息
+		$('.xialacaidan li:nth-child(3)').on('click', function() {
+				window.location.href = "../../html/xiaoxiliebiao.html";
+				//			mui.openWindow({
+				//				url:'../../html/xiaoxiliebiao.html',
+				//				id:'../../html/xiaoxiliebiao.html',
+				//				styles:{
+				//				top:'0',
+				//				bottom:'0px',
+				//				width:'100%',
+				//				height:'100%'
+				//				},
+				//				extras:{
+				//				
+				//				},
+				//				show:{
+				//				autoShow:true,
+				//				aniShow:'slide-in-right',
+				//				duration:'500'
+				//				},
+				//				waiting:{
+				//				autoShow:true,
+				//				title:'正在加载...',
+				//					options:{
+				//					width:'waiting-dialog-widht',
+				//					height:'waiting-dialog-height'
+				//					}
+				//				}
+				//			})
+			})
+			//首页
+		$('.xialacaidan li:nth-child(2)').on('click', function() {
+			window.location.href = "../../index.html";
+			//			mui.openWindow({
+			//				url:'../../index.html',
+			//				id:'../../index.html',
+			//				styles:{
+			//				top:'0',
+			//				bottom:'0px',
+			//				width:'100%',
+			//				height:'100%'
+			//				},
+			//				extras:{
+			//				
+			//				},
+			//				show:{
+			//				autoShow:true,
+			//				aniShow:'slide-in-right',
+			//				duration:'500'
+			//				},
+			//				waiting:{
+			//				autoShow:true,
+			//				title:'正在加载...',
+			//					options:{
+			//					width:'waiting-dialog-widht',
+			//					height:'waiting-dialog-height'
+			//					}
+			//				}
+			//			})
+		})
+		$('.bianjiright').on('click', function() {
+			$(this).children('img').toggle();
+		})
+
+		//		$('.bianjiright img:nth-child(1)').on('click',function(){
+		//			$(this).css('display','none').siblings().css('display','block');
+		//		})
+		//		$('.bianjiright img:nth-child(2)').on('click',function(){
+		//			$(this).css('display','none').siblings().css('display','block');
+		//		})
+	</script>
+
+</html>

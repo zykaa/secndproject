@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			/*div{
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				background-image: url(../img/jishiqi/jishi.jpg);
+				background-repeat: no-repeat;
+				
+			}*/
+			img{
+				/*display: inline-block;*/
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				width:100% ;
+				height: 100%;
+				
+			}
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--<div id="">
+			
+		</div>-->
+		<img src="../img/jishiqi/jishi.jpg"/>
+	</body>
+	<script type="text/javascript" src="../js/buju.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.3.min.js" ></script>
+	<script src="js/clickmodeo.js" type="text/javascript" charset="utf-8"></script>
+</html>
+<script language="javascript" type="text/javascript"> 
+	var intervalid; 
+	intervalid = setInterval("fun()", 3000); 
+	function fun() { 
+
+			window.location.href = "load.html"; 
+			clearInterval(intervalid); 	
+	}
+</script> 

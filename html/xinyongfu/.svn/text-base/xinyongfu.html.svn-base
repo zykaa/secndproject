@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>信用付</title>
+		<link rel="stylesheet" href="../../css/commen.css" />
+		<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../../css/xinyongfu.css" />
+	</head>
+	<body>
+		<header style="width: 7.5rem;height: 0.88rem;">
+			<ul class="zhifuguanli">
+				<li class="theBack">
+					<i class="fa fa-angle-left mui-action-back " aria-hidden="true" style="font-size: 0.66rem;text-align: center;"></i>
+				</li>
+				<li>信用付</li>
+					<li class="liebiaozuanfu" style="float: right;margin-right: 0.3rem; text-align: center;line-height: 0.6rem; font-size: 0.6rem; color: #ea0607;font-family: '微软雅黑';float: right;margin-right: 0.3rem;">...</li>
+			</ul>
+		</header>
+		<ul class="xialacaidan" style="display: none; z-index: 1000;" >
+				<div class="xiaojiao"></div>
+				<li><img src="../../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+				<li><img src="../../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+				
+				<li><img src="../../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+				<li><img src="../../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+		</ul>
+		
+		<div class="xinyongfukeyongyudu">
+			<ul>
+				<li>信用付可用额度</li>
+				<li>3,000,000.00元</li>
+				<li>信用付总额度</li>
+				<li>40,000,000,000.00元</li>
+			</ul>
+			
+		</div>
+		
+		<div class="huankuanmingxi">
+			<ul>
+				<li>
+					<img src="../../img/quanbuhunada.png" />
+					<!--<p>全部待还</p>-->
+					
+				</li>
+				<li>
+					<img src="../../img/dangyuehuangkuang.png" />
+					<!--<p>当月待还</p>-->
+					
+					
+				</li>
+				<li>
+					<img src="../../img/jinqirihankuang.png" />
+					<!--<p>近7日待还</p>-->
+					
+					
+				</li>
+					
+			</ul>
+			
+		</div>
+		
+		<div class="xinyongfudingdan">
+			<ul>
+				<li>
+					<img src="../../img/xinyongfudiongdan.png" style="    width: 0.31rem;height: 0.2rem;margin-top: 0.7rem;"/>
+					
+					<span>信用付订单</span>
+						<i class="fa fa-angle-right mui-action-back " aria-hidden="true" style="font-size: 0.3rem;text-align: center;"></i>
+				</li>
+				<!--<li>
+					<img src="../../img/shijian.png" style="    width: 0.3rem;height: 0.3rem; margin-top: 0.6rem;" />
+					
+					<span>还款记录</span>
+						<i class="fa fa-angle-right mui-action-back " aria-hidden="true" style="font-size: 0.3rem;text-align: center;"></i>
+				</li>-->
+			</ul>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="../../js/buju.js" ></script>
+	<script type="text/javascript" src="../../js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript" src="../../js/mui.js" ></script>
+	<script type="text/javascript" src="../../js/clickmodeo.js" ></script>
+	<script type="text/javascript" src="../../js/tab.js" ></script>
+	<script>
+	//下拉菜单
+		$(".liebiaozuanfu").on("click",function(e){
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+		
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+	
+	//消息
+		$('.xialacaidan li:nth-child(3)').on('click',function(){
+			window.location.href="../../html/xiaoxiliebiao.html";
+//mui.openWindow({
+//				url:'../../html/xiaoxiliebiao.html',
+//				id:'../../html/xiaoxiliebiao.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		//首页
+		$('.xialacaidan li:nth-child(2)').on('click',function(){
+			window.location.href ="../../index.html";
+//mui.openWindow({
+//				url:'../../index.html',
+//				id:'../../index.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		
+		
+		$(".huankuanmingxi li:nth-child(1)").on("click",function(){
+			
+//			window.location.href="quanbudaihuan.html"
+mui.openWindow({
+				url:'quanbudaihuan.html',
+				id:'quanbudaihuan.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+			
+		})
+			$(".huankuanmingxi li:nth-child(3)").on("click",function(){
+			
+//			window.location.href="jinqiridaihuan.html"
+mui.openWindow({
+				url:'jinqiridaihuan.html',
+				id:'jinqiridaihuan.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+			
+		})
+		
+		$(".huankuanmingxi li:nth-child(2)").on("click",function(){
+			
+//			window.location.href="dangyuedaihuan.html"
+mui.openWindow({
+				url:'dangyuedaihuan.html',
+				id:'dangyuedaihuan.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+			
+		})
+		
+	
+		$(".xinyongfudingdan li:nth-child(1)").on("click",function(){
+			
+//			window.location.href="xinyongfudingdan.html"
+mui.openWindow({
+				url:'xinyongfudingdan.html',
+				id:'xinyongfudingdan.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+			
+		})
+		
+	</script>
+</html>

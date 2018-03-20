@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>支付动画</title>
+		<style>
+			
+			img{
+				    width: 7.3rem;
+				    overflow: hidden;
+				    height: 12.36rem;
+			}
+		</style>
+	</head>
+	<body>
+	  <img src="../../img/zhifudonghua.gif"  />
+	</body>
+	<script type="text/javascript" src="../../js/buju.js" ></script>
+	<script type="text/javascript" src="../../js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript" src="../../js/tab.js" ></script>
+	<script type="text/javascript" src="../../js/clickmodeo.js" ></script>
+</html>

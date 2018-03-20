@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>商品详情</title>
+		<script type="text/javascript">
+			document.addEventListener('plusready', function() {
+				//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+
+			});
+		</script>
+		<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../../css/commen.css" />
+		<link rel="stylesheet" href="../../css/index.css" />
+		<link rel="stylesheet" href="../../css/ziyemain.css" />
+
+		<!--<link rel="stylesheet" href="../../css/mui.min.css">-->
+		<style>
+			.shuzifeiru{
+				width: 0.4rem;
+				height: 0.4rem;
+				line-height: 0.4rem;
+				text-align: center;
+				background: #EA0404;
+				color: #fff;
+				-webkit-border-radius: 0.5rem;
+				-moz-border-radius: 0.5rem;
+				border-radius: 0.5rem;
+				position: absolute;
+				left: 4rem;
+				bottom: -12rem;
+			}
+			.shuzifeiru2{
+				width: 0.4rem;
+				height: 0.4rem;
+				line-height: 0.4rem;
+				text-align: center;
+				background: #EA0404;
+				color: #fff;
+				-webkit-border-radius: 0.5rem;
+				-moz-border-radius: 0.5rem;
+				border-radius: 0.5rem;
+				position: absolute;
+				left: 6.1rem;
+				height: 0.4rem;
+			}
+			#banner .center ul li img {
+				height: 6.33rem;
+			}
+			
+			.gundongWord {
+				width: 7.5rem;
+				height: 0.7rem;
+				top: 0;
+			}
+			
+			.gundongWord ul li img {
+				margin-top: 0.15rem;
+				width: 0.7rem;
+				height: 0.7rem;
+			}
+			
+			.gundongWord ul {
+				
+				width: 7.5rem;
+  				height: 0.92rem;
+				margin: 0 auto;
+				position: fixed;
+			    left: 0;
+			    top: 0;
+			}
+			
+			
+			.gundongWord ul li:nth-child(2) {
+				float: right;
+				width: 1.1rem;
+			}
+			
+			.gundongWord ul li:nth-child(3) {
+				float: right;
+			}
+			/*头部下拉菜单*/
+			
+			.xialacaidan {
+				width: 1.81rem;
+				height: 2.86rem;
+				/*padding-top: 0.16rem;*/
+				background: #000;
+				/*opacity: 0.8;*/
+				padding-left: 0.36rem;
+				position: relative;
+				-webkit-border-radius: 0.03rem;
+				-moz-border-radius: 0.03rem;
+				border-radius: 0.03rem;
+				position: fixed;
+				right: 0.1rem;
+				top: 1.1rem;
+			}
+			
+			.xialacaidan li {
+				color: #999;
+				width: 1.4rem;
+				height: 0.66rem;
+				border-bottom: 0.8px solid #4e535d;
+				line-height: 0.66rem;
+				text-align: center;
+				font-size: 0.24rem;
+				font-family: "微软雅黑";
+			}
+			
+			.xialacaidan li:last-child {
+				border-bottom: none;
+			}
+			
+			.xialacaidan li img {
+				margin-right: 0.17rem;
+			}
+			
+			.xiaojiao {
+				border-width: 0px 0.16rem 0.16rem 0.16rem;
+				border-color: transparent;
+				border-style: solid;
+				border-bottom-color: #000;
+				width: 0;
+				height: 0;
+				position: absolute;
+				top: -0.14rem;
+				right: 0.18rem;
+			}
+			
+			.xibanya {
+				width: 7.5rem;
+				height: 1.36rem;
+				border-bottom: 0.8px dashed #E5E5E5;
+			}
+			
+			.xibanyap {
+				width: 7.2rem;
+				height: 0.46rem;
+				color: #6907c0;
+				font-size: 0.26rem;
+				line-height: 0.72rem;
+				padding-left: 0.3rem;
+			}
+			
+			.xibanyaul {
+				height: 0.88rem;
+				line-height: 0.62rem;
+			}
+			
+			.xibanyaul li {
+				float: left;
+			}
+			
+			.xibanyaul li:nth-child(1) {
+				color: #000;
+				padding-left: 0.3rem;
+				width: 6rem;
+				padding-top: 0.11rem;
+				font-size: 0.34rem;
+				border-right: 0.05px dashed #E5E5E5;
+			}
+			
+			.xibanyaul li:nth-child(2) {
+				padding-left: 0.36rem;
+				font-size: 0.2rem;
+			}
+			
+			.xibanyaul li:nth-child(2) img {
+				width: 0.3rem;
+				height: 0.3rem;
+				display: block;
+				margin-left: 0.06rem;
+			}
+			
+			.xiajiadaoji {
+				width: 7.5rem;
+				height: 1.22rem;
+				border-bottom: 0.8px solid #E5E5E5;
+			}
+			
+			.xiajiadaojicon {
+				width: 7.2rem;
+				height: 1.22rem;
+				padding-left: 0.3rem;
+			}
+			
+			.xiajiadaojicon li {
+				float: left;
+			}
+			
+			.xiajiadaojicon .xiajiali1 {
+				width: 3.49rem;
+				height: 0.8rem;
+				border-right: 0.8px dashed #E5E5E5;
+				margin-top: 0.2rem;
+			}
+			
+			.xiajiali2 {
+				margin-top: 0.24rem;
+				margin-left: 0.85rem;
+			}
+			
+			.xiajiali2 .daojishiqi {
+				height: 0.7rem;
+				margin-top: 0.13rem;
+			}
+			
+			.xiajiali2 .daojishiqi li {
+				width: 0.62rem;
+				height: 0.37rem;
+				border: 1px solid #000;
+				float: left;
+				line-height: 0.37rem;
+				text-align: center;
+			}
+			
+			.xiajiali2 .daojishiqi li span:nth-child(1) {
+				font-size: 0.16rem;
+			}
+			
+			.xiajiali2 .daojishiqi li:nth-child(2),
+			.xiajiali2 .daojishiqi li:nth-child(4) {
+				border: none;
+				width: 0.08rem;
+			}
+			
+			.daojishiqi li span {
+				font-size: 0.16rem;
+				color: #FF0103;
+			}
+			
+			.daojishiqi li em {
+				font-size: 0.1re m;
+				color: #FF0103;
+				display: inline-block;
+			}
+			/*库存*/
+			
+			.shuliangkucun {
+				width: 7.5rem;
+				height: 1.3rem;
+				padding-top: 0.36rem;
+			}
+			
+			.shuliangkucun .kucunshu {
+				width: 2.04rem;
+				height: 0.51rem;
+				text-align: center;
+				margin: 0 auto;
+				border: 0.8px solid #000000;
+				-webkit-border-radius: 0.03rem;
+				-moz-border-radius: 0.03rem;
+				border-radius: 0.03rem;
+			}
+			
+			.kucunshu li {
+				float: left;
+			}
+			
+			.kucunshu li:nth-child(1) {
+				width: 0.47rem;
+				height: 0.51rem;
+				line-height: 0.54rem;
+			}
+			
+			.kucunshu li:nth-child(2) {
+				width: 1.1rem;
+				text-align: center;
+				height: 0.51rem;
+				border-right: 0.8px solid #000;
+				border-left: 0.8px solid #000;
+				position: absolute;
+				left: 3.2rem;
+				line-height: 0.51rem;
+			}
+			
+			.kucunshu li:nth-child(3) {
+				float: right;
+				margin-right: 0.15rem;
+    			line-height: 0.54rem;
+			}
+			
+			.shuliangkucun p {
+				width: 7.5rem;
+				text-align: center;
+				margin-top: 0.13rem;
+				font-size: 0.22rem;
+				color: #9b9b9b;
+			}
+			/**/
+			
+			.xinyulist {
+				width: 7.5rem;
+				height: 0.78rem;
+				background: #fdf4f5;
+			}
+			
+			.xinyulistcon {
+				width: 7.2rem;
+				padding-left: 0.3rem;
+			}
+			
+			.xinyulistcon li {
+				float: left;
+				line-height: 0.78rem;
+				color: #4a4a4a;
+				font-size: 0.2rem;
+			}
+			
+			.xinyulistcon li img {
+				width: 0.2rem;
+				height: 0.2rem;
+				margin-right: 0.15rem;
+			}
+			
+			.xinyulistcon li:nth-child(2) {
+				margin: 0 0.2rem;
+			}
+			
+			.xinyulistcon li:nth-child(3) {
+				margin-right: 0.2rem;
+			}
+			
+			.jifenlist1 {
+				width: 6.9rem;
+				height: 0.7rem;
+				margin-left: 0.3rem;
+				border-bottom: 0.8px solid #E5E5E5;
+			}
+			
+			.jifenlist1 li {
+				float: left;
+				line-height: 0.7rem;
+				font-size: 0.24rem;
+				color: #4A4A4A;
+			}
+			
+			.jifenlist1 li img {
+				width: 0.26rem;
+				height: 0.26rem;
+				margin-right: 0.11rem;
+			}
+			
+			.jifenlist1 li:nth-child(1) {
+				margin-right: 0.54rem;
+			}
+			
+			.dierhangp {
+				width: 6.9rem;
+				height: 0.7rem;
+				line-height: 0.7rem;
+				border-bottom: 0.8px solid #E5E5E5;
+				margin-left: 0.3rem;
+			}
+			
+			.jifenlist2 {
+				width: 6.9rem;
+				padding-left: 0.3rem;
+			}
+			
+			.jifenlist2 li {
+				width: 6.9rem;
+				height: 0.7rem;
+				border-bottom: 0.8px solid #E5E5E5;
+				line-height: 0.7rem;
+			}
+			
+			.jifenlist2 li img {
+				margin-right: 0.11rem;
+			}
+			.jifenlist2 li p:nth-child(1) {
+				float: left;
+				font-size: 0.22rem;
+			}
+			
+			.jifenlist2 li p:nth-child(2) {
+				float: right;
+				margin-right: 0.13rem;
+				font-size: 0.22rem;
+			}
+			
+			.jifenlist2 li p:nth-child(2) {
+				color: #ed100f;
+				font-size: 0.24rem;
+			}
+			
+			.tuodongxiangqing {
+				height: 0.8rem;
+				width: 7.5rem;
+				background: #f5f5f5;
+				line-height: 0.8rem;
+				text-align: center;
+			}
+			/*tab切换*/
+			
+			.tabbiaoti {
+				width: 7.2rem;
+				height: 0.48rem;
+				padding-left: 0.3rem;
+				background: #f8f8f8;
+			}
+			
+			.tabbiaoti li {
+				float: left;
+				height: 0.48rem;
+				line-height: 0.48rem;
+				border-right: 0.8px solid #E5E5E5;
+				font-size: 0.22rem;
+			}
+			
+			.tabbiaoti li:nth-child(1) {
+				padding: 0 0.24rem 0 0.12rem;
+				color: #EA0404;
+			}
+			
+			.tabbiaoti li:nth-child(2) {
+				padding: 0 0.32rem;
+				color: #3e3e3e;
+			}
+			
+			
+			.pinglunlist ul {
+				padding-left: 0.3rem;
+				margin-left: 0;
+				border-bottom: 0.8px solid #E5E5E5;
+			}
+			
+			.pinglunlist ul:last-child {
+				margin-bottom: 0.98rem;
+			}
+			
+			.pingjiasuoxie {
+				width: 6.9rem;
+				margin: 0 auto;
+				margin-top: 0.37rem;
+				/*border-bottom: 1px solid #e5e5e5;*/
+			}
+			
+			.pingjiasuoxie li:nth-child(1) {
+				width: 0.8rem;
+				float: left;
+				height: 1.6rem;
+			}
+			
+			.pingjiasuoxie li:nth-child(1) img {
+				width: 0.55rem;
+				height: 0.55rem;
+			}
+			
+			.pingjiasuoxie li:nth-child(2) p {
+				font-size: 0.28rem;
+				height: 0.52rem;
+				line-height: 0.52rem;
+				color: #333333;
+				font-family: "微软雅黑";
+			}
+			
+			.pingjiasuoxie li:nth-child(2) img {
+				width: 0.3rem;
+				height: 0.3rem;
+			}
+			
+			.pingjiasuoxie li:nth-child(2) p:nth-child(2) {
+				color: #999999;
+				font-size: 0.24rem;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				width: 5.9rem;
+				text-align: left;
+			}
+			
+			.pingjiasuoxie li:nth-child(2) p:nth-child(3) span {
+				float: left;
+				font-size: 0.23rem;
+				margin-right: 0.2rem;
+				color: #999999;
+			}
+			
+			.pingjiasuoxie li:nth-child(2) p:nth-child(3) span:nth-child(3) {
+				color: #f1aa34;
+			}
+			
+			.pingjiasuoxie li:nth-child(2) p:nth-child(4) {
+				width: 6.9rem;
+				color: #333333;
+				height: 1.12rem;
+				padding-top: 0.38rem;
+			}
+			
+			.pingjiasuoxie li:nth-child(2) p:nth-child(4) span {
+				width: 1.89rem;
+				height: 0.59rem;
+				border: 0.8px solid #d21416;
+				color: #D21416;
+				display: block;
+				text-align: center;
+				line-height: 0.59rem;
+				-webkit-border-radius: 0.03rem;
+				-moz-border-radius: 0.03rem;
+				border-radius: 0.03rem;
+				margin: 0 auto;
+			}
+			/*底部*/
+			
+			.xiangqingdibu {
+				width: 7.5rem;
+				height: 0.98rem;
+				border-top: 0.8px solid #E5E5E5;
+				position: fixed;
+				bottom: 0;
+				background: #fff;
+				z-index: 10000000;
+			}
+			
+			.xiangqingdibu .xiangqingdibulist {
+				height: 0.98rem;
+				width: 0.72rem;
+				padding-left: 0.3rem;
+			}
+			
+			.xiangqingdibu .xiangqingdibulist li {
+				float: left;
+				/*padding:0 0.3rem;*/
+				height: 0.98rem;
+				line-height: 0.98rem;
+			}
+			
+			.xiangqingdibu .xiangqingdibulist li img {
+				width: 0.4rem;
+				height: 0.4rem;
+				display: block;
+				margin-top: 0.13rem;
+			}
+			
+			.xiangqingdibu .xiangqingdibulist li span {
+				position: relative;
+				top: -0.2rem;
+				font-size: 0.18rem;
+				font-family: "微软雅黑";
+			}
+			
+			.xiangqingdibulist .kefudibu {
+				width: 0.7rem;
+				border-right: 0.8px solid #E5E5E5;
+				text-align: left;
+				color: #000000;
+			}
+			
+			.xiangqingdibulist .shoucangdibu {
+				border-right: 0.8px solid #E5E5E5;
+				width: 1.0rem;
+				color: #000000;
+				text-align: center;
+			}
+			
+			.xiangqingdibulist .fenxiangdibu {
+				border-right: 0.8px solid #E5E5E5;
+				width: 1.0rem;
+				color: #000000;
+				text-align: center;
+			}
+			
+			.xiangqingdibulist .gouwuchedibu {
+				border-right: none;
+				font-size: 0.32rem;
+				/*background: #000;*/
+				width: 2.23rem;
+				/*color: #fff;*/
+				text-align: center;
+			}
+			
+			.xiangqingdibulist .goumaidibu {
+				color: #fff;
+				font-size: 0.32rem;
+				background: #ff0103;
+				border-right: none;
+				width: 2.24rem;
+				color: #fff;
+				text-align: center;
+			}
+			
+			.pinglunlist ul:nth-child(1){
+				border-top: 0.8px solid #E5E5E5;
+				padding-top: 0.3rem;
+			}
+			.pinglunlist ul li:last-child {
+				border-bottom: none;
+				text-align: center;
+			}
+			.pinglunlist li:nth-child(2)  p:nth-child(1) span:nth-child(1){
+				float: left;
+			}
+			
+			.pinglunlist li:nth-child(2)  p:nth-child(1) span:nth-child(2){
+				float: left;
+	    		margin-left: 0.1rem;
+			}
+			
+			
+		.shareNeiRong {
+			width:6rem;
+			position: fixed;
+			top: 3.8rem;
+			/*height: 6.12rem;*/
+			display: none;
+			margin: 0 auto;
+			background: #FFFFFF;
+			margin-left:0.72rem;
+			
+		}
+		.shareNeiRong ul{
+			width: 5.5rem;
+			height: 2.07rem;
+			float: left;
+			
+		}
+		.shareNeiRong ul li{
+			float: left;
+			/*width: 1.2rem;*/
+			height:2.07rem ;
+		}
+		.shareNeiRong ul:nth-child(2){
+			border-bottom: 0.8px solid #F5F5F5;
+			margin-left: 0.2rem;
+		}
+		.shareNeiRong ul:nth-child(2) li:nth-child(1) img{
+			width:0.94rem ;
+			height: 1.23rem;
+			margin: 0 auto;
+			margin-left: 0.37rem;
+			margin-top:0.4rem ;
+		}
+		.shareNeiRong ul:nth-child(2) li:nth-child(2) img{
+			width:0.82rem ;
+			height: 1.26rem;
+			margin: 0 auto;
+			margin-left: 0.37rem;
+			margin-top:0.4rem ;
+		}
+		.shareNeiRong ul:nth-child(3) li:nth-child(1) img{
+			width:0.95rem ;
+			height: 1.27rem;
+			margin: 0 auto;
+			margin-left: 0.37rem;
+			margin-top:0.4rem ;
+		}
+		.shareNeiRong ul:nth-child(3) li:nth-child(2) img{
+			width:1.18rem ;
+			height: 1.27rem;
+			margin: 0 auto;
+			margin-left: 0.37rem;
+			margin-top:0.4rem ;
+		}
+		.shareNeiRong ul:nth-child(3) li:nth-child(3) img{
+			width:0.85rem ;
+			height: 1.27rem;
+			margin: 0 auto;
+			margin-left: 0.37rem;
+			margin-top:0.4rem ;
+		}
+		.shareNeiRong ul:nth-child(3) li:nth-child(4) img{
+			width:0.82rem ;
+			height: 1.27rem;
+			margin: 0 auto;
+			margin-left: 0.37rem;
+			margin-top:0.4rem ;
+		}
+		.shareBg{
+			display: none;
+			width: 7.5rem;
+			height: 100%;
+			background: #000000;
+			opacity: 0.5;
+			filter: alpha(opacity:50);
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+		.shareNeiRong p{width: 6rem;
+		height: 0.5rem;
+		text-align: center;
+		font-size: 0.26rem;
+		line-height: 1rem;
+		color: #333333;
+		}
+		.shareNeiRong .quxioa{
+			height: 1rem;
+			float: left;
+			text-align: center;
+			line-height: 1rem;
+			width: 6rem;
+			border-top: 0.8px solid #F5F5F5;
+		}
+		
+		</style>
+
+	</head>
+
+	<body>
+		<div class="banner" id="banner" style="height:4.94rem;margin-top:0;">
+			<div class="slide" style="height:4.94rem;max-height: none;">
+				<div class="slide-box" style="height:4.94rem;">
+					<ul class="slide-ul" style="height: 4.94rem;">
+						<li><img src="../../img/xiangqingbanner1.jpg"></li>
+						<li><img src="../../img/xiangqingbanner2.jpg"></li>
+						<li><img src="../../img/xiangqingbanner3.jpg"></li>
+					</ul>
+				</div>
+				<div class="title-box"><span class="circle"><em class="active"></em><em></em><em></em></span></div>
+			</div>
+
+			<!--header-->
+			<div class="gundongWord" id="gudongWord">
+				<ul class="touyihang">
+					<li class="mui-action-back"><img style="margin-left: 0.3;" src="../../img/shangpinxiangqingright.png" /></li>
+					<li class="sangedianxiala">
+						<img src="../../img/sangedian.png" />
+					</li>
+					
+					<li><img src="../../img/gouwucheshangpinxiangqing.png" /></li>
+					<div class="shuzifeiru">
+						4
+					</div>
+					<div class="shuzifeiru2">
+						3
+					</div>
+				</ul>
+			</div>
+		</div>
+			<ul class="xialacaidan" style="display: none;">
+				<div class="xiaojiao"></div>
+				<li><img src="../../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+				<li><img src="../../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+				<li><img src="../../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+				<li><img src="../../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+			</ul>
+		
+		<div class="xibanya">
+			<p class="xibanyap"><img src="../../img/guoqi.png" style="margin-right: 0.16rem; width: 0.3rem; height: 0.3rem;" /><span>西班牙进口&nbsp;&nbsp;海外直供</span></p>
+			<ul class="xibanyaul">
+				<li>西班牙A20365厂火腿ADZ-34872356</li>
+				<li><img src="../../img/feixianghei.png" /><span>分享</span></li>
+			</ul>
+		</div>
+
+		<div class="xiajiadaoji">
+			<ul class="xiajiadaojicon">
+				<li class="xiajiali1">
+					<p><span style="font-family: '微软雅黑';font-size: 0.36rem; color: #FF0103;">2980.00</span><span style="color: #FF0103; font-family: '微软雅黑'; font-size: 0.28rem;">元/件</span></p>
+					<p style="color: #4a4a4a; font-size: 0.24rem; text-decoration: line-through;">价格4680.00元/件</p>
+				</li>
+				<li class="xiajiali2" id="daojishien">
+					<p style="font-size: 0.22rem;">距离商品下架倒计时</p>
+					<ul class="daojishiqi">
+						<li><span class="dayday" style="font-size: 0.18rem;"> </span><em style="font-size: 0.1rem;">/天</em></li>
+						<li>:</li>
+						<li><span class="hourhour" style="font-size: 0.18rem;"> </span><em style="font-size: 0.1rem;">/时</em></li>
+						<li>:</li>
+						<li><span class="minutes" style="font-size: 0.18rem;"> </span><em style="font-size: 0.1rem;">/分</em></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div class="shuliangkucun">
+			<ul class="kucunshu">
+				<!--<span class="down" style="display: inline-block; width: 0.47rem; height: 0.51rem; line-height: 0.31rem;">-</span>
+				<span class="num" style="width: 1.1rem; text-align: center;">3</span>
+				<span class="up">+</span>-->
+				<li class="down">－</li>
+				<li class="num">3</li>
+				<li class="up">＋</li>
+			</ul>
+			<p>剩余库存<span class="num">30</span>件</p>
+		</div>
+
+		<div class="xinyulist">
+			<ul class="xinyulistcon">
+				<li><img src="../../img/Group 32.png" alt="" />新鲜直达</li>
+				<li><img src="../../img/Group 32.png" alt="" />品质保证</li>
+				<li><img src="../../img/Group 32.png" alt="" />品类齐全</li>
+				<li><img src="../../img/Group 32.png" alt="" />供应链金融</li>
+			</ul>
+		</div>
+
+		<div class="jifenlist">
+			<ul class="jifenlist1">
+				<li><img src="../../img/Group song.png" />249冻冻积分</li>
+				<li><img src="../../img/Group 8.png" />限量特价</li>
+			</ul>
+
+			<p class="dierhangp"><img src="../../img/Group 8 Copy.png" style="width: 0.26rem; height: 0.26rem; margin-right: 0.11rem;" />该商品最高可享12期免息信用付分期</p>
+
+			<ul class="jifenlist2">
+				<li>
+					<p><img src="../../img/dingzhuanga.png" style="width: 0.22rem; height: 0.2rem;" />定装</p>
+					<p>10KG/件</p>
+				</li>
+				<li>
+					<p><img src="../../img/zhuangchuana.png" style="width: 0.22rem; height: 0.25rem;" />装船期</p>
+					<p>2016-07-03</p>
+				</li>
+				<li>
+					<p><img src="../../img/daohuogang.png" style="width: 0.28rem; height: 0.28rem;" />到货港</p>
+					<p>盐田港</p>
+				</li>
+			</ul>
+
+		</div>
+
+		<p class="tuodongxiangqing"><img src="../../img/Path 2 Copy.png" /><span>继续拖动产看图文详情</span><img src="../../img/Path 2 Copy.png" /></p>
+		<div class="imgtuodong"><img src="../../img/imgtuodong.jpg" style="width: 7.5rem;" /></div>
+
+		<!--评价历史交易-->
+
+		<ul class="tabbiaoti">
+			<li class="tabactive">评价（240）</li>
+			<li>历史交易</li>
+		</ul>
+
+		<div class="tabtabcon">
+			<!--历史评价-->
+			<div class="pingjiacon">
+				<ul class="pingjiasuoxie">
+					<li>
+						<img src="../../img/touxiangpingjia.png" />
+					</li>
+					<li>
+						<p>
+							<span>**鑫</span>
+							<span>
+								<img src="../../img/gerenw.png"  />
+								<img src="../../img/houqigaidongtupaintianchong.png"  />
+								<img src="../../img/houqigaidongtupaintianchong.png"  />
+								<img src="../../img/houqigaidongtupaintianchong.png"  />
+								<img src="../../img/houqigaidongtupaintianchong.png"  />
+								<img src="../../img/houqigaidongtupaintianchong.png"  />
+							</span>
+
+						</p>
+						<p>
+							猪手还不错，进口的就是不一样，大老远从国外运过来的呢，简直太棒了！给个赞呢
+						</p>
+						<p>
+							<span>购买日期:</span>
+							<span>2016-07-23</span>
+							<span>猪手现货</span>
+						</p>
+						<p class="theAllPIngJiaToPeople" style="margin-bottom: 0.85rem;"><span class="zhankaipingjia">全部评价</span></p>
+					</li>
+				</ul>
+				<!--评价列表-->
+				<div class="pinglunlist" style=" display: none;">
+					<ul class="pingjiasuoxie">
+						<li>
+							<img src="../../img/touxiangsix.png" style="width: 0.56rem; height: 0.56rem;"/>
+						</li>
+						<li>
+							<p>
+								<span>**鹏</span>
+								<span>
+									<img src="../../img/gerenw.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+								</span>
+	
+							</p>
+							<p>
+								真不错，进口的就是不一样，继续来一车呢，好东西记得与大家分享，赞赞赞呐！
+							</p>
+							<p>
+								<span>购买日期:</span>
+								<span>2016-07-24</span>
+								<span>猪手现货</span>
+							</p>
+						</li>
+					</ul>
+
+					<ul class="pingjiasuoxie">
+						<li>
+							<img src="../../img/touxiangpingjia.png" />
+						</li>
+						<li>
+							<p>
+								<span>**琦</span>
+								<span>
+									<img src="../../img/gerenw.png"/>
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+								</span>
+	
+							</p>
+							<p>
+								肉的光泽度，还有口感没得说，赞一个，跟大家分享这么好的东西！
+							</p>
+							<p>
+								<span>购买日期:</span>
+								<span>2016-07-24</span>
+								<span>猪手现货</span>
+							</p>
+						</li>
+					</ul>
+					<ul class="pingjiasuoxie">
+						<li>
+							<img src="../../img/touxiangone.png" style="width: 0.56rem; height: 0.56rem;"/>
+						</li>
+						<li>
+							<p>
+								<span>**虎</span>
+								<span>
+									<img src="../../img/gerenw.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+								</span>
+	
+							</p>
+							<p>
+								肉的色泽真的很好，好东西大家一起享用呐。
+							</p>
+							<p>
+								<span>购买日期:</span>
+								<span>2016-07-25</span>
+								<span>猪手现货</span>
+							</p>
+						</li>
+					</ul>
+					<ul class="pingjiasuoxie">
+						<li>
+							<img src="../../img/touxiangtwo.png"style="width: 0.56rem; height: 0.56rem;" />
+						</li>
+						<li>
+							<p>
+								<span>**伦</span>
+								<span>
+									<img src="../../img/gerenw.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+								</span>
+	
+							</p>
+							<p>
+								肉真不错，进口的就是不一样，客服服务态度很好，一一解答了问题，简直太棒了！给个赞呢
+							</p>
+							<p>
+								<span>购买日期:</span>
+								<span>2016-07-25</span>
+								<span>猪手现货</span>
+							</p>
+						</li>
+					</ul>
+
+					<ul class="pingjiasuoxie">
+						<li>
+							<img src="../../img/touxiangFive.png" style="width: 0.56rem; height: 0.56rem;"/>
+						</li>
+						<li>
+							<p>
+								<span>**美</span>
+								<span>
+									<img src="../../img/gerenw.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+								</span>
+	
+							</p>
+							<p>
+								肉还不错，真的是买到了就是赚到了，客服很有耐心，一一解答了问题，给个赞呢
+							</p>
+							<p>
+								<span>购买日期:</span>
+								<span>2016-07-27</span>
+								<span>猪手现货</span>
+							</p>
+						</li>
+					</ul>
+
+					<ul class="pingjiasuoxie">
+						<li>
+							<img src="../../img/touxiangthree.png" style="width: 0.56rem; height: 0.56rem;"/>
+						</li>
+						<li>
+							<p>
+								<span>**汪</span>
+								<span>
+									<img src="../../img/gerenw.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+									<img src="../../img/houqigaidongtupaintianchong.png"  />
+								</span>
+	
+							</p>
+							<p>
+								物美价廉，真的不错，诚心将好东西分享给大家，希望与大家一起想用这么赞的东西。
+							</p>
+							<p>
+								<span>购买日期:</span>
+								<span>2016-07-28</span>
+								<span>猪手现货</span>
+							</p>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+			<!--交易历史-->
+			<div id="main" style="display: none; float: left; width: 7.5rem;">
+				<div id="saleChart"></div>
+				<div id="priceChart" style="margin-bottom:1.5rem;"></div>				
+			</div>
+
+		</div>
+		
+		<!--底部-->
+
+		<div class="xiangqingdibu">
+			<ul class="xiangqingdibulist" style="width: 7.5rem; height: 0.98rem;margin: 0 auto;">
+				<li class="kefudibu"><img src="../../img/xiangqingkefu.png" /><span>客服</span></li>
+				<li class="shoucangdibu"><img src="../../img/Star 2.png" style="margin-left: 0.3rem;" /><span>收藏</span></li>
+				<li class="fenxiangdibu"><img src="../../img/dibufenxiang.png" style="margin-left: 0.3rem;" /><span>分享</span></li>
+				<li class="gouwuchedibu">加入购物车</li>
+				<li class="goumaidibu">立即购买</li>
+			</ul>
+		</div>
+		<!--分享-->
+		<div class="shareBg">
+			
+		</div>
+		<div class="shareNeiRong" style="top: 1.8rem;">
+			
+			<p>分享</p>
+			<ul>
+				<li>
+					<img src="../../img/fuhzilianjie.png" />
+					
+				</li>
+				<li >
+					<img src="../../img/erweimafuzhi.png" />
+				</li>
+			</ul>
+			
+			<ul style="margin-left: 0.2rem;">
+				<li><img src="../../img/weixinhaoyou.png"  /></li>
+				<li>
+					<img  src="../../img/pengyouquan.png"/>
+				</li>
+				<li>
+					<img src="../../img/new-gouwuche/wwww.png" />
+				</li>
+				<li>
+					<img src="../../img/zifubaoaaa.png"  /> 
+				</li>
+			</ul>
+			<p class="quxioa">取消</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../js/mui.js"></script>
+	<script type="text/javascript" src="../../js/buju.js"></script>
+	<script type="text/javascript" src="../../js/jquery-2.1.3.min.js"></script>
+	<!--<script type="text/javascript" src="js/feedback.js" ></script>-->
+	<!--<script type="text/javascript" src="../../js/script.js" ></script>-->
+	<script type="text/javascript" src="../../js/tab.js"></script>
+	<script type="text/javascript" src="../../js/clickmodeo.js"></script>
+	<script type="text/javascript" src="../../js/echarts.min.js"></script>
+	<!--<script src="../../js/echarts-all.js"></script>-->
+
+	<script>
+	
+	//收藏
+	var bool = 0;
+	$('.xiangqingdibulist li:nth-child(2)').on('click',function(){
+		if(bool == 0){
+			$(this).children('img').attr('src','../../img/houqigaidongtupaintianchong.png').siblings('span').text('已收藏');
+			bool = 1;
+		}else{
+			$(this).children('img').attr('src','../../img/Star 2.png').siblings('span').text('收藏');
+			bool = 0;
+		}
+	});
+	
+	//下拉菜单
+	
+		$(".sangedianxiala").on("click",function(e){
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+	
+	//顶部固定
+		$(document).scroll(function(){
+			var _top=$(document).scrollTop();
+			if(_top>315){
+				$('.gundongWord ul').css('background',"#fff");
+			}else{
+				$(".gundongWord ul").css({'background':'none','opacity':'0.8'});
+			}
+		})
+		
+		//展开评论
+		$('.zhankaipingjia').on('click', function() {
+			$('.pinglunlist').fadeToggle();
+			$(document).scrollTop(6000);
+			var s = $(document).scrollTop();
+			if (s==6000) {
+				$(".theAllPIngJiaToPeople").css({
+					marginBottom:"0.8rem"
+
+
+					})
+			}else{
+				$(".theAllPIngJiaToPeople").css({
+					marginBottom:"0.8rem"
+					})
+			}
+		})
+		
+		//加入购物车
+		$('.gouwuchedibu').on('click',function(){
+			$('.shuzifeiru').animate({
+				left:'6.1rem',
+				top:'0.1rem'
+			},500);
+			$('.shuzifeiru2').css('display','none')
+		})
+		//进入购物车
+		$('.touyihang li:nth-child(3)').on('click',function(){
+//			window.location.href = '../gouWuChe/gouwucheBianji.html';
+			mui.openWindow({
+				url:'../gouWuChe/gouwucheBianji.html',
+				id:'../gouWuChe/gouwucheBianji.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+		//客服
+		$('.xiangqingdibulist li:nth-child(1)').on('click',function(){
+//			window.location.href = '../zhuanshukefu.html';
+			mui.openWindow({
+				url:'../zhuanshukefu.html',
+				id:'../zhuanshukefu.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+		//立即购买
+		$('.xiangqingdibulist li:nth-child(5)').on('click',function(){
+//			window.location.href = 'querendingdan.html';
+			mui.openWindow({
+				url:'querendingdan.html',
+				id:'querendingdan.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+		
+		//分享
+		$('.fenxiangdibu').on('click',function(){
+			$(".shareBg").css("display","block");
+			$(".shareNeiRong").css("display","block");
+		})
+		$('.xibanyaul li:nth-child(2)').on('click',function(){
+			$(".shareBg").css("display","block");
+			$(".shareNeiRong").css("display","block");
+		})
+		
+		
+		
+		//第一行的下拉列表展开之后的点击事件
+		//消息
+		$('.xialacaidan li:nth-child(3)').on('click',function(){
+			window.location.href = '../xiaoxiliebiao.html';
+//			mui.openWindow({
+//				url:'../xiaoxiliebiao.html',
+//				id:'../xiaoxiliebiao.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		//首页
+		$('.xialacaidan li:nth-child(2)').on('click',function(){
+			window.location.href = '../../index.html';
+//			mui.openWindow({
+//				url:'../../index.html',
+//				id:'../../index.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		
+		//分享
+		$('.xialacaidan li:nth-child(5)').on('click',function(){
+			$(".shareBg").css("display","block");
+			$(".shareNeiRong").css("display","block");
+		})
+		
+		//分享取消
+		$(".quxioa").on("click",function(){
+			$(".shareBg").css("display","none")
+			$(".shareNeiRong").css("display","none")
+		})
+		
+		
+		//tab标题栏
+		$('.tabbiaoti li:nth-child(1)').on('click', function() {
+			$(this).css('color', '#EA0404').siblings().css('color', '#333');
+			$(this).parent().siblings().children(".pingjiacon").css('display', 'block').siblings().css('display', 'none');
+		})
+
+		//切换到历史交易
+		$('.tabbiaoti li:nth-child(2)').on('click', function() {
+			$(this).css('color', '#EA0404').siblings().css('color', '#333');
+			$(this).parent().siblings().children("#main").css('display', 'block').siblings().css('display', 'none');
+			$('#saleChart').css({'height':'240px','border-bottom':'0.8px solid #e5e5e5','padding':'20px 0'});//设置销售数量显示区域高度
+//			$('#saleChart').css('height','200px');
+			$('#priceChart').css({'height':'240px','padding-top':'20px'});//设置销售价格显示区域高度
+			$(function() {
+				//数量
+				var getSaleChartOption = function(chartType) {
+					var chartOption = chartType == 'pie' ? {
+
+					} : {
+						title: {
+							text: '2016年1-9月平台所售猪手数量曲线图',
+							x: 'center',
+							padding: [0, 10, 40, 10],
+							textStyle: {
+								fontSize: 15,
+								fontWeight: 'normal'
+							}
+						},
+						tooltip: {
+							trigger: 'axis'
+						},
+						//					legend: {
+						//						data: ['蒸发量', '降水量']
+						//					},
+						grid: {
+							x: 40,
+							x2: 10,
+							y: 50,
+							y2: 25
+						},
+
+						calculable: false,
+						xAxis: [{
+							type: 'category',
+							axisLine: {
+								show: true,
+								lineStyle: {
+									color: '#000000',
+									width: 1
+								}
+							},
+							data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月']
+						}],
+						yAxis: [{
+							name: '数量（吨）',
+							axisLine: {
+								show: true,
+								lineStyle: {
+									color: '#000000',
+									width: 1
+								}
+							},
+							type: 'value',
+							splitArea: {
+								show: false
+							},
+							min: 900,
+							max: 1400,
+
+							//						data:['q','wq','qw','sda']
+
+						}],
+						series: [{
+							name: '数量',
+							smooth: true,
+							type: chartType,
+							data: [1000, 1220, 1230, 1215, 1130, 1323, 1235, 1230, 1160]
+						}]
+					};
+					return chartOption;
+				};
+				var saleChart = echarts.init(document.getElementById('saleChart'));
+				saleChart.setOption(getSaleChartOption('line'));
+				//价格
+				var getPriceChartOption = function(chartType) {
+					var chartOption = chartType == 'pie' ? {
+
+					} : {
+						title: {
+							text: '2016年1-9月平台所售猪手价格曲线图',
+							x: 'center',
+							padding: [0, 10, 40, 10],
+							textStyle: {
+								fontSize: 15,
+								fontWeight: 'normal'
+							}
+						},
+						tooltip: {
+							trigger: 'axis'
+						},
+						//					legend: {
+						//						data: ['蒸发量', '降水量']
+						//					},
+						grid: {
+							x: 45,
+							x2: 10,
+							y: 50,
+							y2: 25
+						},
+
+						calculable: false,
+						xAxis: [{
+							type: 'category',
+							boundaryGap: false,
+							axisLine: {
+								show: true,
+								lineStyle: {
+									color: '#000000',
+									width: 1
+								}
+							},
+							data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月']
+						}],
+						yAxis: [{
+							name: '单价（元/吨）',
+							axisLine: {
+								show: true,
+								lineStyle: {
+									color: '#000000',
+									width: 1
+								}
+							},
+							type: 'value',
+							splitArea: {
+								show: false
+							},
+							min: 17100,
+							max: 18000,
+
+							//						data:['q','wq','qw','sda']
+
+						}],
+						series: [{
+							name: '单价',
+							smooth: true,
+							type: chartType,
+							data: [17600, 17300, 17431, 17638, 17938, 17688, 17888, 17588, 17488]
+						}]
+
+					};
+					return chartOption;
+				};
+				var salePriceChart = echarts.init(document.getElementById('priceChart'));
+				salePriceChart.setOption(getPriceChartOption('line'));
+			})
+		})
+		
+//
+		
+		
+
+		
+
+		//自适应
+		function sizeShow() {
+			var pic_w = $(window).width();
+			var pic_h = pic_w * 0.66;
+			$(".slide").height(pic_h);
+			$(".slide li").width(pic_w).height(pic_h);
+			$(".slide ul").width(pic_w * 3)
+		};
+
+		function scrollAuto() {
+			sizeShow();
+			$(window).resize(function() {
+				sizeShow()
+			});
+			var oclass = $(".slide");
+			var w = oclass.find("li").width();
+			var iNow = 0,
+				index = 1,
+				timer = null;
+			var touch = {
+				"s": [],
+				"m": [],
+				"e": [],
+				"d": ""
+			};
+
+			oclass[0].addEventListener('touchstart', function(e) {
+				touch.s[0] = e.targetTouches[0].pageX;
+				touch.s[1] = e.targetTouches[0].pageY;
+				touch.s[2] = (new Date()).getTime();
+				clearInterval(timer)
+			}, false);
+
+			oclass[0].addEventListener('touchmove', function(e) {
+				var a = Math.abs(e.targetTouches[0].pageX - touch.s[0])
+				var b = Math.abs(e.targetTouches[0].pageY - touch.s[1]);
+//				console.log("dMove:" + touch.d)
+				if(a >= b && touch.d == "") {
+					touch.d = 1; //左右
+					//touch.m[0]=touch.s[0]
+				} else if(touch.d == "") {
+					touch.d = 0; //上下或者偏上下
+				}
+//				console.log(a + ":::" + b)
+				if(touch.d == 1) { //左右滚动
+					e.preventDefault();
+					$(".slide ul").css({
+						"left": -iNow * w + e.targetTouches[0].pageX - touch.s[0]
+					});
+					// touch.m[0]=e.targetTouches[0].pageX;
+					//touch.m[1]=e.targetTouches[0].pageY;
+				}
+
+			}, false);
+
+			oclass[0].addEventListener('touchend', function(e) {
+				console.log("dEnd:" + touch.d)
+				if(touch.d == 1) {
+					if((new Date()).getTime() - touch.s[2] > 700) {
+						if(e.changedTouches[0].pageX - touch.s[0] > w / 3) {
+							auto("right")
+						} else if(touch.s[0] - e.changedTouches[0].pageX > w / 3) {
+							auto("left")
+						} else {
+							auto("reset")
+						}
+					} else {
+						if(e.changedTouches[0].pageX > touch.s[0]) {
+							auto("right");
+						} else if(touch.s[0] > e.changedTouches[0].pageX) {
+							auto("left")
+						}
+					}
+				}
+				touch.d = "";
+				timer = setInterval(function() {
+					if(iNow >= $(".slide li").length - 1) {
+						iNow = 0;
+					} else {
+						iNow++
+					}
+					$(".slide ul").animate({
+						"left": -w * iNow
+					})
+					$(".circle em").eq(iNow).addClass("active").siblings().removeClass("active");
+					$(".title-box .title").html($(".slide li").eq(iNow).find("a").attr("title"))
+				}, 3000);
+
+			}, false);
+
+			function auto(c) {
+				if(c == "left") {
+					if(iNow >= $(".slide li").length - 1) {
+						iNow = $(".slide li").length - 1
+					} else {
+						iNow++
+					}
+					console.log(iNow)
+					$(".slide ul").animate({
+						"left": -w * iNow
+					})
+				} else if(c == "right") {
+					if(iNow <= 0) {
+						iNow = 0
+					} else {
+						iNow--
+					}
+					$(".slide ul").animate({
+						"left": -w * iNow
+					})
+				} else if(c == "reset") {
+					$(".slide ul").animate({
+						"left": -w * iNow
+					})
+				}
+				$(".circle em").eq(iNow).addClass("active").siblings().removeClass("active");
+				$(".title-box .title").html($(".slide li").eq(iNow).find("a").attr("title"))
+			};
+
+			timer = setInterval(function() {
+				if(iNow >= $(".slide li").length - 1) {
+					iNow = 0;
+				} else {
+					iNow++
+				}
+				$(".slide ul").animate({
+					"left": -w * iNow
+				})
+				$(".circle em").eq(iNow).addClass("active").siblings().removeClass("active");
+				$(".title-box .title").html($(".slide li").eq(iNow).find("a").attr("title"))
+			}, 3000);
+
+		}
+		$(function() {
+			scrollAuto();
+		})
+
+		//倒计时
+		var interval = 1000;
+
+		function ShowCountDown(year, month, day) {
+			var now = new Date();
+			var endDate = new Date(year, month - 1, day);
+			var leftTime = endDate.getTime() - now.getTime();
+			var leftsecond = parseInt(leftTime / 1000);
+
+			var day1 = Math.floor(leftsecond / (60 * 60 * 24));
+			var hour = Math.floor((leftsecond - day1 * 24 * 60 * 60) / 3600);
+			var minute = Math.floor((leftsecond - day1 * 24 * 60 * 60 - hour * 3600) / 60);
+
+
+			$(".dayday").text(day1);
+			$(".hourhour").text(hour);
+			$(".minutes").text(minute);
+		}
+		window.setInterval(function() {
+			ShowCountDown(2016, 10, 1);
+		}, interval);
+		//历史交易
+	</script>
+
+</html>

@@ -1,0 +1,1905 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>商品分类</title>
+	</head>
+	<link rel="stylesheet" href="../css/commen.css" />
+	<link rel="stylesheet" href="../css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../css/index.css" />
+	<style>
+		.fenleiznys {
+			width: 7.5rem;
+			height: 0.65rem;
+			margin-top: 0.88rem;
+			border-bottom: 1px solid #E5E5E5;
+		}
+		
+		.fenleiznys ul {
+			width: 6rem;
+			height: 0.65rem;
+			margin: 0 auto;
+		}
+		
+		.fenleiznys li {
+			float: left;
+			width: 1.5rem;
+			height: 0.65rem;
+			/*line-height: 0.65rem;*/
+			margin: 0 auto;
+		}
+		
+		.fenleiznys li img {
+			width: 0.7rem;
+			height: 0.26rem;
+			margin-left: 0.4rem;
+			margin-top: 0.19rem;
+			/*margin: 0 auto;*/
+		}
+		
+		.fenleiznys li img:nth-child(2) {
+			display: none;
+		}
+		
+		.searches {
+			width: 0.6rem;
+			height: 0.6rem;
+			position: absolute;
+			top: 0.2rem;
+			right: 1.8rem;
+			background: #333333;
+			opacity: 0;
+		}
+	</style>
+
+	<body>
+		<header class="thebigheader">
+			<ul style="width: 7.5rem;">
+				<a href="../index.html">					
+					<li class="theleft" style="margin: 0;">
+						<i class="fa fa-angle-left mui-action-back " aria-hidden="true" style="font-size: 0.66rem;text-align: ;margin-left: 0.2rem;"></i>
+	
+					</li>
+				</a>
+				<li style="width: 5rem;">
+					<input style="border: 0.8px solid #333333;outline: none; text-indent: 0.3rem; position: relative; width: 5rem; height: 0.56rem;margin-top: -0.4rem; margin-left: -0.8rem; outline: none;text-indent: 0.3rem;background: url(../img/searchindex.png) no-repeat 4.6rem; background-size:0.5rem ;" type="text" placeholder="请输入厂号，港口等关键词" />
+					<div class="searches"></div>
+				</li>
+				<li style="width: 0.7rem; height: 0.88rem;line-height: 0.88rem; text-align: center; font-size: 0.28rem; color: #ea0607;">
+
+					<img src="../img/gouwucar.png" style="width: 0.4rem;height: 0.4rem;margin-top: 0.2rem;margin-bottom: 0.3rem;margin-right: 0;" />
+					<span class="mui-badge" style="  text-align: center;line-height: 0.3rem;  position: absolute; left: 83%; width: 0.35rem; display: block;height: 0.3rem;">3</span>
+				</li>
+				<li class="liebiaozuanfu" style="text-align: center;line-height: 0.6rem; font-size: 0.6rem; color: #ea0607;font-family: '微软雅黑';">...</li>
+			</ul>
+
+		</header>
+		<ul class="xialacaidan" style="display: none;">
+			<div class="xiaojiao"></div>
+			<li><img src="../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+			<li><img src="../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+
+			<li><img src="../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+			<li><img src="../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+		</ul>
+		<div class="fenleiznys">
+			<ul>
+				<li>
+					<img src="../img/piggfd.png" style="width: 0.66rem;height: 0.26rem; display: none;" />
+					<img src="../img/piggg.png" style="width: 0.66rem;height: 0.26rem; display: block;" />
+
+				</li>
+				<li>
+					<img src="../img/niussss.png" style="width: 0.7rem;height: 0.26rem;" />
+					<img src="../img/niusss.png"  style="width: 0.7rem;height: 0.26rem;"/>
+				</li>
+				<li>
+					<img src="../img/yangsss.png"  style="width: 0.57rem;height: 0.29rem;"/>
+					<img src="../img/yangssda.png" style="width: 0.57rem;height: 0.29rem;"/>
+
+				</li>
+				<li>
+					<img src="../img/shuihcangsss.png" style="width: 0.86rem;height: 0.3rem;"/>
+					<img src="../img/shuichansss.png" style="width: 0.86rem;height: 0.3rem;" />
+				</li>
+			</ul>
+
+		</div>
+		<!--zhu-->
+		<div class="qiehuan qiehuanz">
+			<div class="shangpinxinxi_fenlei">
+				<ul>
+
+					<li style="color: #EA0607;">头部</li>
+					<li>背部</li>
+					<li>腹部</li>
+					<li>前腿</li>
+					<li>后腿</li>
+
+				</ul>
+
+			</div>
+			<div>
+				<!--头部-->
+				<div class="fenlei_toubu" style="display: block;">
+					<ul>
+						<li style="border: 0.8px solid #EA0607;background: #EA0607;">
+							<img src="../img/pig/zhuerc.jpg" />
+							<span style="background: #EA0607; color: #fff;border: 0.8px solid #EA0607; ">猪耳</span>
+						</li>
+
+						<li>
+							<img src="../img/pig/zhunaoa.jpg" />
+							<span>去耳猪头</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhunaob.jpg" />
+							<span>去舌猪头</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhushea.jpg" />
+							<span>去耳半头</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhusheb.jpg" />
+							<span>猪脑</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhushec.jpg" />
+							<span>猪耳</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuera.jpg" />
+							<span>猪舌</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuerb.JPG" />
+							<span>猪整鼻</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuerc.jpg" />
+							<span>猪脸皮</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuerd.jpg" />
+							<span>猪耳根</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhushed.jpg" />
+							<span>猪舌根</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhushee.jpg" />
+							<span>去皮下颚</span>
+
+						</li>
+
+					</ul>
+
+				</div>
+				<!--背部-->
+				<div class="fenlei_beibu" style="display: none;">
+					<ul>
+
+						<li>
+							<img src="../img/pig/zhuleigub.jpg" />
+							<span>带筋带骨大排</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuleiguc.jpg" />
+							<span>带骨大排</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuleigua.jpg" />
+							<span>整块带骨背脊肉</span>
+
+						</li>
+
+						<li>
+							<img src="../img/pig/zhuleigud.jpg" />
+							<span>带骨上后腰脊肉</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuleipaia.jpg" />
+							<span>去骨整块背脊肉</span>
+
+						</li>
+
+						<li>
+							<img src="../img/pig/zhulonggua.jpg" />
+							<span>小里脊</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhulonggub.jpg" />
+							<span>小排（颈排）</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhupia.jpg" />
+							<span>大排</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhupib.jpg" />
+							<span>里脊肉</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuleipaib.jpg" />
+							<span>带皮猪背脊</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuleipaic.png" />
+							<span>颈骨</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhupic.jpg" />
+							<span>猪里脊肉条</span>
+
+						</li>
+
+					</ul>
+
+				</div>
+				<!--腹部-->
+				<div class="fenlei_fubu" style="display: none;">
+					<ul>
+						<li>
+							<img src="../img/pig/zhuchanga.jpg" />
+							<span>去骨中方</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuchangb.jpg" />
+							<span>带骨带皮中方</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuchangc.jpg" />
+							<span>祛骨去皮中方</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhudua.jpg" />
+							<span>去骨去皮中方</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhudub.jpg" />
+							<span>腹肉</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuduc.jpg" />
+							<span>带皮去骨猪腹肉</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhufei.jpg" />
+							<span>中式腹胁肉</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhugana.jpg" />
+							<span>美式腹胁肉</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuganb.jpg" />
+							<span>腩排</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuganc.jpg" />
+							<span>腹皮</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuxin.jpg" />
+							<span>猪背皮</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuxinb.jpg" />
+							<span>五花肉</span>
+
+						</li>
+
+					</ul>
+
+				</div>
+
+				<!--前腿-->
+				<div class="fenlei_qiantui" style="display: none;">
+					<ul>
+						<li>
+							<img src="../img/pig/zhuqiana.jpg" />
+							<span>肩胛骨</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuqianb.jpg" />
+							<span>前棒骨</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuqianzhoua.jpg" />
+							<span>前腿骨</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuqianzhoub.jpg" />
+							<span>圆切去脚前腿</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuqianzhouc.jpg" />
+							<span>带骨去皮前腿</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhushana.jpg" />
+							<span>何兰切猪前腿</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhushanb.jpg" />
+							<span>去骨整腿</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhushanc.jpg" />
+							<span>带骨整腿</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhushand.jpg" />
+							<span>月亮骨</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhutonga.jpg" />
+							<span>前蹄膀</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhutongb.jpg" />
+							<span>前蹄髈</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhutongc.jpg" />
+							<span>肩胛排</span>
+
+						</li>
+
+					</ul>
+
+				</div>
+				<!--后腿-->
+				<div class="fenlei_houtui" style="display: none;">
+					<ul>
+						<li>
+							<img src="../img/pig/zhuzhouzhia.jpg" />
+							<span>叉骨</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuzhouzhib.jpg" />
+							<span>寸骨</span>
+
+						</li>
+						<li>
+							<img src="../img/wuhuarousss.png" />
+							<span>后棒骨</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuti.jpg" />
+							<span>火腿</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuzhouzhic.jpg" />
+							<span>腱子肉</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuhougua.jpg" />
+							<span>带皮后腿</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/zhuhougub.jpg" />
+							<span>尾骨</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/dagua.jpg" />
+							<span>筒子肉</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/dagub.jpg" />
+							<span>猪脚圈</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/jianzhiroua.jpg" />
+							<span>带蹄带骨带皮猪后腿</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/jianzhiroub.jpg" />
+							<span>大腿骨</span>
+
+						</li>
+						<li>
+							<img src="../img/pig/banggu.jpg" />
+							<span>后蹄髈</span>
+
+						</li>
+
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+		<!--niu-->
+		<div class="qiehuan  qiehuanN" style="display: none;">
+			<div class="shangpinxinxi_fenlei">
+				<ul>
+
+					<li style="color: #EA0607;">牛头</li>
+					<li>牛肩胛</li>
+					<li>牛腿</li>
+					<li>牛背脊</li>
+					<li>牛腹肌</li>
+					<!--<li>牛骨</li>
+				<li>牛内脏(013)</li>
+				<li>油膘类</li>
+				<li>牛肉类</li>-->
+				</ul>
+
+			</div>
+			<div>
+				<!--头部-->
+				<div class="fenlei_toubu" style="display: block;">
+					<ul>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>牛舌</span>
+
+						</li>
+
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>牛唇</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>牛头肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>牛耳</span>
+
+						</li>
+						<!--<li>
+						<img src="img/pig/zhunaob.jpg" />
+						<span>祛骨去皮中方</span>
+
+					</li>
+					
+					<li>
+						<img src="img/pig/zhushec.jpg" />
+						<span>腹皮</span>
+
+					</li>
+					<li>
+						<img src="img/pig/zhusheb.jpg" />
+						<span>腩排</span>
+
+					</li>
+					
+					<li>
+						<img src="img/pig/zhuerb.JPG" />
+						<span>带皮五花肉</span>
+
+					</li>
+					<li>
+						<img src="img/pig/zhuerc.jpg" />
+						<span>祛皮五花肉</span>
+
+					</li>
+					<li>
+						<img src="img/pig/zhuerd.jpg" />
+						<span>五花肉肉条</span>
+
+					</li>
+					<li>
+						<img src="img/pig/zhushed.jpg" />
+						<span>肋排</span>
+
+					</li>
+					<li>
+						<img src="img/pig/zhushee.jpg" />
+						<span>腰肋</span>
+
+					</li>-->
+
+					</ul>
+
+				</div>
+				<!--背部-->
+				<div class="fenlei_beibu" style="display: none;">
+					<ul>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>上脑芯 </span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>牛脖肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span> 牛肩肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>上脑</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>肩胛肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>方切肩肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>颈肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>牛嫩肩肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>  牛板腱</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>去骨牛肩肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>牛肩甲</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>前牛腱</span>
+
+						</li>
+
+					</ul>
+
+				</div>
+				<!--腹部-->
+				<div class="fenlei_fubu" style="display: none;">
+					<ul>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>臀尖</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>三扒一霖</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>牛大米龙</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>  牛小米龙</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>牛米龙</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>粗米龙</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>上臀腰肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>臀腰肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>粗臀腰肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>D-臀腰肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>臀肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>臀腰肉心</span>
+
+						</li>
+
+					</ul>
+
+				</div>
+
+				<!--前腿-->
+				<div class="fenlei_qiantui" style="display: none;">
+					<ul>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>外脊（西冷）</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>里脊</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>眼肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>腹肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>眼肉心</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>肋排</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span> 牛肋排</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>  牛板筋</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>  肥牛</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>牛上脑</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>嫩腰</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>  牛肋条</span>
+
+						</li>
+
+					</ul>
+
+				</div>
+				<!--后腿-->
+				<div class="fenlei_houtui" style="display: none;">
+					<ul>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>  牛腹肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>  牛后胸肉</span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span>牛胸肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>修清前胸肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>前胸肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>牛筋肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>牛腰窝</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>三岔肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>牛腩</span>
+
+						</li>
+						<!--<li>
+						<img src="img/pig/jianzhiroua.jpg" />
+						<span>五花肉肉条</span>
+
+					</li>
+					<li>
+						<img src="img/pig/jianzhiroub.jpg" />
+						<span>肋排</span>
+
+					</li>
+					<li>
+						<img src="img/pig/banggu.jpg" />
+						<span>腰肋</span>
+
+					</li>-->
+
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+		<!--
+		yang
+	-->
+
+		<div class="qiehuan  qiehuany" style="display: none;">
+			<div class="shangpinxinxi_fenlei">
+				<ul>
+
+					<li style="color: #EA0607;">羊头</li>
+					<li>羊肩胛</li>
+					<li>羊腿</li>
+					<li>羊背脊</li>
+					<li>羊腹肌</li>
+					<!--<li>羊骨</li>
+				<li>羊内脏(013)</li>
+				<li>油膘类</li>
+				<li>羊肉类</li>-->
+
+				</ul>
+
+			</div>
+			<div>
+				<!--头部-->
+				<div class="fenlei_toubu" style="display: block;">
+					<ul>
+
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊舌</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊头肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊头</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊耳</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊脑</span>
+
+						</li>
+						<!--<li>
+						<img src="img/pig/zhuerc.jpg" />
+						<span>祛皮五花肉</span>
+
+					</li>
+					<li>
+						<img src="img/pig/zhuerd.jpg" />
+						<span>五花肉肉条</span>
+
+					</li>
+					<li>
+						<img src="img/pig/zhushed.jpg" />
+						<span>肋排</span>
+
+					</li>
+					<li>
+						<img src="img/pig/zhushee.jpg" />
+						<span>腰肋</span>
+
+					</li>
+					<li>
+						<img src="img/pig/zhutou.jpg" />
+						<span>祛骨中方</span>
+
+					</li>
+					<li>
+						<img src="img/pig/zhunaoa.jpg" />
+						<span>带骨带皮中方</span>
+
+					</li>
+					<li>
+						<img src="img/pig/zhunaob.jpg" />
+						<span>祛骨去皮中方</span>
+
+					</li>-->
+
+					</ul>
+
+				</div>
+				<!--背部-->
+				<div class="fenlei_beibu" style="display: none;">
+					<ul>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊脖肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊肩肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>上脑</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>肩胛肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>方切肩肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>颈肉</span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span> 羊嫩肩肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>  羊板腱</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>去骨羊肩肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊肩甲</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>前羊腱</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊脖肉</span>
+
+						</li>
+
+					</ul>
+
+				</div>
+				<!--腹部-->
+				<div class="fenlei_fubu" style="display: none;">
+					<ul>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>粗米龙</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>臀腰肉</span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span>膝圆</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>臀肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊腩排</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>膝圆</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>臀尖</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊去盖臀肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span> 羊臀肉盖</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>  羊腱子</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span> 羊霖</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊后腿</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊腩筋</span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span>后羊腱</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>板冻后羊腱</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊腿排</span>
+
+						</li>
+					</ul>
+
+				</div>
+
+				<!--前腿-->
+				<div class="fenlei_qiantui" style="display: none;">
+					<ul>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>外脊（西冷）</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>里脊</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>眼肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>眼肉心</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>肋排</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>脊肋排</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>  羊肋排</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>  羊板筋</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊鞍</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>嫩腰</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>  羊肋条</span>
+
+						</li>
+
+					</ul>
+
+				</div>
+				<!--后腿-->
+				<div class="fenlei_houtui" style="display: none;">
+					<ul>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>  羊腹肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>  羊后胸肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>  羊后胸肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>腹肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊胸肉</span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span>修清前胸肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊筋肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊腰窝</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>三岔肉</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>老羊胸腹排</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>大羊排</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>羊腩</span>
+
+						</li>
+
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+		<!--shuichan-->
+
+		<div class="qiehuan  qiehuans" style="display: none;">
+			<div class="shangpinxinxi_fenlei">
+				<ul>
+
+					<li style="color: #EA0607;">贝</li>
+					<li>参</li>
+					<li>母</li>
+					<li>虾</li>
+					<li>蟹</li>
+					<!--<li>鱼</li>
+				<li>藻</li>-->
+				</ul>
+
+			</div>
+			<div>
+				<!--贝-->
+				<div class="fenlei_toubu" style="display: block;">
+					<ul>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>虾夷盘扇贝 </span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>鲍鱼</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>绿壳菜蛤</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>泥蚶</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>牡蛎</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>河蚬</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>竹蛏</span>
+
+						</li>
+
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>蝾螺</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>东风螺</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>花螺</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>瘤珠螺</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>蝾螺</span>
+
+						</li>
+
+					</ul>
+
+				</div>
+				<!--参-->
+				<div class="fenlei_beibu" style="display: none;">
+					<ul>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>刺参</span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span>仿刺参</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>瓜参</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>芋参</span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span>海茄子</span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span>长棘海星</span>
+
+						</li>
+						<!--<li>
+						<img src="../img/pigzhuleipaic.png" />
+						<span>五花肉</span>
+
+					</li>
+					<li>
+						<img src="../img/pigzhulonggua.jpg" />
+						<span>带皮五花肉</span>
+
+					</li>
+					<li>
+						<img src="../img/pigzhulonggub.jpg" />
+						<span>祛皮五花肉</span>
+
+					</li>
+					<li>
+						<img src="../img/pigzhupia.jpg" />
+						<span>五花肉肉条</span>
+
+					</li>
+					<li>
+						<img src="../img/pigzhupib.jpg" />
+						<span>肋排</span>
+
+					</li>
+					<li>
+						<img src="../img/pigzhupic.jpg"  />
+						<span>腰肋</span>
+
+					</li>-->
+
+					</ul>
+
+				</div>
+				<!--母-->
+				<div class="fenlei_fubu" style="display: none;">
+					<ul>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>灯水母</span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span>发水母</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>海月水母</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>花笠水母</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>金黄水母 </span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span>咖啡金黄水母 </span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>沙水母 </span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>海蜇</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>裸海蝶</span>
+
+						</li>
+						<!--<li>
+						<img src="../img/pigzhuganc.jpg" />
+						<span>五花肉肉条</span>
+
+					</li>
+					<li>
+						<img src="../img/pigzhuxin.jpg" />
+						<span>肋排</span>
+
+					</li>
+					<li>
+						<img src="../img/pigzhuxinb.jpg" />
+						<span>腰肋</span>
+
+					</li>-->
+
+					</ul>
+
+				</div>
+
+				<!--虾-->
+				<div class="fenlei_qiantui" style="display: none;">
+					<ul>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>龙宫虾</span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span>北极虾</span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span>中国龙虾</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>波纹龙虾</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>日本龙虾</span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span>杂色龙虾</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>少刺龙虾</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>长足龙虾</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>真龙虾</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>龙虾</span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span>斑节对虾</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>北方长额虾</span>
+
+						</li>
+
+					</ul>
+
+				</div>
+				<!--蟹-->
+				<div class="fenlei_houtui" style="display: none;">
+					<ul>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>雪蟹</span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span>北黄道蟹</span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span>红眼雪蟹</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>灰眼雪蟹</span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span>锯缘青蟹</span>
+
+						</li>
+						<li>
+						<img src="../img/zanwuzaishou.gif" />
+							<span>堪察加拟石蟹</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>普通黄道蟹</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>三疣梭子蟹</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>圣诞岛红蟹</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>旭蟹</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>远海梭子蟹</span>
+
+						</li>
+						<li>
+							<img src="../img/zanwuzaishou.gif" />
+							<span>蓝足短浆蟹</span>
+
+						</li>
+
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="../js/mui.js"></script>
+	<script type="text/javascript" src="../js/buju.js"></script>
+	<script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="../js/tab.js"></script>
+	<script type="text/javascript" src="../js/clickmodeo.js"></script>
+	<script>
+		$(".searches").on("click", function() {
+
+			var theword = $(".thebigheader ul li:nth-child(2) input").val()
+
+			//			console.log(theword)
+
+			if(theword == "猪手") {
+//				window.location.href ="../dahuosanjiCaiNixihuan.html"
+mui.openWindow({
+				url:'../dahuosanjiCaiNixihuan.html',
+				id:'../dahuosanjiCaiNixihuan.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+			} else {
+				// 			alert("服务器开小差了，咱们去看看其他商品吧！")
+				// 			window.location.href="lingshouErji.html"
+			}
+
+		})
+			
+		$('.thebigheader ul li:nth-child(3)').on('click',function(){
+//			window.location.href = 'gouWuChe/gouwucheBianji.html';
+mui.openWindow({
+				url:'gouWuChe/gouwucheBianji.html',
+				id:'gouWuChe/gouwucheBianji.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+
+
+		$(".fenleiznys ul li").on("click", function() {
+			$(this).children("img:nth-child(1)").css("display", "none").siblings("img").css("display", "block").parent().siblings().children("img:nth-child(1)").css("display", "block").siblings().css("display", "none")
+
+		})
+
+		$(".fenleiznys ul li:nth-child(1)").on("click", function() {
+			$(".qiehuanz").css("display", "block")
+			$(".qiehuanN").css("display", "none")
+			$(".qiehuany").css("display", "none")
+			$(".qiehuans").css("display", "none")
+		})
+		$(".fenleiznys ul li:nth-child(2)").on("click", function() {
+			$(".qiehuanz").css("display", "none")
+			$(".qiehuanN").css("display", "block")
+			$(".qiehuany").css("display", "none")
+			$(".qiehuans").css("display", "none")
+		})
+
+		$(".fenleiznys ul li:nth-child(3)").on("click", function() {
+			$(".qiehuanz").css("display", "none")
+			$(".qiehuanN").css("display", "none")
+			$(".qiehuany").css("display", "block")
+			$(".qiehuans").css("display", "none")
+		})
+		$(".fenleiznys ul li:nth-child(4)").on("click", function() {
+			$(".qiehuanz").css("display", "none")
+			$(".qiehuanN").css("display", "none")
+			$(".qiehuany").css("display", "none")
+			$(".qiehuans").css("display", "block")
+		})
+		//下拉菜单
+	
+		$(".liebiaozuanfu").click(function(e){
+	　　		$(".xialacaidan").show(300);
+	　　		e.stopPropagation();
+		});
+		
+		
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+
+		//消息
+		$('.xialacaidan li:nth-child(3)').on('click', function() {
+				window.location.href = "xiaoxiliebiao.html";
+//mui.openWindow({
+//				url:'xiaoxiliebiao.html',
+//				id:'xiaoxiliebiao.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+			})
+			//首页
+		$('.xialacaidan li:nth-child(2)').on('click', function() {
+			window.location.href = "../index.html";
+//mui.openWindow({
+//				url:'../index.html',
+//				id:'../index.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		
+		
+		$(".fenlei_toubu li").on("click",function(){
+			
+//			window.location.href="fenleisanji/daHuoErJi.html"
+mui.openWindow({
+				url:'fenleisanji/daHuoErJi.html',
+				id:'fenleisanji/daHuoErJi.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+		$(".fenlei_beibu li").on("click",function(){
+			
+//			window.location.href="fenleisanji/daHuoErJi.html"
+mui.openWindow({
+				url:'fenleisanji/daHuoErJi.html',
+				id:'fenleisanji/daHuoErJi.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+		$(".fenlei_fubu li").on("click",function(){
+			
+//			window.location.href="fenleisanji/daHuoErJi.html"
+mui.openWindow({
+				url:'fenleisanji/daHuoErJi.html',
+				id:'fenleisanji/daHuoErJi.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+		$(".fenlei_qiantui li").on("click",function(){
+			
+//			window.location.href="fenleisanji/daHuoErJi.html"
+mui.openWindow({
+				url:'fenleisanji/daHuoErJi.html',
+				id:'fenleisanji/daHuoErJi.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+		$(".fenlei_houtui li").on("click",function(){
+			
+//			window.location.href="fenleisanji/daHuoErJi.html"
+mui.openWindow({
+				url:'fenleisanji/daHuoErJi.html',
+				id:'fenleisanji/daHuoErJi.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+			
+		})
+	</script>
+
+</html>
+
+ 

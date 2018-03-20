@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>商品详情</title>
+    <script type="text/javascript">
+
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+
+   		});
+
+    </script>
+     <link rel="stylesheet" href="../../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../css/commen.css" />
+    <link rel="stylesheet" href="../../css/index.css" />
+    <style>
+    	#banner .center ul li img{
+    		height: 4.1rem;
+    	}
+    	.gundongWord{
+    		  width: 7.5rem;
+    			height: 0.7rem;
+    			top: 0;
+    	}
+    		.gundongWord ul li img{
+    			margin-top: 0.15rem;
+    			width: 0.7rem;
+    			height:0.7rem ;
+    		}
+    		.gundongWord ul{
+    			width: 6.9rem;
+    			height: 0.7rem;
+    			margin: 0 auto;
+    		}
+    	.gundongWord ul li:nth-child(2){
+    		float: right;
+    		width:1.1rem;
+
+    	}
+    	.gundongWord ul li:nth-child(3){
+    		float: right;
+    	}
+    	.jiarugouwuche{
+    		width: 7.5rem;
+    		float: left;
+
+    	}
+    	.jiarugouwuche ul{
+    		  width: 6.9rem;
+
+			    margin: 0 auto;
+			    float: left;
+			    margin-left: 0.3rem;
+			    padding-bottom: 0.85rem;
+			    border-bottom: 1px solid #e5e5e5;
+    	}
+    	.jiarugouwuche ul li{
+    		float: left;
+    	}
+    	.jiarugouwuche ul li:nth-child(1){
+
+    		width: 1.44rem;
+
+    		height: 1.44rem;
+
+
+    	}
+    	.jiarugouwuche ul li{
+    		float: left;
+    		margin-top: 0.33rem;
+    	}
+    	.jiarugouwuche ul li:nth-child(2){
+    		width:5.4rem;
+    	}
+    	.jiarugouwuche ul li:nth-child(1) img{
+
+    		width: 1.44rem;
+    		height: 1.44rem;
+
+    	}
+    	.jiarugouwuche ul li:nth-child(2) p:nth-child(1){
+    		width:5.4rem;
+    		height:0.35rem;
+    		font-size: 0.35rem;
+    		text-align: right;
+    		color: #999999;
+    	}
+    	.jiarugouwuche ul li:nth-child(2) p:nth-child(2){
+    		width:5.4rem;
+    		height:0.35rem;
+    		font-size: 0.28rem;
+    		/*text-align: right;*/
+    		color: #999999;
+    	}
+    	.jiarugouwuche ul li:nth-child(2) p:nth-child(2) span{
+    		float: left;
+    		/*text-indent: 0.3rem;*/
+    	}
+    	.jiarugouwuche ul li:nth-child(2) p:nth-child(2) span:nth-child(1){
+    		text-indent: 0.3rem;
+    		color: #333333;
+    		font-size: 0.24rem;
+    	}
+    	.jiarugouwuche ul li:nth-child(2) p:nth-child(2) span:nth-child(2){
+    		/*background: #EA0607;*/
+    		border: 1px solid #EA0607;
+    		color: #EA0607;
+    		padding: 0 0.08rem;
+    		font-size: 0.2rem;
+    		margin-left: 0.1rem;
+    		border-radius: 0.03rem;
+    	}
+    	.jiarugouwuche ul li:nth-child(2) p:nth-child(3){
+    		text-indent: 0.3rem;
+    		font-size: 0.24rem;
+    		color: #999;
+    		margin-top: 0.1rem;
+
+    	}
+    	.jiarugouwuche ul li:nth-child(2) p:nth-child(4){
+    		text-indent: 0.3rem;
+    		font-size: 0.24rem;
+    		color: #EA0607;
+    			margin-top: 0.1rem;
+
+
+    	}
+    	.goumaishulaing{
+    		width:7.5rem;
+    		height:0.7rem;
+    		margin-top: 0.4rem;
+    		float: left;
+    	}
+    	.goumaishulaing p{
+    		font-size: 0.3rem;
+    		color: #333333;
+    		float: left;
+    		width: 3.05rem;
+    		line-height: 0.7rem;
+    		text-align: right;
+    		font-weight: 600;
+
+    	}
+
+    	.addgouwuche{
+    		  float: left;
+			    margin-top: 0.5rem;
+			    width: 7.5rem;
+			    margin-bottom: 0.3rem;
+    	}
+    	.addgouwuche p{
+    		  width: 5.7rem;
+			    height: 0.75rem;
+			    border: 1px solid #E5E5E5;
+			    text-align: center;
+			    line-height: 0.75rem;
+			    font-size: 0.25rem;
+			    /*position: fixed;*/
+			    margin: 0 auto;
+			    /*bottom: 1rem;*/
+			    /*left: 0.8rem;*/
+    	}
+
+    	.goumai,#shuliangjiajian{
+    		display: inline-block;
+    		vertical-align: middle;
+    	}
+    	#shuliangjiajian{
+    		float: left;
+    		margin-top: 0.2rem;
+    	}
+    	.jiarugouwuche #shuliangjiajian p{
+    		width: 0.69rem;
+    		color: #333;
+    		font-size: 0.28rem;
+    		text-align: center;
+    		line-height: 0.69rem;
+    		border: 1px solid #e5e5e5;
+    		height: 0.69rem;
+    		float: left;
+    		margin: 0;
+    	}
+    	.jiarugouwuche #shuliangjiajian p:nth-child(2){
+    		border-right: none;
+    		border-left: none;
+
+    	}
+    	</style>
+    	</head>
+			<div class="banner" id="banner" style="height: 4.1rem;margin-top:0;">
+		<div class="center" style="height: 4.1rem;">
+				<ul>
+					<li><img src="../../img/zhupaiasdasz.png"/></li>
+					<!--<li><img src="../../img/index/banner2.jpg"/></li>-->
+
+				</ul>
+
+			</div>
+
+		<!--header-->
+		<!--<div class="thetopZ"></div>-->
+		<div class="gundongWord">
+			<ul>
+					<li class="mui-action-back"><img src="../../img/shangpinxiangqingright.png" /></li>
+
+					<li class="liebiaozuanfu">
+						<img src="../../img/sangedian.png" />
+					</li>
+			       <li class="jiarugouwucheheader"  style="margin-right: 0.3rem;"><img src="../../img/gouwucheshangpinxiangqing.png" /></li>
+			</ul>
+		</div>
+		<ul class="xialacaidan" style="display: none; z-index: 1001;right: 0.4rem;" >
+				<div class="xiaojiao"></div>
+				<li><img src="../../img/shouyeshouye.png" style="width: 0.29rem; height: 0.27rem;" />首页</li>
+				<li><img src="../../img/xiaoxixiaoxi.png" style="width: 0.26rem; height: 0.21rem;" />消息</li>
+				
+				<li><img src="../../img/bangzhubangzhu.png" style="width: 0.27rem; height: 0.27rem;" />帮助</li>
+				<li><img src="../../img/fenxiangfenxiang.png" style="width: 0.3rem; height: 0.29rem;" />分享</li>
+			</ul>
+
+		<div class="shangpinxuanzwe">
+			<ul>
+				<li>
+					×
+				</li>
+				<li>
+					<img src="../../img/zhupaiasdasz.png"  />
+					<p>＋</p>
+					<img src="../../img/zhushefghh.png"  />
+				</li>
+				<li>
+					<p>
+						<span>套餐费:</span>
+						<span>243.00元</span>
+
+					</p>
+					<p>
+
+						<span>价格:</span>
+						<del>356.00元</del>
+					</p>
+					<p>
+
+						省30.00元
+					</p>
+
+
+				</li>
+			</ul>
+
+
+
+		</div>
+
+
+		<div class="jiarugouwuche">
+			<ul>
+				<li>
+					<img src="../../img/zhupaiasdasz.png"  />
+				</li>
+				<li>
+					<p>
+
+					</p>
+					<p>
+						<span>猪背骨</span>
+						<span>期货</span>
+					</p>
+					<!--<p>库存135486件</p>
+					<p>￥98.00</p>-->
+					<p style="color: #333; font-size: 0.24rem;margin-right:0.3rem;margin-top: 0.3rem;float: left;">购买数量</p>
+					<div id="shuliangjiajian">
+						<p class="down">－</p>
+						<p class="num">1</p>
+						<p style="text-indent:0 ;" class="up">＋</p>
+					</div>
+
+				</li>
+			</ul>
+
+			<ul>
+				<li>
+					<img src="../../img/zhushefghh.png"  />
+				</li>
+				<li>
+					<p>
+
+					</p>
+					<p>
+						<span>猪背膘</span>
+						<span>期货</span>
+					</p>
+					<!--<p>库存135486件</p>
+					<p>￥98.00</p>-->
+					<p style="color: #333; font-size: 0.24rem;margin-right:0.3rem;margin-top: 0.3rem;float: left;">购买数量</p>
+					<div id="shuliangjiajian">
+						<p class="down">－</p>
+						<p class="num">1</p>
+						<p style="text-indent:0 ;" class="up">＋</p>
+					</div>
+
+				</li>
+			</ul>
+
+		</div>
+
+
+
+
+		<div class="addgouwuche">
+
+			<p style= "background: #ea0607;color: #fff;font-size: 0.28rem;font-weight: 600;">加入购物车</p>
+
+		</div>
+	</body>
+	<script type="text/javascript" src="../../js/mui.js" ></script>
+	<script type="text/javascript" src="../../js/buju.js" ></script>
+    <script type="text/javascript" src="../../js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript" src="../../js/tab.js" ></script>
+	<script type="text/javascript" src="../../js/clickmodeo.js" ></script>
+	<script>
+
+		$(".addgouwuche p").on("click",function(){
+
+//			window.location.href="../gouWuChe/gouwucheBianji.html"
+			mui.openWindow({
+				url:'../gouWuChe/gouwucheBianji.html',
+				id:'../gouWuChe/gouwucheBianji.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+		$(".jiarugouwucheheader").on("click",function(){
+//			window.location.href="../gouWuChe/gouwucheBianji.html"
+			mui.openWindow({
+				url:'../gouWuChe/gouwucheBianji.html',
+				id:'../gouWuChe/gouwucheBianji.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+	//下拉菜单
+	
+		$(".liebiaozuanfu").on("click",function(e){
+			$('.xialacaidan').toggle(300);
+			e.stopPropagation();
+		})
+		$(document).click(function(){
+	　　		$(".xialacaidan").hide(300);
+		});
+		$(document).scroll(function(){
+			$(".xialacaidan").hide(300);
+		})
+		
+		$(".xialacaidan").click(function(e){
+	　　		e.stopPropagation();
+		});
+	
+	//消息
+		$('.xialacaidan li:nth-child(3)').on('click',function(){
+			window.location.href="../../html/xiaoxiliebiao.html";
+//			mui.openWindow({
+//				url:'../../html/xiaoxiliebiao.html',
+//				id:'../../html/xiaoxiliebiao.html',
+//				styles:{
+//				top:'0',
+//				bottom:'0px',
+//				width:'100%',
+//				height:'100%'
+//				},
+//				extras:{
+//				
+//				},
+//				show:{
+//				autoShow:true,
+//				aniShow:'slide-in-right',
+//				duration:'500'
+//				},
+//				waiting:{
+//				autoShow:true,
+//				title:'正在加载...',
+//					options:{
+//					width:'waiting-dialog-widht',
+//					height:'waiting-dialog-height'
+//					}
+//				}
+//			})
+		})
+		//首页
+		$('.xialacaidan li:nth-child(2)').on('click',function(){
+//			window.location.href ="../../index.html";
+			mui.openWindow({
+				url:'../../index.html',
+				id:'../../index.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+	</script>
+
+</html>

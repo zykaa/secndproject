@@ -1,0 +1,149 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>商品自提</title>
+		<style type="text/css">
+			div.shangpin_ziti ul li input{
+				background: #f5f5f5;
+				border: 1px solid #e5e5e5;
+				border-radius: 0.03rem;
+			}
+			.theThirdPage{
+				-webkit-overflow-scrolling: touch;
+				overflow: auto;
+				height: 9.8rem;
+			}
+		</style>
+	</head>
+	<link rel="stylesheet" href="../../css/commen.css" />
+	<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../../css/index.css" />
+	<link rel="stylesheet" href="../../css/ziyemain.css" />
+	<body style="overflow-x: hidden;width: 7.5rem;">
+		<header class="dingdanquanbu" style="z-index: 1000;background: #f8f8f8;position: fixed;" >
+		<ul class="wodedingdanheader yincang" style=" width: 7.5rem;">
+			<li style="margin-left: 0.3rem;font-size: 0.3rem;">
+				<i class="fa fa-angle-left mui-action-back" aria-hidden="true" style="font-size: 0.66rem;"></i>
+			</li>
+
+			<li style="text-align: center;width: 5.18rem;font-size: 0.3rem;">
+				商品自提
+			</li>
+			<li style="width:0.86rem;line-height: 0.8rem;font-size: 0.24rem;margin-left: 0.3rem;">
+				<!--<img src="../../img/search.png"  />-->
+			</li>
+
+		</ul>
+
+	</header>
+	<div class="theThirdPage">
+	<div class="shangpin_ziti" style="margin-top: 1rem;">
+		<p>
+			物流司机基本信息
+		</p>
+
+		<ul>
+			<li>
+				<span style="font-size:0.24rem">姓名</span>
+				<input type="text" placeholder="张扬" />
+			</li>
+			<li>
+				<span style="font-size:0.24rem">手机号</span>
+				<input type="text" placeholder="15832229900" />
+			</li>
+			<li>
+				<span style="font-size:0.24rem">车牌号</span>
+				<input type="text" placeholder="京N22334445" />
+			</li>
+		</ul>
+
+
+	</div>
+
+	<div class="shangchuan">
+			<p>身份证照</p>
+			<ul>
+				<li>
+					<img src="../../img/shnrefenhzng.png"  />
+				</li>
+				<li>
+					<img src="../../img/kongmeban.png"  />
+
+				</li>
+			</ul>
+
+	</div>
+	<div class="xingshizheng">
+
+		<p>行驶证照片</p>
+
+		<p>
+
+			<img src="../../img/photo.png" />
+			<span>点击上传</span>
+		</p>
+
+	</div>
+
+
+	<div class="shangpinziti_tijiao">
+		<p style="border: 1px solid #e5e5e5;">提交</p>
+
+
+	</div>
+	<p class="ziliaoyitijiao" style="width: 7.5rem;font-size: 0.28rem;display:none;color: #EA0607;text-align: center;float: left;line-height: 0.5rem;">资料已提交</p>
+</div>	
+	</body>
+     <script type="text/javascript" src="../../js/mui.js" ></script>
+     <script type="text/javascript" src="../../js/buju.js" ></script>
+	<script type="text/javascript" src="../../js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript" src="../../js/tab.js" ></script>
+	<script type="text/javascript" src="../../js/clickmodeo.js" ></script>
+	<script>
+		$(".shangpinziti_tijiao").on("click",function(){
+
+			$(".ziliaoyitijiao").fadeIn(500,function(){
+
+//				window.location.href="querendingdan.html";
+				mui.openWindow({
+					url:'querendingdan.html',
+					id:'querendingdan.html',
+					styles:{
+					top:'0',
+					bottom:'0px',
+					width:'100%',
+					height:'100%'
+					},
+					extras:{
+					
+					},
+					show:{
+					autoShow:true,
+					aniShow:'slide-in-right',
+					duration:'500'
+					},
+					waiting:{
+					autoShow:true,
+					title:'正在加载...',
+						options:{
+						width:'waiting-dialog-widht',
+						height:'waiting-dialog-height'
+						}
+					}
+				})
+				$(".tuijiawuliuzixuan>li>img").attr("src","../../img/shouhoudizhixuanze.png");
+				$(".shangpinzitihsangpinxiangqing>img").attr("src","../../img/shouhuodizhiyixuanze.png");
+
+
+			})
+
+		})
+
+
+
+	</script>
+
+	<!--<script type="text/javascript" src="../../js/feedback.js" ></script>-->
+</html>

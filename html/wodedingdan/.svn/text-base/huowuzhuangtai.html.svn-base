@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html style="overflow-x: hidden;">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>物流信息</title>
+		<meta name="format-detection" content="telephone=no" />
+		<style type="text/css">
+			.wuliu .wu li{
+				
+				box-sizing: border-box;
+				height: auto;
+				padding: 0;
+				margin: 0 auto;
+				margin-top: 0.2rem;
+				margin-left: 0.3rem;
+				/*height: auto;*/
+				/*padding: 0.45rem 0;*/
+				display: inline-block;
+			}
+			.wuliu .wu li div{
+				float: right;
+				/*padding-left: 0.06rem;*/
+				box-sizing: border-box;
+				border: 0.8px solid #e5e5e5;
+				border-radius: 0.03rem;
+				display: inline-block;
+				width: 6rem;
+			}
+			/*.wuliu .wu li div:before{
+				content: "";
+				width: 0;
+				height: 0;
+				border-top: 10px solid transparent;
+				border-right: 10px solid #fff;
+				border-bottom: 10px solid transparent;
+				position: absolute;
+				left: 57px;
+			}
+			.wuliu .wu li .d1:before{
+				top: 357px;
+			}*/
+			/*.wuliu .wu li .d2:before{
+				top: 467px;
+			}
+			.wuliu .wu li .d3:before{
+				top: 567px;
+			}
+			.wuliu .wu li .d4:before{
+				top: 667px;
+			}
+			.wuliu .wu li .d5:before{
+				top: 787px;
+			}
+			.wuliu .wu li .d6:before{
+				top: 883px;
+			}
+			.wuliu .wu li .d7:before{
+				top: 983px;
+			}
+			.wuliu .wu li .d8:before{
+				top: 1083px;
+			}
+			.wuliu .wu li .d9:before{
+				top: 1177px;
+			}
+			.wuliu .wu li .d10:before{
+				top: 1277px;
+			}
+			.wuliu .wu li .d11:before{
+				top: 1377px;
+			}*/
+			.wuliu .wu li img,.wuliu .wu li div{
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.wuliu .wu li img{
+				height: auto;
+				position: relative;
+				margin-top: 0.3rem;
+				margin-right: 0.1rem;
+			}
+			.wuliu .wu li .duiqi img{
+				display: inline-block;
+				width: 0.8rem;
+				margin-top: 0.1rem;
+			}
+			.wuliu .wu li .duiqi{
+				box-sizing: border-box;
+				padding: 0.4rem 0.2rem;
+				background: #fff;
+			}
+			.wuliu .wu li .duiqi p:nth-child(1){
+				font-size: 0.28rem;
+				color: #333;
+				margin-bottom: 0.1rem;
+				width: auto;
+				display: inline-block;
+			}
+			.wuliu .wu li p{
+				font-size: 0.28rem;
+				color: #333;
+			}
+			.wuliu .wu li p:nth-child(3){
+				/*font-size: 0.28rem;
+				color: #333;
+				margin-bottom: 0.1rem;
+				width: auto;
+				display: inline-block;*/
+				margin-left: 0;
+				margin-top: 0.1rem;
+				font-size: 0.24rem;
+				color: #999;
+			}
+			.shuxian{
+				position: absolute;
+				top: 0;
+				left: 0.55rem;
+				width: 0.01rem;
+				height: 1.5rem;
+				background: #999;
+			}
+			.shu1{
+				top: 4.4rem;
+				height: 1.02rem;
+			}
+			.shu2{
+				top: 6.2rem;
+				height: 1.02rem;
+			}
+			.shu3{
+				top: 8rem;
+				height: 1.02rem;
+			}
+			/*.shu4{
+				top: 12.6rem;
+			}*/
+			/*.shu5{
+				top: 14.8rem;
+				height: 1.05rem;
+			}
+			.shu6{
+				top: 16.6rem;
+				height: 1.05rem;
+			}
+			.shu7{
+				top: 18.4rem;
+				height: 1.05rem;
+			}
+			.shu8{
+				top: 20.2rem;
+				height: 1.05rem;
+			}
+			.shu9{
+				top: 22rem;
+				height: 1.05rem;
+			}
+			.shu10{
+				top: 23.7rem;
+				height: 1.1rem;
+			}*/
+			.huoyunzhuantai .wuhuo li{
+				font-size: 0.24rem;
+			}
+			.huoyunzhuantai .wuhuo li span{
+				color: #757575;
+				font-size: 0.24rem;
+			}
+			header.dingdanquanbu{
+				background: #f8f8f8;
+			}
+			img,span{
+				display: inline-block;
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+	<link rel="stylesheet" href="../../css/commen.css" />
+	<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../../css/index.css" />
+	<link rel="stylesheet" href="../../css/ziyemain.css" />
+	<body>
+		<header class=" dingdanquanbu"  style="position:fixed;top:-0.01rem">
+		<ul class="wodedingdanheader yincang" style=" width: 7.5rem;">
+			<li style="margin-left: 0.3rem;">
+				<i class="fa fa-angle-left mui-action-back" aria-hidden="true" style="font-size: 0.66rem;"></i>
+			</li>
+
+			<li style="text-align: center;width: 5.4rem;font-size:0.34rem">
+				货物状态
+			</li>
+			<li style="line-height: 0.8rem;font-size: 0.24rem;margin-left: 0.3rem;">
+				<!--<img src="../../img/search.png"  />-->
+			</li>
+
+		</ul>
+
+	</header>
+
+	<!--<div class="wuliuxinxiheader" style="margin-top:0.87rem;background: #333;">
+		<ul>
+			<li style="width: 4.7rem;">
+				<img src="../../img/wuliuxinxitouxiang.png" />
+				<p style="color: #d8d8d8;margin-left: 2.35rem;">司机：速度与激情</p>
+				<p style="margin-left: 2.35rem;">手机：15029987456</p>
+			</li>
+			<li>
+				<img style="width: 1rem;height: auto;" src="../../img/dianhua@2x.png"  />
+
+			</li>
+		</ul>
+
+
+	</div>-->
+
+	<div class="huoyunzhuantai" style="margin-top: 0.87rem;padding-bottom: 0.3rem;padding-top: 0.3rem;">
+		<ul class="wuhuo">
+			<li>
+				物流状态：
+				<span>交易关闭</span>
+			</li>
+			<li>
+				承运来源：
+				<span>锦鹏物流北京冷链运输分公司</span>
+			</li>
+			<li>
+				运单编号：
+				<span></span>
+			</li>
+			<li>
+				官方电话：
+				<span> 010-46685565</span>
+			</li>
+
+		</ul>
+
+
+	</div>
+
+	<div class="wuliuzhuizong">
+		<p>
+			<img src="../../img/wuliugenzong.png"  />
+			<span>货物追踪</span>
+		</p>
+
+	</div>
+
+	<div class="wuliu" style="background: #f5f5f5;margin-top: 0;margin-bottom: 0;padding-bottom: 2.27rem;box-sizing: border-box;">
+		<div  style="position: absolute;width: 1px;height: 5.6rem;top: 4.5rem;left: 0.55rem; background: url(../../img/theLine.png) no-repeat left; ">
+			
+		</div>
+		<ul class="wu">
+			
+			<style>
+				.duiqi{
+					position: relative;
+				}
+				.wuliu .wu li .duiqi img{
+					width: 0.2rem;
+				 	height: 0.2rem;
+				    position: absolute;
+				    top: 0.2rem;
+				    left: -0.2rem;
+				}
+			</style>
+			<li>
+				<img src="../../img/guojiyunshu@2x.png" />
+				<div class="duiqi d8">
+					<img src="../../img/xiaosanjiao.png"/>
+					<p>
+					【国际运输(船运)】德国盐田港到中国塘沽港
+					</p>
+					<p style="color: #999;">
+						2016-08-18 20:04:06
+					</p>
+				</div>
+			</li>
+			<li>
+				<img src="../../img/haiwaiqingguan@2x.png" />
+				<div class="duiqi d9">
+					<img src="../../img/xiaosanjiao.png"/>
+					<p>
+					【清关(海外)】德国盐田港海关
+					</p>
+					<p>
+						2016-07-19 03:04:05
+					</p>
+				</div>
+			</li>
+			<li>
+				<img src="../../img/haiwaicangchu@2x.png" />
+				<div class="duiqi d10">
+					<img src="../../img/xiaosanjiao.png"/>
+					<p>
+					【仓库(海外)】德国汉堡龙谷仓库
+					</p>
+					<p>
+						2016-07-18 03:04:05
+					</p>
+				</div>
+			</li>
+			<li>
+				<img src="../../img/haiwaiwuliu@2x.png" />
+				<div class="duiqi d11">
+					<img src="../../img/xiaosanjiao.png"/>
+					<p>
+					【物流(海外)】德国汉堡市区到柏林卡卡仓库
+					</p>
+					<p>
+						2016-07-17 03:04:05
+					</p>
+				</div>
+			</li>
+			
+		</ul>
+
+
+
+	</div>
+
+
+	</body>
+	<script type="text/javascript" src="../../js/mui.js" ></script>
+	<script type="text/javascript" src="../../js/buju.js" ></script>
+	<script type="text/javascript" src="../../js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript" src="../../js/tab.js" ></script>
+	<script type="text/javascript" src="../../js/clickmodeo.js" ></script>
+	<script>
+//		$(".wuliuzhuizong p").on("click",function(){
+//
+//			window.location.href="wuliuxinxiditu.html"
+//		})
+	</script>
+</html>
+

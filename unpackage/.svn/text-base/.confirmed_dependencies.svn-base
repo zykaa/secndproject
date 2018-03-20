@@ -1,0 +1,65 @@
+{
+  "index.html": {
+    "resources": [
+      "img/bannerTwo.png",
+      "img/zhuer.png",
+      "img/bannerssss.png",
+      "js/tab.js",
+      "img/homehou.png",
+      "img/zhushouxiao.png",
+      "img/bannerThree.png",
+      "img/fenlei.png",
+      "img/bighou.png",
+      "img/gonggao.png",
+      "fonts/fontawesome-webfont.woff2",
+      "img/huidoadingbu.png",
+      "css/index.css",
+      "img/gouwucar.png",
+      "js/clickmodeo.js",
+      "img/biaoqian.png",
+      "img/lingshouhou.png",
+      "img/mined.png",
+      "img/kefu.png",
+      "img/guanggaoong.png",
+      "img/guangaothree.png",
+      "js/mui.js",
+      "img/home.png",
+      "img/guanggaotwo.png",
+      "img/lingshou.png",
+      "img/bannerFour.png",
+      "img/changjaizixun.png",
+      "img/zhushou.png",
+      "js/buju.js",
+      "img/bannerOne.png",
+      "img/xinxi.png",
+      "img/renmencuxiao.png",
+      "img/mine.png",
+      "img/searchindex.png",
+      "img/zhupai.png",
+      "img/big.png",
+      "img/jingpintuijian.png",
+      "img/thenews.png",
+      "img/toright.png",
+      "img/zhubangguindex.png",
+      "js/script.js",
+      "img/xunpanimg.png",
+      "img/xunpan.png",
+      "js/jquery-2.1.3.min.js",
+      "img/thenewsyouhui.png",
+      "css/font-awesome.min.css",
+      "wodebaopan.html",
+      "css/commen.css",
+      "img/logo.png",
+      "img/wuhuarou.png"
+    ],
+    "refer": [
+      "wodebaopan.html"
+    ]
+  },
+  "wodebaopan.html": {
+    "resources": [
+      "img/datussad.png",
+      "css/ziyemain.css"
+    ]
+  }
+}

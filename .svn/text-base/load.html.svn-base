@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+	    <title></title>
+	    <link rel="stylesheet" href="css/font-awesome.min.css" />
+	    <!--<link rel="stylesheet" href="css/commen.css" />-->
+	    <!--<link rel="stylesheet" href="css/index.css" />-->
+	    <link rel="stylesheet" type="text/css" href="css/load.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+	    <style type="text/css">
+	    	*{
+	    		margin: 0;
+	    		padding: 0;
+	    	}
+	    </style>
+	</head>
+	<body>
+
+		<!--<div class="load">
+			<img src="img/load1.png"/>
+			<img src="img/load2.png"/>
+			<img src="img/load3.png"/>
+		</div>-->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+			    <div class="swiper-slide"><img src="img/load.png"/></div>
+			    <div class="swiper-slide"><img src="img/load2.png"/></div>
+			    <div class="swiper-slide"><a href="html/login.html"><img src="img/load3.png"/></a></div>
+			</div>
+		</div>
+			
+			
+		
+		<script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/buju.js" ></script>
+		<script type="text/javascript">
+			var mySwiper = new Swiper('.swiper-container',{
+			effect : 'fade',
+			fade: {
+			  crossFade: false,
+			}
+			})
+		</script>
+		<script src="js/clickmodeo.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

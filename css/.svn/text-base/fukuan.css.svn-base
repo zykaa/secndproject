@@ -1,0 +1,170 @@
+body{
+	display: block;
+}
+i{
+	font-style: normal;
+}
+div{
+	border: none;
+	margin: none;
+	padding: none;
+}
+a{
+	font-style: normal;
+	color: #000000;
+	text-decoration:none;
+}
+a:active{
+	font-style: normal;
+	color: #000000;
+	text-decoration:none;
+}
+a:visited{
+	font-style: normal;
+	color: #000000;
+	text-decoration:none;
+}
+i{
+	text-decoration: none;
+}
+/*01*/
+
+.thebigheader{
+	width: 7.5rem;
+    height: 1rem;
+    margin-bottom: 0.28rem;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    background-color: #F8F8F8;
+}
+.thebigheader ul{
+	float: left;
+}
+.thebigheader ul li{
+	float: left;
+	width:0.86rem;
+	height: 0.86rem;
+	
+}
+.thebigheader ul li:nth-child(1){
+	line-height: 0.86rem;
+	text-align: center;
+	color: #ff0103;
+	font-size: 0.36rem;
+	font-family: "微软雅黑";
+}
+.thebigheader ul li:nth-child(1) i{
+	line-height: 0.86rem;
+	font-size: 0.36rem;
+}
+.thebigheader ul li:nth-child(2){
+	font-size: 0.36rem;
+	width: 5rem;
+	text-align: center;
+	line-height: 0.86rem;
+	color: #EA0607;
+	font-family: "微软雅黑";
+}
+/*02*/
+#zhifumoney{
+	width: 7.5rem;
+	height: ;
+	margin-top: 1.28rem;
+	
+}
+#zhifumoney a{
+	display: block;
+	font-size: 0.32rem;
+	margin-left: 0.32rem;
+	line-height: 0.32rem;
+	margin-bottom: 0.30rem;
+}
+#zhifumoney a i{
+	color:#FF0103;
+}
+
+#xiangxi ul{
+	margin-left: 0.335rem;
+	margin-right: 0.335rem;
+	/*width: 6.38rem;*/
+	height: 2.29rem;
+	border: none;
+	background-color:#f1f1f1 ;
+	font-size: 0.28rem;
+	line-height: 0.28rem;	
+}
+#xiangxi ul li{
+	font-size: 0.28rem;
+	color: #666666;
+	margin-left: 0.32rem;
+	line-height: 0.62rem;
+	margin: 0.14rem 0.32rem;
+}
+.lt{
+	display: block;
+	float: right;
+}
+hr{
+	margin:0.24rem 0.335rem;
+	border:0.8px solid #E5E5E5;
+}
+.yue{
+	display: block;
+	margin-left: 0.335rem;
+	color: #000000;
+	font-size:0.32rem;	
+}
+/*.yue em{
+	font-size: 0.32rem;
+	margin: 0;
+}*/
+.yue .change{
+	/*font-size: 0.32rem;*/	
+}
+/*.yue .change1{
+	font-size: 0.32rem;	
+}*/
+b{
+	font-size: 0.32rem;
+	margin-left: 0.335rem;
+}
+.xuanzhe{
+	font-size: 0.32rem;
+}
+#hr1{
+	height: 0.03rem;
+	border: 0.8px;
+	background-color: #000000;
+	margin-bottom: 0.01rem;
+}
+#hr2{
+	margin-top: 0.1rem;
+	border: 0.8px;
+}
+
+
+.moneyfangshi i{
+	margin-left: 0.335rem;
+	margin-right: 0.335rem;
+	font-size: 0.32rem;
+}
+.moneyfangshi i .lt{
+	margin-right: 0.335rem;
+}
+
+#bottom{
+	background-color: #FF0103;
+	height: 0.95rem;
+	line-height: 0.95rem;
+	font-size: 0.38rem;
+	text-align: center;
+	color: #FFFFFF;
+	position: fixed;
+	bottom: 0;
+	width: 7.5rem;
+}
+.ziti{
+	font-size: 0.30rem;
+}
+

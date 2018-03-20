@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>冻冻公告</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../../css/app.css" />-->
+		<style>
+			.mui-table-view-cell{
+				border-bottom: 1px solid #E5E5E5;
+			}
+			.mui-ios .mui-table-view-cell{
+				width: 7.5rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#ea0607;"></a>
+			<!--<button id="submit" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">提交</button>-->
+			<h1 class="mui-title">冻冻公告</h1>
+		</header>
+			<div class="mui-content">
+			<ul id="OA_task_1" class="mui-table-view" style="margin: 0;">
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 12px;color: #999;">
+						今日开始，从欧洲进口牛仔骨同一降价5元每斤
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 12px;color: #999;">
+						今日开始，从欧洲进口牛仔骨同一降价5元每斤
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 12px;color: #999;">
+						今日开始，从欧洲进口牛仔骨同一降价5元每斤
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 12px;color: #999;">
+						今日开始，从欧洲进口牛仔骨同一降价5元每斤
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 12px;color: #999;">
+						今日开始，从欧洲进口牛仔骨同一降价5元每斤
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 12px;color: #999;">
+						今日开始，从欧洲进口牛仔骨同一降价5元每斤
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 12px;color: #999;">
+						今日开始，从欧洲进口牛仔骨同一降价5元每斤
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 12px;color: #999;">
+						今日开始，从欧洲进口牛仔骨同一降价5元每斤
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 12px;color: #999;">
+						今日开始，从欧洲进口牛仔骨同一降价5元每斤
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 12px;color: #999;">
+						今日开始，从欧洲进口牛仔骨同一降价5元每斤
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 12px;color: #999;">
+						今日开始，从欧洲进口牛仔骨同一降价5元每斤
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 12px;color: #999;">
+						今日开始，从欧洲进口牛仔骨同一降价5元每斤
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled" style="right: 2px;">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle" style="font-size: 12px;color: #999;">
+						今日开始，从欧洲进口牛仔骨同一降价5元每斤
+					</div>
+				</li>
+				
+			</ul>
+			
+			
+		</div>
+		
+		<script src="../../js/mui.js"></script>
+		<script type="text/javascript" src="../../js/buju.js" ></script>
+		<script type="text/javascript" src="../../js/jquery-2.1.3.min.js" ></script>
+		<script type="text/javascript" src="../../js/tab.js" ></script>
+		<script src="../../js/clickmodeo.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			
+			$(".mui-table-view-cell").on("click",function(){
+				
+				
+//				window.location.href="xiangqing.html"
+				mui.openWindow({
+				url:'xiangqing.html',
+				id:'xiangqing.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+			})
+			
+		</script>
+		
+		<script>
+			mui.init();
+			(function($) {
+				//$.swipeoutOpen(el,direction)//打开指定列的滑动菜单，el:指定列的dom对象，direction：取值left|right，指定打开的是左侧或右侧滑动菜单
+				//$.swipeoutClose(el);//关闭指定列的滑动菜单，el:指定列的dom对象
+				//				setTimeout(function() {
+				//					$.swipeoutOpen(document.getElementById("OA_task_1").querySelector('li:last-child'), 'left');
+				//					setTimeout(function() {
+				//						$.swipeoutClose(document.getElementById("OA_task_1").querySelector('li:last-child'));
+				//					}, 1000);
+				//				}, 1000);
+				//第一个demo，拖拽后显示操作图标，点击操作图标删除元素；
+				$('#OA_task_1').on('tap', '.mui-btn', function(event) {
+					var elem = this;
+					var li = elem.parentNode.parentNode;
+					mui.confirm('确认删除该条公告？', '冻冻公告', btnArray, function(e) {
+						if (e.index == 0) {
+							li.parentNode.removeChild(li);
+						} else {
+							setTimeout(function() {
+								$.swipeoutClose(li);
+							}, 0);
+						}
+					});
+				});
+				var btnArray = ['确认', '取消'];
+				
+				
+			})(mui);
+		</script>
+	</body>
+
+</html>

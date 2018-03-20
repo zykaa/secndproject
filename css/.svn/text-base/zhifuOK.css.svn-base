@@ -1,0 +1,117 @@
+i{
+	font-style: normal;
+}
+div{
+	border: none;
+	margin: none;
+	padding: none;
+}
+a{
+	font-style: normal;
+	color: #000000;
+	text-decoration:none;
+}
+a:active{
+	font-style: normal;
+	color: #000000;
+	text-decoration:none;
+}
+a:visited{
+	font-style: normal;
+	color: #000000;
+	text-decoration:none;
+}
+em{
+	text-decoration: none;
+}
+/*01*/
+
+.thebigheader{
+	width: 7.5rem;
+    height: 1.28rem;
+    /*padding-top: 0.28rem;*/
+    margin-bottom: 0.28rem;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    background-color: #F8F8F8;
+}
+.thebigheader ul{
+	margin-top: 0.28rem;
+}
+.thebigheader ul li{
+	float: left;
+	margin-top: 0.15rem;
+	width:0.86rem;
+	height: 0.86rem;
+	
+}
+.thebigheader ul li:nth-child(1){
+	line-height: 0.86rem;
+	text-align: center;
+	color: #ff0103;
+	font-size: 0.36rem;
+	font-family: "微软雅黑";
+}
+.thebigheader ul li:nth-child(1) i{
+	line-height: 0.86rem;
+	font-size: 0.36rem;
+}
+.thebigheader ul li:nth-child(2){
+	font-size: 0.36rem;
+	width: 5rem;
+	text-align: center;
+	line-height: 0.86rem;
+	color: #EA0607;
+	font-family: "微软雅黑";
+}
+
+/*02*/
+.yifukuan{
+	height: 1.65rem;
+	margin-top: 1.28rem;
+	background-color: #007AFF;
+}
+
+
+/*03*/
+.people{
+	margin: 0 0.335rem;
+	/*border-bottom: solid #E5E5E5 0.8px;*/
+}
+hr{
+	border: 0.8px;
+	margin: 0.2rem 0.335rem;
+}
+p{
+	
+}
+.p1{
+	margin: 0.2rem 0;
+	line-height: 0.32rem;
+	font-size: 0.32rem;
+}
+.p2{
+	line-height: 0.30rem;
+	margin: 0.2rem 0;
+	font-size: 0.30rem;
+}
+.a{
+	display: block;
+	text-align: center;
+	font-size: 0.32rem;
+	border: solid 0.03rem #979797;
+	border-radius: 0.05rem;
+	width: 2.27rem;
+	height: 0.60rem;
+	line-height: 0.60rem;
+	float: left;
+	margin-top: 0.35rem;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	
+}
+/*04*/
+.tui{
+	
+}

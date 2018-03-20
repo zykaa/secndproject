@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>冻冻会员</title>
+    <link rel="stylesheet" href="../../css/commen.css" />
+  	<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+  	<link rel="stylesheet" href="../../css/ziyemain.css" />
+  	<!--<script type="text/javascript">
+
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+
+   		});-->
+
+    <!--</script>-->
+    <style media="screen">
+      header .gerenzilaio{
+          background-size: 100% 100%;
+          height: auto;
+        }
+       .main img{
+       	width: 100%;      	
+       }
+       header .huiyuan ul li:nth-child(1){
+       	position: relative;
+       }
+       header .huiyuan ul li:nth-child(1) div{
+       	position: absolute;
+       	width: 0.5rem;
+       	height: 0.5rem;
+       	top: 0.2rem;
+       	left: -0.1rem;
+       }
+       header .huiyuan ul li:nth-child(1) i{
+       	width: 1rem;
+       	height: auto;
+       	text-align: left;
+       }
+       .tequan{
+       	width: 0.7rem;
+       	height: 0.25rem;
+       	right: 0.28rem;
+       	top: 2.78rem;
+       	position: absolute;
+       }
+    </style>
+  </head>
+  <body>
+  		<header style="width: 7.5rem;position: fixed;top: 0;background: #EA0607;">
+				<div class="gerenzilaio huiyuan">
+					<ul style="width:7rem;">
+						<li style="width:2.3rem;font-weight: normal;">
+							<i class="fa fa-angle-left mui-action-back" aria-hidden="true" style="margin-top:0.1rem;font-size:0.66rem;color: #FFFFFF;"></i>
+							
+						</li>
+						<li style="font-size:0.34rem;width:2.3rem;font-weight: normal;">冻冻会员</li>
+						<li class="shuoming" style="font-size:0.3rem;width:2.4rem;font-weight: normal;">会员说明</li>
+					</ul>
+				</div>
+			</header>
+    	<div class="main" style="margin-top: 0.87rem">
+				<img src="../../img/huiyuan.png" alt="" />
+				<div class="tequan"></div>
+    	</div>
+  </body>
+  <script type="text/javascript" src="../../js/mui.js" ></script>
+	<script type="text/javascript" src="../../js/buju.js" ></script>
+  <script src="../../js/jquery-2.1.3.min.js" ></script>
+  <script type="text/javascript" src="../../js/tab.js" ></script>
+  <script type="text/javascript" src="../../js/clickmodeo.js" ></script>
+  <script>
+		$(".huiyuan .shuoming").on("click",function(){
+//			window.location.href="shuoming.html";
+				mui.openWindow({
+				url:'shuoming.html',
+				id:'shuoming.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+		$(".tequan").on("click",function(){
+//			window.location.href="tequan.html";
+				mui.openWindow({
+				url:'tequan.html',
+				id:'tequan.html',
+				styles:{
+				top:'0',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+				},
+				extras:{
+				
+				},
+				show:{
+				autoShow:true,
+				aniShow:'slide-in-right',
+				duration:'500'
+				},
+				waiting:{
+				autoShow:true,
+				title:'正在加载...',
+					options:{
+					width:'waiting-dialog-widht',
+					height:'waiting-dialog-height'
+					}
+				}
+			})
+		})
+
+	</script>
+</html>

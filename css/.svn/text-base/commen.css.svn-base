@@ -1,0 +1,224 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{
+			margin:0;
+			padding:0;
+			
+			} 
+			body{font:0.16rem  "微软雅黑", HELVETICA;background:#fff; 
+			-webkit-tap-highlight-color:rgba(0,0,0,0);
+			-o-tap-highlight-color:rgba(0,0,0,0)
+			-os-tap-highlight-color:rgba(0,0,0,0);
+			tap-highlight-color:rgba(0,0,0,0);
+			overflow-x:hidden ; 
+			display: none;
+			}
+			a{text-decoration:none} 
+			a:hover{text-decoration:underline} 
+			em{font-style:normal}
+			li{list-style:none}
+			img{border:0;vertical-align:middle} 
+			table{border-collapse:collapse;border-spacing:0}
+			p{word-wrap:break-word}
+			
+			/*header{
+				
+				position: fixed;
+				top: 0;
+				z-index: 10000;
+			}*/
+			body {
+    /**设置内嵌的元素在 3D 空间如何呈现：保留 3D*/
+    -webkit-transform-style: preserve-3d;
+    /**（设置进行转换的元素的背面在面对用户时是否可见：隐藏）*/
+    -webkit-backface-visibility: hidden;
+    
+      -webkit-scrollbar {width: 0;} /* 滚动条整体部分 */
+			-webkit-scrollbar-track {background-color: #fff;color: #fff;} /* 滚动条的轨道（里面装有Thumb） */
+			-webkit-scrollbar-thumb {background-color: #fff;color: #fff;} /* 滑块颜色 */
+			-webkit-scrollbar-button {background-color: #fff;color: #fff;} /* 滚动条的轨道的两端按钮 */
+			-webkit-scrollbar-corner {background-color: #fff;color: #fff;} /* 边角，即两个滚动条的交汇处 */
+			
+			-o-scrollbar {width: 0;} /* 滚动条整体部分 */
+			-o-scrollbar-track {background-color: #fff;color: #fff;} /* 滚动条的轨道（里面装有Thumb） */
+			-o-scrollbar-thumb {background-color: #fff;color: #fff;} /* 滑块颜色 */
+			-o-scrollbar-button {background-color: #fff;color: #fff;} /* 滚动条的轨道的两端按钮 */
+			-o-scrollbar-corner {background-color: #fff;color: #fff;} /* 边角，即两个滚动条的交汇处 */
+			
+			-os-scrollbar {width: 0;} /* 滚动条整体部分 */
+			-os-scrollbar-track {background-color: #fff;color: #fff;} /* 滚动条的轨道（里面装有Thumb） */
+			-os-scrollbar-thumb {background-color: #fff;color: #fff;} /* 滑块颜色 */
+			-os-scrollbar-button {background-color: #fff;color: #fff;} /* 滚动条的轨道的两端按钮 */
+			-os-scrollbar-corner {background-color: #fff;color: #fff;} /* 边角，即两个滚动条的交汇处 */
+}
+
+a,img,button,input,textarea{-webkit-tap-highlight-color:rgba(255,255,255,0); font-size: 0.24rem;border-radius: 0;}
+input,textarea{-webkit-appearance:none;}
+a{
+	text-decoration: none;
+}
+header ul li:nth-child(1) i ,header a{
+	width: 0.86rem;
+	height: 0.86rem;
+	text-align: left;
+}
+
+ /*头部下拉菜单*/
+		
+			 .xialacaidan {
+				width: 1.81rem;
+				height: 2.86rem;
+				/*padding-top: 0.16rem;*/
+				background: #34373d;
+				/*opacity: 0.8;*/
+				padding-left: 0.36rem;
+				position: relative;
+				-webkit-border-radius: 0.03rem;
+				-moz-border-radius: 0.03rem;
+				border-radius: 0.03rem;
+				position: fixed;
+
+				right: 0.25rem;
+
+		
+
+				top: 0.9rem;
+				z-index: 10001;
+				
+			}
+			
+			 .xialacaidan li {
+				color: #999999;
+				width: 1.4rem;
+				height: 0.66rem;
+				border-bottom: 0.8px solid #4e535d;
+				line-height: 0.66rem;
+				text-align: center;
+				font-size: 0.28rem;
+			}
+			
+		 .xialacaidan li:last-child {
+				border-bottom: none;
+			}
+			
+		 .xialacaidan li img {
+				margin-right: 0.17rem;
+			}
+			
+		 .xiaojiao {
+				border-width: 0px 0.16rem 0.16rem 0.16rem;
+				border-color: transparent;
+				border-style: solid;
+				border-bottom-color: #34373d;
+				width: 0;
+				height: 0;
+				position: absolute;
+				top: -0.14rem;
+				right: 0.18rem;
+			}
+			
+		 .xibanya {
+				width: 7.5rem;
+				height: 1.6rem;
+				border-bottom: 0.8px dashed #E5E5E5;
+			}
+			
+			 .xibanyap {
+				width: 7.2rem;
+				height: 0.72rem;
+				color: #6907c0;
+				font-size: 0.26rem;
+				line-height: 0.72rem;
+				padding-left: 0.3rem;
+			}
+			
+		 .xibanyaul {
+				height: 0.88rem;
+				line-height: 0.62rem;
+			}
+			
+		 .xibanyaul li {
+				float: left;
+			}
+			
+			 .xibanyaul li:nth-child(1) {
+				color: #000;
+				padding-left: 0.3rem;
+				width: 6rem;
+				padding-top: 0.11rem;
+				font-size: 0.34rem;
+				border-right: 0.05px dashed #E5E5E5;
+			}
+			
+			 .xibanyaul li:nth-child(2) {
+				padding-left: 0.36rem;
+				font-size: 0.2rem;
+			}
+			
+	.xibanyaul li:nth-child(2) img {
+				width: 0.3rem;
+				height: 0.3rem;
+				display: block;
+				margin-left: 0.06rem;
+			}
+			
+		 .xiajiadaoji {
+				width: 7.5rem;
+				height: 1.22rem;
+				border-bottom: 0.8px solid #E5E5E5;
+			}
+			
+		 .xiajiadaojicon {
+				width: 7.2rem;
+				height: 1.22rem;
+				padding-left: 0.3rem;
+			}
+			
+			 .xiajiadaojicon li {
+				float: left;
+			}
+			
+	 .xiajiadaojicon .xiajiali1 {
+				width: 3.49rem;
+				height: 0.8rem;
+				border-right: 0.8px dashed #E5E5E5;
+				margin-top: 0.2rem;
+			}
+			
+			 .xiajiali2 {
+				margin-top: 0.24rem;
+				margin-left: 0.85rem;
+			}
+			
+			 .xiajiali2 .daojishiqi {
+				height: 0.7rem;
+				margin-top: 0.13rem;
+			}
+			
+		 .xiajiali2 .daojishiqi li {
+				width: 0.62rem;
+				height: 0.37rem;
+				border: 0.05px solid #000;
+				float: left;
+				line-height: 0.37rem;
+				text-align: center;
+			}
+			
+		.xiajiali2 .daojishiqi li span:nth-child(1) {
+				font-size: 0.16rem;
+			}
+			
+		 .xiajiali2 .daojishiqi li:nth-child(2),
+		 .xiajiali2 .daojishiqi li:nth-child(4) {
+				border: none;
+				width: 0.08rem;
+			}
+			
+		.daojishiqi li span {
+				font-size: 0.16rem;
+				color: #FF0103;
+			}
+			
+			.daojishiqi li em {
+				font-size: 0.1re m;
+				color: #FF0103;
+				display: inline-block;
+			}         

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>历史交易</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<!--<link rel="stylesheet" href="../../css/mui.min.css">-->
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../../css/app.css" />-->
+		<!--<link rel="stylesheet" href="../../css/commen.css" />-->
+		<!--<link rel="stylesheet" href="../../css/ziyemain.css" />-->
+		<style>
+			.chart {
+				height: 200px;
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			h5 {
+				margin-top: 30px;
+				text-align: center;
+				font-weight: bold;
+			}
+			
+			h5:first-child {
+				margin-top: 15px;
+			}
+			
+			.mui-content-padded p {
+				text-align: center;
+				margin: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="box-sizing: border-box;padding-left: 10px;background: #f8f8f8;">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #EA0607;"></a>
+			<h1 class="mui-title">历史交易</h1>
+			<p>
+				<!--<img style="float: right;width: 20px;height: 45px;" src="../../img/shenqingtuikuan.png" />-->
+			</p>
+		</header>
+		<div class="mui-content" style="height: 0;">
+			<div class="mui-content-padded">
+				<!--<h5>柱图示例</h5>
+				<div class="chart" id="barChart"></div>-->
+				<!--<h5>报盘销售数量走势</h5>-->
+				<!--<p style="margin-top: 30px;">2016年1-10月所售商品数量曲线图</p>
+				<div class="chart" id="lineChart"></div>
+				<span style="position: absolute; top: 107px;color: #333;left: 40px;font-size: 0.24rem;color: #999;">单位(吨)</span>-->
+				<!--<h5>柱图示例</h5>-->
+				<!--<h5>该品类价格走势</h5>-->
+				<div class="chart" id="saleChart"></div>
+				<!--商品销售数量曲线图容器-->
+			</div>
+			<div class="mui-content-padded">
+				<!--<p style="margin-top: 30px;">2016年1-10月猪手价格曲线图</p>
+				<div class="chart" id="barChart"></div>
+				<span style="position: absolute; bottom: 354px; left: 47px; font-size: 0.24rem;text-align: center;color: #999;">单位(元 / 吨)</span>-->
+				<div class="chart" id="priceChart"></div>
+				<!--商品销售价格曲线图容器-->
+			</div>
+
+		</div>
+		<script src="../../js/mui.js"></script>
+		<script src="../../js/echarts-all.js"></script>
+		<script type="text/javascript" src="../../js/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="../../js/tab.js"></script>
+		<script type="text/javascript" src="../../js/clickmodeo.js"></script>
+		<script>
+			/*var getOption = function(chartType) {
+																			var chartOption = chartType == 'pie' ? {
+
+																			} : {
+																				//					legend: {
+																				//						data: ['蒸发量', '降水量']
+																				//					},
+																				grid: {
+																					x: 45,
+																					x2: 10,
+																					y: 25,
+																					y2: 25
+																				},
+
+																				calculable: false,
+																				xAxis: [{
+																					type: 'category',
+																					data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+																				}],
+																				yAxis: [{
+																					//						name:'吨',
+																					type: 'value',
+																					splitArea: {
+																						show: true
+																					},
+																					//						data:['q','wq','qw','sda']
+
+																				}],
+																				series: [{
+																					name: '数量',
+																					type: chartType,
+																					data: [10, 20, 25, 20, 30, 80, 35, 30, 45, 40, 50, ]
+																				}]
+
+																			};
+																			return chartOption;
+																		};
+																		var byId = function(id) {
+																			return document.getElementById(id);
+																		};
+
+																		var lineChart = echarts.init(byId('lineChart'));
+																		lineChart.setOption(getOption('line'));
+																		var barChart = echarts.init(byId('barChart'));
+																		barChart.setOption(getOption('line'));*/
+
+			var getSaleChartOption = function(chartType) {
+				var chartOption = chartType == 'pie' ? {
+
+				} : {
+					title: {
+						text: '2016年1-9月平台所售猪手数量曲线图',
+						x: 'center',
+						padding: [10, 10, 30, 10],
+						textStyle: {
+							fontSize: 15,
+							fontWeight:'normal'
+						}
+					},
+					tooltip: {
+						trigger: 'axis'
+					},
+					//					legend: {
+					//						data: ['蒸发量', '降水量']
+					//					},
+					grid: {
+						x: 40,
+						x2: 10,
+						y: 50,
+						y2: 25
+					},
+
+					calculable: false,
+					xAxis: [{
+						type: 'category',
+						axisLine:{
+							show:true,
+							lineStyle:{
+								color: '#000000',
+								width:1
+							}
+						},
+						data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月']
+					}],
+					yAxis: [{
+						name: '数量（吨）',
+						axisLine:{
+							show:true,
+							lineStyle:{
+								color: '#000000',
+								width:1
+							}
+						},
+						type: 'value',
+						splitArea: {
+							show: false
+						},
+						min: 900,
+						max: 1400,
+
+						//						data:['q','wq','qw','sda']
+
+					}],
+					series: [{
+						name: '数量',
+						smooth: true,
+						type: chartType,
+						data: [1000, 1220, 1230, 1215, 1130, 1323, 1235, 1230, 1160]
+					}]
+				};
+				return chartOption;
+			};
+
+			var getPriceChartOption = function(chartType) {
+				var chartOption = chartType == 'pie' ? {
+
+				} : {
+					title: {
+						text: '2016年1-9月平台所售猪手价格曲线图',
+						x: 'center',
+						padding: [10, 10, 30, 10],
+						textStyle: {
+							fontSize: 15,
+							fontWeight:'normal'
+						}
+					},
+					tooltip: {
+						trigger: 'axis'
+					},
+					//					legend: {
+					//						data: ['蒸发量', '降水量']
+					//					},
+					grid: {
+						x: 45,
+						x2: 10,
+						y: 50,
+						y2: 25
+					},
+
+					calculable: false,
+					xAxis: [{
+						type: 'category',
+						boundaryGap : false,
+						axisLine:{
+							show:true,
+							lineStyle:{
+								color: '#000000',
+								width:1
+							}
+						},
+						data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月']
+					}],
+					yAxis: [{
+						name: '单价（元/吨）',
+						axisLine:{
+							show:true,
+							lineStyle:{
+								color: '#000000',
+								width:1
+							}
+						},
+						type: 'value',
+						splitArea: {
+							show: false
+						},
+						min: 17100,
+						max: 18000,
+
+						//						data:['q','wq','qw','sda']
+
+					}],
+					series: [{
+						name: '单价',
+						smooth: true,
+						type: chartType,
+						data: [17600, 17300, 17431, 17638, 17938, 17688, 17888, 17588, 17488]
+					}]
+
+				};
+				return chartOption;
+			};
+
+			var byId = function(id) {
+				return document.getElementById(id);
+			};
+
+			var lineChart = echarts.init(byId('saleChart'));
+			lineChart.setOption(getSaleChartOption('line'));
+			var barChart = echarts.init(byId('priceChart'));
+			barChart.setOption(getPriceChartOption('line'));
+		</script>
+	</body>
+
+</html>
